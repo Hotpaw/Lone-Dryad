@@ -3,12 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TreeScript : MonoBehaviour
-{
-    public float progressScore;
-    public float health;
-    public float waterLevel;
-    public float waterLoss;
-    public float treeLevel;
+{   
 
     public SpriteRenderer spriteRenderer;
 
@@ -21,7 +16,7 @@ public class TreeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;
-        spriteRenderer.color = new Color(1, 1, 1, waterLevel * 0.01f);        
+        GameValueManager.INSTANCE?.LoseWater();
+        spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);        
     }
 }
