@@ -7,6 +7,7 @@ public class ChangeTreeStage : MonoBehaviour
 {
     public List<Sprite> treeStages;
     SpriteRenderer spriteRenderer;
+    public ParticleSystem particleSystem;
     int id =2;
     private void Start()
     {
@@ -17,8 +18,10 @@ public class ChangeTreeStage : MonoBehaviour
         if(Keyboard.current.spaceKey.wasPressedThisFrame == true)
         {
             ChangeTreeSprite(id);
-            id++;
+            id++;     
+            particleSystem.Play();
         }
+        
     }
     public void ChangeTreeSprite(int id)
     {
