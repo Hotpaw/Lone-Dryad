@@ -264,6 +264,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc157dc3ae79564f85e808b0b1ac53a, type: 3}
+--- !u!1 &401512287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2050442824164955568, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+  m_PrefabInstance: {fileID: 1559773838}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &401512290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401512287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29a8bd569e54e446b21f37dc0fd36fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterAmount: 50
 --- !u!1001 &408751116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -576,7 +594,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.2337048, b: 0.2735849, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.8086254, b: 0.9433962, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -640,6 +658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3666537420658668297, guid: e0addbe7867f4d94081542e1b3482802, type: 3}
+      propertyPath: particleSystem
+      value: 
+      objectReference: {fileID: 533175746}
     - target: {fileID: 7379343613888535474, guid: e0addbe7867f4d94081542e1b3482802, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.38
@@ -791,7 +813,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -910,7 +932,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 30
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1028,7 +1050,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.41
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1345,9 +1367,9 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 1000
+    maxNumParticles: 10000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
-    size3D: 0
+    size3D: 1
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -1405,7 +1427,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 4
+    type: 20
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -1414,7 +1436,7 @@ ParticleSystem:
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -0.85, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
-    placementMode: 0
+    placementMode: 2
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
     m_MeshSpawn:
@@ -1476,8 +1498,8 @@ ParticleSystem:
     m_Mesh: {fileID: 0}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
-    m_Sprite: {fileID: 0}
-    m_SpriteRenderer: {fileID: 0}
+    m_Sprite: {fileID: 21300000, guid: 0fd4e5951f802f642a4f7f19ee42608e, type: 3}
+    m_SpriteRenderer: {fileID: 533175747}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
     alignToDirection: 0
@@ -1549,7 +1571,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 150
+      value: 175
       mode: 0
       spread: 0
       speed:
@@ -1611,7 +1633,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 100
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1721,7 +1743,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 60
+        scalar: 0
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -2107,15 +2129,15 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.34457386, b: 0, a: 1}
-        key1: {r: 0.35965127, g: 0.9622642, b: 0, a: 0.7411765}
+        key0: {r: 0.09293197, g: 0.8773585, b: 0.028969401, a: 1}
+        key1: {r: 1, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 386
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -5555,6 +5577,11 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!212 &533175747 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 93846936484765914, guid: e0addbe7867f4d94081542e1b3482802, type: 3}
+  m_PrefabInstance: {fileID: 533175743}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1407165362 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2134600171258895131, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
@@ -5594,6 +5621,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c510b4ce9a4801b41a20752a49f739a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1559773838
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175495296343206735, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5559419585837521605, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_Name
+      value: InteractableObject 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8016043021571669606, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7123906783216750279, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2050442824164955568, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 401512290}
+  m_SourcePrefab: {fileID: 100100000, guid: 7d2be434e4318e843815e57476f85e70, type: 3}
 --- !u!1 &1620929874
 GameObject:
   m_ObjectHideFlags: 0
@@ -10802,3 +10894,4 @@ SceneRoots:
   - {fileID: 208495397}
   - {fileID: 1650225554}
   - {fileID: 444271190}
+  - {fileID: 1559773838}
