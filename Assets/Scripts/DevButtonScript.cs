@@ -7,10 +7,14 @@ public class DevButtonScript : MonoBehaviour
 {
     public GameObject player;
     public Vector2 checkPoint;
+    public float playerY;
+    public float playerX;
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerY = PlayerPrefs.GetFloat("PlayerY");
+        playerX = PlayerPrefs.GetFloat("PlayerX");
+        player.transform.position = new Vector2(playerX, playerY);
     }
 
     // Update is called once per frame
@@ -19,9 +23,17 @@ public class DevButtonScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         if (Input.GetKeyDown(KeyCode.C))
-            checkPoint = player.transform.position;
+        {
+            PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
+            PlayerPrefs.SetFloat("PlayerY", player.transform.position.y);
+            PlayerPrefs.Save();
+        }
         if (Input.GetKeyDown(KeyCode.T))
-            player.transform.position = checkPoint;
+        {
+            playerY = PlayerPrefs.GetFloat("PlayerY");
+            playerX = PlayerPrefs.GetFloat("PlayerX");
+            player.transform.position = new Vector2(playerX, playerY);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha4))
             Time.timeScale -= 0.25f;
         if (Input.GetKeyDown(KeyCode.Alpha5))
