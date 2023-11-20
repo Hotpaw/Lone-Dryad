@@ -11,6 +11,7 @@ public class GameValueManager : MonoBehaviour
     public float waterLevel;
     public float waterLoss;
     public float treeLevel;
+    public float currentEnergy;
 
     //Dryad stats
     public TeleportScript teleportScript;
@@ -39,5 +40,9 @@ public class GameValueManager : MonoBehaviour
             exhaustLevel = 0;
         }
     }
-    
+    public void IncreaseEnergyLevel(float amount)
+    {
+        currentEnergy += amount;
+    }
+
 }
