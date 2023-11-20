@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public GameObject tree;
+    public GameObject enemy;
     Transform target;
     Rigidbody2D rb2D;
     float enemySpeed = 2f;
@@ -12,7 +12,9 @@ public class EnemyScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("EnemyFollow", 0.5f);
+        //Invoke("EnemyFollow", 0.5f);
+
+        EnemyFollow();
 
         rb2D = GetComponent<Rigidbody2D>();
     }
@@ -30,7 +32,7 @@ public class EnemyScript : MonoBehaviour
 
     public void EnemyFollow()
     {
-        target = GameObject.FindGameObjectWithTag("Tree").transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
     
 }
