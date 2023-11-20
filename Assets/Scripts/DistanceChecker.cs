@@ -19,6 +19,7 @@ public class DistanceChecker : MonoBehaviour
                 // move the player back to the tree and reset exhaust level.
                 sp.DistanceFeedBack();
                 activated = true;
+                GameValueManager.INSTANCE.IncreaseExhaustLevel();
             }
         }
 

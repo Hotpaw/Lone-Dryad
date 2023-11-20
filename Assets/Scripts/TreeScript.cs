@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TreeScript : MonoBehaviour
 {   
-
     public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update

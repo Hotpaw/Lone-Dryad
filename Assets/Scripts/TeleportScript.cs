@@ -5,19 +5,17 @@ using UnityEngine;
 public class TeleportScript : MonoBehaviour
 {
     Rigidbody2D rb2D;
-    public DevButtonScript devButtonScript;
+    public TreeScript treeScript;
     // Start is called before the first frame update
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
-    void Update()
+    public void TeleportBackToTree()
     {
-        if (Input.GetKeyDown(KeyCode.T))
+        if (GameValueManager.INSTANCE.exhaustLevel == 3)
         {
-            rb2D.position = devButtonScript.checkPoint;
+            rb2D.position = treeScript.transform.position;
         }
-    }
+    }   
 }

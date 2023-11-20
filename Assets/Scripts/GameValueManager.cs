@@ -14,6 +14,7 @@ public class GameValueManager : MonoBehaviour
 
     //Dryad stats
     public float carryingWater;
+    public float exhaustLevel;
 
     public void Awake()
     {
@@ -25,6 +26,11 @@ public class GameValueManager : MonoBehaviour
     public void LoseWater()
     {
         waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;
+    }
+
+    public void IncreaseExhaustLevel()
+    {
+        exhaustLevel++;
     }
     
 }
