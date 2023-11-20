@@ -6,15 +6,17 @@ public class GameValueManager : MonoBehaviour
 {
     public static GameValueManager INSTANCE;
 
-    //Tree Stats
+    //Tree Stats    
     public float progressScore;    
     public float waterLevel;
     public float waterLoss;
     public float treeLevel;
 
     //Dryad stats
+    public TeleportScript teleportScript;
     public float carryingWater;
     public float exhaustLevel;
+    public float maxExhaustLevel;
 
     public void Awake()
     {
@@ -31,6 +33,11 @@ public class GameValueManager : MonoBehaviour
     public void IncreaseExhaustLevel()
     {
         exhaustLevel++;
+        if (exhaustLevel >= maxExhaustLevel) 
+        {
+            teleportScript.TeleportBackToTree();
+            exhaustLevel = 0;
+        }
     }
     
 }

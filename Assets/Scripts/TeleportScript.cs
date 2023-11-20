@@ -11,11 +11,15 @@ public class TeleportScript : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
     }
+    private void Update()
+    {
+        if (GameValueManager.INSTANCE.exhaustLevel == GameValueManager.INSTANCE.maxExhaustLevel)
+        {
+            TeleportBackToTree();
+        }
+    }
     public void TeleportBackToTree()
     {
-        if (GameValueManager.INSTANCE.exhaustLevel == 3)
-        {
-            rb2D.position = treeScript.transform.position;
-        }
+        rb2D.position = treeScript.transform.position;         
     }   
 }
