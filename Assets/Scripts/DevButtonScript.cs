@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DevButtonScript : MonoBehaviour
 {
+    public static DevButtonScript INSTANCE;
     public GameObject player;
     public Vector2 checkPoint;
     public float playerY;
