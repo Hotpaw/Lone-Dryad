@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 8347290138253707983}
   - component: {fileID: 3690963864398414237}
   - component: {fileID: 8530224298679314655}
+  - component: {fileID: 6739408173499341374}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -376,3 +377,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   devButtonScript: {fileID: 6668071987460727230, guid: 8fa1cdec4914de7408d5e9fd58b349a8, type: 3}
+--- !u!114 &6739408173499341374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134600171258895131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c510b4ce9a4801b41a20752a49f739a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkPoint: {fileID: 0}
+  playerMovement: {fileID: 2553664546516223078}
+  speedDecreaseAmount: 0
+  jumpDecreaseAmount: 0
+  playerSpeedValue: 0
+  playerJumpValue: 0
