@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class FollowPlayerScript : MonoBehaviour
 {
     public GameObject enemy;
     public Transform target;
     Rigidbody2D rb2D;
-    float enemySpeed = 3f;
+   public float enemySpeed = 3f;
 
     // Start is called before the first frame update
     void Start()
