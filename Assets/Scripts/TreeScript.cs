@@ -16,7 +16,7 @@ public class TreeScript : MonoBehaviour
     void Update()
     {
         GameValueManager.INSTANCE?.LoseWater();
-        spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);        
+        //spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);        
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {

@@ -9,25 +9,44 @@ public class ChangeTreeStage : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
     int id =1;
+    bool once;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        particleSystem.Play();
     }
     private void Update()
     {
+        GameValueManager.INSTANCE.IncreaseProgress();
+        var emission = particleSystem.emission;
+        if (!once)
+            emission.rateOverTime = 0.35f * GameValueManager.INSTANCE.progressScore;
+        var shape = particleSystem.shape;
+
         if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= 100)
-        {            
-            id++;     
-            particleSystem.Play();
-            StartCoroutine(YieldChangeTreeSprite());
-            GameValueManager.INSTANCE.progressScore = 0;
-        }
-        
+        {   
+            if (!once)
+            {
+                once = true;
+                id++;
+                shape.randomDirectionAmount = 1;
+                shape.randomPositionAmount = 1;
+                shape.sphericalDirectionAmount = 1;
+                emission.rateOverTime = id * 1000;                
+                StartCoroutine(YieldChangeTreeSprite());                
+            }
+        } 
     }
     IEnumerator YieldChangeTreeSprite()
     {
         yield return new WaitForSeconds(1f);
         ChangeTreeSprite(id);
+        var shape = particleSystem.shape;
+        shape.randomDirectionAmount = 0;
+        shape.randomPositionAmount = 0;
+        shape.sphericalDirectionAmount = 0;
+        GameValueManager.INSTANCE.progressScore = 0;
+        once = false;
     }
     public void ChangeTreeSprite(int id)
     {
