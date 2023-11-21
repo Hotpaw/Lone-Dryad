@@ -28,6 +28,24 @@ public class GameValueManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void GainProgress()
+    {
+        progressScore += Time.deltaTime;
+        if (waterLevel < 50)
+        {
+            progressScore += 0.5f * Time.deltaTime;
+        }
+        else if (waterLevel < 25) 
+        {
+            progressScore += 0.25f * Time.deltaTime;
+        }
+        else if (waterLevel <= 0)
+        {
+            progressScore -= 0.25f * Time.deltaTime;
+            waterLevel = 0;
+        }
+    }
+
     public void LoseWater()
     {
         waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;
