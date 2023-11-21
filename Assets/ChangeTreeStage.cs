@@ -16,12 +16,17 @@ public class ChangeTreeStage : MonoBehaviour
     private void Update()
     {
         if(Keyboard.current.spaceKey.wasPressedThisFrame == true)
-        {
-            ChangeTreeSprite(id);
+        {            
             id++;     
             particleSystem.Play();
+            StartCoroutine(YieldChangeTreeSprite());            
         }
         
+    }
+    IEnumerator YieldChangeTreeSprite()
+    {
+        yield return new WaitForSeconds(1f);
+        ChangeTreeSprite(id);
     }
     public void ChangeTreeSprite(int id)
     {
@@ -37,4 +42,5 @@ public class ChangeTreeStage : MonoBehaviour
                 break;
         }
     }
+    
 }

@@ -7,6 +7,7 @@ public class InteractWith : MonoBehaviour
     public InteractableObject interactableObject;
     public bool interactable;
     bool used = false;
+    public bool unlimitedUses = false;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (interactable)
@@ -15,9 +16,15 @@ public class InteractWith : MonoBehaviour
             {
                 if (!used)
                 {
-                    used = true;
-                    interactableObject.Interact();
-                    DisableInteractable();
+                    if (!unlimitedUses)
+                    {
+                        used = true;
+                        interactableObject.Interact();
+                        DisableInteractable();
+                    }
+                    else
+                        interactableObject.Interact();
+
                 }
 
             }
@@ -33,9 +40,14 @@ public class InteractWith : MonoBehaviour
                 
                 if (!used)
                 {
-                    used = true;
-                    interactableObject.Interact();
-                    DisableInteractable();
+                    if (!unlimitedUses)
+                    {
+                        used = true;
+                        interactableObject.Interact();
+                        DisableInteractable();
+                    }
+                    else
+                        interactableObject.Interact();
                 }
             }
             else
