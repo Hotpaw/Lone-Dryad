@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FollowPlayerScript : MonoBehaviour
 {
-    public GameObject enemy;
-    public Transform target;
-    Rigidbody2D rb2D;
+ 
+   public Transform target;
+   Rigidbody2D rb2D;
    public float enemySpeed = 3f;
 
     // Start is called before the first frame update
