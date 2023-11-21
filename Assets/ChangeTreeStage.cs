@@ -15,7 +15,7 @@ public class ChangeTreeStage : MonoBehaviour
     }
     private void Update()
     {
-        if(Keyboard.current.spaceKey.wasPressedThisFrame == true)
+        if(Keyboard.current.gKey.wasPressedThisFrame == true)
         {            
             id++;     
             particleSystem.Play();
