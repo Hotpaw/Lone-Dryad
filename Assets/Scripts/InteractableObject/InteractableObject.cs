@@ -5,7 +5,5 @@ using UnityEngine;
 public abstract class InteractableObject : MonoBehaviour
 {
     // Start is called before the first frame update
-    public abstract void Interact();
-    
-    
+    public abstract void Interact();    
 }

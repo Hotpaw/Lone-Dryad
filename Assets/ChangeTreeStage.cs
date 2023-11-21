@@ -7,7 +7,7 @@ public class ChangeTreeStage : MonoBehaviour
 {
     public List<Sprite> treeStages;
     SpriteRenderer spriteRenderer;
-    public ParticleSystem particleSystem;
+    public new ParticleSystem particleSystem;
     int id =2;
     private void Start()
     {

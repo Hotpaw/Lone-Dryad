@@ -12,6 +12,8 @@ public class GameValueManager : MonoBehaviour
     public float waterLoss;
     public float treeLevel;
     public float currentEnergy;
+    public float maxHealth;
+    public float currentHealth;
 
     //Dryad stats
     public TeleportScript teleportScript;
@@ -43,6 +45,14 @@ public class GameValueManager : MonoBehaviour
     public void IncreaseEnergyLevel(float amount)
     {
         currentEnergy += amount;
+    }
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+    }
+    public void GameOver()
+    {
+
     }
 
 }
