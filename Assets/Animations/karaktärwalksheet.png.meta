@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 10a0c574484b82f47a827e0ab110a747
+=======
+guid: aa922d72511e2ef4cb96f6692d577ecd
+>>>>>>> parent of dbd17f1 (Merge branch 'main' of https://github.com/Hotpaw/Lone-Dryad)
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +47,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> parent of dbd17f1 (Merge branch 'main' of https://github.com/Hotpaw/Lone-Dryad)
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -81,6 +89,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+<<<<<<< HEAD
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -94,6 +103,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
+=======
+>>>>>>> parent of dbd17f1 (Merge branch 'main' of https://github.com/Hotpaw/Lone-Dryad)
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -119,9 +130,196 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
   spriteSheet:
     serializedVersion: 2
     sprites: []
+=======
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4d0459aca7cff478c90dc3904f1113
+      internalID: 1195889246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_1"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b815edd8e888f847aa72f48a64ebcff
+      internalID: -1069100754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_2"
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2e6373008d7a2f48b7c1608181ab033
+      internalID: -1310196430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_3"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e929eda9ce6939745a98e8f3ecc6f454
+      internalID: 822436053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7b48f4cd625f74582c0c6da8597ddc
+      internalID: 156854337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_5"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9bd00062be848409efa874b0f1ed44
+      internalID: 1020711053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_6"
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffda7c52f0df8424389297f2809d544c
+      internalID: 84104203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheet_7"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fde9c1a595aa841b278f9c06437e91
+      internalID: 1680896211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> parent of dbd17f1 (Merge branch 'main' of https://github.com/Hotpaw/Lone-Dryad)
     outline: []
     physicsShape: []
     bones: []
@@ -132,7 +330,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
     nameFileIdTable: {}
+=======
+    nameFileIdTable:
+      "karakt\xE4rwalksheet_0": 1195889246
+      "karakt\xE4rwalksheet_1": -1069100754
+      "karakt\xE4rwalksheet_2": -1310196430
+      "karakt\xE4rwalksheet_3": 822436053
+      "karakt\xE4rwalksheet_4": 156854337
+      "karakt\xE4rwalksheet_5": 1020711053
+      "karakt\xE4rwalksheet_6": 84104203
+      "karakt\xE4rwalksheet_7": 1680896211
+>>>>>>> parent of dbd17f1 (Merge branch 'main' of https://github.com/Hotpaw/Lone-Dryad)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
