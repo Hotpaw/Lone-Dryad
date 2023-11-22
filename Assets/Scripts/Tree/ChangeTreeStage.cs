@@ -9,7 +9,7 @@ public class ChangeTreeStage : MonoBehaviour
     public List<Sprite> treeStages;
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
-    int id =1;
+    public int id =1;
     bool once;
     public GameOverScript gameOverScript;
     private void Start()
