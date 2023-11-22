@@ -28,14 +28,5 @@ public class TreeScript : MonoBehaviour
                 gameOverScript.GameOver();
             }
         }
-    }
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        health.TakeDamage(1);
-        if ( health.currentHealth <= 0)
-        {
-            gameOverScript.GameOver();
-        }
-    }
-
+    } 
 }
