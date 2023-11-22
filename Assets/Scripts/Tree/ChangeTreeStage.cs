@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class ChangeTreeStage : MonoBehaviour
 {
     public List<Sprite> treeStages;
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
-    int id =1;
+    public int id =1;
     bool once;
     public GameOverScript gameOverScript;
     private void Start()
@@ -26,7 +27,7 @@ public class ChangeTreeStage : MonoBehaviour
 
         if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= 100)
         {   
-            if (!once)
+            if (!once && id < 6)
             {
                 once = true;
                 id++;
