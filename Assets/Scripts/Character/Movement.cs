@@ -46,6 +46,8 @@ public class Movement : MonoBehaviour
 
     private Vector2 vecGravity;
     bool jumpCallBeingPressed;
+
+    public bool right;
     private void Start()
     {
         Physics2D.queriesStartInColliders = false;
@@ -109,9 +111,17 @@ public class Movement : MonoBehaviour
     public void Flip()
     {
         if (xInput < -0.1f)
+        {
+
+            right = false;
             playerSprite.flipX = true;
+        }
         else if (xInput > 0.1f)
+        {
+            right = true;
             playerSprite.flipX = false;
+        }
+        Debug.Log(right);
     }
 
     public void Dash(InputAction.CallbackContext context)
