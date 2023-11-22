@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackValue : MonoBehaviour
 {
-    public int damage;
+    public int Treedamage;
    
     //public int currentHealth;
     //public int maxHealth;
