@@ -17,7 +17,7 @@ public class BloomingAura : MonoBehaviour
     void Update()
     {
         flowerTimer += Time.deltaTime;
-        if (flowerTimer > 0.2f && movement.isGrounded ) 
+        if (flowerTimer > 0.1f && movement.isGrounded ) 
         {
             Instantiate(flower, new Vector3 (transform.position.x, transform.position.y - 0.475f, 0), transform.rotation);
             flowerTimer = 0;
