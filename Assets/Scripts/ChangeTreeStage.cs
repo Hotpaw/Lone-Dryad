@@ -10,6 +10,7 @@ public class ChangeTreeStage : MonoBehaviour
     public new ParticleSystem particleSystem;
     int id =1;
     bool once;
+    GameOverScript gameOverScript;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -64,7 +65,11 @@ public class ChangeTreeStage : MonoBehaviour
                 spriteRenderer.sprite = treeStages[3];
                 break;
             case 5:
+                spriteRenderer.sprite = treeStages[4];                
+                break;
+            case 6:
                 spriteRenderer.sprite = treeStages[4];
+                gameOverScript.WinGame();
                 break;
         }
     }

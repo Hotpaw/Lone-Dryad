@@ -5025,7 +5025,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5280249613807412224}
   health: {fileID: 1505651948598819397}
   gameOverScript: {fileID: 0}
-  wiltingTree: {fileID: 0}
+  wiltingTree: {fileID: 5465376704038557651, guid: e8e8f21a0646d69478bf5cf333cd3320, type: 3}
 --- !u!114 &1505651948598819397
 MonoBehaviour:
   m_ObjectHideFlags: 0
