@@ -6,9 +6,17 @@ public class StartState : State
 {
 
     public State attackState;
+    public bool attack;
     public override State RunCurrentState()
     {
-        return this;
+        if (!attack)
+        {
+            return this;
+        }
+        else
+        {
+            return attackState;
+        }
     }
 
 
