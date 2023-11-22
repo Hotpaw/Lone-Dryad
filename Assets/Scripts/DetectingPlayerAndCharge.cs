@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class DetectingPlayer : MonoBehaviour
+public class DetectingPlayerAndCharge : MonoBehaviour
 {
     public Transform target;
 
@@ -13,12 +13,17 @@ public class DetectingPlayer : MonoBehaviour
 
     public float withinRange;
 
+    float detectRadius;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
+        StartCoroutine(Charge(1f)); //how much is the delay
+
+
         rb2D = GetComponent<Rigidbody2D>();
 
     }
@@ -27,6 +32,7 @@ public class DetectingPlayer : MonoBehaviour
     void Update()
     {
         Detection();
+        
     }
 
     public void Detection()
@@ -55,6 +61,8 @@ public class DetectingPlayer : MonoBehaviour
             rb2D.velocity= Vector2.zero;
 
             transform.rotation = Quaternion.identity;
+
+
         }
 
     }
@@ -65,5 +73,37 @@ public class DetectingPlayer : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, withinRange);
 
 
+    }
+
+    IEnumerator Charge(float chargedelay)
+    {
+
+        yield return new WaitForSeconds(chargedelay); //wait for specified delay
+
+        //action to perform after delay
+
+        float detectRadius = Vector2.Distance(transform.position, target.transform.position);
+
+        if (detectRadius <= withinRange)
+        {
+
+            enemySpeed+= 4f;
+
+        
+
+            //Debug.Log("player in range" + enemySpeed);
+
+        }
+        else
+        {
+
+           rb2D.velocity = Vector2.zero;
+
+            transform.rotation = Quaternion.identity;
+
+           
+        }
+
+        StartCoroutine(Charge(chargedelay));
     }
 }
