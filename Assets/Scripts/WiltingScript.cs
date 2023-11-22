@@ -17,18 +17,14 @@ public class WiltingScript : MonoBehaviour
     }
 
     private void Update()
-    {
-        if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
-        {
-            particleSystem.Play();
-            WiltTree();          
-            wilting = true;
-        }
+    {        
+        particleSystem.Play();
+        WiltTree();          
+        wilting = true;        
         if (wilting)
         {
             WiltTree();
-        }
-        
+        }        
     }
     //IEnumerator YieldWiltingTree()
     //{

@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public float currentHealth;
     public float maxHealth;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class Health : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);
+        Destroy(gameObject);        
     }
 
 }
