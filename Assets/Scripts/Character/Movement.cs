@@ -114,12 +114,12 @@ public class Movement : MonoBehaviour
         {
 
             right = false;
-            playerSprite.flipX = true;
+            playerSprite.flipX = false;
         }
         else if (xInput > 0.1f)
         {
             right = true;
-            playerSprite.flipX = false;
+            playerSprite.flipX = true;
         }
         Debug.Log(right);
     }
