@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2456.6108, y: 766.2551}
+  m_AnchoredPosition: {x: 8.491, y: -4.2454}
+  m_SizeDelta: {x: 3150, y: 1590}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &362179613901001868
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The Tree is rotten, you dead!
+  m_text: 'The tree is healthy and happy! You won very much!
 
     Press R to restart'
   m_isRightToLeft: 0
@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9179492535559473834
 RectTransform:
   m_ObjectHideFlags: 0

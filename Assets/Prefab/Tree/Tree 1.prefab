@@ -58,6 +58,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c8c0416d6405781419d9e6cd19108c9b, type: 3}
   - {fileID: 21300000, guid: 23d2f93613ae0f8428ba4a729ddae996, type: 3}
   particleSystem: {fileID: 8374226956251733907}
+  gameOverScript: {fileID: 4235941407364987273, guid: e8e8f21a0646d69478bf5cf333cd3320, type: 3}
 --- !u!212 &5280249613807412224
 SpriteRenderer:
   m_ObjectHideFlags: 0
