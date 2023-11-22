@@ -12,7 +12,8 @@ public class InteractWith : MonoBehaviour
     {
         if (interactable)
         {
-            if (collision.gameObject.CompareTag("Player") && Gamepad.current.buttonEast.IsPressed() || Keyboard.current.eKey.wasPressedThisFrame == true)
+            
+            if (collision != null && collision.gameObject.CompareTag("Player") && Gamepad.current.buttonEast.IsPressed() || Keyboard.current.eKey.wasPressedThisFrame == true)
             {
                 if (!used)
                 {
