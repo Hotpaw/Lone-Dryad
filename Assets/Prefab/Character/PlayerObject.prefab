@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 3690963864398414237}
   - component: {fileID: 8530224298679314655}
   - component: {fileID: 6739408173499341374}
+  - component: {fileID: 3518732695571583954}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -68,7 +69,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3626746282453398816}
   m_Father: {fileID: 6908549365073698798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3710457006668558986
@@ -180,6 +182,7 @@ MonoBehaviour:
   dashStrength: 30
   dashCooldown: 1
   dead: 0
+  right: 0
 --- !u!114 &7538903822014611799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,13 +230,13 @@ MonoBehaviour:
     m_ActionName: Player/Look[/XInputControllerWindows/rightStick,/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 3518732695571583954}
+        m_TargetAssemblyTypeName: playerAttack, Assembly-CSharp
+        m_MethodName: Fire
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -376,7 +379,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80662edfb061fb14f86ee47edb7c98bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  devButtonScript: {fileID: 6668071987460727230, guid: 8fa1cdec4914de7408d5e9fd58b349a8, type: 3}
+  treeScript: {fileID: 0}
 --- !u!114 &6739408173499341374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,3 +398,51 @@ MonoBehaviour:
   jumpDecreaseAmount: 0
   playerSpeedValue: 0
   playerJumpValue: 0
+--- !u!114 &3518732695571583954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134600171258895131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5dffd9cc160bd8409759131a574796d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coolDown: 0
+  attackSpeed: 1
+  Projectiles:
+  - {fileID: 1507772101223891192, guid: 5951d1b8edb54f746a074472e3d75c11, type: 3}
+  attackPoint: {fileID: 3626746282453398816}
+--- !u!1 &7442248028267429792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3626746282453398816}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3626746282453398816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7442248028267429792}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1020250558922792702}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

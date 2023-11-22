@@ -5,7 +5,7 @@ using UnityEngine;
 public class AttackValue : MonoBehaviour
 {
     public int damage;
-   
+
     //public int currentHealth;
     //public int maxHealth;
 
@@ -19,7 +19,7 @@ public class AttackValue : MonoBehaviour
     //// Update is called once per frame
     //void Update()
     //{
-        
+
     //}
 
     //public void Damage(int damageAmount)
@@ -31,4 +31,13 @@ public class AttackValue : MonoBehaviour
     //        Destroy(gameObject);
     //    }
     //}
+    
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+        if (collision.gameObject.CompareTag("Tree"))
+        {
+            collision.gameObject.GetComponent<Health>().TakeDamage(damage);
+        }
+    }
 }
