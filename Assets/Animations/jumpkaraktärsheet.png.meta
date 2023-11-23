@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: a0d3aa950b3b71046a17973d9aa55a6f
-=======
-guid: 50047399bd0739d4eb165714e7fc11c3
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,15 +39,11 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,16 +63,29 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,25 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-=======
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -150,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 693eeddf20c9c8440bbfde9f667b52e0
-      internalID: -338980150
+      spriteID: 7ddf25ab150b37c40b8da94ad748e97f
+      internalID: 1572424999
       vertices: []
       indices: 
       edges: []
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88494c195b9146d48a39b80dbf9d441c
-      internalID: 304986406
+      spriteID: fd12dc6f05ae1d04aad0645727337efa
+      internalID: 489336795
       vertices: []
       indices: 
       edges: []
@@ -192,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f7e986c09da2b6449f7441ecee9b245
-      internalID: 2104750639
+      spriteID: ff074d9575f9f0d44af28dad9c3d10f8
+      internalID: 1651036793
       vertices: []
       indices: 
       edges: []
@@ -213,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5073665ba68371540b99fd0d686d4d31
-      internalID: -987589099
+      spriteID: e66a4d5545060794ba668ec26a53ecaf
+      internalID: -1990435685
       vertices: []
       indices: 
       edges: []
@@ -234,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c105b366c8b872242860aaca4ea422c7
-      internalID: 652119454
+      spriteID: 8f3a54c15ef46bb47879c24da2f2f63a
+      internalID: -2083383060
       vertices: []
       indices: 
       edges: []
@@ -255,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cd9517065ba02146b2c9068cc718e4a
-      internalID: -822871110
+      spriteID: a8a262b26b8d2bb4d9aa6c6253434bb5
+      internalID: 746791888
       vertices: []
       indices: 
       edges: []
@@ -276,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94b9ec8c592e88644b3e7fb37f7b9c18
-      internalID: 826795379
+      spriteID: 333e728376626134d89b6afb5be5f278
+      internalID: 326216748
       vertices: []
       indices: 
       edges: []
@@ -297,36 +284,31 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03b315660f732db46b0b938be7e2744a
-      internalID: -1652846144
+      spriteID: e808fa0de3de71547a7d6f6b4bf662b4
+      internalID: 99248311
       vertices: []
       indices: 
       edges: []
       weights: []
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 3ad61e336f339d846866c0e611703072
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      "jumpkarakt\xE4rsheet_0": -338980150
-      "jumpkarakt\xE4rsheet_1": 304986406
-      "jumpkarakt\xE4rsheet_2": 2104750639
-      "jumpkarakt\xE4rsheet_3": -987589099
-      "jumpkarakt\xE4rsheet_4": 652119454
-      "jumpkarakt\xE4rsheet_5": -822871110
-      "jumpkarakt\xE4rsheet_6": 826795379
-      "jumpkarakt\xE4rsheet_7": -1652846144
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
+      "jumpkarakt\xE4rsheet_0": 1572424999
+      "jumpkarakt\xE4rsheet_1": 489336795
+      "jumpkarakt\xE4rsheet_2": 1651036793
+      "jumpkarakt\xE4rsheet_3": -1990435685
+      "jumpkarakt\xE4rsheet_4": -2083383060
+      "jumpkarakt\xE4rsheet_5": 746791888
+      "jumpkarakt\xE4rsheet_6": 326216748
+      "jumpkarakt\xE4rsheet_7": 99248311
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b8b3771e06e39124784d64d586ff4d38
-=======
-guid: 17d6e8212c09b4544910e192ae47c1fe
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,15 +39,11 @@ TextureImporter:
     mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: 1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-<<<<<<< HEAD
-  spriteMode: 1
-=======
   spriteMode: 2
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,16 +63,29 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
+  applyGammaDecoding: 1
   swizzle: 50462976
-  cookieLightType: 0
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -93,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,25 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-<<<<<<< HEAD
-  spriteSheet:
-    serializedVersion: 2
-    sprites: []
-=======
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,7 +128,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 385
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -150,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f25972f53b5cbef4f9cab300225877a9
-      internalID: -1918151455
+      spriteID: abd7aa7c47508364986c92538c1ec527
+      internalID: -1348384173
       vertices: []
       indices: 
       edges: []
@@ -160,9 +147,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_1"
       rect:
         serializedVersion: 2
-        x: 238
+        x: 326
         y: 385
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 559d1f9245be08740b7c9e3bafde46ae
-      internalID: -1300975033
+      spriteID: 47125bd994e197a4391a2199834b6f8f
+      internalID: -1154892502
       vertices: []
       indices: 
       edges: []
@@ -181,9 +168,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_2"
       rect:
         serializedVersion: 2
-        x: 476
+        x: 652
         y: 385
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28e907b6c37e1ff44b8e262ce17cfdb8
-      internalID: -7014388
+      spriteID: 03e1632908ffb9d4581e127b131cd612
+      internalID: -283994240
       vertices: []
       indices: 
       edges: []
@@ -202,9 +189,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_3"
       rect:
         serializedVersion: 2
-        x: 714
+        x: 978
         y: 385
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fa1f191b5071204fac21af2d23224bc
-      internalID: -1911995027
+      spriteID: 89238e1caa91b60448c035c41b82b338
+      internalID: 940777767
       vertices: []
       indices: 
       edges: []
@@ -223,9 +210,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_4"
       rect:
         serializedVersion: 2
-        x: 952
-        y: 385
-        width: 238
+        x: 0
+        y: 2
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 130374aac26d4b740a26aeb19105df98
-      internalID: 1676564480
+      spriteID: 7b03070e061a5d64bba1964115adedd5
+      internalID: 1305950421
       vertices: []
       indices: 
       edges: []
@@ -244,9 +231,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_5"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 326
         y: 2
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fa7db57ef3b9794f99821db0363c093
-      internalID: -194483879
+      spriteID: fcb0541342674db4c983e84ae7fbdecc
+      internalID: -1753682107
       vertices: []
       indices: 
       edges: []
@@ -265,9 +252,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_6"
       rect:
         serializedVersion: 2
-        x: 238
+        x: 652
         y: 2
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,8 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1f2b15312d06724aadd995631b8d1ab
-      internalID: 759438964
+      spriteID: 8fead781c51ed4b41948f26651d05c71
+      internalID: 850071476
       vertices: []
       indices: 
       edges: []
@@ -286,9 +273,9 @@ TextureImporter:
       name: "karakt\xE4rrunsheet_7"
       rect:
         serializedVersion: 2
-        x: 476
+        x: 978
         y: 2
-        width: 238
+        width: 326
         height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,80 +284,31 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ffe54c8edbe37d4e834ce3869df7a6c
-      internalID: -943745045
+      spriteID: 515cdc3127a16a34b82e780efa7d7d5e
+      internalID: -705026637
       vertices: []
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: "karakt\xE4rrunsheet_8"
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 2
-        width: 238
-        height: 383
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eaeef1fd099261845ad79368d5036125
-      internalID: -1568601614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "karakt\xE4rrunsheet_9"
-      rect:
-        serializedVersion: 2
-        x: 952
-        y: 2
-        width: 238
-        height: 383
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fce45892f24abf44b2301c73e0f9964
-      internalID: -202341089
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: c8fc243b299b0ed40b7fba440b1e60e3
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-<<<<<<< HEAD
-    nameFileIdTable: {}
-=======
     nameFileIdTable:
-      "karakt\xE4rrunsheet_0": -1918151455
-      "karakt\xE4rrunsheet_1": -1300975033
-      "karakt\xE4rrunsheet_2": -7014388
-      "karakt\xE4rrunsheet_3": -1911995027
-      "karakt\xE4rrunsheet_4": 1676564480
-      "karakt\xE4rrunsheet_5": -194483879
-      "karakt\xE4rrunsheet_6": 759438964
-      "karakt\xE4rrunsheet_7": -943745045
-      "karakt\xE4rrunsheet_8": -1568601614
-      "karakt\xE4rrunsheet_9": -202341089
->>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
+      "karakt\xE4rrunsheet_0": -1348384173
+      "karakt\xE4rrunsheet_1": -1154892502
+      "karakt\xE4rrunsheet_2": -283994240
+      "karakt\xE4rrunsheet_3": 940777767
+      "karakt\xE4rrunsheet_4": 1305950421
+      "karakt\xE4rrunsheet_5": -1753682107
+      "karakt\xE4rrunsheet_6": 850071476
+      "karakt\xE4rrunsheet_7": -705026637
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
