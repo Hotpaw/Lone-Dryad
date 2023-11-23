@@ -18,13 +18,19 @@ public class TreeScript : MonoBehaviour
     void Update()
     {
         GameValueManager.INSTANCE?.LoseWater();
-        //spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);
+        spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);
         if (Input.GetKeyDown (KeyCode.LeftControl)) 
         {
             health.TakeDamage(1);
         }
         if (health.currentHealth <= 0)
             WiltingTree();
+        if (GameValueManager.INSTANCE?.waterLevel <= 0) 
+        { 
+            gameOverScript.GameOver();
+            StartCoroutine(health.YieldDie());
+            WiltingTree();
+        }
     }
     public void WiltingTree()
     {

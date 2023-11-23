@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
             }
         }            
     }
-    IEnumerator YieldDie()
+    public IEnumerator YieldDie()
     {
         yield return new WaitForSeconds(0.1f);
         Die();

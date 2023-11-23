@@ -30,7 +30,7 @@ public class GameValueManager : MonoBehaviour
 
     public void IncreaseProgress()
     {
-        progressScore += 10 * Time.deltaTime;
+        progressScore += 2 * Time.deltaTime;
         if (waterLevel < 50)
         {
             progressScore += 1.5f * Time.deltaTime;
