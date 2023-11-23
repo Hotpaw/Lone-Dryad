@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7910264016518433208
 RectTransform:
   m_ObjectHideFlags: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 1396706140537398761}
   - component: {fileID: 1942333667195431657}
   - component: {fileID: 8020949429591653100}
-  - component: {fileID: 5411413523721115876}
+  - component: {fileID: 3231149862191492745}
   m_Layer: 5
   m_Name: PopUpCanvas
   m_TagString: Untagged
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &5411413523721115876
+--- !u!114 &3231149862191492745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +246,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6350145354620660458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac7e9d418edd5024f936c32694fde049, type: 3}
+  m_Script: {fileID: 11500000, guid: d23d8fb9421d204468b3f274465b15b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   popUpText: {fileID: 6183398809146926204}
+  timer: 0
