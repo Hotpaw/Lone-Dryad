@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AttackState : State
 {
-    public State startState;
     public override State RunCurrentState()
     {
         return this;

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: d76fb9f498217924d9cdd1e5030270ac
+<<<<<<< HEAD
+guid: b8b3771e06e39124784d64d586ff4d38
+=======
+guid: 17d6e8212c09b4544910e192ae47c1fe
+>>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +47,16 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
+  spriteMode: 1
+=======
   spriteMode: 2
+>>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,17 +114,35 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+=======
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Characterwalk_0
+      name: "karakt\xE4rrunsheet_0"
       rect:
         serializedVersion: 2
-        x: 28
-        y: 432
-        width: 185
-        height: 342
+        x: 0
+        y: 385
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d86f534df4131644ba9062e6ca095343
-      internalID: -1771837587
+      spriteID: f25972f53b5cbef4f9cab300225877a9
+      internalID: -1918151455
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_1
+      name: "karakt\xE4rrunsheet_1"
       rect:
         serializedVersion: 2
-        x: 291
-        y: 430
-        width: 183
-        height: 350
+        x: 238
+        y: 385
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f17f7c4e9f5371458e8e536734565f0
-      internalID: -1230209555
+      spriteID: 559d1f9245be08740b7c9e3bafde46ae
+      internalID: -1300975033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_2
+      name: "karakt\xE4rrunsheet_2"
       rect:
         serializedVersion: 2
-        x: 558
-        y: 425
-        width: 176
-        height: 361
+        x: 476
+        y: 385
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +192,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319aadb3f6f2fca40b281223673ff55a
-      internalID: -813150818
+      spriteID: 28e907b6c37e1ff44b8e262ce17cfdb8
+      internalID: -7014388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_3
+      name: "karakt\xE4rrunsheet_3"
       rect:
         serializedVersion: 2
-        x: 815
-        y: 430
-        width: 179
-        height: 350
+        x: 714
+        y: 385
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd80e64a570c14429a47dd7d1be1c13
-      internalID: 1539530651
+      spriteID: 0fa1f191b5071204fac21af2d23224bc
+      internalID: -1911995027
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_4
+      name: "karakt\xE4rrunsheet_4"
       rect:
         serializedVersion: 2
-        x: 28
-        y: 30
-        width: 185
-        height: 341
+        x: 952
+        y: 385
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +234,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec3c90e6d89199940a002e9c791a4ebf
-      internalID: -1814368508
+      spriteID: 130374aac26d4b740a26aeb19105df98
+      internalID: 1676564480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_5
+      name: "karakt\xE4rrunsheet_5"
       rect:
         serializedVersion: 2
-        x: 291
-        y: 28
-        width: 183
-        height: 349
+        x: 0
+        y: 2
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +255,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af16b00005890e740aacbbe7bad217e2
-      internalID: -1488526407
+      spriteID: 4fa7db57ef3b9794f99821db0363c093
+      internalID: -194483879
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_6
+      name: "karakt\xE4rrunsheet_6"
       rect:
         serializedVersion: 2
-        x: 558
-        y: 23
-        width: 176
-        height: 360
+        x: 238
+        y: 2
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +276,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b57c2aa2fc7d7624399fb9ee79acecd0
-      internalID: -1705629136
+      spriteID: c1f2b15312d06724aadd995631b8d1ab
+      internalID: 759438964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_7
+      name: "karakt\xE4rrunsheet_7"
       rect:
         serializedVersion: 2
-        x: 815
-        y: 28
-        width: 179
-        height: 349
+        x: 476
+        y: 2
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,12 +297,55 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8447b5b94cdb0414da9b26f054ef20eb
-      internalID: -2104785320
+      spriteID: 9ffe54c8edbe37d4e834ce3869df7a6c
+      internalID: -943745045
       vertices: []
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rrunsheet_8"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 2
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeef1fd099261845ad79368d5036125
+      internalID: -1568601614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rrunsheet_9"
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 2
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fce45892f24abf44b2301c73e0f9964
+      internalID: -202341089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
     outline: []
     physicsShape: []
     bones: []
@@ -287,15 +356,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
+    nameFileIdTable: {}
+=======
     nameFileIdTable:
-      Characterwalk_0: -1771837587
-      Characterwalk_1: -1230209555
-      Characterwalk_2: -813150818
-      Characterwalk_3: 1539530651
-      Characterwalk_4: -1814368508
-      Characterwalk_5: -1488526407
-      Characterwalk_6: -1705629136
-      Characterwalk_7: -2104785320
+      "karakt\xE4rrunsheet_0": -1918151455
+      "karakt\xE4rrunsheet_1": -1300975033
+      "karakt\xE4rrunsheet_2": -7014388
+      "karakt\xE4rrunsheet_3": -1911995027
+      "karakt\xE4rrunsheet_4": 1676564480
+      "karakt\xE4rrunsheet_5": -194483879
+      "karakt\xE4rrunsheet_6": 759438964
+      "karakt\xE4rrunsheet_7": -943745045
+      "karakt\xE4rrunsheet_8": -1568601614
+      "karakt\xE4rrunsheet_9": -202341089
+>>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

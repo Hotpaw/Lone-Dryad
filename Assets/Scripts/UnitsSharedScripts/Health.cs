@@ -24,7 +24,22 @@ public class Health : MonoBehaviour
     {
         currentHealth -= amount;
         if (currentHealth <= 0)
-            Die();
+        {
+            if (this.CompareTag("Tree"))
+            {
+                this.GetComponent<TreeScript>().WiltingTree();
+                StartCoroutine(YieldDie());
+            }
+            else
+            {
+                Die();
+            }
+        }            
+    }
+    public IEnumerator YieldDie()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Die();
     }
     public void Die()
     {

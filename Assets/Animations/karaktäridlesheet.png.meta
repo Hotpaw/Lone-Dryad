@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d76fb9f498217924d9cdd1e5030270ac
+guid: 2cbfd67dfd4750d4abcfa076b292cffe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 192
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Characterwalk_0
+      name: "karakt\xE4ridlesheet_0"
       rect:
         serializedVersion: 2
-        x: 28
-        y: 432
-        width: 185
-        height: 342
+        x: 0
+        y: 383
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d86f534df4131644ba9062e6ca095343
-      internalID: -1771837587
+      spriteID: 79617a5274ee9ce47b65c8cfeebfce70
+      internalID: -1386407391
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_1
+      name: "karakt\xE4ridlesheet_1"
       rect:
         serializedVersion: 2
-        x: 291
-        y: 430
-        width: 183
-        height: 350
+        x: 238
+        y: 383
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f17f7c4e9f5371458e8e536734565f0
-      internalID: -1230209555
+      spriteID: d05cb585b1991d442842fb236b2e435e
+      internalID: 745084894
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_2
+      name: "karakt\xE4ridlesheet_2"
       rect:
         serializedVersion: 2
-        x: 558
-        y: 425
-        width: 176
-        height: 361
+        x: 476
+        y: 383
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 319aadb3f6f2fca40b281223673ff55a
-      internalID: -813150818
+      spriteID: 1d712e97de3917c41843929386f0c70c
+      internalID: -1147635435
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_3
+      name: "karakt\xE4ridlesheet_3"
       rect:
         serializedVersion: 2
-        x: 815
-        y: 430
-        width: 179
-        height: 350
+        x: 714
+        y: 383
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efd80e64a570c14429a47dd7d1be1c13
-      internalID: 1539530651
+      spriteID: d22056d2094fe114cb2f94b56595b789
+      internalID: -1148963661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_4
+      name: "karakt\xE4ridlesheet_4"
       rect:
         serializedVersion: 2
-        x: 28
-        y: 30
-        width: 185
-        height: 341
+        x: 0
+        y: 0
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec3c90e6d89199940a002e9c791a4ebf
-      internalID: -1814368508
+      spriteID: a384a43b0140a9f4dbbe53aa308c293e
+      internalID: -2124590952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_5
+      name: "karakt\xE4ridlesheet_5"
       rect:
         serializedVersion: 2
-        x: 291
-        y: 28
-        width: 183
-        height: 349
+        x: 238
+        y: 0
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af16b00005890e740aacbbe7bad217e2
-      internalID: -1488526407
+      spriteID: 520800d30e17aff438c4b42063ff6d99
+      internalID: -1395681536
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_6
+      name: "karakt\xE4ridlesheet_6"
       rect:
         serializedVersion: 2
-        x: 558
-        y: 23
-        width: 176
-        height: 360
+        x: 476
+        y: 0
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b57c2aa2fc7d7624399fb9ee79acecd0
-      internalID: -1705629136
+      spriteID: ae730b0cc34b8654db3684804e96534c
+      internalID: 1150565083
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Characterwalk_7
+      name: "karakt\xE4ridlesheet_7"
       rect:
         serializedVersion: 2
-        x: 815
-        y: 28
-        width: 179
-        height: 349
+        x: 714
+        y: 0
+        width: 238
+        height: 383
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8447b5b94cdb0414da9b26f054ef20eb
-      internalID: -2104785320
+      spriteID: a45e75a057934a54fb75236df09afc10
+      internalID: 699153643
       vertices: []
       indices: 
       edges: []
@@ -288,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Characterwalk_0: -1771837587
-      Characterwalk_1: -1230209555
-      Characterwalk_2: -813150818
-      Characterwalk_3: 1539530651
-      Characterwalk_4: -1814368508
-      Characterwalk_5: -1488526407
-      Characterwalk_6: -1705629136
-      Characterwalk_7: -2104785320
+      "karakt\xE4ridlesheet_0": -1386407391
+      "karakt\xE4ridlesheet_1": 745084894
+      "karakt\xE4ridlesheet_2": -1147635435
+      "karakt\xE4ridlesheet_3": -1148963661
+      "karakt\xE4ridlesheet_4": -2124590952
+      "karakt\xE4ridlesheet_5": -1395681536
+      "karakt\xE4ridlesheet_6": 1150565083
+      "karakt\xE4ridlesheet_7": 699153643
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

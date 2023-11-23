@@ -2,22 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartState : State
+public class ChaseState : State
 {
-
     public State attackState;
     public bool attack;
+
     public override State RunCurrentState()
     {
         if (!attack)
         {
             return this;
         }
-        else
+        else if (attack)
         {
             return attackState;
         }
+        else
+        {
+            return this;
+        }
+
     }
-
-
 }

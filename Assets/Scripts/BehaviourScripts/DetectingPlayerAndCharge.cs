@@ -78,7 +78,7 @@ public class DetectingPlayerAndCharge : MonoBehaviour
     IEnumerator Charge(float chargedelay)
     {
 
-        yield return new WaitForSeconds(chargedelay); //wait for specified delay
+        yield return new WaitForSeconds(chargedelay); //wait for specified delay 
 
         //action to perform after delay
 
@@ -87,7 +87,7 @@ public class DetectingPlayerAndCharge : MonoBehaviour
         if (detectRadius <= withinRange)
         {
 
-            enemySpeed+= 4f;
+            enemySpeed+= 4f; //increase speed
 
         
 
@@ -97,13 +97,13 @@ public class DetectingPlayerAndCharge : MonoBehaviour
         else
         {
 
-           rb2D.velocity = Vector2.zero;
+           rb2D.velocity = Vector2.zero; //no velocity when outside cirle
 
-            transform.rotation = Quaternion.identity;
+            transform.rotation = Quaternion.identity; //förhindrar rotation och spin
 
            
         }
 
-        StartCoroutine(Charge(chargedelay));
+        StartCoroutine(Charge(chargedelay)); //reset timer
     }
 }

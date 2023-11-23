@@ -121,7 +121,7 @@ public class Movement : MonoBehaviour
             right = true;
             playerSprite.flipX = true;
         }
-        Debug.Log(right);
+    
     }
 
     public void Dash(InputAction.CallbackContext context)

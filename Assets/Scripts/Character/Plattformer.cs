@@ -25,12 +25,12 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
     ""maps"": [
         {
             ""name"": ""Player"",
-            ""id"": ""aaa2226f-9637-4903-9054-b2c11fd4ab8d"",
+            ""IdleState"": ""aaa2226f-9637-4903-9054-b2c11fd4ab8d"",
             ""actions"": [
                 {
                     ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""03e701ca-e1f4-486c-b13e-1ee94f87f15a"",
+                    ""IdleState"": ""03e701ca-e1f4-486c-b13e-1ee94f87f15a"",
                     ""expectedControlType"": ""Axis"",
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
@@ -39,7 +39,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Look"",
                     ""type"": ""Value"",
-                    ""id"": ""451559fc-1177-4ba9-945b-ef01cabf8abc"",
+                    ""IdleState"": ""451559fc-1177-4ba9-945b-ef01cabf8abc"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -48,7 +48,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Fire"",
                     ""type"": ""Button"",
-                    ""id"": ""08996434-e75e-4125-a4f1-f051ba6ca165"",
+                    ""IdleState"": ""08996434-e75e-4125-a4f1-f051ba6ca165"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -57,7 +57,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""d7bd2431-433d-454a-8766-b118c747036c"",
+                    ""IdleState"": ""d7bd2431-433d-454a-8766-b118c747036c"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -66,7 +66,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Dash"",
                     ""type"": ""Button"",
-                    ""id"": ""f40fdf88-4849-4b21-84f2-15dacbdbe278"",
+                    ""IdleState"": ""f40fdf88-4849-4b21-84f2-15dacbdbe278"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press"",
@@ -75,7 +75,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Attack"",
                     ""type"": ""Button"",
-                    ""id"": ""0ec41246-b811-4646-ab5d-3c670bde6666"",
+                    ""IdleState"": ""0ec41246-b811-4646-ab5d-3c670bde6666"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press"",
@@ -84,7 +84,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""HoldOn"",
                     ""type"": ""Button"",
-                    ""id"": ""b15fad5a-e0ee-410a-b313-cc9c191ee790"",
+                    ""IdleState"": ""b15fad5a-e0ee-410a-b313-cc9c191ee790"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Hold(duration=0.1,pressPoint=0.1)"",
@@ -94,7 +94,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""978bfe49-cc26-4a3d-ab7b-7d7a29327403"",
+                    ""IdleState"": ""978bfe49-cc26-4a3d-ab7b-7d7a29327403"",
                     ""path"": ""<Gamepad>/leftStick/x"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -105,7 +105,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8"",
+                    ""IdleState"": ""1635d3fe-58b6-4ba9-a4e2-f4b964f6b5c8"",
                     ""path"": ""<XRController>/{Primary2DAxis}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -116,7 +116,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3ea4d645-4504-4529-b061-ab81934c3752"",
+                    ""IdleState"": ""3ea4d645-4504-4529-b061-ab81934c3752"",
                     ""path"": ""<Joystick>/stick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -127,7 +127,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a2e3c804-75fb-42b6-ac84-e58b192b9ad1"",
+                    ""IdleState"": ""a2e3c804-75fb-42b6-ac84-e58b192b9ad1"",
                     ""path"": ""<Gamepad>/dpad/x"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -138,7 +138,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""1D Axis"",
-                    ""id"": ""e629db79-e304-4c64-bd6d-1e4b3942b892"",
+                    ""IdleState"": ""e629db79-e304-4c64-bd6d-1e4b3942b892"",
                     ""path"": ""1DAxis(whichSideWins=1)"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -149,7 +149,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""negative"",
-                    ""id"": ""1b1642f4-783e-4f3d-a3d6-e048eee4d557"",
+                    ""IdleState"": ""1b1642f4-783e-4f3d-a3d6-e048eee4d557"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -160,7 +160,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""1305e3de-b276-4145-937e-2b94d46b7ee9"",
+                    ""IdleState"": ""1305e3de-b276-4145-937e-2b94d46b7ee9"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -171,7 +171,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
+                    ""IdleState"": ""c1f7a91b-d0fd-4a62-997e-7fb9b69bf235"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -182,7 +182,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
+                    ""IdleState"": ""8c8e490b-c610-4785-884f-f04217b23ca4"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -193,7 +193,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3e5f5442-8668-4b27-a940-df99bad7e831"",
+                    ""IdleState"": ""3e5f5442-8668-4b27-a940-df99bad7e831"",
                     ""path"": ""<Joystick>/{Hatswitch}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -204,7 +204,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
+                    ""IdleState"": ""143bb1cd-cc10-4eca-a2f0-a3664166fe91"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -215,7 +215,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
+                    ""IdleState"": ""05f6913d-c316-48b2-a6bb-e225f14c7960"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -226,7 +226,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""886e731e-7071-4ae4-95c0-e61739dad6fd"",
+                    ""IdleState"": ""886e731e-7071-4ae4-95c0-e61739dad6fd"",
                     ""path"": ""<Touchscreen>/primaryTouch/tap"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -237,7 +237,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ee3d0cd2-254e-47a7-a8cb-bc94d9658c54"",
+                    ""IdleState"": ""ee3d0cd2-254e-47a7-a8cb-bc94d9658c54"",
                     ""path"": ""<Joystick>/trigger"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -248,7 +248,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8255d333-5683-4943-a58a-ccb207ff1dce"",
+                    ""IdleState"": ""8255d333-5683-4943-a58a-ccb207ff1dce"",
                     ""path"": ""<XRController>/{PrimaryAction}"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -259,7 +259,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""7e5473a4-9610-4371-8880-2e7e845617f6"",
+                    ""IdleState"": ""7e5473a4-9610-4371-8880-2e7e845617f6"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -270,7 +270,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""86145ba6-2924-45c3-abad-93dc937428f5"",
+                    ""IdleState"": ""86145ba6-2924-45c3-abad-93dc937428f5"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -281,7 +281,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""025fab15-8b44-448c-b6d5-46c1800255fb"",
+                    ""IdleState"": ""025fab15-8b44-448c-b6d5-46c1800255fb"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -292,7 +292,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""04af48d1-5793-4e0f-b33a-5c2cae26d40f"",
+                    ""IdleState"": ""04af48d1-5793-4e0f-b33a-5c2cae26d40f"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -303,7 +303,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6d62c563-6039-4932-a1de-b00083ade2f2"",
+                    ""IdleState"": ""6d62c563-6039-4932-a1de-b00083ade2f2"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -314,7 +314,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8768e772-ae46-4502-9464-e447bfb0232c"",
+                    ""IdleState"": ""8768e772-ae46-4502-9464-e447bfb0232c"",
                     ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
@@ -325,7 +325,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""474b8817-4b20-48ab-92b4-441107356ca2"",
+                    ""IdleState"": ""474b8817-4b20-48ab-92b4-441107356ca2"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": ""Hold"",
                     ""processors"": """",

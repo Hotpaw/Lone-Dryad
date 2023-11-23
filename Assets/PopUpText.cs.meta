@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/States/ChaseState.cs.meta
+guid: d23d8fb9421d204468b3f274465b15b0
+========
+guid: ac7e9d418edd5024f936c32694fde049
+>>>>>>>> 83562d60744215bfeddeef7b727e3148ee21e4ee:Assets/PopUpText.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

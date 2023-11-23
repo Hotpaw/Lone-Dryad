@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/States/ChaseState.cs.meta
+guid: 97b607cde566f39438212ed83fcc38cf
+========
+guid: 2cd738143cbce104f95011b645fded62
+>>>>>>>> 6c4de3dfe2bb25045e02a9ac4cc3904982c21050:Assets/Scripts/Enemies/EnemieSpawner.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
