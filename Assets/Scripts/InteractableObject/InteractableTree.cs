@@ -6,12 +6,13 @@ public class Tree : InteractableObject
 {
     public override void Interact()
     {
-        GameValueManager.INSTANCE.waterLevel += GameValueManager.INSTANCE.carryingWater;
-        if (GameValueManager.INSTANCE.waterLevel > 100)
-            GameValueManager.INSTANCE.waterLevel = 100;
-        GameValueManager.INSTANCE.carryingWater = 0;
+        if (GameValueManager.INSTANCE.carryingWater > 0)
+        {
+            GameValueManager.INSTANCE.waterLevel += GameValueManager.INSTANCE.carryingWater;
+            PopUpText.INSTANCE.PopUpMessage("Drunk tree", Color.magenta);
+            if (GameValueManager.INSTANCE.waterLevel > 100)
+                GameValueManager.INSTANCE.waterLevel = 100;
+            GameValueManager.INSTANCE.carryingWater = 0;
+        }
     }
-    
-
-
 }
