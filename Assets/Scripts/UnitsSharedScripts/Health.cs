@@ -28,12 +28,18 @@ public class Health : MonoBehaviour
             if (this.CompareTag("Tree"))
             {
                 this.GetComponent<TreeScript>().WiltingTree();
+                StartCoroutine(YieldDie());
             }
             else
             {
                 Die();
             }
         }            
+    }
+    IEnumerator YieldDie()
+    {
+        yield return new WaitForSeconds(0.1f);
+        Die();
     }
     public void Die()
     {
