@@ -22,11 +22,13 @@ public class TreeScript : MonoBehaviour
         if (Input.GetKeyDown (KeyCode.LeftControl)) 
         {
             health.TakeDamage(1);
-            if (health.currentHealth <= 0)
-            {
-                wiltingTree.SetActive(true);
-                gameOverScript.GameOver();
-            }
         }
-    } 
+        if (health.currentHealth <= 0)
+            WiltingTree();
+    }
+    public void WiltingTree()
+    {
+        wiltingTree.SetActive(true);
+        gameOverScript.GameOver();
+    }
 }

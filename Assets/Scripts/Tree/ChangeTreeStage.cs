@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class ChangeTreeStage : MonoBehaviour
 {
     public List<Sprite> treeStages;
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
-    int id =1;
+    public int id =1;
     bool once;
+    public EnemieSpawner spawner;
     public GameOverScript gameOverScript;
     private void Start()
     {
@@ -26,7 +28,7 @@ public class ChangeTreeStage : MonoBehaviour
 
         if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= 100)
         {   
-            if (!once)
+            if (!once && id < 6)
             {
                 once = true;
                 id++;
@@ -55,8 +57,14 @@ public class ChangeTreeStage : MonoBehaviour
         {
             case 1:
                 spriteRenderer.sprite = treeStages[0];
+                
                 break;
-            case 2: spriteRenderer.sprite = treeStages[1];
+            case 2: 
+                spriteRenderer.sprite = treeStages[1];
+                if (spawner != null)
+                {
+                    spawner.SpawnEnemy(0, new Vector2(12.61f, 3.75f));
+                }
                 break;
             case 3:
                 spriteRenderer.sprite = treeStages[2];
