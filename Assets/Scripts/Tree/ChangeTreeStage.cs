@@ -11,6 +11,7 @@ public class ChangeTreeStage : MonoBehaviour
     public new ParticleSystem particleSystem;
     public int id =1;
     bool once;
+    public EnemieSpawner spawner;
     public GameOverScript gameOverScript;
     private void Start()
     {
@@ -56,8 +57,14 @@ public class ChangeTreeStage : MonoBehaviour
         {
             case 1:
                 spriteRenderer.sprite = treeStages[0];
+                
                 break;
-            case 2: spriteRenderer.sprite = treeStages[1];
+            case 2: 
+                spriteRenderer.sprite = treeStages[1];
+                if (spawner != null)
+                {
+                    spawner.SpawnEnemy(0, new Vector2(12.61f, 3.75f));
+                }
                 break;
             case 3:
                 spriteRenderer.sprite = treeStages[2];
