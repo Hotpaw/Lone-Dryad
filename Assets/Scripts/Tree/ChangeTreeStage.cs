@@ -63,7 +63,8 @@ public class ChangeTreeStage : MonoBehaviour
                 spriteRenderer.sprite = treeStages[1];
                 if (spawner != null)
                 {
-                    spawner.SpawnEnemy(0, new Vector2(12.61f, 3.75f));
+                    spawner.SpawnEnemy(0, new Vector2(27f, -4f));
+                    spawner.SpawnEnemy(0, new Vector2(-43f, 10f));
                 }
                 break;
             case 3:

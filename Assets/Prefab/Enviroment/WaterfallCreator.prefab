@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6297177761950096451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3728567647110956798}
+  - component: {fileID: 6380897787405380524}
+  m_Layer: 0
+  m_Name: WaterfallCreator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3728567647110956798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297177761950096451}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.74033284, y: -6.9882293, z: 0.48080766}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2871377098498190076}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6380897787405380524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297177761950096451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25c23aa365300b64aaf63e003100770f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstFallPosition: {fileID: 2871377098498190076}
+  waterfall: {fileID: 7637797328027550791, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+  waterfallWidth: 100
+--- !u!1001 &7355124615019338073
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3728567647110956798}
+    m_Modifications:
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.0096672
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.3817706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0042116046
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7637797328027550791, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_Name
+      value: Waterfall
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+--- !u!4 &2871377098498190076 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+  m_PrefabInstance: {fileID: 7355124615019338073}
+  m_PrefabAsset: {fileID: 0}

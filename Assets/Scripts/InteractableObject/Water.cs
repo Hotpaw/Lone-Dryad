@@ -10,7 +10,6 @@ public class Water : InteractableObject
     public override void Interact()
     {
         //Här
-        GameValueManager.INSTANCE.carryingWater += waterAmount;
-        waterAmount = 0;
+        GameValueManager.INSTANCE.carryingWater = waterAmount;        
     }
 }

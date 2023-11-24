@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1178008384819037961}
   - component: {fileID: 1860837032368101014}
   - component: {fileID: 7877070587296899061}
+  - component: {fileID: -2240890064337806613}
   m_Layer: 8
   m_Name: enemy2 (1)
   m_TagString: Enemy
@@ -114,7 +115,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &1178008384819037961
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,5 +177,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c529efc2e18574e488bd6bfd0cad0b96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 2547331271290354222, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
   enemySpeed: 3
+--- !u!114 &-2240890064337806613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2820279264199627435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5042b0f058c490499de05e6f7e7d997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
