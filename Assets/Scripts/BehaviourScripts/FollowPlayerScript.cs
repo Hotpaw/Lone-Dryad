@@ -32,6 +32,8 @@ public class FollowPlayerScript : MonoBehaviour
 
             transform.right = target.position - transform.position;
 
+            transform.rotation = Quaternion.identity;
+
         }
 
     }

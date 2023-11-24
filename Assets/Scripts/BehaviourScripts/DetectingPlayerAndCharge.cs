@@ -7,7 +7,7 @@ public class DetectingPlayerAndCharge : MonoBehaviour
 {
     public Transform target;
 
-    float enemySpeed = 3f;
+    float enemySpeed = 1.5f;
 
     Rigidbody2D rb2D;
 
@@ -87,7 +87,7 @@ public class DetectingPlayerAndCharge : MonoBehaviour
         if (detectRadius <= withinRange)
         {
 
-            enemySpeed+= 4f; //increase speed
+            enemySpeed+= 2.5f; //increase speed
 
         
 
