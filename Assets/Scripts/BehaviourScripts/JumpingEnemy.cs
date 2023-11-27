@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -31,11 +32,13 @@ public class JumpingEnemy : MonoBehaviour
 
 
     [Header("JumpAttack")]
-    [SerializeField] float enemyJumpHeight;
+    [SerializeField] public float enemyJumpHeight;
     [SerializeField] Transform target;
     [SerializeField] Transform checkingGround;
     [SerializeField] Vector2 boxSize; //istället för float radius av cirkel, är det overlapbox, så då blir dte vector 2.
     [SerializeField] bool isOnGround;
+    [SerializeField] public float jumpAngle;
+    
 
 
 
@@ -56,9 +59,17 @@ public class JumpingEnemy : MonoBehaviour
         //allså en cirkels storlek. Den retuernerar null om inte, annars returnerar collider. groundcheck position är mitten av cirkeln. raidus storlek, och gorundlayer är vilket layer den ska kolla som överlappar. 
         againstWall = Physics2D.OverlapCircle(wallCheck.position, radius, groundLayer);
 
-        isOnGround = Physics2D.OverlapBox(checkingGround.position, boxSize, 0, groundLayer); //samma som ovan, fast vecto1 och 0 är "angle".
+        isOnGround = Physics2D.OverlapBox(checkingGround.position, boxSize, jumpAngle, groundLayer); //samma som ovan, fast vecto1 och 0 är "angle".
 
-        EnemyPetrolling();
+
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    JumpAttack();
+        //}
+
+        //EnemyPetrolling();
+
+        FlipToPlayer();
     }
 
 
@@ -86,13 +97,30 @@ public class JumpingEnemy : MonoBehaviour
 
     }
 
+    void FlipToPlayer()
+    {
+        float playerPosition = target.position.x - transform.position.x;
+
+        if (playerPosition < 0 && facingRight)
+        {
+
+            EnemyFlipSide();
+
+        }
+        else if (playerPosition > 0 && !facingRight)
+        {
+            EnemyFlipSide();
+        }
+
+    }
+
 
     void JumpAttack()
     {
 
-        float distanceFromPlayer = target.position.x - transform.position.x;
+        float distanceFromPlayer = target.position.x - transform.position.x; //enemyn tittar hur långt ifrån den är fårn spelaren för att kunan göra sitt hopp.
 
-        if (isOnGround) //om nu spelaren är på marken...
+        if (isOnGround) //om nu spelaren är på marken, och efter dne caluclerat hur långt den är från playern...
         {
             enemy2D.AddForce(new Vector2(distanceFromPlayer, enemyJumpHeight), ForceMode2D.Impulse); //så ska spelaren hoppa.ForceMode.2d är för impuler så som hopp, snabba ryck.You Apply impulse to jump towards the player 
         }
@@ -116,7 +144,8 @@ public class JumpingEnemy : MonoBehaviour
 
         Gizmos.DrawWireSphere(onGroundCheck.position, radius);
         Gizmos.DrawWireSphere(wallCheck.position, radius);
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(checkingGround.position, boxSize);
     }
 
 
