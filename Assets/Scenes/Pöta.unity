@@ -1108,9 +1108,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4065574140520954512, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065574140520954512, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.10588074
+      objectReference: {fileID: 0}
     - target: {fileID: 6297177761950096451, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: m_Name
       value: WaterfallCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: waterAmount
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: waterFallSpeed
+      value: 42.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: waterFallWidth
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: waterFallLength
+      value: 2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502555897371333570, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: fallSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6502555897371333570, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: maxLenght
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
