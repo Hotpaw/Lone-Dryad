@@ -13,6 +13,8 @@ public class ChangeTreeStage : MonoBehaviour
     bool once;
     public EnemieSpawner spawner;
     public GameOverScript gameOverScript;
+    public Collider2D branchOne;
+    public Collider2D branchTwo;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -72,9 +74,11 @@ public class ChangeTreeStage : MonoBehaviour
                 break;
             case 4:
                 spriteRenderer.sprite = treeStages[3];
+                branchOne.enabled = true;
+                branchTwo.enabled = true;
                 break;
             case 5:
-                spriteRenderer.sprite = treeStages[4];                
+                spriteRenderer.sprite = treeStages[4];   
                 break;
             case 6:
                 spriteRenderer.sprite = treeStages[4];
