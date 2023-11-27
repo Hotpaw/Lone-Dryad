@@ -7,7 +7,8 @@ public class GameValueManager : MonoBehaviour
     public static GameValueManager INSTANCE;
 
     //Tree Stats    
-    public float progressScore;    
+    public float progressScore;
+    public float nextStageScore;
     public float waterLevel;
     public float waterLoss;
     public float treeLevel;
@@ -28,22 +29,23 @@ public class GameValueManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void IncreaseProgress()
+    public void IncreaseProgress(float amount)
     {
-        progressScore += 2 * Time.deltaTime;
-        if (waterLevel < 50)
-        {
-            progressScore += 1.5f * Time.deltaTime;
-        }
-        else if (waterLevel < 25) 
-        {
-            progressScore += 0.75f * Time.deltaTime;
-        }
-        else if (waterLevel <= 0)
-        {
-            progressScore -= 1f * Time.deltaTime;
-            waterLevel = 0;
-        }
+        progressScore += amount;
+        //progressScore += 2 * Time.deltaTime;
+        //if (waterLevel < 50)
+        //{
+        //    progressScore += 1.5f * Time.deltaTime;
+        //}
+        //else if (waterLevel < 25) 
+        //{
+        //    progressScore += 0.75f * Time.deltaTime;
+        //}
+        //else if (waterLevel <= 0)
+        //{
+        //    progressScore -= 1f * Time.deltaTime;
+        //    waterLevel = 0;
+        //}
     }
 
     public void LoseWater()

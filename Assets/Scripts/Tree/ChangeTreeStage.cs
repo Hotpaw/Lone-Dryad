@@ -10,8 +10,7 @@ public class ChangeTreeStage : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
     public int id =1;
-    bool once;
-    public EnemieSpawner spawner;
+    bool once;    
     public GameOverScript gameOverScript;
     public Collider2D branchOne;
     public Collider2D branchTwo;
@@ -19,20 +18,23 @@ public class ChangeTreeStage : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         particleSystem.Play();
+        GameValueManager.INSTANCE.nextStageScore = 60;
     }
     private void Update()
     {
-        GameValueManager.INSTANCE.IncreaseProgress();
+        //GameValueManager.INSTANCE.IncreaseProgress();
         var emission = particleSystem.emission;
         if (!once)
             emission.rateOverTime = id * 0.35f * GameValueManager.INSTANCE.progressScore;
         var shape = particleSystem.shape;
 
-        if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= 100)
+        if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= GameValueManager.INSTANCE.nextStageScore)
         {   
             if (!once && id < 6)
             {
                 once = true;
+                GameValueManager.INSTANCE.treeLevel++;
+                Water.INSTANCE.waterAmount = 50;
                 id++;
                 shape.randomDirectionAmount = 1;
                 shape.randomPositionAmount = 1;
@@ -51,6 +53,7 @@ public class ChangeTreeStage : MonoBehaviour
         shape.randomPositionAmount = 0;
         shape.sphericalDirectionAmount = 0;
         GameValueManager.INSTANCE.progressScore = 0;
+        GameValueManager.INSTANCE.nextStageScore = 80 * (id * 0.5f);
         once = false;
     }
     public void ChangeTreeSprite(int id)
@@ -62,12 +65,7 @@ public class ChangeTreeStage : MonoBehaviour
                 
                 break;
             case 2: 
-                spriteRenderer.sprite = treeStages[1];
-                if (spawner != null)
-                {
-                    spawner.SpawnEnemy(0, new Vector2(27f, -4f));
-                    spawner.SpawnEnemy(0, new Vector2(-43f, 10f));
-                }
+                spriteRenderer.sprite = treeStages[1];      
                 break;
             case 3:
                 spriteRenderer.sprite = treeStages[2];
