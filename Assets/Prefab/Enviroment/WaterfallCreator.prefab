@@ -47,7 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstFallPosition: {fileID: 2871377098498190076}
   waterfall: {fileID: 7637797328027550791, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
-  waterfallWidth: 100
+  waterFallSpeed: 0
+  waterFallLength: 0
+  waterAmount: 85
+  waterFallWidth: 1.4
 --- !u!1001 &7355124615019338073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -95,6 +98,14 @@ PrefabInstance:
     - target: {fileID: 4741033237421798309, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807600944695894985, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807600944695894985, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.10588074
       objectReference: {fileID: 0}
     - target: {fileID: 7637797328027550791, guid: 311678ffd7001d74594df30b924c0c11, type: 3}
       propertyPath: m_Name

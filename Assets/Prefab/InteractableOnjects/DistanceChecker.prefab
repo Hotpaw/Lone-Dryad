@@ -93,8 +93,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1243778105760348273}
-  - component: {fileID: 8605444891176439347}
   - component: {fileID: 8596412616499620434}
+  - component: {fileID: 801299906881695007}
   m_Layer: 0
   m_Name: DistanceChecker
   m_TagString: Untagged
@@ -118,19 +118,6 @@ Transform:
   - {fileID: 4622242178157253993}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8605444891176439347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7124445211457528006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3b658d2e2640b549950e63221b22fbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sp: {fileID: 0}
 --- !u!61 &8596412616499620434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +163,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.893998, y: 70.14}
   m_EdgeRadius: 0
+--- !u!114 &801299906881695007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7124445211457528006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe19eab3f44ead946b349d54e828753f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sp: {fileID: 0}
