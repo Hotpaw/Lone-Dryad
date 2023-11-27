@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Tree
   - Enemy
+  - TreeTop
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Tree
   - Enemy
   - Obstacle
-  - 
+  - TreeTop
   - 
   - 
   - 
