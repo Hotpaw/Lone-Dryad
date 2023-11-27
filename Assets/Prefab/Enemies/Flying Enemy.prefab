@@ -99,6 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   treeTop: {fileID: 0}
+  enemyPause: {fileID: 0}
+  isPausing: 0
   flyingSpeed: 2.08
 --- !u!50 &4880468465725232394
 Rigidbody2D:
@@ -126,4 +128,4 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
