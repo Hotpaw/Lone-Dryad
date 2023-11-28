@@ -43,12 +43,12 @@ public class FloweScript : MonoBehaviour
                 growing = false;
             }
         }
-        //if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
-        //{
-        //    particleSystem.Play();
-        //    WiltTree();
-        //    wilting = true;
-        //}
+        if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
+        {
+            particleSystem.Play();
+            WiltTree();
+            wilting = true;
+        }
         if (wilting)
         {
             WiltTree();
@@ -61,10 +61,13 @@ public class FloweScript : MonoBehaviour
         spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);
         Destroy(gameObject, 5.5f);
     }
-    public void OnTriggerExit2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        particleSystem.Play();
-        WiltTree();
-        wilting = true;
+        if (collision.CompareTag("Player"))
+        {
+            particleSystem.Play();
+            WiltTree();
+            wilting = true;
+        }
     }
 }

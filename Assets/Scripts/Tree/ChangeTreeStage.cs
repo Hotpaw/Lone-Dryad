@@ -13,7 +13,7 @@ public class ChangeTreeStage : MonoBehaviour
     bool once;    
     public GameOverScript gameOverScript;
     public Collider2D branchOne;
-    public Collider2D branchTwo;
+    public Collider2D branchTwo;    
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -32,6 +32,7 @@ public class ChangeTreeStage : MonoBehaviour
         {   
             if (!once && id < 6)
             {
+                Destroy(GetComponent<PolygonCollider2D>());
                 once = true;
                 GameValueManager.INSTANCE.treeLevel++;
                 Water.INSTANCE.waterAmount = 50;
@@ -54,6 +55,7 @@ public class ChangeTreeStage : MonoBehaviour
         shape.sphericalDirectionAmount = 0;
         GameValueManager.INSTANCE.progressScore = 0;
         GameValueManager.INSTANCE.nextStageScore = 80 * (id * 0.5f);
+        gameObject.AddComponent<PolygonCollider2D>();
         once = false;
     }
     public void ChangeTreeSprite(int id)
