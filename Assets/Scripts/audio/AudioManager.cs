@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,12 +14,35 @@ public class AudioManager : MonoBehaviour
     public AudioSource Music;
     public List<AudioClip> SFXClips;
     public List<AudioClip> musicClips;
+    public Slider SFXslider;
+    public Slider musicslider;
+    public Slider masterSlider;
+
+    AudioMixer masterMixer;
 
     private void Awake()
     {
         if (INSTANCE != null) Destroy(this.gameObject);
         INSTANCE = this;
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void Update()
+    {
+       
+    }
+    // Add slider in the UI and change On Value Change for each slider to use the functions below for each volume setting
+    public void SetSFXVolume(float volume)
+    {
+        masterMixer.SetFloat("SFX", volume);
+    }
+    public void SetMusicVolume(float volume)
+    {
+        masterMixer.SetFloat("Music", volume);
+    }
+    public void SetMasterVolume(float volume)
+    {
+        masterMixer.SetFloat("Master", volume);
     }
     public void PlaySFX(string clip)
     {
