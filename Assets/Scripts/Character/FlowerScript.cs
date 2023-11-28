@@ -23,8 +23,8 @@ public class FloweScript : MonoBehaviour
     {
         particleSystem = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        growSize = Random.Range(0.1f, 0.3f);
-        growSpeed = Random.Range(0.1f, 0.2f);
+        growSize = Random.Range(0.3f, 0.7f);
+        growSpeed = Random.Range(0.1f, 0.4f);
         growUpWhen = 0.1f;
     }
 

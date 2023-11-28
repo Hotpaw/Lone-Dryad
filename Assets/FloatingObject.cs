@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.ShaderGraph.Internal;
@@ -9,6 +10,7 @@ public class FloatingObject : MonoBehaviour
     public GameObject floatingTo;
     //Added random xOffset for diffrent landing position.
     public float xOffset;
+    public GameObject landingPosition;
     bool destroyThisSeed;
     public float destroyTimer;
 
@@ -25,7 +27,7 @@ public class FloatingObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        xOffset = Random.Range(GameValueManager.INSTANCE.treeLevel * 2, GameValueManager.INSTANCE.treeLevel * -2);
+        xOffset = Random.Range(GameValueManager.INSTANCE.treeLevel * 15, GameValueManager.INSTANCE.treeLevel * -15);
         floating2D = GetComponent<Rigidbody2D>();
     }
 
@@ -40,7 +42,7 @@ public class FloatingObject : MonoBehaviour
         }
 
 
-        Vector2 directionTarget = (new Vector3(floatingTo.transform.position.y, floatingTo.transform.position.x + xOffset) - transform.position).normalized;
+        Vector2 directionTarget = (new Vector3(floatingTo.transform.position.x + xOffset, floatingTo.transform.position.y) - transform.position).normalized;
       Vector2 floatForce = directionTarget * floatStrength;
 
         float objectRotation = objectRotationStrength * Mathf.Sin(Time.time);
@@ -60,7 +62,7 @@ public class FloatingObject : MonoBehaviour
     {
         if (!destroyThisSeed)
         {
-            GameObject plant = Instantiate(corruptPlant, new Vector3(transform.position.x, transform.position.y - 2f), Quaternion.identity);
+            GameObject plant = Instantiate(corruptPlant, landingPosition.transform.position, Quaternion.identity);
             plant.transform.SetParent(null);
             destroyThisSeed = true;
         }
