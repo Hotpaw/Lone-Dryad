@@ -69,20 +69,22 @@ public class JumpingEnemy : MonoBehaviour
         canSeePlayer = Physics2D.OverlapBox(transform.position, lineOfSight, jumpAngle, playerLayer);
 
 
-        if (!canSeePlayer && isOnGround) 
-        {
-            FlipToPlayer();
-            EnemyPetrolling();
-            
+        //if (!canSeePlayer && isOnGround) 
+        //{
+        //    FlipToPlayer();
+        //    EnemyPetrolling();
 
-        }
-        else if (canSeePlayer) 
-        {
-           
-            JumpAttack();
-            
 
-        }
+        //}
+        //else if (canSeePlayer) 
+        //{
+
+        //    JumpAttack();
+
+
+        //}
+
+        EnemyPetrolling();
 
 
     }
@@ -90,7 +92,7 @@ public class JumpingEnemy : MonoBehaviour
 
     public void EnemyPetrolling()
     {
-        if (!onGround || againstWall) // om nu enemy inte checkar markeb men checkar emot en vägg så...
+        if (!onGround || againstWall) // om nu enemy inte checkar marken men checkar emot en vägg så...
         {
         
            if (facingRight) //är den riktaf mot höger
