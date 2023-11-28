@@ -7,6 +7,10 @@ using UnityEngine.UIElements;
 public class FloatingObject : MonoBehaviour
 {
     public GameObject floatingTo;
+    //Added random xOffset for diffrent landing position.
+    public float xOffset;
+    bool destroyThisSeed;
+    public float destroyTimer;
 
     Rigidbody2D floating2D;
 
@@ -14,25 +18,34 @@ public class FloatingObject : MonoBehaviour
 
     float objectRotationStrength = 1f;
 
+    public GameObject corruptPlant;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        xOffset = Random.Range(GameValueManager.INSTANCE.treeLevel * 2, GameValueManager.INSTANCE.treeLevel * -2);
         floating2D = GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-      Vector2 directionTarget = (floatingTo.transform.position - transform.position).normalized;
+        if (destroyThisSeed)
+        {
+            destroyTimer += Time.deltaTime;
+            if (destroyTimer > 0.2)
+                Destroy(gameObject);
+        }
+
+
+        Vector2 directionTarget = (new Vector3(floatingTo.transform.position.y, floatingTo.transform.position.x + xOffset) - transform.position).normalized;
       Vector2 floatForce = directionTarget * floatStrength;
 
         float objectRotation = objectRotationStrength * Mathf.Sin(Time.time);
 
-        floating2D.AddTorque(objectRotation);
+        //floating2D.AddTorque(objectRotation);
 
         floating2D.AddForce(directionTarget * floatStrength);
 
@@ -42,9 +55,15 @@ public class FloatingObject : MonoBehaviour
         {
             floating2D.velocity = Vector2.zero;
         }
-        
-
     }
-
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (!destroyThisSeed)
+        {
+            GameObject plant = Instantiate(corruptPlant, new Vector3(transform.position.x, transform.position.y - 2f), Quaternion.identity);
+            plant.transform.SetParent(null);
+            destroyThisSeed = true;
+        }
+        
+    }
 }
