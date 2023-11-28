@@ -1109,6 +1109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4065574140520954512, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4065574140520954512, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
       value: 0
       objectReference: {fileID: 0}
@@ -1122,7 +1126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: waterAmount
-      value: 21
+      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: waterFallSpeed
@@ -1130,11 +1134,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: waterFallWidth
-      value: 1.4
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: waterFallLength
-      value: 2.41
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6502555897371333570, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: fallSpeed
