@@ -18,9 +18,20 @@ public class FloweScript : MonoBehaviour
     public float wiltTimerColor = 1;
     bool wilting;
 
+    //Corrupt plants
+    public bool corruptPlant;
+    public float damageTreeTimer;
+    public int damage;
+    public float howOftenDamage;
+    public GameObject tree;
+    public Health treeHealth;
+    public GameObject energystealer;
+
     // Start is called before the first frame update
     void Start()
-    {
+    {        
+        tree = GameObject.FindGameObjectWithTag("Tree");
+        treeHealth = tree.GetComponent<Health>();
         particleSystem = GetComponent<ParticleSystem>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         growSize = Random.Range(0.3f, 0.7f);
@@ -43,31 +54,56 @@ public class FloweScript : MonoBehaviour
                 growing = false;
             }
         }
-        if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
-        {
-            particleSystem.Play();
-            WiltTree();
-            wilting = true;
-        }
+        //if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
+        //{
+        //    particleSystem.Play();
+        //    WiltTree();
+        //    wilting = true;
+        //}
         if (wilting)
+        {
+            WiltTree();
+        }
+        if (corruptPlant && !wilting)
+        {
+            damageTreeTimer += Time.deltaTime;
+            if (damageTreeTimer > howOftenDamage)
+            {
+                energystealer.SetActive(true);
+                damageTreeTimer = 0;
+                treeHealth.TakeDamage(damage);
+                PopUpText.INSTANCE.PopUpMessage("a parasitic plant is stealing the lifeenergy from the tree", Color.red);
+            }
+        }
+        if (tree == null)
         {
             WiltTree();
         }
     }
     public void WiltTree()
     {             
-        wiltTimerAlpha -= (0.35f * Time.deltaTime);   
-        wiltTimerColor -= (0.60f * Time.deltaTime);
+        wiltTimerAlpha -= (0.55f * Time.deltaTime);   
+        wiltTimerColor -= (0.70f * Time.deltaTime);
         spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);
-        Destroy(gameObject, 5.5f);
+        Destroy(gameObject, 4.5f);
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            particleSystem.Play();
-            WiltTree();
-            wilting = true;
+            PopUpText.INSTANCE.PopUpMessage("Press E to get rid of this evil plant", Color.magenta);             
+        }
+    }
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            if (Input.GetKey(KeyCode.E))
+            {
+                particleSystem.Play();
+                WiltTree();
+                wilting = true;
+            }
         }
     }
 }
