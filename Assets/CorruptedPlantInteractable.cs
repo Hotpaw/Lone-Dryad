@@ -7,7 +7,7 @@ public class CorruptedPlantInteractable : InteractableObject
 {
     public override void Interact()
     {
-       Destroy(transform.parent.gameObject, 4.5f);
+       //Destroy(transform.parent.gameObject, 4.5f);
     }
 
    

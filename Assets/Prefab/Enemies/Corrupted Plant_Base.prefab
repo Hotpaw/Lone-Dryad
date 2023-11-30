@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4281481427498831827}
   m_Layer: 0
-  m_Name: Corrupted Plant
+  m_Name: Corrupted Plant_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219928349718646913, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: iconOffset.y
-      value: 3
+      value: 5.39
       objectReference: {fileID: 0}
     - target: {fileID: 4219928349718646913, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: interactable
