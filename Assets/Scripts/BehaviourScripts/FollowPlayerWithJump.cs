@@ -11,7 +11,7 @@ public class FollowPlayerWithJump : MonoBehaviour
     Rigidbody2D rb2D;
 
     [SerializeField] public Vector3 direction = new Vector3(1, 1, 1);
-    public Transform target;
+     Transform target;
     float timerjump = 1f;
     public float jumpHeight;
     public float gravityForce = 5f;
@@ -29,7 +29,7 @@ public class FollowPlayerWithJump : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
-
+        target = FindAnyObjectByType<TreeScript>().transform;
 
     }
 
@@ -40,6 +40,7 @@ public class FollowPlayerWithJump : MonoBehaviour
         {
             if (walking)
             {
+                rb2D.gravityScale = 24;
                 isJumping = false;
                 transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
             }
@@ -61,8 +62,15 @@ public class FollowPlayerWithJump : MonoBehaviour
         if (Vector2.Distance(target.position, transform.position) < jumpRange)
         {
 
+            if(target != null)
+            {
 
             Jump();
+            }
+            else
+            {
+                Debug.LogError("There was no target referenced in Jump script");
+            }
         }
     }
 
@@ -100,7 +108,7 @@ public class FollowPlayerWithJump : MonoBehaviour
 
         Vector2 jumpDirection = (target.position - transform.position);
         rb2D.AddForce(Vector2.down * gravityForce, ForceMode2D.Force); //gravitation som ska dra ner
-
+        rb2D.gravityScale = 1;
 
         yield return new WaitForSeconds(0.5f);
         jumponce = false;
