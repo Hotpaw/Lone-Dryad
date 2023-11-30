@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5f759a7aab3154a8eb5105dacf111e
+      internalID: -335105002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_1"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285470ed04771a0448937273cc8e1a57
+      internalID: 833616466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_2"
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0adaafe1f01fd4bb59d27c76ec06d5
+      internalID: 2011924696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_3"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 383
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8db77665a924f5498b25aec80494e71
+      internalID: 431948654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab80d1ef23ae8bc4faeb0957d22925f8
+      internalID: -580523122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_5"
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d01e334bd11814b9a58fc2696b2817
+      internalID: -1427476153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_6"
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4fa631b16d548a44bc4047b85a1e479
+      internalID: 1210168110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rwalksheetv2_7"
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 238
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7238bc3e585144241b8761b6d84f4797
+      internalID: -114881178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "karakt\xE4rwalksheetv2_0": -335105002
+      "karakt\xE4rwalksheetv2_1": 833616466
+      "karakt\xE4rwalksheetv2_2": 2011924696
+      "karakt\xE4rwalksheetv2_3": 431948654
+      "karakt\xE4rwalksheetv2_4": -580523122
+      "karakt\xE4rwalksheetv2_5": -1427476153
+      "karakt\xE4rwalksheetv2_6": 1210168110
+      "karakt\xE4rwalksheetv2_7": -114881178
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

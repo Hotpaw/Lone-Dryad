@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f2818263095074ab64c22f3cb95ca6
+      internalID: 1418867884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_1"
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa87e896d0bf8994d937b95236a2b088
+      internalID: 1493906309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_2"
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1fd8cc9b1849fe4bb6cfd348a7332a2
+      internalID: -458638293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_3"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a656b9f3685e74bbb83698750caa3c
+      internalID: 2124696430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b324c17fdc9cad1489f01b5b413138ea
+      internalID: 468063870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_5"
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276e0b2e8740b7f4886f8bf7d407fd00
+      internalID: -1445877289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_6"
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4485988d2cc0b3488316be13d80fade
+      internalID: 369466338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rcrawlsheetv2_7"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851cbce56b528a94bbf033b21d030328
+      internalID: 811740472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "karakt\xE4rcrawlsheetv2_0": 1418867884
+      "karakt\xE4rcrawlsheetv2_1": 1493906309
+      "karakt\xE4rcrawlsheetv2_2": -458638293
+      "karakt\xE4rcrawlsheetv2_3": 2124696430
+      "karakt\xE4rcrawlsheetv2_4": 468063870
+      "karakt\xE4rcrawlsheetv2_5": -1445877289
+      "karakt\xE4rcrawlsheetv2_6": 369466338
+      "karakt\xE4rcrawlsheetv2_7": 811740472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
