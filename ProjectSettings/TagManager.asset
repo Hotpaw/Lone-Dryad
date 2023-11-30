@@ -10,7 +10,6 @@ TagManager:
   - TreeTop
   - Pause
   - Jump
-  - JumpStop
   layers:
   - Default
   - TransparentFX
@@ -23,7 +22,7 @@ TagManager:
   - Enemy
   - Obstacle
   - TreeTop
-  - Jump
+  - 
   - 
   - 
   - 

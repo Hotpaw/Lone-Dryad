@@ -45,7 +45,10 @@ public class Health : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);        
+        if (this.CompareTag("Tree"))
+            this.GetComponent<SpriteRenderer>().enabled = false;
+        else
+            Destroy(gameObject);
     }
 
 }
