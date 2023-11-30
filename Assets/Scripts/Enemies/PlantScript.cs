@@ -100,7 +100,7 @@ public class PlantScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.E))
+            if (Keyboard.current.eKey.IsActuated() && Gamepad.current.buttonEast.IsActuated())
             {
                 particleSystem.Play();
                 WiltTree();
