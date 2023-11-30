@@ -55,7 +55,8 @@ public class Movement : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
-        gravityscale = rb.gravityScale;
+        gravityscale = rb.gravityScale;      
+        animator.SetTrigger("Crawl");
     }
 
     void Update()

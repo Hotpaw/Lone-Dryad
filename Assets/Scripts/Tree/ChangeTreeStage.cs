@@ -11,9 +11,7 @@ public class ChangeTreeStage : MonoBehaviour
     public new ParticleSystem particleSystem;
     public int id =1;
     bool once;    
-    public GameOverScript gameOverScript;
-    public Collider2D branchOne;
-    public Collider2D branchTwo;    
+    public GameOverScript gameOverScript;    
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -77,9 +75,7 @@ public class ChangeTreeStage : MonoBehaviour
                 spriteRenderer.sprite = treeStages[2];
                 break;
             case 4:
-                spriteRenderer.sprite = treeStages[3];
-                branchOne.enabled = true;
-                branchTwo.enabled = true;
+                spriteRenderer.sprite = treeStages[3];                
                 break;
             case 5:
                 spriteRenderer.sprite = treeStages[4];   

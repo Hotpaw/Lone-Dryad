@@ -26,6 +26,8 @@ public class GameValueManager : MonoBehaviour
     public float exhaustLevel;
     public float maxExhaustLevel;
 
+    public Animator animator;
+
     public void Awake()
     {
         if (INSTANCE != null) Destroy(this.gameObject);
@@ -41,7 +43,7 @@ public class GameValueManager : MonoBehaviour
             progressScore += 1.5f * Time.deltaTime;
         }
         else if (waterLevel < 25)
-        {
+        {            
             progressScore += 0.75f * Time.deltaTime;
         }
         else if (waterLevel <= 0)
@@ -53,7 +55,7 @@ public class GameValueManager : MonoBehaviour
 
     public void LoseWater()
     {
-        waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;
+        waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;   
     }
 
     public void IncreaseExhaustLevel()
