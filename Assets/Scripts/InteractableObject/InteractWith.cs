@@ -18,13 +18,13 @@ public class InteractWith : MonoBehaviour
     }
     private void Update()
     {
-       // Update the icon to change during runtime whenever a controll is disconnected
+        // Update the icon to change during runtime whenever a controll is disconnected
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DisplayInteractableIcon();
 
-      
+
         if (interactable)
         {
 
@@ -36,7 +36,7 @@ public class InteractWith : MonoBehaviour
                     {
                         used = true;
                         interactableObject.Interact();
-                        DisableInteractable();
+
                     }
                     else
                         interactableObject.Interact();
@@ -60,7 +60,7 @@ public class InteractWith : MonoBehaviour
                     {
                         used = true;
                         interactableObject.Interact();
-                        DisableInteractable();
+
                     }
                     else
                         interactableObject.Interact();
@@ -86,10 +86,7 @@ public class InteractWith : MonoBehaviour
     {
         InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
-    public void DisableInteractable()
-    {
-        gameObject.SetActive(false);
-    }
+
 
 
 }
