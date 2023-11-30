@@ -11,7 +11,7 @@ public class FollowPlayerWithJump : MonoBehaviour
     Rigidbody2D rb2D;
 
     [SerializeField] public Vector3 direction = new Vector3(1, 1, 1);
-     Transform target;
+    Transform target;
     float timerjump = 1f;
     public float jumpHeight;
     public float gravityForce = 5f;
@@ -42,7 +42,7 @@ public class FollowPlayerWithJump : MonoBehaviour
             {
                 rb2D.gravityScale = 24;
                 isJumping = false;
-                if(target != null)
+                if (target != null)
                 {
                     transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
                 }
@@ -50,12 +50,20 @@ public class FollowPlayerWithJump : MonoBehaviour
                 {
                     Debug.LogError("There was no target referenced in Jump script");
                 }
-               
+
             }
         }
         else
         {
-            StartCoroutine(JumpWithGravity());
+            if (target != null)
+            {
+
+                StartCoroutine(JumpWithGravity());
+            }
+            else
+            {
+                Debug.LogError("There was no target referenced in Jump script");
+            }
         }
 
 
@@ -66,20 +74,21 @@ public class FollowPlayerWithJump : MonoBehaviour
 
     public void CheckDistanceToTarget()
     {
-
-        if (Vector2.Distance(target.position, transform.position) < jumpRange)
+        if (target != null)
         {
-
-            if(target != null)
+            if (Vector2.Distance(target.position, transform.position) < jumpRange)
             {
 
-            Jump();
-            }
-            else
-            {
-                Debug.LogError("There was no target referenced in Jump script");
+                Jump();
             }
         }
+        else
+        {
+            Debug.LogError("There was no target referenced in Jump script");
+        }
+
+
+
     }
 
     void Jump()
@@ -89,7 +98,7 @@ public class FollowPlayerWithJump : MonoBehaviour
 
 
         isJumping = true;
-      
+
 
         if (jumponce)
         {
