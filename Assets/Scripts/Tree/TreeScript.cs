@@ -17,6 +17,7 @@ public class TreeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameValueManager.INSTANCE?.IncreaseProgress();
         GameValueManager.INSTANCE?.LoseWater();
         spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);
         if (Input.GetKeyDown (KeyCode.LeftControl)) 

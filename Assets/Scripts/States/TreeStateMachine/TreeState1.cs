@@ -28,11 +28,11 @@ public class TreeState1 : State
                 seedTimer = 0;
                 spawnSeedAt = Random.Range(5,10);
             }
-            if (!once && GameValueManager.INSTANCE.progressScore >= 40)
-            {
-                once = true;
-                EnemySpawner.INSTANCE.SpawnEnemy(0, new Vector2(33, 4));
-            }
+            //if (!once && GameValueManager.INSTANCE.progressScore >= 40)
+            //{
+            //    once = true;
+            //    EnemySpawner.INSTANCE.SpawnEnemy(0, new Vector2(33, 4));
+            //}
             return this;
         }
         else
