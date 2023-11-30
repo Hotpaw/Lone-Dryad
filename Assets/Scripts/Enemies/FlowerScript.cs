@@ -63,11 +63,12 @@ public class FloweScript : MonoBehaviour
         if (wilting)
         {
             WiltTree();
+            energystealer.SetActive(false);
         }
         if (corruptPlant && !wilting)
         {
             damageTreeTimer += Time.deltaTime;
-            if (damageTreeTimer > howOftenDamage)
+            if (damageTreeTimer > howOftenDamage && GameValueManager.INSTANCE.treeIsALive)
             {
                 energystealer.SetActive(true);
                 damageTreeTimer = 0;

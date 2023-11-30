@@ -34,38 +34,45 @@ public class FloatingObject : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (destroyThisSeed)
+        if (floatingTo != null)
         {
-            destroyTimer += Time.deltaTime;
-            if (destroyTimer > 0.2)
-                Destroy(gameObject);
+            if (destroyThisSeed)
+            {
+                destroyTimer += Time.deltaTime;
+                if (destroyTimer > 0.2)
+                    Destroy(gameObject);
+            }
+
+
+            Vector2 directionTarget = (new Vector3(floatingTo.transform.position.x + xOffset, floatingTo.transform.position.y) - transform.position).normalized;
+            Vector2 floatForce = directionTarget * floatStrength;
+
+            float objectRotation = objectRotationStrength * Mathf.Sin(Time.time);
+
+            //floating2D.AddTorque(objectRotation);
+
+            floating2D.AddForce(directionTarget * floatStrength);
+
+            print(Vector2.Distance(floatingTo.transform.position, transform.position));
+
+            if (Vector2.Distance(floatingTo.transform.position, transform.position) < 1)
+            {
+                floating2D.velocity = Vector2.zero;
+            }
         }
-
-
-        Vector2 directionTarget = (new Vector3(floatingTo.transform.position.x + xOffset, floatingTo.transform.position.y) - transform.position).normalized;
-      Vector2 floatForce = directionTarget * floatStrength;
-
-        float objectRotation = objectRotationStrength * Mathf.Sin(Time.time);
-
-        //floating2D.AddTorque(objectRotation);
-
-        floating2D.AddForce(directionTarget * floatStrength);
-
-        print(Vector2.Distance(floatingTo.transform.position, transform.position));
-
-        if (Vector2.Distance(floatingTo.transform.position, transform.position) < 1)
-        {
-            floating2D.velocity = Vector2.zero;
-        }
+        else
+            Destroy(gameObject);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!destroyThisSeed)
+        if (!destroyThisSeed && GameValueManager.INSTANCE.treeIsALive)
         {
             GameObject plant = Instantiate(corruptPlant, landingPosition.transform.position, Quaternion.identity);
             plant.transform.SetParent(null);
             destroyThisSeed = true;
         }
+        else
+            Destroy(gameObject);
         
     }
 }

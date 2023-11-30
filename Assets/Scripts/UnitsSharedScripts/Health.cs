@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         {
             if (this.CompareTag("Tree"))
             {
+                GameValueManager.INSTANCE.treeIsALive = false;
                 this.GetComponent<TreeScript>().WiltingTree();
                 StartCoroutine(YieldDie());
             }
@@ -44,7 +45,10 @@ public class Health : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);        
+        if (this.CompareTag("Tree"))
+            this.GetComponent<SpriteRenderer>().enabled = false;
+        else
+            Destroy(gameObject);
     }
 
 }
