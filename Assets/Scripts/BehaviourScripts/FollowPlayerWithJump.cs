@@ -79,8 +79,6 @@ public class FollowPlayerWithJump : MonoBehaviour
     void Jump()
     {
 
-
-        Debug.Log("Jumping function");
         isJumping = true;
         rb2D.velocity = Vector2.zero;
         Vector2 jumpDirection = (target.position - transform.position);
@@ -94,23 +92,19 @@ public class FollowPlayerWithJump : MonoBehaviour
 
     //void CheckDistanceToTarget()
     //{
-    //   float distance = Vector2.Distance(transform.position, target.position);
+    //  
        
     //}
     IEnumerator JumpWithGravity()
     {
        
-        
-        
-            Vector2 jumpDirection = (target.position - transform.position);
-            rb2D.AddForce(Vector2.down * gravityForce, ForceMode2D.Force); //gravitation som ska dra ner
+        Vector2 jumpDirection = (target.position - transform.position);
+        rb2D.AddForce(Vector2.down * gravityForce, ForceMode2D.Force); //gravitation som ska dra ner
         
    
 
         yield return new WaitForSeconds(timerjump);
-
-        
-       
+  
        
     }
 
