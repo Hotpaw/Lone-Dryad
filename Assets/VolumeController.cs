@@ -23,15 +23,15 @@ public class VolumeController : MonoBehaviour
         if (isMuted) 
         {
 
-            originalVolume = AudioListener.volume;
-            AudioListener.volume = 0f;
-            volumeStateText.text = " OFF ";
+            //originalVolume = AudioListener.volume;
+            //AudioListener.volume = 0f;
+            volumeStateText.text = "Volume: OFF";
          
         }
         else
         {
-            AudioListener.volume = originalVolume;
-            volumeStateText.text = " ON ";
+            //AudioListener.volume = originalVolume;
+            volumeStateText.text = "Volume: ON";
 
 
         }
