@@ -15,12 +15,14 @@ public class GameValueManager : MonoBehaviour
     public float currentEnergy;
     public float maxHealth;
     public float currentHealth;
+    
 
     public bool treeIsALive = true;
 
     //Dryad stats
     public TeleportScript teleportScript;
     public float carryingWater;
+    public float carryingWaterMax;
     public float exhaustLevel;
     public float maxExhaustLevel;
 

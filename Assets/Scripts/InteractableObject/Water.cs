@@ -18,6 +18,7 @@ public class Water : InteractableObject
     {
         PopUpText.INSTANCE.PopUpMessage("Got water", Color.blue);
         GameValueManager.INSTANCE.carryingWater += waterAmount;
-        waterAmount = 0;
+        if (GameValueManager.INSTANCE.carryingWater > GameValueManager.INSTANCE.carryingWaterMax)
+            GameValueManager.INSTANCE.carryingWater = GameValueManager.INSTANCE.carryingWaterMax;
     }
 }
