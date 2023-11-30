@@ -251,7 +251,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.53
+  orthographic size: 8.08
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -439,7 +439,7 @@ Transform:
   m_GameObject: {fileID: 600570065}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.43, y: -18.18, z: 0}
+  m_LocalPosition: {x: -4.76, y: -23.63, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -565,7 +565,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1020250559076238164}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6.53
+    OrthographicSize: 8.08
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -987,7 +987,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1817749865
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1379,6 +1379,10 @@ PrefabInstance:
     - target: {fileID: 6297177761950096451, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: m_Name
       value: WaterfallCreator
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297177761950096451, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6380897787405380524, guid: 8b0ade8f0ad37844c87ba08b45e5f40d, type: 3}
       propertyPath: waterAmount
