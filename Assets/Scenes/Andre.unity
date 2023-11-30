@@ -22292,6 +22292,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 9e428e1275fce754ea4b52eb37c80052, type: 3}
+    - target: {fileID: 5280249613807412224, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280249613807412224, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280249613807412224, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5526380997614024160, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
       propertyPath: wiltingTree
       value: 
