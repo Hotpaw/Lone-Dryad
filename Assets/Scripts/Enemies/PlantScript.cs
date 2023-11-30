@@ -73,7 +73,7 @@ public class PlantScript : MonoBehaviour
                 energystealer.SetActive(true);
                 damageTreeTimer = 0;
                 treeHealth.TakeDamage(damage);
-                PopUpText.INSTANCE.PopUpMessage("a parasitic plant is stealing the lifeenergy from the tree", Color.red);
+                PopUpText.INSTANCE.PopUpMessage(" parasitic plant is stealing the lifeenergy from the tree", Color.red);
             }
             GameValueManager.INSTANCE.progressScore -= 0.2f * Time.deltaTime;
         }
@@ -100,7 +100,7 @@ public class PlantScript : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (Keyboard.current.eKey.IsActuated() && Gamepad.current.buttonEast.IsActuated())
+            if (Input.GetKey(KeyCode.E))
             {
                 particleSystem.Play();
                 WiltTree();

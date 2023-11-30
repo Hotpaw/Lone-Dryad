@@ -107,7 +107,7 @@ MonoBehaviour:
   landingPosition: {fileID: 6877028320174336110}
   destroyTimer: 0
   floatStrength: 0.89
-  corruptPlant: {fileID: 9035025947644057997, guid: 1c005dc0a11a8fd42af674c90f273297, type: 3}
+  corruptPlant: {fileID: 4529126810206123681, guid: 8b6c31e9c63a97143a9ea419d7ece79b, type: 3}
 --- !u!50 &6030726275233196868
 Rigidbody2D:
   serializedVersion: 4
