@@ -48,8 +48,10 @@ public class Movement : MonoBehaviour
     bool jumpCallBeingPressed;
 
     public bool right;
+    float savedMaxSpeed;
     private void Start()
     {
+        savedMaxSpeed = maxSpeed;
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
@@ -115,7 +117,7 @@ public class Movement : MonoBehaviour
     }
     public void DecreaseSpeed()
     {
-        maxSpeed *= 0.5f
+        maxSpeed = savedMaxSpeed;
     }
 
     public void Flip()
