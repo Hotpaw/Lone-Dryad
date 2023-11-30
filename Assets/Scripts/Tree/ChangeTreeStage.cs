@@ -22,6 +22,10 @@ public class ChangeTreeStage : MonoBehaviour
     }
     private void Update()
     {
+        if (GameValueManager.INSTANCE.treeIsALive == false)
+        {
+            particleSystem.gameObject.SetActive(false);
+        }
         //GameValueManager.INSTANCE.IncreaseProgress();
         var emission = particleSystem.emission;
         if (!once)

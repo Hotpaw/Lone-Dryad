@@ -946,6 +946,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1020250558922792702, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
   m_PrefabInstance: {fileID: 1923459496}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &954264027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8530224298679314655, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+  m_PrefabInstance: {fileID: 1923459496}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954264021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80662edfb061fb14f86ee47edb7c98bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &978780803
 GameObject:
   m_ObjectHideFlags: 0
@@ -22180,7 +22191,7 @@ PrefabInstance:
     - target: {fileID: 8890390070079470653, guid: a0ba9ab584b484241a50e65832644287, type: 3}
       propertyPath: teleportScript
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 954264027}
     - target: {fileID: 8890390070079470653, guid: a0ba9ab584b484241a50e65832644287, type: 3}
       propertyPath: maxExhaustLevel
       value: 4
@@ -22359,6 +22370,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: InitialModule.gravitySource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
       propertyPath: ShapeModule.alignToDirection
       value: 0
       objectReference: {fileID: 0}
@@ -22399,8 +22414,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
       value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8374226956251733907, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
       propertyPath: ShapeModule.sphericalDirectionAmount
