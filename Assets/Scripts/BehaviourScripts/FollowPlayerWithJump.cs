@@ -42,7 +42,15 @@ public class FollowPlayerWithJump : MonoBehaviour
             {
                 rb2D.gravityScale = 24;
                 isJumping = false;
-                transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
+                if(target != null)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
+                }
+                else
+                {
+                    Debug.LogError("There was no target referenced in Jump script");
+                }
+               
             }
         }
         else
