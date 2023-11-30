@@ -43,8 +43,7 @@ public class FollowPlayerWithJump : MonoBehaviour
                 isJumping = false;
                 transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
             }
-        }
-        
+        }       
 
         
     }

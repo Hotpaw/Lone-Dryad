@@ -26,8 +26,7 @@ public class TreeScript : MonoBehaviour
         if (health.currentHealth <= 0)
             WiltingTree();
         if (GameValueManager.INSTANCE?.waterLevel <= 0) 
-        { 
-          
+        {           
             gameOverScript.GameOver();
             StartCoroutine(health.YieldDie());
             WiltingTree();
