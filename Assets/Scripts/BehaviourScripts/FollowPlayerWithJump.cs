@@ -19,7 +19,7 @@ public class FollowPlayerWithJump : MonoBehaviour
     public bool isJumping = false;
     bool walking = true;
     public float jumpRange;
-
+    bool jumponce = true;
     [SerializeField] public float walkSpeed = 2f;
 
 
@@ -44,37 +44,55 @@ public class FollowPlayerWithJump : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, target.position, walkSpeed * Time.deltaTime);
             }
         }
-        
+        else
+        {
+            StartCoroutine(JumpWithGravity());
+        }
 
-        
+
+        CheckDistanceToTarget();
+
     }
 
-  
+
     public void CheckDistanceToTarget()
     {
-        if(Vector2.Distance(target.position,transform.position) < jumpRange)
+
+        if (Vector2.Distance(target.position, transform.position) < jumpRange)
         {
+
+
             Jump();
         }
     }
 
     void Jump()
     {
-        StartCoroutine(JumpWithGravity());
 
-       
+
+
+
         isJumping = true;
-        rb2D.velocity = Vector2.zero;
-        Vector2 jumpDirection = (target.position - transform.position);
+      
 
-        Vector2 jumpHeightOffset = Vector2.up * jumpHeight;
-        rb2D.bodyType = RigidbodyType2D.Dynamic;
-        rb2D.AddForce((jumpDirection + jumpHeightOffset) * jumpForce, ForceMode2D.Impulse);
+        if (jumponce)
+        {
+            rb2D.velocity = Vector2.zero;
+            Vector2 jumpDirection = (target.position - transform.position);
+
+            Vector2 jumpHeightOffset = Vector2.up * jumpHeight;
+            rb2D.bodyType = RigidbodyType2D.Dynamic;
+
+            rb2D.AddForce((jumpDirection + jumpHeightOffset) * jumpForce, ForceMode2D.Impulse);
+
+
+        }
+
 
 
     }
 
-    
+
     IEnumerator JumpWithGravity()
     {
 
@@ -84,7 +102,8 @@ public class FollowPlayerWithJump : MonoBehaviour
         rb2D.AddForce(Vector2.down * gravityForce, ForceMode2D.Force); //gravitation som ska dra ner
 
 
-
+        yield return new WaitForSeconds(0.5f);
+        jumponce = false;
         yield return new WaitForSeconds(timerjump);
 
 
