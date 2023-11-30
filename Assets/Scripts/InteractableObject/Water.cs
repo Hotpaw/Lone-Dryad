@@ -16,7 +16,7 @@ public class Water : InteractableObject
     }
     public override void Interact()
     {
-        //Här
+        PopUpText.INSTANCE.PopUpMessage("Got water", Color.blue);
         GameValueManager.INSTANCE.carryingWater += waterAmount;
         waterAmount = 0;
     }

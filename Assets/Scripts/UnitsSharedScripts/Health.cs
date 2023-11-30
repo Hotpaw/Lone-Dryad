@@ -33,8 +33,7 @@ public class Health : MonoBehaviour
             }
             else
             {
-                Die();
-                GameValueManager.INSTANCE.IncreaseProgress(20);
+                Die();                
             }
         }            
     }

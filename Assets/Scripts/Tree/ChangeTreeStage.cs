@@ -22,10 +22,14 @@ public class ChangeTreeStage : MonoBehaviour
     }
     private void Update()
     {
+        if (GameValueManager.INSTANCE.treeIsALive == false)
+        {
+            particleSystem.gameObject.SetActive(false);
+        }
         //GameValueManager.INSTANCE.IncreaseProgress();
         var emission = particleSystem.emission;
         if (!once)
-            emission.rateOverTime = id * 0.35f * GameValueManager.INSTANCE.progressScore;
+            emission.rateOverTime = id * 0.15f * GameValueManager.INSTANCE.progressScore;
         var shape = particleSystem.shape;
 
         if(Keyboard.current.gKey.wasPressedThisFrame == true || GameValueManager.INSTANCE.progressScore >= GameValueManager.INSTANCE.nextStageScore)

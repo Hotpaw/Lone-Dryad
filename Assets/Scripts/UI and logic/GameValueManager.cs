@@ -31,23 +31,22 @@ public class GameValueManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
-    public void IncreaseProgress(float amount)
-    {
-        progressScore += amount;
-        //progressScore += 2 * Time.deltaTime;
-        //if (waterLevel < 50)
-        //{
-        //    progressScore += 1.5f * Time.deltaTime;
-        //}
-        //else if (waterLevel < 25) 
-        //{
-        //    progressScore += 0.75f * Time.deltaTime;
-        //}
-        //else if (waterLevel <= 0)
-        //{
-        //    progressScore -= 1f * Time.deltaTime;
-        //    waterLevel = 0;
-        //}
+    public void IncreaseProgress()
+    {        
+        progressScore += 1 * Time.deltaTime;
+        if (waterLevel < 50)
+        {
+            progressScore += 1.5f * Time.deltaTime;
+        }
+        else if (waterLevel < 25)
+        {
+            progressScore += 0.75f * Time.deltaTime;
+        }
+        else if (waterLevel <= 0)
+        {
+            progressScore -= 1f * Time.deltaTime;
+            waterLevel = 0;
+        }
     }
 
     public void LoseWater()
