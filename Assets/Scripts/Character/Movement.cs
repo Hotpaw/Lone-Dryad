@@ -113,11 +113,11 @@ public class Movement : MonoBehaviour
     }
     public void IncreaseSpeed()
     {
-        maxSpeed *= 2;
+        maxSpeed = savedMaxSpeed;
     }
     public void DecreaseSpeed()
     {
-        maxSpeed = savedMaxSpeed;
+        maxSpeed *= 0.5f;
     }
 
     public void Flip()

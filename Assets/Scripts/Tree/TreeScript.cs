@@ -8,6 +8,7 @@ public class TreeScript : MonoBehaviour
     public Health health;
     public GameOverScript gameOverScript;
     public GameObject wiltingTree;
+    float dryingColor;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +18,10 @@ public class TreeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        dryingColor = GameValueManager.INSTANCE.waterLevel * 0.01f;
         GameValueManager.INSTANCE?.IncreaseProgress();
         GameValueManager.INSTANCE?.LoseWater();
-        spriteRenderer.color = new Color(1, 1, 1, GameValueManager.INSTANCE.waterLevel * 0.01f);
+        spriteRenderer.color = new Color(dryingColor, dryingColor, dryingColor, 1);
         if (Input.GetKeyDown (KeyCode.LeftControl)) 
         {
             health.TakeDamage(1);
