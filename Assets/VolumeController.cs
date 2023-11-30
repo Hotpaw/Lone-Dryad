@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
+using TMPro;
 
 public class VolumeController : MonoBehaviour
 {
+    
   
     private bool isMuted = false;
     private float originalVolume;
 
     AudioListener volume;
 
-    public Text volumeStateText; //ska visa om volymen är on/off
+    public TextMeshProUGUI volumeStateText; //ska visa om volymen är on/off
 
     public void ToggleVolume()
     {
@@ -23,13 +25,14 @@ public class VolumeController : MonoBehaviour
 
             originalVolume = AudioListener.volume;
             AudioListener.volume = 0f;
-            volumeStateText.text = "Volume: OFF";
+            volumeStateText.text = " OFF ";
          
         }
         else
         {
             AudioListener.volume = originalVolume;
-            volumeStateText.text = "Volume: ON";
+            volumeStateText.text = " ON ";
+
 
         }
 
