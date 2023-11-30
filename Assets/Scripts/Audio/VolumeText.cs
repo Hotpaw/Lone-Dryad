@@ -5,14 +5,14 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
 
-public class VolumeController : MonoBehaviour
+public class VolumeText : MonoBehaviour
 {
     
   
     private bool isMuted = false;
     private float originalVolume;
 
-    AudioListener volume;
+    //AudioListener volume;
 
     public TextMeshProUGUI volumeStateText; //ska visa om volymen är on/off
 
