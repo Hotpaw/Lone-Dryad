@@ -34,7 +34,7 @@ public class InteractWith : MonoBehaviour
                
                 if(Gamepad.current != null)
                 {
-                    if (Gamepad.current.buttonEast.IsPressed())
+                    if (Gamepad.current.buttonEast.IsActuated())
                     {
                        
                         if (!used)
@@ -50,7 +50,7 @@ public class InteractWith : MonoBehaviour
                         }
                     }
                 }
-                else if(Keyboard.current.eKey.wasPressedThisFrame == true)
+                else if(Keyboard.current.eKey.IsActuated())
                 {
                    
                     if (!used)
