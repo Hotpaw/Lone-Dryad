@@ -115,7 +115,7 @@ public class Movement : MonoBehaviour
     }
     public void DecreaseSpeed()
     {
-        maxSpeed *= 0.5f
+        maxSpeed *= 0.5f;
     }
 
     public void Flip()
