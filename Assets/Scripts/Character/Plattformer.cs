@@ -260,7 +260,7 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7e5473a4-9610-4371-8880-2e7e845617f6"",
-                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""path"": ""<Gamepad>/buttonWest"",
                     ""interactions"": ""Press"",
                     ""processors"": """",
                     ""groups"": ""Gamepad"",

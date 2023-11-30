@@ -126,23 +126,23 @@ public class Movement : MonoBehaviour
 
     public void Dash(InputAction.CallbackContext context)
     {
-        if (context.action.IsPressed() && dashTimer > dashCooldown && !dead)
-        {
-            int i;
+        //if (context.action.IsPressed() && dashTimer > dashCooldown && !dead)
+        //{
+        //    int i;
           
            
-            if (playerSprite.flipX)
-                i = -1;
-            else
-                i = 1;
+        //    if (playerSprite.flipX)
+        //        i = -1;
+        //    else
+        //        i = 1;
 
-            isDashing = true;
-            rb.velocity = new Vector2(i * dashStrength, 0);
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
-            dashTimer = 0;
-            Invoke("DashDone", 0.2f);
-            animator.SetBool("Dash", true);
-        }
+        //    isDashing = true;
+        //    rb.velocity = new Vector2(i * dashStrength, 0);
+        //    rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+        //    dashTimer = 0;
+        //    Invoke("DashDone", 0.2f);
+        //    animator.SetBool("Dash", true);
+        //}
     }
 
     public void DashDone()

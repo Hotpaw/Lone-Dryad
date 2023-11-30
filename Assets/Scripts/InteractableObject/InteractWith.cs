@@ -19,6 +19,7 @@ public class InteractWith : MonoBehaviour
     private void Update()
     {
         // Update the icon to change during runtime whenever a controll is disconnected
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,8 +31,28 @@ public class InteractWith : MonoBehaviour
 
             if (collision.gameObject.CompareTag("Player"))
             {
-                if (Gamepad.current.buttonEast.IsPressed() || Keyboard.current.eKey.wasPressedThisFrame == true)
+               
+                if(Gamepad.current != null)
                 {
+                    if (Gamepad.current.buttonEast.IsPressed())
+                    {
+                       
+                        if (!used)
+                        {
+                            if (!unlimitedUses)
+                            {
+                                used = true;
+                                interactableObject.Interact();
+
+                            }
+                            else
+                                interactableObject.Interact();
+                        }
+                    }
+                }
+                else if(Keyboard.current.eKey.wasPressedThisFrame == true)
+                {
+                   
                     if (!used)
                     {
                         if (!unlimitedUses)
@@ -55,7 +76,10 @@ public class InteractWith : MonoBehaviour
        
 
     }
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        OnTriggerEnter2D (collision);
+    }
     private void DisplayInteractableIcon()
     {
         InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = true;
