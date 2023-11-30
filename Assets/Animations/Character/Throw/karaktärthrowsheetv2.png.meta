@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 383
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7164f5eb11f1f694f800cc2f0fddb0a9
+      internalID: -1750934615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_1"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 383
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04b877acf1a8c8408be090533cb6c06
+      internalID: 2035011236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_2"
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 383
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0a8631ce20f13e41b8430f987c572f0
+      internalID: -52494451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_3"
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 383
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b63b41efcb6ea40b80e1e3db605a50
+      internalID: -1267307072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefce2c141465394ea8e976e4f64de44
+      internalID: 142201040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_5"
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 0
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc1a7d1e400f774a90dc2e727240443
+      internalID: 1252990442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_6"
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 0
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868568f084e4dfe4e9c6479a1a0b289f
+      internalID: -1359159129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karakt\xE4rthrowsheetv2_7"
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 0
+        width: 327
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cd4215445c370408aed1bd6ccbd852
+      internalID: 1654019013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "karakt\xE4rthrowsheetv2_0": -1750934615
+      "karakt\xE4rthrowsheetv2_1": 2035011236
+      "karakt\xE4rthrowsheetv2_2": -52494451
+      "karakt\xE4rthrowsheetv2_3": -1267307072
+      "karakt\xE4rthrowsheetv2_4": 142201040
+      "karakt\xE4rthrowsheetv2_5": 1252990442
+      "karakt\xE4rthrowsheetv2_6": -1359159129
+      "karakt\xE4rthrowsheetv2_7": 1654019013
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

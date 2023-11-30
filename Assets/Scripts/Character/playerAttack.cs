@@ -23,7 +23,10 @@ public class playerAttack : MonoBehaviour
     }
     IEnumerator AttackCooldown()
     {
+        FindAnyObjectByType<Movement>().GetComponent<Animator>().SetTrigger("Throw");
         coolDown = true;
+        yield return new WaitForSeconds(0.3f);
+      
         FireProjectile();
         yield return new WaitForSeconds(attackSpeed);
         coolDown = false;
