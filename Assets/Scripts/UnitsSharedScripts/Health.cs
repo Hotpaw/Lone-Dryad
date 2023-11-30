@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         {
             if (this.CompareTag("Tree"))
             {
+                GameValueManager.INSTANCE.treeIsALive = false;
                 this.GetComponent<TreeScript>().WiltingTree();
                 StartCoroutine(YieldDie());
             }

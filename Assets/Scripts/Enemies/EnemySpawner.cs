@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
 
     public void SpawnEnemy(int enemyId, Vector2 spawnPosition)
     {
+        if (GameValueManager.INSTANCE.treeIsALive)
         Instantiate(enemies[enemyId], new Vector3(spawnPosition.x, spawnPosition.y, 0), transform.rotation);
     }
 }
