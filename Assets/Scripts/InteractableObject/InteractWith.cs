@@ -18,6 +18,7 @@ public class InteractWith : MonoBehaviour
     }
     private void Update()
     {
+        transform.localScale = new Vector3(1,1,1);
         // Update the icon to change during runtime whenever a controll is disconnected
         
     }
