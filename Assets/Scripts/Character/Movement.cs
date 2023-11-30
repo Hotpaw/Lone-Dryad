@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
         gravityscale = rb.gravityScale;      
         animator.SetTrigger("Crawl");
+        DecreaseSpeed();
     }
 
     void Update()
@@ -107,6 +108,14 @@ public class Movement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
+    }
+    public void IncreaseSpeed()
+    {
+        maxSpeed *= 2;
+    }
+    public void DecreaseSpeed()
+    {
+        maxSpeed *= 0.5f
     }
 
     public void Flip()

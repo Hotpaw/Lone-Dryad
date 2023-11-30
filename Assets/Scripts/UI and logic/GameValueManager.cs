@@ -25,7 +25,7 @@ public class GameValueManager : MonoBehaviour
     public float carryingWaterMax;
     public float exhaustLevel;
     public float maxExhaustLevel;
-
+    public bool Crawl;
     public Animator animator;
 
     public void Awake()
