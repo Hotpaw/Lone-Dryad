@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5826700488605382652}
   - component: {fileID: 1752966793845100817}
   m_Layer: 0
-  m_Name: Interactable_EnergyGain
+  m_Name: InteractableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
