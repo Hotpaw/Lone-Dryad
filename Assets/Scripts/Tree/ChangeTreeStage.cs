@@ -66,7 +66,8 @@ public class ChangeTreeStage : MonoBehaviour
         {
             case 1:
                 spriteRenderer.sprite = treeStages[0];
-                
+                gameOverScript.WinGame();
+
                 break;
             case 2: 
                 spriteRenderer.sprite = treeStages[1];      
@@ -82,7 +83,7 @@ public class ChangeTreeStage : MonoBehaviour
                 break;
             case 6:
                 spriteRenderer.sprite = treeStages[4];
-                gameOverScript.WinGame();
+                
                 break;
         }
     }
