@@ -28,49 +28,31 @@ public class InteractWith : MonoBehaviour
         if (interactable)
         {
 
-            if (collision != null && collision.gameObject.CompareTag("Player") && Gamepad.current.buttonEast.IsPressed() || Keyboard.current.eKey.wasPressedThisFrame == true)
-            {
-                if (!used)
-                {
-                    if (!unlimitedUses)
-                    {
-                        used = true;
-                        interactableObject.Interact();
-
-                    }
-                    else
-                        interactableObject.Interact();
-
-                }
-
-            }
-            else
-            {
-                return;
-            }
-        }
-        else
-        {
             if (collision.gameObject.CompareTag("Player"))
             {
-
-                if (!used)
+                if (Gamepad.current.buttonEast.IsPressed() || Keyboard.current.eKey.wasPressedThisFrame == true)
                 {
-                    if (!unlimitedUses)
+                    if (!used)
                     {
-                        used = true;
-                        interactableObject.Interact();
+                        if (!unlimitedUses)
+                        {
+                            used = true;
+                            interactableObject.Interact();
 
+                        }
+                        else
+                            interactableObject.Interact();
                     }
-                    else
-                        interactableObject.Interact();
+
                 }
+
             }
             else
             {
                 return;
             }
         }
+       
 
     }
 
