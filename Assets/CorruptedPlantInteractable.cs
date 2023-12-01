@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class CorruptedPlantInteractable : InteractableObject
 {
-    public override void Interact()
+    public GameObject amuletGlow;
+
+    public void Start()
     {
-       //Destroy(transform.parent.gameObject, 4.5f);
+        amuletGlow = GameObject.FindGameObjectWithTag("Amulet");
     }
 
+    public override void Interact()
+    {
+            amuletGlow.GetComponent<ParticleSystem>().Play(); 
+    }   
+   
    
 }

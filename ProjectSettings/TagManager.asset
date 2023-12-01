@@ -10,6 +10,8 @@ TagManager:
   - TreeTop
   - Pause
   - Jump
+  - DistanceChecker
+  - Amulet
   layers:
   - Default
   - TransparentFX

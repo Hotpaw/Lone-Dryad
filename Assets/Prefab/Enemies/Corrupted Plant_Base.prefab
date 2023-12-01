@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4281481427498831827}
   m_Layer: 0
   m_Name: Corrupted Plant_Base
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -124,6 +124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CorruptPlant
       objectReference: {fileID: 0}
+    - target: {fileID: 9035025947644057997, guid: 1c005dc0a11a8fd42af674c90f273297, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -148,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 69855353168688615, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_Name
       value: InteractableObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 69855353168688615, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1752966793845100817, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_Radius
@@ -243,6 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e2e232382727f47998a392f81963b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  amuletGlow: {fileID: 0}
 --- !u!4 &5001498997904952907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}

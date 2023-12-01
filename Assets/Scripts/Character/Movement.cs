@@ -111,7 +111,7 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("distanceChecker"))
+        if (collision.gameObject.CompareTag("DistanceChecker"))
         {
             if (GameValueManager.INSTANCE.exhaustLevel == 1)
             {
