@@ -53,7 +53,7 @@ public class FloatingObject : MonoBehaviour
 
             floating2D.AddForce(directionTarget * floatStrength);
 
-            print(Vector2.Distance(floatingTo.transform.position, transform.position));
+         
 
             if (Vector2.Distance(floatingTo.transform.position, transform.position) < 1)
             {
