@@ -1,25 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class TeleportScript : MonoBehaviour
 {
-    Rigidbody2D rb2D;
     public TreeScript treeScript;
     // Start is called before the first frame update
-    void Start()
-    {
-        rb2D = GetComponent<Rigidbody2D>();
-    }
+    
     private void Update()
     {
-        if (GameValueManager.INSTANCE.exhaustLevel == GameValueManager.INSTANCE.maxExhaustLevel)
+        if (GameValueManager.INSTANCE.exhaustLevel == 2)
         {
             TeleportBackToTree();
+            GameValueManager.INSTANCE.exhaustLevel = 0;
         }
     }
     public void TeleportBackToTree()
     {
-        rb2D.position = treeScript.transform.position;         
+        transform.position = treeScript.transform.position;         
     }   
 }

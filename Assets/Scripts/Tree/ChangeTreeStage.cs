@@ -66,8 +66,7 @@ public class ChangeTreeStage : MonoBehaviour
         switch (id)
         {
             case 1:
-                spriteRenderer.sprite = treeStages[0];                
-
+                spriteRenderer.sprite = treeStages[0];  
                 break;
             case 2: 
                 spriteRenderer.sprite = treeStages[1];      
@@ -82,8 +81,7 @@ public class ChangeTreeStage : MonoBehaviour
                 spriteRenderer.sprite = treeStages[4];   
                 break;
             case 6:
-                spriteRenderer.sprite = treeStages[4];
-                
+                spriteRenderer.sprite = treeStages[4];                
                 break;
         }
     }

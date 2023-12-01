@@ -18,6 +18,7 @@ public class GameValueManager : MonoBehaviour
     
 
     public bool treeIsALive = true;
+    public bool gameWon;
 
     //Dryad stats
     public TeleportScript teleportScript;

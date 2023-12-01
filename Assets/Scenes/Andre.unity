@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.24
+      value: -22.2
       objectReference: {fileID: 0}
     - target: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21682,7 +21682,8 @@ PrefabInstance:
       propertyPath: treeScript
       value: 
       objectReference: {fileID: 533175751}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6739408173499341374, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21748,6 +21749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14da2079926b1d4eb1a0568c095a0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstTime: 0
+  distanceChecker: {fileID: 7124445211457528006, guid: 9bc157dc3ae79564f85e808b0b1ac53a, type: 3}
 --- !u!1 &2025406818
 GameObject:
   m_ObjectHideFlags: 0

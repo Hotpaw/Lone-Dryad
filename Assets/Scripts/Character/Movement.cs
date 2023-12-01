@@ -25,6 +25,8 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isGrounded;
 
+    bool isCrawling;
+
     [Header("Dash Variables")]
     public float dashStrength;
     public float dashCooldown;
@@ -57,8 +59,8 @@ public class Movement : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
-        gravityscale = rb.gravityScale;      
-        animator.SetTrigger("Crawl");
+        gravityscale = rb.gravityScale;
+        isCrawling = true;
         DecreaseSpeed();
     }
 
@@ -102,11 +104,11 @@ public class Movement : MonoBehaviour
             
 
         }
-
         rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -lowerVerticalVelocityClamp, upperVerticalVelocityClamp));
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
+        animator.SetBool("Crawl", isCrawling);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -116,26 +118,31 @@ public class Movement : MonoBehaviour
             if (GameValueManager.INSTANCE.exhaustLevel == 1)
             {
                 animator.SetTrigger("Crawl");
+                isCrawling = true;
                 DecreaseSpeed();
             }
             if (GameValueManager.INSTANCE.exhaustLevel == 0)
+            {
                 IncreaseSpeed();
+                isCrawling = false;
+            }
         } 
     }
     public void IncreaseSpeed()
     {
         maxSpeed = savedMaxSpeed;
+        isCrawling = false;
     }
     public void DecreaseSpeed()
     {
         maxSpeed *= 0.5f;
+        isCrawling = true;
     }
 
     public void Flip()
     {
         if (xInput < -0.1f)
         {
-
             right = false;
             playerSprite.flipX = false;
         }
@@ -177,13 +184,16 @@ public class Movement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-       
-            jumpCallBeingPressed = context.action.IsPressed();
+       if (!isCrawling)
+       {
+           jumpCallBeingPressed = context.action.IsPressed();
         
-        if (context.action.WasPressedThisFrame())
-        {
-            timeSinceJumpPressed = 0;
-        }
+           if (context.action.WasPressedThisFrame())
+           {
+               timeSinceJumpPressed = 0;
+           }
+
+       }
     }
 
     private void GroundCheck()

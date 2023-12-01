@@ -14,6 +14,7 @@ public class GameOverScript : MonoBehaviour
     }
     public void WinGame()
     {
+        GameValueManager.INSTANCE.gameWon = true;
         FindAnyObjectByType<Movement>().enabled = false;
         gameObject.SetActive(true);
         infoText.text = "The tree is healthy and happy! You won very much!\r\nPress R to restart";

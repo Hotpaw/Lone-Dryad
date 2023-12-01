@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            if (this.CompareTag("Tree"))
+            if (this.CompareTag("Tree") && !GameValueManager.INSTANCE.gameWon)
             {
                 GameValueManager.INSTANCE.treeIsALive = false;
                 this.GetComponent<TreeScript>().WiltingTree();
