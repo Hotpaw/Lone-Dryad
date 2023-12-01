@@ -18,7 +18,7 @@ public class WiltingScript : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         particleSystem = GetComponent<ParticleSystem>();
-        ChangeTreeSprite(changeTreeStage.id);       
+        ChangeTreeSprite(changeTreeStage.id+1);       
     }
 
     private void Update()

@@ -8,9 +8,12 @@ public class GameOverScript : MonoBehaviour
     public TextMeshProUGUI infoText;
     public void GameOver()
     {
-        FindAnyObjectByType<Movement>().enabled = false;
-        gameObject.SetActive(true);
-        infoText.text = "The Tree is rotten, you dead!\r\nPress R to restart";
+        if (!GameValueManager.INSTANCE.gameWon)
+        {
+            FindAnyObjectByType<Movement>().enabled = false;
+            gameObject.SetActive(true);
+            infoText.text = "The Tree is rotten, you dead!\r\nPress R to restart";
+        }
     }
     public void WinGame()
     {
