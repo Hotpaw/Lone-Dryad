@@ -99,6 +99,8 @@ public class Movement : MonoBehaviour
             //    deacceleration = 0;
             //else
             //    deacceleration = 15;
+            
+
         }
 
         rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -lowerVerticalVelocityClamp, upperVerticalVelocityClamp));
@@ -109,7 +111,16 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject.CompareTag("distanceChecker"))
+        {
+            if (GameValueManager.INSTANCE.exhaustLevel == 1)
+            {
+                animator.SetTrigger("Crawl");
+                DecreaseSpeed();
+            }
+            if (GameValueManager.INSTANCE.exhaustLevel == 0)
+                IncreaseSpeed();
+        } 
     }
     public void IncreaseSpeed()
     {

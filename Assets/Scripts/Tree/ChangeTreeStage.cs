@@ -34,6 +34,7 @@ public class ChangeTreeStage : MonoBehaviour
         {   
             if (!once && id < 6)
             {
+                gameOverScript.WinGame();
                 Destroy(GetComponent<PolygonCollider2D>());
                 once = true;
                 GameValueManager.INSTANCE.treeLevel++;
@@ -65,8 +66,7 @@ public class ChangeTreeStage : MonoBehaviour
         switch (id)
         {
             case 1:
-                spriteRenderer.sprite = treeStages[0];
-                gameOverScript.WinGame();
+                spriteRenderer.sprite = treeStages[0];                
 
                 break;
             case 2: 
