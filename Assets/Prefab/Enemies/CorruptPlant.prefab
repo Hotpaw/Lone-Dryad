@@ -9772,10 +9772,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   growTimer: 0
   spriteRenderer: {fileID: 3573186183340964072}
-  growing: 0
-  growSize: 0
-  growSpeed: 0
-  growUpWhen: 0
+  growing: 1
+  growSize: 1
+  growSpeed: 0.3
   particleSystem: {fileID: 4888570202583354496}
   wiltTimerAlpha: 1
   wiltTimerColor: 1

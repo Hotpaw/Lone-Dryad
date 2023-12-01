@@ -5,8 +5,7 @@ using UnityEngine;
 public class TreeScript : MonoBehaviour
 {   
     public SpriteRenderer spriteRenderer;
-    public Health health;
-    public GameOverScript gameOverScript;
+    public Health health;    
     public GameObject wiltingTree;
     float dryingColor;
 
@@ -29,8 +28,7 @@ public class TreeScript : MonoBehaviour
         if (health.currentHealth <= 0 && !GameValueManager.INSTANCE.gameWon)
             WiltingTree();
         if (GameValueManager.INSTANCE?.waterLevel <= 0) 
-        {           
-            gameOverScript.GameOver();
+        {                       
             StartCoroutine(health.YieldDie());
             WiltingTree();
         }
@@ -38,6 +36,6 @@ public class TreeScript : MonoBehaviour
     public void WiltingTree()
     {
         wiltingTree.SetActive(true);
-        gameOverScript.GameOver();
+        GameOverScript.INSTANCE.GameOver();
     }
 }

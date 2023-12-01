@@ -72,7 +72,6 @@ public class FloatingObject : MonoBehaviour
             destroyThisSeed = true;
         }
         else
-            Destroy(gameObject);
-        
+            Destroy(gameObject);        
     }
 }

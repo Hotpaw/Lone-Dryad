@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DistanceChecker : MonoBehaviour
@@ -22,7 +19,6 @@ public class DistanceChecker : MonoBehaviour
                 FindAnyObjectByType<Movement>().IncreaseSpeed();
             }
         }
-
     }
     private void OnDrawGizmos()
     {

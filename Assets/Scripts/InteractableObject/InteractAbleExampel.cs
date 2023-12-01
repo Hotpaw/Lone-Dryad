@@ -8,7 +8,5 @@ public class InteractAbleExampel : InteractableObject
     public override void Interact()
     {
         
-    }
-
-    
+    }    
 }

@@ -5,7 +5,17 @@ using UnityEngine;
 
 public class GameOverScript : MonoBehaviour
 {
+    public static GameOverScript INSTANCE;
+
     public TextMeshProUGUI infoText;
+
+    public void Awake()
+    {
+        if (INSTANCE != null) Destroy(this.gameObject);
+        INSTANCE = this;
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     public void GameOver()
     {
         if (!GameValueManager.INSTANCE.gameWon)

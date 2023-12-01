@@ -12,22 +12,13 @@ public class GameValueManager : MonoBehaviour
     public float waterLevel;
     public float waterLoss;
     public float treeLevel;
-    public float currentEnergy;
-    public float maxHealth;
-    public float currentHealth;
-    
-
     public bool treeIsALive = true;
     public bool gameWon;
 
     //Dryad stats
     public TeleportScript teleportScript;
     public float carryingWater;
-    public float carryingWaterMax;
-    public float exhaustLevel;
-    public float maxExhaustLevel;
-    public bool Crawl;
-    public Animator animator;
+    public float carryingWaterMax; 
 
     public void Awake()
     {
@@ -60,19 +51,5 @@ public class GameValueManager : MonoBehaviour
     public void LoseWater()
     {
         waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;   
-    }
-    
-    public void IncreaseEnergyLevel(float amount)
-    {
-        currentEnergy += amount;
-    }
-    public void TakeDamage(int amount)
-    {
-        currentHealth -= amount;
-    }
-    public void GameOver()
-    {
-
-    }
-
+    }    
 }

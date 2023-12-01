@@ -10,8 +10,8 @@ public class ChangeTreeStage : MonoBehaviour
     SpriteRenderer spriteRenderer;
     public new ParticleSystem particleSystem;
     public int id =1;
-    bool once;    
-    public GameOverScript gameOverScript;    
+    bool once;   
+      
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -34,7 +34,7 @@ public class ChangeTreeStage : MonoBehaviour
         {   
             if (!once && id < 6)
             {
-                gameOverScript.WinGame();
+                GameOverScript.INSTANCE.WinGame();
                 Destroy(GetComponent<PolygonCollider2D>());
                 once = true;
                 GameValueManager.INSTANCE.treeLevel++;

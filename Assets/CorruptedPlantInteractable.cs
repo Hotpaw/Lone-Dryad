@@ -16,6 +16,4 @@ public class CorruptedPlantInteractable : InteractableObject
     {
         amuletGlow.GetComponent<ParticleSystem>().Play(); 
     }   
-   
-   
 }

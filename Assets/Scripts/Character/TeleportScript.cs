@@ -9,12 +9,8 @@ public class TeleportScript : MonoBehaviour
     // Start is called before the first frame update
     
     private void Update()
-    {
-        if (GameValueManager.INSTANCE.exhaustLevel == 2)
-        {
-            TeleportBackToTree();
-            GameValueManager.INSTANCE.exhaustLevel = 0;
-        }
+    {        
+        //TeleportBackToTree();
     }
     public void TeleportBackToTree()
     {

@@ -26,7 +26,7 @@ public class TreeState1 : State
             {
                 EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);
                 seedTimer = 0;
-                spawnSeedAt = Random.Range(5,10);
+                spawnSeedAt = Random.Range(5,25);
             }
             //if (!once && GameValueManager.INSTANCE.progressScore >= 40)
             //{

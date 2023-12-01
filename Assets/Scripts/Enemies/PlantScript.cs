@@ -7,11 +7,10 @@ public class PlantScript : MonoBehaviour
 {
     public float growTimer;
     public SpriteRenderer spriteRenderer;
-    public bool growing;
+    public bool growing = true;
 
-    public float growSize;
-    public float growSpeed;
-    public float growUpWhen;
+    public float growSize = 1;
+    public float growSpeed = 0.3f;    
 
     public new ParticleSystem particleSystem;
     public float wiltTimerAlpha = 1;
@@ -33,39 +32,24 @@ public class PlantScript : MonoBehaviour
         tree = GameObject.FindGameObjectWithTag("Tree");
         treeHealth = tree.GetComponent<Health>();
         particleSystem = GetComponent<ParticleSystem>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        growSize = Random.Range(0.3f, 0.7f);
-        growSpeed = Random.Range(0.1f, 0.4f);
-        growUpWhen = 0.1f;
+        spriteRenderer = GetComponent<SpriteRenderer>();   
     }
 
     // Update is called once per frame
     void Update()
-    {
-        growTimer += Time.deltaTime;
-        if (growTimer > growUpWhen)
-        {
-            growing = true;
-            spriteRenderer.enabled = true;
-            if (transform.localScale.x < growSize && growing && !wilting)
-                transform.localScale += new Vector3(growSpeed, growSpeed, growSpeed) * Time.deltaTime;
-            else
-            {
-                growing = false;
-            }
-        }
-        //if (Keyboard.current.spaceKey.wasPressedThisFrame == true)
-        //{
-        //    particleSystem.Play();
-        //    WiltTree();
-        //    wilting = true;
-        //}
+    {       
+        spriteRenderer.enabled = true;
+        if (transform.localScale.x < growSize && growing && !wilting)
+            transform.localScale += new Vector3(growSpeed, growSpeed, growSpeed) * Time.deltaTime;
+        else            
+            growing = false;
+        
         if (wilting)
         {
-            WiltTree();
+            Wilt();
             energystealer.SetActive(false);
         }
-        if (corruptPlant && !wilting)
+        else
         {
             damageTreeTimer += Time.deltaTime;
             if (damageTreeTimer > howOftenDamage && GameValueManager.INSTANCE.treeIsALive)
@@ -73,16 +57,16 @@ public class PlantScript : MonoBehaviour
                 energystealer.SetActive(true);
                 damageTreeTimer = 0;
                 treeHealth.TakeDamage(damage);
-                PopUpText.INSTANCE.PopUpMessage(" parasitic plant is stealing the lifeenergy from the tree", Color.red);
+                PopUpText.INSTANCE.PopUpMessage("parasitic plant is stealing the lifeenergy from the tree", Color.red);
             }
             GameValueManager.INSTANCE.progressScore -= 0.2f * Time.deltaTime;
         }
         if (tree == null)
         {
-            WiltTree();
+            Wilt();
         }
     }
-    public void WiltTree()
+    public void Wilt()
     {
         wiltTimerAlpha -= (0.55f * Time.deltaTime);
         wiltTimerColor -= (0.70f * Time.deltaTime);
@@ -103,7 +87,7 @@ public class PlantScript : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 particleSystem.Play();
-                WiltTree();
+                Wilt();
                 wilting = true;
             }
         }

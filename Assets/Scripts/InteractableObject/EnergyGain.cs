@@ -7,7 +7,7 @@ public class EnergyGain : InteractableObject
     public float amount;
     public override void Interact()
     {
-        GameValueManager.INSTANCE.IncreaseEnergyLevel(amount);
+        //GameValueManager.INSTANCE.IncreaseEnergyLevel(amount);
         PopUpText.INSTANCE.PopUpMessage(amount.ToString() + " Energy Gained",Color.green);
     }
 
