@@ -6,22 +6,28 @@ public class DistanceChecker : MonoBehaviour
 {
     public SlowPlayer sp;
     
-    bool activated = false;
+    bool triggered = false;
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.CompareTag("Player"))
-        {
-            if (!activated)
+        {            
+            if (!triggered)
             {
-                // Add GameManager reference to increase some kind of exhaust level. and if it becomes greater then X.
-                // move the player back to the tree and reset exhaust level.
-                sp.DistanceFeedBack();
-                activated = true;
+                PopUpText.INSTANCE.PopUpMessage("I am feeling weaker", Color.gray);
                 GameValueManager.INSTANCE.IncreaseExhaustLevel();
             }
+            if (triggered)
+            {
+                PopUpText.INSTANCE.PopUpMessage("I am feeling stronger", Color.gray);
+                GameValueManager.INSTANCE.DecreaseExhaustLevel();
+            }
+            triggered = !triggered;
+            if (GameValueManager.INSTANCE.exhaustLevel == 0)
+            {
+                triggered = false;
+            }
+            
         }
-
     }
 }

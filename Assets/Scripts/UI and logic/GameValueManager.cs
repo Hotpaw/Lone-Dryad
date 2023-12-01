@@ -65,10 +65,16 @@ public class GameValueManager : MonoBehaviour
     {
         exhaustLevel++;
         if (exhaustLevel >= maxExhaustLevel) 
-        {
+        {            
             teleportScript.TeleportBackToTree();
             exhaustLevel = 0;
         }
+    }
+    public void DecreaseExhaustLevel()
+    {
+        exhaustLevel--;
+        if (exhaustLevel < 0)
+            exhaustLevel = 0;        
     }
     public void IncreaseEnergyLevel(float amount)
     {
