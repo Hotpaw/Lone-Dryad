@@ -1,33 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class DistanceChecker : MonoBehaviour
 {
-    public SlowPlayer sp;
-    
-    bool triggered = false;
-   
-    private void OnTriggerEnter2D(Collider2D collision)
+    public float maxDistance;
+
+    private void Update()
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {            
-            if (!triggered)
-            {
-                PopUpText.INSTANCE.PopUpMessage("I am feeling weaker", Color.gray);
-                GameValueManager.INSTANCE.IncreaseExhaustLevel();
-            }
-            if (triggered)
-            {
-                PopUpText.INSTANCE.PopUpMessage("I am feeling stronger", Color.gray);
-                GameValueManager.INSTANCE.DecreaseExhaustLevel();
-            }
-            triggered = !triggered;
-            if (GameValueManager.INSTANCE.exhaustLevel == 0)
-            {
-                triggered = false;
-            }
-            
+        if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) < maxDistance)
+        {
+            FindAnyObjectByType<Movement>().isCrawling = true;
         }
+        else
+        {
+            FindAnyObjectByType<Movement>().isCrawling = false;
+        }
+
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
 }

@@ -25,7 +25,7 @@ public class Movement : MonoBehaviour
     public LayerMask groundLayer;
     public bool isGrounded;
 
-    bool isCrawling;
+    public bool isCrawling;
 
     [Header("Dash Variables")]
     public float dashStrength;
