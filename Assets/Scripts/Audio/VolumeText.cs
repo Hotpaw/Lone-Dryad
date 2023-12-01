@@ -10,11 +10,23 @@ public class VolumeText : MonoBehaviour
     
   
     private bool isMuted = false;
-    private float originalVolume;
+    private float originalVolume = 1.0f;
 
     //AudioListener volume;
+    [SerializeField] public AudioMixer audioMixer;
 
     public TextMeshProUGUI volumeStateText; //ska visa om volymen är on/off
+
+
+    void Start()
+    {
+
+
+      audioMixer.GetFloat("Master", out originalVolume);
+
+        UpdateVolumeStateText();
+
+    }
 
     public void ToggleVolume()
     {
@@ -25,13 +37,15 @@ public class VolumeText : MonoBehaviour
 
             //originalVolume = AudioListener.volume;
             //AudioListener.volume = 0f;
-            volumeStateText.text = "Volume: OFF";
+            SetMasterVolume(0f);
+            volumeStateText.text = " OFF ";
          
         }
         else
         {
             //AudioListener.volume = originalVolume;
-            volumeStateText.text = "Volume: ON";
+            SetMasterVolume(originalVolume);
+            volumeStateText.text = " ON ";
 
 
         }
@@ -39,15 +53,16 @@ public class VolumeText : MonoBehaviour
 
     }
 
+    private void SetMasterVolume(float volume)
+    {
+        audioMixer.SetFloat("Master", volume);
+        UpdateVolumeStateText();
+    }
 
-
-
-
-
-
-
-
-
+    private void UpdateVolumeStateText()
+    {
+        volumeStateText.text = isMuted ? " OFF " : " ON ";
+    }
 
 
 }

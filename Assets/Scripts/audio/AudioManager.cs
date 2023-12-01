@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     public Slider musicslider;
     public Slider masterSlider;
 
-    AudioMixer masterMixer;
+   [SerializeField] public AudioMixer masterMixer;
 
    
 
