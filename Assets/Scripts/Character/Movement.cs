@@ -91,9 +91,7 @@ public class Movement : MonoBehaviour
                 if (timeSinceGrounded > coyoteTime)
                     doubleJump = false;
 
-                animator.SetTrigger("Jump");
-              
-             
+                animator.SetTrigger("Jump");  
             }
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
@@ -113,30 +111,15 @@ public class Movement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("DistanceChecker"))
-        {
-            if (GameValueManager.INSTANCE.exhaustLevel == 1)
-            {
-                animator.SetTrigger("Crawl");
-                isCrawling = true;
-                DecreaseSpeed();
-            }
-            if (GameValueManager.INSTANCE.exhaustLevel == 0)
-            {
-                IncreaseSpeed();
-                isCrawling = false;
-            }
-        } 
+        
     }
     public void IncreaseSpeed()
     {
-        maxSpeed = savedMaxSpeed;
-        isCrawling = false;
+        maxSpeed = savedMaxSpeed;        
     }
     public void DecreaseSpeed()
     {
-        maxSpeed *= 0.5f;
-        isCrawling = true;
+        maxSpeed *= 0.5f;       
     }
 
     public void Flip()

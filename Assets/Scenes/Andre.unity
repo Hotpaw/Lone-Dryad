@@ -16791,6 +16791,20 @@ PolygonCollider2D:
       - {x: -0.3891136, y: 2.6757207}
       - {x: -0.4191136, y: 2.6657207}
   m_UseDelaunayMesh: 0
+--- !u!114 &1772930430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772930418}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe19eab3f44ead946b349d54e828753f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 17
+  active: 0
 --- !u!4 &1844236934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5887832823688670166, guid: 8fa1cdec4914de7408d5e9fd58b349a8, type: 3}
@@ -21750,7 +21764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstTime: 0
-  distanceChecker: {fileID: 7124445211457528006, guid: 9bc157dc3ae79564f85e808b0b1ac53a, type: 3}
+  distanceChecker: {fileID: 1772930430}
 --- !u!1 &2025406818
 GameObject:
   m_ObjectHideFlags: 0
@@ -22470,6 +22484,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 604792402919592632, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1772930424}
+    - targetCorrespondingSourceObject: {fileID: 604792402919592632, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772930430}
   m_SourcePrefab: {fileID: 100100000, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
 --- !u!1001 &3267137264163566735
 PrefabInstance:
