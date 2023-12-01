@@ -6,16 +6,21 @@ using UnityEngine;
 public class DistanceChecker : MonoBehaviour
 {
     public float maxDistance;
-
+    public bool active = false;
     private void Update()
     {
-        if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) < maxDistance)
+        if (active)
         {
-            FindAnyObjectByType<Movement>().isCrawling = true;
-        }
-        else
-        {
-            FindAnyObjectByType<Movement>().isCrawling = false;
+            if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) < maxDistance)
+            {
+                FindAnyObjectByType<Movement>().isCrawling = true;
+                FindAnyObjectByType<Movement>().DecreaseSpeed();
+            }
+            else
+            {
+                FindAnyObjectByType<Movement>().isCrawling = false;
+                FindAnyObjectByType<Movement>().IncreaseSpeed();
+            }
         }
 
     }
