@@ -22,7 +22,11 @@ public class DevButtonScript : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
+        {
+            StopAllCoroutines();
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+           
         if (Input.GetKeyDown(KeyCode.C))
         {
             PlayerPrefs.SetFloat("PlayerX", player.transform.position.x);
