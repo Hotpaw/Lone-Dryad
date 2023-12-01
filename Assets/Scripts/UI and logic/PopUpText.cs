@@ -11,9 +11,7 @@ public class PopUpText : MonoBehaviour
     public int timer;
     private void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
-        INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+       
         if (timer == 0)
         {
             timer = 1;
