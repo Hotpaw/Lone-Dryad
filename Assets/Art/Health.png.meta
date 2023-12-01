@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -115,16 +115,16 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 54
-      alignment: 9
-      pivot: {x: 0.43121058, y: 0.33853608}
+        width: 34
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0298aef09786dc247accaa6ea6a36c9e
+      spriteID: c8536f3d5b5e40d4cab87a898810732e
       internalID: 1428589776
       vertices: []
       indices: 
@@ -134,18 +134,18 @@ TextureImporter:
       name: Health_1
       rect:
         serializedVersion: 2
-        x: 91
-        y: 0
-        width: 45
-        height: 52
-      alignment: 9
-      pivot: {x: 0.41057366, y: 0.34522378}
+        x: 90
+        y: 1
+        width: 40
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44325f9b514a6d44aa6ba8062a8778e0
+      spriteID: cfc1d096c27bbd4489fd64686f0b24fc
       internalID: -853276615
       vertices: []
       indices: 
@@ -155,10 +155,10 @@ TextureImporter:
       name: Health_2
       rect:
         serializedVersion: 2
-        x: 187
-        y: 0
-        width: 57
-        height: 54
+        x: 189
+        y: 10
+        width: 53
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,7 +166,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25934e549c6b05645a164af689b4eed2
+      spriteID: e873001c5bc8283459b3e071ecd639bb
       internalID: 488317346
       vertices: []
       indices: 
@@ -176,18 +176,18 @@ TextureImporter:
       name: Health_3
       rect:
         serializedVersion: 2
-        x: 291
-        y: 0
-        width: 80
-        height: 54
-      alignment: 9
-      pivot: {x: 0.5167675, y: 0.45031884}
+        x: 298
+        y: 3
+        width: 69
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ceca666ebbd662f42b6bc7a051930f41
+      spriteID: 391a74d589a28e146b3513493890da12
       internalID: -1654099200
       vertices: []
       indices: 
@@ -197,18 +197,18 @@ TextureImporter:
       name: Health_4
       rect:
         serializedVersion: 2
-        x: 399
-        y: 0
-        width: 98
-        height: 54
-      alignment: 9
-      pivot: {x: 0.53421926, y: 0.537261}
+        x: 417
+        y: 7
+        width: 70
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41daa156fd2beee4cb0394a5a37fbfec
+      spriteID: ad65fc1c18ac4a045889e45adddb4349
       internalID: 855502973
       vertices: []
       indices: 
@@ -218,18 +218,18 @@ TextureImporter:
       name: Health_5
       rect:
         serializedVersion: 2
-        x: 535
-        y: 0
-        width: 70
-        height: 54
-      alignment: 9
-      pivot: {x: 0.44251186, y: 0.52484065}
+        x: 538
+        y: 13
+        width: 53
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1493481b420a74194382bc20fd56f0
+      spriteID: b45956274b18fa340b81732d00912b6f
       internalID: 413169240
       vertices: []
       indices: 
@@ -239,18 +239,18 @@ TextureImporter:
       name: Health_6
       rect:
         serializedVersion: 2
-        x: 641
-        y: 0
-        width: 58
-        height: 54
-      alignment: 9
-      pivot: {x: 0.5925093, y: 0.5496813}
+        x: 648
+        y: 16
+        width: 51
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65484364a976e1946a60361c3c2dd445
+      spriteID: b23988df7938b1d439dbb579ef466e22
       internalID: -2011527959
       vertices: []
       indices: 
