@@ -25,6 +25,10 @@ public class TreeScript : MonoBehaviour
         {
             health.TakeDamage(1);
         }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            health.Heal(1);
+        }
         if (health.currentHealth <= 0 && !GameValueManager.INSTANCE.gameWon)
             WiltingTree();
         if (GameValueManager.INSTANCE?.waterLevel <= 0) 
