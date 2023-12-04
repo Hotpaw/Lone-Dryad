@@ -72,7 +72,13 @@ public class Movement : MonoBehaviour
 
         if (!isDashing && !dead)
         {
-            MovementHorizontal();
+            if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
+            {
+                rb.velocity = Vector2.zero;
+            }
+            else
+                MovementHorizontal();
+
             GroundCheck();
             Flip();
 
@@ -107,6 +113,8 @@ public class Movement : MonoBehaviour
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
         animator.SetBool("Crawl", isCrawling);
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
