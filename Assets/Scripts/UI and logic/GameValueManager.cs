@@ -22,6 +22,8 @@ public class GameValueManager : MonoBehaviour
 
     public bool addingWater;
 
+    [HideInInspector] public bool KC;
+
     public void Awake()
     {
         if (INSTANCE != null) Destroy(this.gameObject);
