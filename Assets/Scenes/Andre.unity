@@ -467,7 +467,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19.33
+  orthographic size: 58.05
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5618,7 +5618,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 3.2}
   serializedVersion: 2
-  m_Radius: 2.93
+  m_Radius: 2.84
 --- !u!61 &758867938
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5674,7 +5674,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.01, y: -0.19, z: -0.31300163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.879849, y: 1.3842837, z: 0.79671}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -5982,7 +5982,7 @@ MonoBehaviour:
   m_Follow: {fileID: 954264022}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 19.33
+    OrthographicSize: 58.05
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -20806,7 +20806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 69855353168688615, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1357965480713175697, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
       propertyPath: m_SortingOrder
@@ -31371,13 +31371,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1772930418}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe19eab3f44ead946b349d54e828753f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxDistance: 17
   active: 0
+  inside: 1
 --- !u!1 &1817451607
 GameObject:
   m_ObjectHideFlags: 0
@@ -41157,8 +41158,7 @@ PrefabInstance:
       propertyPath: treeScript
       value: 
       objectReference: {fileID: 533175751}
-    m_RemovedComponents:
-    - {fileID: 6739408173499341374, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

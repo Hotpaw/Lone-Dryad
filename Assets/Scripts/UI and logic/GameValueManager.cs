@@ -18,7 +18,9 @@ public class GameValueManager : MonoBehaviour
     //Dryad stats
     public TeleportScript teleportScript;
     public float carryingWater;
-    public float carryingWaterMax; 
+    public float carryingWaterMax;
+
+    public bool addingWater;
 
     public void Awake()
     {

@@ -4,19 +4,28 @@ public class DistanceChecker : MonoBehaviour
 {
     public float maxDistance;
     public bool active = false;
+    public bool inside = true;
     private void Update()
     {
         if (active)
         {
-            if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) < maxDistance)
+            if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) > maxDistance)
             {
-                FindAnyObjectByType<Movement>().isCrawling = true;
-                FindAnyObjectByType<Movement>().DecreaseSpeed();
+                if (inside)
+                {
+                    FindAnyObjectByType<Movement>().isCrawling = true;
+                    FindAnyObjectByType<Movement>().DecreaseSpeed();
+                    inside = !inside;
+                }
             }
             else
-            {
-                FindAnyObjectByType<Movement>().isCrawling = false;
-                FindAnyObjectByType<Movement>().IncreaseSpeed();
+            {   
+                if(!inside)
+                {
+                    FindAnyObjectByType<Movement>().isCrawling = false;
+                    FindAnyObjectByType<Movement>().IncreaseSpeed();
+                    inside = !inside;
+                }
             }
         }
     }

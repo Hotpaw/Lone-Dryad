@@ -16,7 +16,8 @@ public class Tree : InteractableObject
             PopUpText.INSTANCE.PopUpMessage("Watered tree", Color.blue);
             if (GameValueManager.INSTANCE.waterLevel > 100)
                 GameValueManager.INSTANCE.waterLevel = 100;
-            GameValueManager.INSTANCE.carryingWater = 0;
+            GameValueManager.INSTANCE.addingWater = true;
+            //GameValueManager.INSTANCE.carryingWater = 0;
             if(!firstTime)
             {
                 distanceChecker.active = true;
