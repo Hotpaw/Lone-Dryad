@@ -14,7 +14,8 @@ public class TreeState1 : State
         if (INSTANCE != null) Destroy(this.gameObject);
         INSTANCE = this;
         DontDestroyOnLoad(this.gameObject);
-        //spawnSeedAt = Random.Range(5, 10);
+        spawnSeedAt = Random.Range(15, 25);
+        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
     }
 
     public override State RunCurrentState()
@@ -24,9 +25,9 @@ public class TreeState1 : State
             seedTimer += Time.deltaTime;
             if (seedTimer > spawnSeedAt) 
             {
-                //EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);
-                //seedTimer = 0;
-                //spawnSeedAt = Random.Range(5,25);
+                EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);
+                seedTimer = 0;
+                spawnSeedAt = Random.Range(5, 25);
             }
             //if (!once && GameValueManager.INSTANCE.progressScore >= 40)
             //{

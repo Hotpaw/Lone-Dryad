@@ -34,6 +34,8 @@ public class WaterOrb : MonoBehaviour
         }
         if (GameValueManager.INSTANCE.carryingWater > 0)
         {
+            var subEmitters = PS.subEmitters;
+            subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
             var emission = PS.emission;
             emission.rateOverTime = 100;            
             if (GameValueManager.INSTANCE.addingWater)
@@ -41,20 +43,23 @@ public class WaterOrb : MonoBehaviour
                 transform.position = Vector3.MoveTowards(transform.position, WateringTreePosition, 0.1f);
                 if (transform.position == WateringTreePosition)
                 {
-                    var subEmitters = PS.subEmitters;
+                    
                     subEmitters.SetSubEmitterEmitProbability(0, 1f);
                     wateringCountDown -= (2 *Time.deltaTime);                    
 
-                    if(wateringCountDown <= 0)
+                    if(wateringCountDown >= 0 && wateringCountDown < 9.9f)
                     {                         
                         emission.rateOverTime = 10 * wateringCountDown;
-                    }
-                    if(wateringCountDown < -4)
+                    }                    
+                    if (wateringCountDown < 0)
+                    {
+                        subEmitters.SetSubEmitterEmitProbability(0, 0f);
+                    }                
+                    if (wateringCountDown < -4)
                     {
                         GameValueManager.INSTANCE.addingWater = false;
-                        GameValueManager.INSTANCE.carryingWater = 0;
-                        transform.position = followDryadPosition;
-                        wateringCountDown = 10;
+                        GameValueManager.INSTANCE.carryingWater = 0;                        
+                        wateringCountDown = 10;                        
                     }                    
                 }
             }

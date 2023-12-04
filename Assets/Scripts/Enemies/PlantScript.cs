@@ -66,30 +66,17 @@ public class PlantScript : MonoBehaviour
             Wilt();
         }
     }
+    public void KillPlant()
+    {        
+        particleSystem.Play();
+        Wilt();
+        wilting = true;        
+    }
     public void Wilt()
     {
         wiltTimerAlpha -= (0.55f * Time.deltaTime);
         wiltTimerColor -= (0.70f * Time.deltaTime);
         spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);
         Destroy(gameObject, 4.5f);
-    }
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            PopUpText.INSTANCE.PopUpMessage("Press E to get rid of this evil plant", Color.magenta);
-        }
-    }
-    public void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
-        {
-            if (Input.GetKey(KeyCode.E))
-            {
-                particleSystem.Play();
-                Wilt();
-                wilting = true;
-            }
-        }
-    }
+    }        
 }

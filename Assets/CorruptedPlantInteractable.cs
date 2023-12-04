@@ -6,6 +6,7 @@ using UnityEngine;
 public class CorruptedPlantInteractable : InteractableObject
 {
     public GameObject amuletGlow;
+    public PlantScript plantScript;
 
     public void Start()
     {
@@ -14,6 +15,7 @@ public class CorruptedPlantInteractable : InteractableObject
 
     public override void Interact()
     {
-        amuletGlow.GetComponent<ParticleSystem>().Play(); 
+        amuletGlow.GetComponent<ParticleSystem>().Play();
+        plantScript.KillPlant();
     }   
 }
