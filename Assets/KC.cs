@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KC : MonoBehaviour
 {
-    public int KCNR;
+    int KCNR;
     // Start is called before the first frame update
     void Start()
     {
