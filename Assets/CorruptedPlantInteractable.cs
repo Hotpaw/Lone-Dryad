@@ -14,8 +14,9 @@ public class CorruptedPlantInteractable : InteractableObject
     }
 
     public override void Interact()
-    {
-        amuletGlow.GetComponent<ParticleSystem>().Play();
-        plantScript.KillPlant();
+    {        
+        if (amuletGlow != null)
+            amuletGlow.GetComponent<ParticleSystem>().Play();
+        plantScript.KillPlant();        
     }   
 }

@@ -20,17 +20,15 @@ public class HealthFlowers : MonoBehaviour
         if (currentHealth < healthLastFrame) 
         {
             flowers[currentHealth].gameObject.GetComponent<ParticleSystem>().startColor = Color.black;
-            flowers[currentHealth].gameObject.GetComponent<ParticleSystem>().Play();          
+            flowers[currentHealth].gameObject.GetComponent<ParticleSystem>().Play();
+            flowers[currentHealth].gameObject.GetComponent<SpriteRenderer>().color = Color.black;
         }
-
-        //for (int i = 0; i <= currentHealth-1; i++)
-        //{
-        //    flowers[i].gameObject.GetComponent<SpriteRenderer>().color = Color.white;            
-        //}        
-        //for (int i = currentHealth; i < flowers.Count; i++)
-        //{
-        //    flowers[i].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        //}
+        if (currentHealth > healthLastFrame) 
+        {
+            flowers[currentHealth-1].gameObject.GetComponent<ParticleSystem>().startColor = Color.white;
+            flowers[currentHealth-1].gameObject.GetComponent<ParticleSystem>().Play();
+            flowers[currentHealth - 1].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+        } 
         healthLastFrame = currentHealth;
     }
 }

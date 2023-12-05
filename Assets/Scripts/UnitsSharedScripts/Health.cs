@@ -7,11 +7,7 @@ public class Health : MonoBehaviour
     public int currentHealth;
     public int maxHealth;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        currentHealth = maxHealth;
-    }    
+    // Start is called before the first frame update    
     public void Heal(int amount)
     {
         currentHealth += amount;

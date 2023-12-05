@@ -22,6 +22,9 @@ public class GameValueManager : MonoBehaviour
 
     public bool addingWater;
 
+    //Unlockable stats
+    public bool thePowerToThrowNuts;
+
     [HideInInspector] public bool KC;
 
     public void Awake()
