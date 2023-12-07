@@ -18,9 +18,9 @@ public class InteractWith : MonoBehaviour
     }
     private void Update()
     {
-        transform.localScale = new Vector3(1,1,1);
+        transform.localScale = new Vector3(1, 1, 1);
         // Update the icon to change during runtime whenever a controll is disconnected
-        
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -32,12 +32,12 @@ public class InteractWith : MonoBehaviour
 
             if (collision.gameObject.CompareTag("Player"))
             {
-               
-                if(Gamepad.current != null)
+
+                if (Gamepad.current != null)
                 {
                     if (Gamepad.current.buttonEast.IsActuated())
                     {
-                       
+
                         if (!used)
                         {
                             if (!unlimitedUses)
@@ -51,9 +51,9 @@ public class InteractWith : MonoBehaviour
                         }
                     }
                 }
-                else if(Keyboard.current.eKey.IsActuated())
+                else if (Keyboard.current.eKey.IsActuated())
                 {
-                   
+
                     if (!used)
                     {
                         if (!unlimitedUses)
@@ -74,12 +74,12 @@ public class InteractWith : MonoBehaviour
                 return;
             }
         }
-       
+
 
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        OnTriggerEnter2D (collision);
+        OnTriggerEnter2D(collision);
     }
     private void DisplayInteractableIcon()
     {
