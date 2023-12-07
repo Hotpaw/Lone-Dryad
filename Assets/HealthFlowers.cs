@@ -22,11 +22,7 @@ public class HealthFlowers : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        HealFlower();
-        for (int i = 0; i < currentHealth; i++) 
-        {
-            flowers[i].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-        }        
+        HealFlower();        
     }
 
     private void HealFlower()
@@ -42,7 +38,10 @@ public class HealthFlowers : MonoBehaviour
         {
             flowers[currentHealth - 1].gameObject.GetComponent<ParticleSystem>().startColor = Color.white;
             flowers[currentHealth - 1].gameObject.GetComponent<ParticleSystem>().Play();
-            flowers[currentHealth - 1].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            for (int i = 0; i < currentHealth; i++)
+            {
+                flowers[i].gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+            }
         }
         healthLastFrame = currentHealth;
     }
