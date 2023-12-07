@@ -18,6 +18,7 @@ public class TreeState1 : State
     private void Start()
     {
         PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
+        FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
     }
 
     public override State RunCurrentState()
