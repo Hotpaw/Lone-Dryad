@@ -202,7 +202,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 6807600944695894985}
   obstacleLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 8
   splashEffectObject: {fileID: 3943291844365589949}
 --- !u!1001 &7856005294488826136
 PrefabInstance:
