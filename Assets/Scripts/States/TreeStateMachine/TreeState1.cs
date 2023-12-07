@@ -11,10 +11,12 @@ public class TreeState1 : State
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
-        INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+        
         spawnSeedAt = Random.Range(15, 25);
+       
+    }
+    private void Start()
+    {
         PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
     }
 
