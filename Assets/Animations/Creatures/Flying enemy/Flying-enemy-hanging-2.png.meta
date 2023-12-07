@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 8bd7a56b01e97194497ebffa263a3ec7
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1528
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cf8cdeb1bb8194da1b8281de59e617
+      internalID: 1564374547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_1
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1528
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93f46062f2e80d4ea9dfa0ea075e51b
+      internalID: 1487108424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_2
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1528
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a937fb7efb1b2d47b9a087155aae7fa
+      internalID: 924494944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_3
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1528
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c007e1ea9ece564d9a87378f200b7fa
+      internalID: 298778185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_4
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1528
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8af5930c78d590458cfcbfd63c3cb3c
+      internalID: 1306078962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1146
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d642a51f6ac9f14794e878e4808a81e
+      internalID: -1350521667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_6
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1146
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42e30caab58e4a842823d46c05656e66
+      internalID: -2075810147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_7
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 1146
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3915549ea3463f34f8f09be952cf6b35
+      internalID: -1689970677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_8
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 1146
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88082ce180dafed43afbe2c59f547654
+      internalID: 1376464542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_9
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 1146
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d82cf65ee73b4478a5fedfba1a74c6
+      internalID: 1923482426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 764
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72cdbb9743b31974abac55a341c330b5
+      internalID: -797725839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_11
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 764
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ab5d6bd1b5b5e42b571464151c1869
+      internalID: -137235799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_12
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 764
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff74926ba0bc93f4fa8c22aa68a5a5dc
+      internalID: -542576380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_13
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 764
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ddd3cf936dbd1419b4ee392510a97b
+      internalID: -256499947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_14
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 764
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cd60036578a3f46b7e2ea460520eba
+      internalID: -519405304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 382
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efad81002f99f6e4ba8c5aaebb2ed843
+      internalID: 42807000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_16
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 382
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c069da27d15bfbf40a1cdda32e955e93
+      internalID: 261287339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_17
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 382
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66dcd8459d520a438b085a650f6b043
+      internalID: 342790865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_18
+      rect:
+        serializedVersion: 2
+        x: 1137
+        y: 382
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c866244d648030745bfec1ec2a1bf01b
+      internalID: 361486553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_19
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 382
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c57a24fe1f48af4a9cd86ad581ce989
+      internalID: -1941892812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c1bd8bcd9580e24891bec5af8afd81d
+      internalID: -421703512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flying-enemy-hanging-2_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 379
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20ec49e3e9de3e41a22c02047f33148
+      internalID: 1059912612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Flying-enemy-hanging-2_0: 1564374547
+      Flying-enemy-hanging-2_1: 1487108424
+      Flying-enemy-hanging-2_10: -797725839
+      Flying-enemy-hanging-2_11: -137235799
+      Flying-enemy-hanging-2_12: -542576380
+      Flying-enemy-hanging-2_13: -256499947
+      Flying-enemy-hanging-2_14: -519405304
+      Flying-enemy-hanging-2_15: 42807000
+      Flying-enemy-hanging-2_16: 261287339
+      Flying-enemy-hanging-2_17: 342790865
+      Flying-enemy-hanging-2_18: 361486553
+      Flying-enemy-hanging-2_19: -1941892812
+      Flying-enemy-hanging-2_2: 924494944
+      Flying-enemy-hanging-2_20: -421703512
+      Flying-enemy-hanging-2_21: 1059912612
+      Flying-enemy-hanging-2_3: 298778185
+      Flying-enemy-hanging-2_4: 1306078962
+      Flying-enemy-hanging-2_5: -1350521667
+      Flying-enemy-hanging-2_6: -2075810147
+      Flying-enemy-hanging-2_7: -1689970677
+      Flying-enemy-hanging-2_8: 1376464542
+      Flying-enemy-hanging-2_9: 1923482426
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
