@@ -26,7 +26,7 @@ public class WaterOrb : MonoBehaviour
     void Start()
     {        
         PS = this.GetComponentInChildren<ParticleSystem>();
-        WateringTreePosition = new Vector2(tree.transform.position.x, tree.transform.position.y + WateringYOffset);        
+        WateringTreePosition = new Vector2(tree.transform.position.x, tree.transform.position.y);        
     }
 
     // Update is called once per frame
