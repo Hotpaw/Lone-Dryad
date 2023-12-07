@@ -8,18 +8,15 @@ public class GameValueManager : MonoBehaviour
 
     //Tree Stats    
     public float progressScore;
-    public float nextStageScore;
-    public float waterLevel;
-    public float waterLoss;
+    public float nextStageScore;    
     public float treeLevel;
     public bool treeIsALive = true;
     public bool gameWon;
 
     //Dryad stats
-    public TeleportScript teleportScript;
-    public float carryingWater;
-    public float carryingWaterMax;
+    public TeleportScript teleportScript;    
 
+    public bool gotWater;
     public bool addingWater;
 
     //Unlockable stats
@@ -35,28 +32,7 @@ public class GameValueManager : MonoBehaviour
     }
 
     public void IncreaseProgress()
-    {
-        if (waterLevel > 75)
-        {
-            progressScore += 1f * Time.deltaTime;
-        }
-        else if (waterLevel > 50)
-        {
-            progressScore += 0.75f * Time.deltaTime;
-        }
-        else if (waterLevel > 0)
-        {            
-            progressScore += 0.5f * Time.deltaTime;
-        }
-        else if (waterLevel <= 0)
-        {
-            progressScore -= 1f * Time.deltaTime;
-            waterLevel = 0;
-        }
-    }
-
-    public void LoseWater()
-    {
-        waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;   
+    {        
+        progressScore += 1f * Time.deltaTime;             
     }    
 }

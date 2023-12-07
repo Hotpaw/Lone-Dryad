@@ -10,12 +10,14 @@ public class DevButtonScript : MonoBehaviour
     public Vector2 checkPoint;
     public float playerY;
     public float playerX;
+    Health health;
     // Start is called before the first frame update
     void Start()
     {
         playerY = PlayerPrefs.GetFloat("PlayerY");
         playerX = PlayerPrefs.GetFloat("PlayerX");
         player.transform.position = new Vector2(playerX, playerY);
+        health = GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>();
     }
 
     // Update is called once per frame
@@ -43,5 +45,13 @@ public class DevButtonScript : MonoBehaviour
             Time.timeScale -= 0.25f;
         if (Input.GetKeyDown(KeyCode.Alpha5))
             Time.timeScale += 0.25f;
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            health.TakeDamage(1);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            health.Heal(1);
+        }
     }
 }

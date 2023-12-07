@@ -7,19 +7,12 @@ public class HealthFlowers : MonoBehaviour
     public List <GameObject> flowers;
     public int currentHealth;
     public int healthLastFrame;
-    //public List<bool> flowerIsAlive;
-    // Start is called before the first frame update
+    
     void Start()
     {
-        currentHealth = GetComponentInParent<Health>().currentHealth;
-        //foreach (var flower in flowers)
-        //{
-        //    bool alive = false;
-        //    flowerIsAlive.Add(alive);
-        //}        
+        currentHealth = GetComponentInParent<Health>().currentHealth;        
     }
-
-    // Update is called once per frame
+        
     void Update()
     {   
         HealFlower();        

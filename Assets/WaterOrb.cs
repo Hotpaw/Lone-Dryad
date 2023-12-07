@@ -7,7 +7,8 @@ using UnityEngine.Android;
 public class WaterOrb : MonoBehaviour
 {
     public TreeScript tree;
-    Vector3 followDryadPosition;
+    public float playerfollowraidus;
+    public Vector3 followPosition;
 
     ParticleSystem PS;
     public float wateringCountDown = 10;
@@ -33,14 +34,18 @@ public class WaterOrb : MonoBehaviour
     {
         if (!GameValueManager.INSTANCE.addingWater)
         {
-            followDryadPosition = GetComponentInParent<Transform>().position;
-            transform.position = Vector3.MoveTowards(transform.position, followDryadPosition, 0.1f);
+            if (Vector2.Distance(transform.position, FindAnyObjectByType<Movement>().gameObject.transform.position) > playerfollowraidus)
+            {
+                followPosition.x = FindAnyObjectByType<Movement>().gameObject.transform.position.x - 2;
+                followPosition.y = FindAnyObjectByType<Movement>().gameObject.transform.position.y + 1;
+                transform.position = Vector2.MoveTowards(transform.position, followPosition, 7 * Time.deltaTime);
+            }
             heal1 = false;
             heal2 = false;
             heal3 = false; 
             heal4 = false;
         }
-        if (GameValueManager.INSTANCE.carryingWater > 0)
+        if (GameValueManager.INSTANCE.gotWater)
         {
             var subEmitters = PS.subEmitters;
             subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
@@ -84,9 +89,9 @@ public class WaterOrb : MonoBehaviour
                     }                
                     if (wateringCountDown < -4)
                     {
-                        GameValueManager.INSTANCE.addingWater = false;
-                        GameValueManager.INSTANCE.carryingWater = 0;                        
-                        wateringCountDown = 10;                        
+                        GameValueManager.INSTANCE.addingWater = false;                                               
+                        wateringCountDown = 10;
+                        GameValueManager.INSTANCE.gotWater = false; ;
                     }    
                 }
             }
@@ -96,5 +101,9 @@ public class WaterOrb : MonoBehaviour
             var emission = PS.emission;
             emission.rateOverTime = 0;
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, playerfollowraidus);
     }
 }

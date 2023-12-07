@@ -7,31 +7,13 @@ public class TreeScript : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Health health;    
     public GameObject wiltingTree;
-    float dryingColor;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
     void Update()
-    {        
-        if (Input.GetKeyDown (KeyCode.LeftControl)) 
-        {
-            health.TakeDamage(1);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            health.Heal(1);
-        }
+    {   
         if (health.currentHealth <= 0 && !GameValueManager.INSTANCE.gameWon)
-            WiltingTree();
-        if (GameValueManager.INSTANCE?.waterLevel <= 0) 
-        {                       
-            StartCoroutine(health.YieldDie());
-            WiltingTree();
-        }
+            WiltingTree();        
+        if (health.currentHealth == health.maxHealth)
+            GameValueManager.INSTANCE.IncreaseProgress();
     }
     public void WiltingTree()
     {

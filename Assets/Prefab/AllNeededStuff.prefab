@@ -9903,6 +9903,7 @@ Transform:
   - {fileID: 4486316870543430491}
   - {fileID: 6952461551216722178}
   - {fileID: 7450439811682844782}
+  - {fileID: 8810344310893267892}
   - {fileID: 2026005190455072977}
   - {fileID: 1535297081941193030}
   - {fileID: 1563327190006611285}
@@ -15737,6 +15738,72 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 653310187505293088, guid: 37c67557114a50d4789513f5c38f28db, type: 3}
   m_PrefabInstance: {fileID: 2044492019084682854}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2129436273917024392
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5998313320737051046}
+    m_Modifications:
+    - target: {fileID: 1557050255336443236, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: playerfollowraidus
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6425644396128117674, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_Name
+      value: WaterOrb
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+--- !u!4 &8810344310893267892 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7478762071929819964, guid: fe5bcbf53f377c84a9f15cf97b176157, type: 3}
+  m_PrefabInstance: {fileID: 2129436273917024392}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4838531461618662188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15845,7 +15912,8 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.01886791
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6013270623121330241, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15859,17 +15927,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8099cc13d651323428aa3c46a9914df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1177277332824828781 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6013270623121330241, guid: 833eb1aeea1cabe4297e9ff42dc5251b, type: 3}
-  m_PrefabInstance: {fileID: 4838531461618662188}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8111bed7e40c38e43ab2c0b6f42896a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &6952461551216722178 stripped
@@ -15928,6 +15985,10 @@ PrefabInstance:
     - target: {fileID: 4884936965370313837, guid: a0ba9ab584b484241a50e65832644287, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8890390070079470653, guid: a0ba9ab584b484241a50e65832644287, type: 3}
+      propertyPath: gotWater
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8890390070079470653, guid: a0ba9ab584b484241a50e65832644287, type: 3}
       propertyPath: teleportScript
@@ -16148,10 +16209,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4754138620910674506, guid: 7643ea7961de0304aa84b5d548e71f17, type: 3}
-      propertyPath: changeTreeStage
-      value: 
-      objectReference: {fileID: 1177277332824828781}
     - target: {fileID: 7569525364264847062, guid: 7643ea7961de0304aa84b5d548e71f17, type: 3}
       propertyPath: m_Name
       value: Wilting tree (1)
