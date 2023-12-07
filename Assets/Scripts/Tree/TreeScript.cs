@@ -20,10 +20,14 @@ public class TreeScript : MonoBehaviour
         dryingColor = GameValueManager.INSTANCE.waterLevel * 0.01f;
         GameValueManager.INSTANCE?.IncreaseProgress();
         GameValueManager.INSTANCE?.LoseWater();
-        spriteRenderer.color = new Color(dryingColor, dryingColor, dryingColor, 1);
+        //spriteRenderer.color = new Color(dryingColor, dryingColor, dryingColor, 1);
         if (Input.GetKeyDown (KeyCode.LeftControl)) 
         {
             health.TakeDamage(1);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            health.Heal(1);
         }
         if (health.currentHealth <= 0 && !GameValueManager.INSTANCE.gameWon)
             WiltingTree();

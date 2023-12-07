@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e2e232382727f47998a392f81963b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amuletGlow: {fileID: 1859102023842208760, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+  amuletGlow: {fileID: 0}
   plantScript: {fileID: 3508781994032257904}
 --- !u!4 &5001498997904952907 stripped
 Transform:

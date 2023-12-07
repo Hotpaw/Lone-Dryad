@@ -48,14 +48,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a965128397c4b49bc74a503ef7c70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactableObject: {fileID: 2084481175589821438}
+  interactableObject: {fileID: 1307081105545489357}
   InteractableIcon: {fileID: 1336767493903949191}
   Icons:
   - {fileID: 21300000, guid: ba1b52b758af1e745b53685a075d34f0, type: 3}
   - {fileID: 21300000, guid: b98ba18c244626143b46dce0b8608e2c, type: 3}
-  interactable: 0
-  iconOffset: {x: 0, y: 0}
-  unlimitedUses: 0
+  interactable: 1
+  iconOffset: {x: 0, y: 4.13}
+  unlimitedUses: 1
 --- !u!212 &5826700488605382652
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -236,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2466668067176982790}
-  - component: {fileID: 2084481175589821438}
+  - component: {fileID: 1307081105545489357}
   m_Layer: 0
   m_Name: Interactable
   m_TagString: Untagged
@@ -259,7 +259,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4136526811372781742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2084481175589821438
+--- !u!114 &1307081105545489357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6777926508624122070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 985e7fea6dad63346914df0f4c824932, type: 3}
+  m_Script: {fileID: 11500000, guid: c29a8bd569e54e446b21f37dc0fd36fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 0
+  waterAmount: 50
