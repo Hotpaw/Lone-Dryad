@@ -16,11 +16,7 @@ public class TreeScript : MonoBehaviour
     }
     // Update is called once per frame
     void Update()
-    {
-        dryingColor = GameValueManager.INSTANCE.waterLevel * 0.01f;
-        GameValueManager.INSTANCE?.IncreaseProgress();
-        GameValueManager.INSTANCE?.LoseWater();
-        //spriteRenderer.color = new Color(dryingColor, dryingColor, dryingColor, 1);
+    {        
         if (Input.GetKeyDown (KeyCode.LeftControl)) 
         {
             health.TakeDamage(1);
