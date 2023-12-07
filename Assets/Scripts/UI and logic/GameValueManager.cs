@@ -33,6 +33,10 @@ public class GameValueManager : MonoBehaviour
 
     public void IncreaseProgress()
     {        
-        progressScore += 1f * Time.deltaTime;             
+        progressScore += 1f * Time.deltaTime;
+        if (progressScore >= nextStageScore)
+        {
+            GameValueManager.INSTANCE.gameWon = true;
+        }
     }    
 }
