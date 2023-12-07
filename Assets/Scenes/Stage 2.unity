@@ -324,6 +324,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6957421061352719193, guid: 4371ab75f133c064fbe5d09ca67528d1, type: 3}
+      propertyPath: groundCheckLength
+      value: 2.24
+      objectReference: {fileID: 0}
     - target: {fileID: 7123498585872079291, guid: 4371ab75f133c064fbe5d09ca67528d1, type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 2048

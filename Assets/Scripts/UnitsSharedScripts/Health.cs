@@ -16,6 +16,10 @@ public class Health : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
+    public void HealToMax()
+    {
+        currentHealth = maxHealth;
+    }
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;

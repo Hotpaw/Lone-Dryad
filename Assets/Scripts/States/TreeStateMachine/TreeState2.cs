@@ -13,6 +13,7 @@ public class TreeState2 : State
         {
             FindAnyObjectByType<Movement>().isCrawling = false;
             FindAnyObjectByType<Movement>().IncreaseSpeed();
+            FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
         }
         if (INSTANCE != null) Destroy(this.gameObject);
         INSTANCE = this;
