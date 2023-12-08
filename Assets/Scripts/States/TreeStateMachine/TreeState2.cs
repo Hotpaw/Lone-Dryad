@@ -12,8 +12,7 @@ public class TreeState2 : State
     public void Start()
     {
         GameValueManager.INSTANCE.nextStageScore = 100;
-        if (GameValueManager.INSTANCE.treeLevel == 2)
-        {
+       
 
             FindAnyObjectByType<Movement>().isCrawling = false;
             FindAnyObjectByType<Movement>().IncreaseSpeed();
@@ -23,10 +22,10 @@ public class TreeState2 : State
             {
                 checker.enabled = false;
             }
-        }
-        if (INSTANCE != null) Destroy(this.gameObject);
+      
+       
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+        
     }
     private void Update()
     {

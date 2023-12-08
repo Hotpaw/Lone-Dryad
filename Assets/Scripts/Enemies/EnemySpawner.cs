@@ -10,9 +10,9 @@ public class EnemySpawner : MonoBehaviour
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+        
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+      
     }
 
     public void SpawnEnemy(int enemyId, Vector2 spawnPosition)

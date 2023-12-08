@@ -9,9 +9,9 @@ public class SceneLoader : MonoBehaviour
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+     
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+      
     }
 
     public void LoadScene(int scene)
@@ -30,7 +30,7 @@ public class SceneLoader : MonoBehaviour
                 }
             case 2:
                 {
-                    SceneManager.LoadScene("Stage2");
+                    SceneManager.LoadScene(2);
                     break;
                 }
             case 3:

@@ -51,22 +51,22 @@ public class Movement : MonoBehaviour
     bool jumpCallBeingPressed;
 
     public bool right;
-    float savedMaxSpeed;
+    public float savedMaxSpeed;
     //KC
     bool kc;
     Vector2 position;
 
     private void Start()
     {
-        savedMaxSpeed = maxSpeed;
+        
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
         gravityscale = rb.gravityScale;
-        isCrawling = true;
-        DecreaseSpeed();
+       
+       
     }
 
     void Update()

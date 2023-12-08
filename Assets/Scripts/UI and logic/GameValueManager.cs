@@ -28,9 +28,9 @@ public class GameValueManager : MonoBehaviour
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+       
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+      
     }
 
     public void IncreaseProgress()
@@ -41,8 +41,8 @@ public class GameValueManager : MonoBehaviour
         }        
         if (progressScore >= nextStageScore)
         {
-            treeLevel++;
-            SceneLoader.INSTANCE.LoadScene(sceneNr + 1);
+            
+            SceneLoader.INSTANCE.LoadScene(2);
         }
     }    
 }

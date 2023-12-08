@@ -12,9 +12,9 @@ public class GameOverScript : MonoBehaviour
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+      
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);        
+        
     }
 
     public void GameOver()
