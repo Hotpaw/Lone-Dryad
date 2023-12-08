@@ -26,12 +26,8 @@ public class Stage2Event : MonoBehaviour
         BatCocoon[] cocoon = FindObjectsOfType<BatCocoon>();
         foreach (var coco in cocoon)
         {
-
-            GameObject BatClone = Instantiate(Bat, coco.gameObject.transform.position, Quaternion.identity);
-            BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(7f,10f), PathType.Linear);
-            Destroy(coco.gameObject);
-            Destroy(BatClone, 10f);
-            yield return new WaitForSeconds(0.5f);
+            coco.GetComponent<BatCocoon>().StartEvent();
+            yield return new WaitForSeconds(0.1f);
         }
        
 
