@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Stage1.1");
+       
     }
     public void BackButton()
     {

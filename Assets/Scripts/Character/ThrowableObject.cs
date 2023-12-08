@@ -37,7 +37,7 @@ public class ThrowableObject : MonoBehaviour
       
         rb.AddForce(forceDirn * thrust, ForceMode2D.Impulse);
     }
-
+    
 
 }
 
