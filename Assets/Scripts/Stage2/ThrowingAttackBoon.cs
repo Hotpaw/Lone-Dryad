@@ -10,8 +10,8 @@ public class ThrowingAttackBoon : InteractableObject
         GameValueManager.INSTANCE.thePowerToThrowNuts = true;
         GameValueManager.INSTANCE.progressActive = true;
         Stage2Event.INSTANCE.SpawnBats();
+        TreeState2.INSTANCE.batsReleased = true;
         Destroy(gameObject, 0.1f);
-        
        
     }
 
