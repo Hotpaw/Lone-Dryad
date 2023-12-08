@@ -7,7 +7,7 @@ public class TransitionScript : MonoBehaviour
 {
    
     public Animator transition;
-    public float transitionTime = 1.0f;
+    public float transitionTime = 0.5f;
     Menu menuScript;
 
     private void Awake()
@@ -24,22 +24,25 @@ public class TransitionScript : MonoBehaviour
     void Update()
     {
         
-        if (menuScript != null) 
-        {
+        //if (menuScript != null) 
+        //{
         
-          if (menuScript.PlayGame())
-          {
+        //  if (menuScript.PlayGame())
+        //  {
 
-                SceneTransition();
-          }
+        //        SceneTransition();
+        //  }
         
-        }
-        else
+        //}
+        //else
+        //{
+        //    Debug.LogError("MenuScript not found");
+        //}
+
+        if (Input.GetMouseButtonDown(0))
         {
-            Debug.LogError("MenuScript not found");
+            SceneTransition();
         }
-
-
 
     }
 
@@ -51,7 +54,7 @@ public class TransitionScript : MonoBehaviour
     }
     IEnumerator LoadScene(int sceneIndex)
     {
-        transition.SetTrigger("Start");               //which animation clip trigger to play
+        transition.SetTrigger("start");               //which animation clip trigger to play
         yield return new WaitForSeconds(transitionTime);  //load scene time
         SceneManager.LoadScene(sceneIndex);             //which scene to load
     }

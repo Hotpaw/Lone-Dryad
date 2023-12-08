@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public bool PlayGame()
+    public void PlayGame()
     {
-        SceneManager.LoadScene("Andre");
-        return true;
+        SceneManager.LoadScene("Stage1.1");
+       
     }
     public void BackButton()
     {
