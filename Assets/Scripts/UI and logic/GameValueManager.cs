@@ -12,6 +12,7 @@ public class GameValueManager : MonoBehaviour
     public float treeLevel;
     public bool treeIsALive = true;
     public bool gameWon;
+    public int sceneNr;
 
     //Dryad stats
     public TeleportScript teleportScript;    
@@ -33,6 +34,10 @@ public class GameValueManager : MonoBehaviour
 
     public void IncreaseProgress()
     {        
-        progressScore += 1f * Time.deltaTime;             
+        progressScore += 1f * Time.deltaTime;
+        if (progressScore >= nextStageScore)
+        {
+            SceneLoader.INSTANCE.LoadScene(sceneNr + 1);
+        }
     }    
 }
