@@ -1380,11 +1380,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2a8bace893d7834cbd32ba63b3f1b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &1605134970 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1265476047250636313, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-  m_PrefabInstance: {fileID: 2003115600}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1742304829
 GameObject:
   m_ObjectHideFlags: 0
@@ -1739,18 +1734,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4144947950185103187, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: transition
-      value: 
-      objectReference: {fileID: 1605134970}
-    - target: {fileID: 4144947950185103187, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: transitionTime
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6311014245121185567, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6370699298713374567, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
