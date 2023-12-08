@@ -17,6 +17,7 @@ public class TreeState1 : State
     {
         PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
         GameValueManager.INSTANCE.nextStageScore = 40;
+        GameValueManager.INSTANCE.progressActive = true;
     }
 
     public override State RunCurrentState()

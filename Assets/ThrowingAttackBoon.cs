@@ -8,6 +8,7 @@ public class ThrowingAttackBoon : InteractableObject
     public override void Interact()
     {
         GameValueManager.INSTANCE.thePowerToThrowNuts = true;
+        GameValueManager.INSTANCE.progressActive = true;
         Stage2Event.INSTANCE.SpawnBats();
         Destroy(gameObject, 0.1f);
         

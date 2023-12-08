@@ -8,7 +8,8 @@ public class GameValueManager : MonoBehaviour
 
     //Tree Stats    
     public float progressScore;
-    public float nextStageScore;    
+    public float nextStageScore;
+    public bool progressActive;
     public float treeLevel;
     public bool treeIsALive = true;
     public bool gameWon;
@@ -33,8 +34,11 @@ public class GameValueManager : MonoBehaviour
     }
 
     public void IncreaseProgress()
-    {        
-        progressScore += 1f * Time.deltaTime;
+    {
+        if (progressActive)
+        {
+            progressScore += 1f * Time.deltaTime;
+        }        
         if (progressScore >= nextStageScore)
         {
             SceneLoader.INSTANCE.LoadScene(sceneNr + 1);

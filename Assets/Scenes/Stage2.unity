@@ -3031,6 +3031,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 467844562811401677, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: sceneNr
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 467844562811401677, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: gotWater
       value: 0
       objectReference: {fileID: 0}

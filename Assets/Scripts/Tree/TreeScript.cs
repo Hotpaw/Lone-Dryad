@@ -6,7 +6,7 @@ public class TreeScript : MonoBehaviour
 {   
     public SpriteRenderer spriteRenderer;
     public Health health;    
-    public GameObject wiltingTree;
+    public GameObject wiltingTree;    
 
     void Update()
     {   
