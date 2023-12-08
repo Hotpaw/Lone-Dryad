@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fcab92204c30c4abf4e048ed377007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 2376364688710594948}
+  transition: {fileID: 0}
   transitionTime: 0
 --- !u!1 &7095949188004776805
 GameObject:
@@ -169,7 +169,6 @@ GameObject:
   - component: {fileID: 3845540120870865840}
   - component: {fileID: 9070440969876489152}
   - component: {fileID: 8676812347988420269}
-  - component: {fileID: 2376364688710594948}
   m_Layer: 5
   m_Name: crossfade
   m_TagString: Untagged
@@ -260,24 +259,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!95 &2376364688710594948
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7095949188004776805}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c86dadfb2e7c91540bfa06beb5901b22, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

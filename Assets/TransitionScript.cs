@@ -7,7 +7,7 @@ public class TransitionScript : MonoBehaviour
 {
    
     public Animator transition;
-    public float transitionTime = 0.5f;
+    public float transitionTime;
     Menu menuScript;
 
     private void Awake()
