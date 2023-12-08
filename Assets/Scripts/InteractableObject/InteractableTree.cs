@@ -8,16 +8,13 @@ public class Tree : InteractableObject
     public DistanceChecker distanceChecker;
     public override void Interact()
     {
-        if (GameValueManager.INSTANCE.carryingWater > 0)
+        if (GameValueManager.INSTANCE.gotWater)
         {            
             FindObjectOfType<Movement>().IncreaseSpeed();
             FindObjectOfType<Movement>().isCrawling = false;
-            GameValueManager.INSTANCE.waterLevel += GameValueManager.INSTANCE.carryingWater;
-            PopUpText.INSTANCE.PopUpMessage("Watered tree", Color.blue);
-            if (GameValueManager.INSTANCE.waterLevel > 100)
-                GameValueManager.INSTANCE.waterLevel = 100;
-            GameValueManager.INSTANCE.addingWater = true;
-            //GameValueManager.INSTANCE.carryingWater = 0;
+            PopUpText.INSTANCE.PopUpMessage("Watered tree", Color.blue);            
+            GameValueManager.INSTANCE.addingWater = true; 
+
             if(!firstTime)
             {
                 distanceChecker.active = true;

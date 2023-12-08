@@ -9,15 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: acf4bbef963929848ad9ba670b4ae2e8
   - enabled: 1
-    path: Assets/Scenes/Andre.unity
-    guid: ead7246aeca9cba488c9760702ee05f3
-  - enabled: 0
-    path: Assets/Scenes/GameScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
+    path: Assets/Scenes/Stage1.1.unity
+    guid: 8f02a28cfb2252444847ebb3e7e7276e
+  - enabled: 1
+    path: Assets/Scenes/Stage2.unity
+    guid: 66553714607cadc429af16857d291dea
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 1d27ab6be37e06d40ae6c18c92ddbfaf
-  - enabled: 0
-    path: Assets/Scenes/Settings.unity
-    guid: dada7960193aff846823381f4a5d3094
   m_configObjects: {}

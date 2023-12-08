@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 
 
@@ -51,6 +52,10 @@ public class Movement : MonoBehaviour
 
     public bool right;
     float savedMaxSpeed;
+    //KC
+    bool kc;
+    Vector2 position;
+
     private void Start()
     {
         savedMaxSpeed = maxSpeed;
@@ -113,8 +118,18 @@ public class Movement : MonoBehaviour
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
         animator.SetBool("Crawl", isCrawling);
+        //KC
+        kc = GameValueManager.INSTANCE.KC;
+        animator.SetBool("KC", kc);
+        if (kc)
+        {
+            maxSpeed = 25;
+            position.x += Input.GetAxis("Horizontal") * maxSpeed * Time.deltaTime;
+            position.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
+            transform.position = position;
+        }
 
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -6,8 +6,7 @@ using System.Collections;
 public class WiltingScript : MonoBehaviour
 {
     public List<Sprite> treeStages;
-    SpriteRenderer spriteRenderer;
-    public ChangeTreeStage changeTreeStage;
+    SpriteRenderer spriteRenderer;    
     public new ParticleSystem particleSystem;
     public float wiltTimer = 1;
     public int id;
@@ -17,8 +16,7 @@ public class WiltingScript : MonoBehaviour
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        particleSystem = GetComponent<ParticleSystem>();
-        ChangeTreeSprite(changeTreeStage.id+1);       
+        particleSystem = GetComponent<ParticleSystem>();             
     }
 
     private void Update()
@@ -32,37 +30,10 @@ public class WiltingScript : MonoBehaviour
         {
             WiltTree();
         }        
-    }
-    //IEnumerator YieldWiltingTree()
-    //{
-    //    yield return new WaitForSeconds(2f);
-    //    WiltTree();
-    //}
+    }    
     public void WiltTree()
-    {
-        //spriteRenderer.enabled = false;        
+    {           
         wiltTimer -= (0.35f * Time.deltaTime);
         spriteRenderer.color = new Color(1, 1, 1, wiltTimer);
-    }
-    public void ChangeTreeSprite(int id)
-    {
-        switch (id)
-        {
-            case 1:
-                spriteRenderer.sprite = treeStages[0];
-                break;
-            case 2:
-                spriteRenderer.sprite = treeStages[1];
-                break;
-            case 3:
-                spriteRenderer.sprite = treeStages[2];
-                break;
-            case 4:
-                spriteRenderer.sprite = treeStages[3];
-                break;
-            case 5:
-                spriteRenderer.sprite = treeStages[4];
-                break;            
-        }
-    }
+    }   
 }

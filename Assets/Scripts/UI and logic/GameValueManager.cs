@@ -9,18 +9,22 @@ public class GameValueManager : MonoBehaviour
     //Tree Stats    
     public float progressScore;
     public float nextStageScore;
-    public float waterLevel;
-    public float waterLoss;
+    public bool progressActive;
     public float treeLevel;
     public bool treeIsALive = true;
     public bool gameWon;
+    public int sceneNr;
 
     //Dryad stats
-    public TeleportScript teleportScript;
-    public float carryingWater;
-    public float carryingWaterMax;
+    public TeleportScript teleportScript;    
 
+    public bool gotWater;
     public bool addingWater;
+
+    //Unlockable stats
+    public bool thePowerToThrowNuts;
+
+    [HideInInspector] public bool KC;
 
     public void Awake()
     {
@@ -31,27 +35,14 @@ public class GameValueManager : MonoBehaviour
 
     public void IncreaseProgress()
     {
-        if (waterLevel > 75)
+        if (progressActive)
         {
             progressScore += 1f * Time.deltaTime;
-        }
-        else if (waterLevel > 50)
+        }        
+        if (progressScore >= nextStageScore)
         {
-            progressScore += 0.75f * Time.deltaTime;
+            treeLevel++;
+            SceneLoader.INSTANCE.LoadScene(sceneNr + 1);
         }
-        else if (waterLevel > 0)
-        {            
-            progressScore += 0.5f * Time.deltaTime;
-        }
-        else if (waterLevel <= 0)
-        {
-            progressScore -= 1f * Time.deltaTime;
-            waterLevel = 0;
-        }
-    }
-
-    public void LoseWater()
-    {
-        waterLevel -= (waterLoss - treeLevel) * Time.deltaTime;   
     }    
 }

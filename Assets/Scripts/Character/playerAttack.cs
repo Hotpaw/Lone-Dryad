@@ -15,7 +15,7 @@ public class playerAttack : MonoBehaviour
     }
     public void Fire(InputAction.CallbackContext context)
     {
-        if (!coolDown && context.action.IsPressed())
+        if (!coolDown && context.action.IsPressed() && GameValueManager.INSTANCE.thePowerToThrowNuts)
         {
             Debug.Log("PRESSED ATTACK");
             StartCoroutine(AttackCooldown());

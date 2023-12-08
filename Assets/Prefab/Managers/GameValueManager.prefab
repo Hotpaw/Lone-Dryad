@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4884936965370313837}
   - component: {fileID: 8890390070079470653}
+  - component: {fileID: 3205248264372523229}
   m_Layer: 0
   m_Name: GameValueManager
   m_TagString: Untagged
@@ -45,7 +46,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressScore: 0
-  health: 0
-  waterLevel: 100
-  waterLoss: 5
+  nextStageScore: 0
+  waterLevel: 20
+  waterLoss: 1
   treeLevel: 1
+  treeIsALive: 1
+  gameWon: 0
+  teleportScript: {fileID: 0}
+  carryingWater: 0
+  carryingWaterMax: 50
+  addingWater: 0
+  KC: 0
+--- !u!114 &3205248264372523229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100839698264059302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3976a49bfa024fa32034449555652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KCNR: 0
