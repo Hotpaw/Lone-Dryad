@@ -9,9 +9,10 @@ public class TreeState2 : State
 
     public void Start()
     {
-        if(GameValueManager.INSTANCE.treeLevel == 2)
+        GameValueManager.INSTANCE.nextStageScore = 60;
+        if (GameValueManager.INSTANCE.treeLevel == 2)
         {
-            GameValueManager.INSTANCE.nextStageScore = 60;
+            
             FindAnyObjectByType<Movement>().isCrawling = false;
             FindAnyObjectByType<Movement>().IncreaseSpeed();
             FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();

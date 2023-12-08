@@ -41,6 +41,7 @@ public class GameValueManager : MonoBehaviour
         }        
         if (progressScore >= nextStageScore)
         {
+            treeLevel++;
             SceneLoader.INSTANCE.LoadScene(sceneNr + 1);
         }
     }    
