@@ -33,8 +33,6 @@ public class EnemySpawner : MonoBehaviour
             floatingObjectClone.GetComponent<FloatingObject>().floatingTo = destinationPoints[Random.Range(0,destinationPoints.Length)].gameObject;
         
 
-        GameObject floatingObjectClone = Instantiate(enemies[enemyId], new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
-        floatingObjectClone.GetComponent<FloatingObject>().floatingTo = destinationPoints[Random.Range(0, destinationPoints.Length)].gameObject;
 
 
     }
@@ -48,8 +46,8 @@ public class EnemySpawner : MonoBehaviour
             clone.transform.rotation = new Quaternion(0,180,0,0);
         }
        
-        clone.GetComponent<FlyingEnemy>().waitAfterSpawn.transform.position = spawnPoints2[rand].position;
-        clone.GetComponent<FlyingEnemy>().target.transform.position = destinationPoints2[rand].position;
+        clone.GetComponent<BatMovement>().waitAfterSpawn.transform.position = spawnPoints2[rand].position;
+        clone.GetComponent<BatMovement>().target.transform.position = destinationPoints2[rand].position;
 
     }
 }
