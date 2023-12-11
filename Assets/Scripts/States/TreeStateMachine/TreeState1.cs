@@ -20,7 +20,6 @@ public class TreeState1 : State
         GameValueManager.INSTANCE.progressActive = true;
         FindAnyObjectByType<Movement>().isCrawling = true;
         FindAnyObjectByType<Movement>().DecreaseSpeed();
-
     }
 
     public override State RunCurrentState()
