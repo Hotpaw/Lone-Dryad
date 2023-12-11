@@ -5,13 +5,15 @@ using UnityEngine;
 public class TreeState1 : State
 {
     public static TreeState1 INSTANCE;
-    bool once;
     public float seedTimer;
     public float spawnSeedAt;
 
+    public bool watered;    
+    bool once;
+
     public void Awake()
-    {        
-        spawnSeedAt = Random.Range(15, 25);       
+    {
+        spawnSeedAt = 10;      
     }
     private void Start()
     {
@@ -26,12 +28,16 @@ public class TreeState1 : State
     {        
         if (GameValueManager.INSTANCE.treeLevel == 1)
         {
-            seedTimer += Time.deltaTime;
-            if (seedTimer > spawnSeedAt) 
+            if (GameValueManager.INSTANCE.addingWater)
+                watered = true;
+            if (watered && !once)
+                seedTimer += Time.deltaTime;
+            if (!once && seedTimer > spawnSeedAt) 
             {
                 EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);
                 seedTimer = 0;
-                spawnSeedAt = Random.Range(5, 25);
+                //spawnSeedAt = Random.Range(5, 25);
+                once = true;
             }            
             return this;
         }
