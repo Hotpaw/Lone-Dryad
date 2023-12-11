@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1512962969307417053}
   - component: {fileID: 6283062478971946348}
   m_Layer: 8
-  m_Name: FloatingEnemy
+  m_Name: Spore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

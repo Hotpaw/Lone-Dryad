@@ -31,6 +31,7 @@ public class BatCocoon : MonoBehaviour
         yield return new WaitForSeconds(2.4f);
         Transform[] paths = Stage2Event.INSTANCE.paths;
         GameObject BatClone = Instantiate(Stage2Event.INSTANCE.Bat, coco.gameObject.transform.position, Quaternion.identity);
+        BatClone.transform.rotation = new Quaternion(0,180, 0, 0);
         // Easin in path, check documentation
         BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(7f, 10f), PathType.Linear).SetEase(Ease);
         Destroy(coco.gameObject);
