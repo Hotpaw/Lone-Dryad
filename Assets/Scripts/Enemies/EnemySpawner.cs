@@ -9,9 +9,11 @@ public class EnemySpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public Transform[] destinationPoints;
 
+
     [Header("stage 2")]
     public Transform[] spawnPoints2;
     public Transform[] destinationPoints2;
+
 
     public void Awake()
     {
@@ -21,15 +23,20 @@ public class EnemySpawner : MonoBehaviour
     }
     private void Update()
     {
-      
+
     }
 
     public void SpawnEnemy(int enemyId, Vector2 spawnPosition)
     {
-       
+
             GameObject floatingObjectClone = Instantiate(enemies[enemyId], new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
             floatingObjectClone.GetComponent<FloatingObject>().floatingTo = destinationPoints[Random.Range(0,destinationPoints.Length)].gameObject;
         
+
+        GameObject floatingObjectClone = Instantiate(enemies[enemyId], new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
+        floatingObjectClone.GetComponent<FloatingObject>().floatingTo = destinationPoints[Random.Range(0, destinationPoints.Length)].gameObject;
+
+
     }
     public void SpawnStage2()
     {
