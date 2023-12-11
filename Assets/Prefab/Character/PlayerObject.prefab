@@ -185,6 +185,7 @@ MonoBehaviour:
   dashCooldown: 1
   dead: 0
   right: 0
+  savedMaxSpeed: 0
 --- !u!114 &7538903822014611799
 MonoBehaviour:
   m_ObjectHideFlags: 0

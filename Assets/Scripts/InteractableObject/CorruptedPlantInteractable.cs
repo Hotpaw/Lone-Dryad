@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class CorruptedPlantInteractable : InteractableObject
-{
+{    
     public GameObject amuletGlow;
     public PlantScript plantScript;
 
