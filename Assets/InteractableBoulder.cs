@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Boulder : InteractableObject
 {
+    public GameObject boulder;
+    
     public override void Interact()
     {
-        Destroy(gameObject);
+        Destroy(boulder);
     }
 }

@@ -2088,7 +2088,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119534305}
   - component: {fileID: 1119534304}
-  m_Layer: 6
+  m_Layer: 11
   m_Name: Cavefullv1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9578,11 +9578,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3414871205515799300, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26
+      value: 26.9
       objectReference: {fileID: 0}
     - target: {fileID: 3414871205515799300, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.5
+      value: -36.1
       objectReference: {fileID: 0}
     - target: {fileID: 3472064624547334635, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Name

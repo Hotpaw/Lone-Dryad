@@ -8,6 +8,7 @@ public class CrawlCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Fix apparent delay, if the player turns around quick, they can cheese the colliders.
         if (!entered)
         {
 

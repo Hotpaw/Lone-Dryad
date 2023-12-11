@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_0"
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f04602e08a8bf884f99eba2cea5ffda9
+      internalID: 885949342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_1"
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3e85d961432194fb15acec41a4cd46
+      internalID: 725086114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_2"
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae89237d192e1a4485dcd3453cc538e
+      internalID: -389145598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_3"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 383
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1582fe978657d64482d2e6871439bd0
+      internalID: -1254057363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_4"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48063b283a4a6114ebde1b4fb25df34d
+      internalID: 555654074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_5"
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54a6cea82e88b44f9eabd52a26313ac
+      internalID: -326311696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_6"
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc98da47e7354c743859e826d4323e8f
+      internalID: -1541720609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "karat\xE4rsheetpickupv2_7"
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 0
+        width: 363
+        height: 383
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4832aad83ec68ec41ac11275182ac3f3
+      internalID: -593972925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "karat\xE4rsheetpickupv2_0": 885949342
+      "karat\xE4rsheetpickupv2_1": 725086114
+      "karat\xE4rsheetpickupv2_2": -389145598
+      "karat\xE4rsheetpickupv2_3": -1254057363
+      "karat\xE4rsheetpickupv2_4": 555654074
+      "karat\xE4rsheetpickupv2_5": -326311696
+      "karat\xE4rsheetpickupv2_6": -1541720609
+      "karat\xE4rsheetpickupv2_7": -593972925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
