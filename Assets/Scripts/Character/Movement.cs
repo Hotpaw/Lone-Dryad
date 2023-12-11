@@ -10,7 +10,7 @@ using UnityEngine.UIElements;
 public class Movement : MonoBehaviour
 {
     [Header("Move Variables")]
-    public float maxSpeed; 
+    public float maxSpeed;
     public float acceleration = 20;
     public float deacceleration = 4;
 
@@ -58,15 +58,15 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        
+
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         vecGravity = new Vector2(0, -Physics2D.gravity.y);
         gravityscale = rb.gravityScale;
-       
-       
+
+
     }
 
     void Update()
@@ -102,7 +102,7 @@ public class Movement : MonoBehaviour
                 if (timeSinceGrounded > coyoteTime)
                     doubleJump = false;
 
-                animator.SetTrigger("Jump");  
+                animator.SetTrigger("Jump");
             }
             RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
@@ -110,7 +110,7 @@ public class Movement : MonoBehaviour
             //    deacceleration = 0;
             //else
             //    deacceleration = 15;
-            
+
 
         }
         rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -lowerVerticalVelocityClamp, upperVerticalVelocityClamp));
@@ -132,17 +132,18 @@ public class Movement : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
+  
     public void IncreaseSpeed()
     {
-        maxSpeed = savedMaxSpeed;        
+        isCrawling = false;
+        animator.SetBool("Crawl", !isCrawling);
+        maxSpeed = savedMaxSpeed;
     }
     public void DecreaseSpeed()
     {
-        maxSpeed *= 0.5f;       
+        isCrawling = true;
+        animator.SetBool("Crawl", isCrawling);
+        maxSpeed *= 0.5f;
     }
 
     public void Flip()
@@ -157,7 +158,7 @@ public class Movement : MonoBehaviour
             right = true;
             playerSprite.flipX = true;
         }
-    
+
     }
 
     public void Dash(InputAction.CallbackContext context)
@@ -165,8 +166,8 @@ public class Movement : MonoBehaviour
         //if (context.action.IsPressed() && dashTimer > dashCooldown && !dead)
         //{
         //    int i;
-          
-           
+
+
         //    if (playerSprite.flipX)
         //        i = -1;
         //    else
@@ -190,16 +191,16 @@ public class Movement : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-       if (!isCrawling)
-       {
-           jumpCallBeingPressed = context.action.IsPressed();
-        
-           if (context.action.WasPressedThisFrame())
-           {
-               timeSinceJumpPressed = 0;
-           }
+        if (!isCrawling)
+        {
+            jumpCallBeingPressed = context.action.IsPressed();
 
-       }
+            if (context.action.WasPressedThisFrame())
+            {
+                timeSinceJumpPressed = 0;
+            }
+
+        }
     }
 
     private void GroundCheck()
@@ -233,5 +234,5 @@ public class Movement : MonoBehaviour
         rb.velocity = new Vector2(velocityX, rb.velocity.y);
     }
 
-    
+
 }
