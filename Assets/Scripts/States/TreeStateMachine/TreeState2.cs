@@ -6,34 +6,42 @@ public class TreeState2 : State
 {
     public static TreeState2 INSTANCE;
     bool once;
-    public bool batsReleased = false;
-    bool spawnCD = false;
+    public bool enemyWaveActive = false;
+    bool batCD = false;
+    bool seedCD = false;
 
     public void Start()
     {
         GameValueManager.INSTANCE.nextStageScore = 100;
-       
 
-            FindAnyObjectByType<Movement>().isCrawling = false;
-            FindAnyObjectByType<Movement>().IncreaseSpeed();
-            FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
-            DistanceChecker[] checkerfs = FindObjectsOfType<DistanceChecker>();
-            foreach (DistanceChecker checker in checkerfs)
-            {
-                checker.enabled = false;
-            }
-      
-       
+
+        FindAnyObjectByType<Movement>().isCrawling = false;
+        FindAnyObjectByType<Movement>().IncreaseSpeed();
+        FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
+        DistanceChecker[] checkerfs = FindObjectsOfType<DistanceChecker>();
+        foreach (DistanceChecker checker in checkerfs)
+        {
+            checker.enabled = false;
+        }
+
+
         INSTANCE = this;
-        
+
     }
     private void Update()
     {
-        if (batsReleased && GameValueManager.INSTANCE.treeIsALive)
+        if (enemyWaveActive && GameValueManager.INSTANCE.treeIsALive)
         {
-            if (!spawnCD)
+            if (!batCD)
             {
                 StartCoroutine(SpawnBats());
+            }
+        }
+        if (enemyWaveActive && GameValueManager.INSTANCE.treeIsALive)
+        {
+            if (!seedCD)
+            {
+                StartCoroutine(SpawnSeeds());
             }
         }
     }
@@ -41,11 +49,29 @@ public class TreeState2 : State
     {
         return this;
     }
+    IEnumerator SpawnSeeds()
+    {
+        seedCD = true;
+        if (seedCD)
+        {
+            for (int i = 0; i < 2; i++)
+                EnemySpawner.INSTANCE.SpawnEnemy();
+        }
+        yield return new WaitForSeconds(Random.Range(13, 15));
+
+        seedCD = false;
+    }
     IEnumerator SpawnBats()
     {
-        spawnCD = true;
-        yield return new WaitForSeconds(Random.Range(5, 15));
+        batCD = true;
         EnemySpawner.INSTANCE.SpawnStage2();
-        spawnCD = false;
+        yield return new WaitForSeconds(Random.Range(5, 15));
+        batCD = false;
     }
+    public IEnumerator StartBatTimer()
+    {
+        yield return new WaitForSeconds(10f);
+        enemyWaveActive = true;
+    }
+
 }

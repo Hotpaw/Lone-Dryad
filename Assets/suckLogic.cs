@@ -13,12 +13,28 @@ public class suckLogic : MonoBehaviour
     }
     private void Update()
     {
-        // FIXA SUG SKADA
+       if(sucking)
+        {
+            StartCoroutine(StealingHealth());
+        }
     }
 
     public void Suck()
     {
 
         animator.SetTrigger("Sucking");
+        sucking = true;
+    }
+
+    IEnumerator StealingHealth()
+    {
+        sucking = false;
+        if(FindObjectOfType<TreeScript>() != null)
+        {
+
+        FindObjectOfType<TreeScript>().gameObject.GetComponent<Health>().TakeDamage(1);
+        }
+        yield return new WaitForSeconds(3f);
+        sucking = true;
     }
 }

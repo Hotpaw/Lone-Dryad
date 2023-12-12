@@ -26,10 +26,10 @@ public class EnemySpawner : MonoBehaviour
 
     }
 
-    public void SpawnEnemy(int enemyId, Vector2 spawnPosition)
+    public void SpawnEnemy()
     {
 
-            GameObject floatingObjectClone = Instantiate(enemies[enemyId], new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
+            GameObject floatingObjectClone = Instantiate(enemies[0], transform.position, Quaternion.identity);
             floatingObjectClone.GetComponent<FloatingObject>().floatingTo = destinationPoints[Random.Range(0,destinationPoints.Length)].gameObject;
         
 
@@ -41,7 +41,7 @@ public class EnemySpawner : MonoBehaviour
         int rand = Random.Range(0,waitPoints.Length);
         int rand2 = Random.Range(0,suckPoints.Length);
         GameObject clone = Instantiate(enemies[1], spawnPoints[rand].transform.position, Quaternion.identity);
-        clone.GetComponent<BatMovement>().waitAfterSpawn = waitPoints[rand];
+       
         clone.GetComponent<BatMovement>().target = suckPoints[rand2];
         if (clone.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
         {

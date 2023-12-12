@@ -34,7 +34,7 @@ public class TreeState1 : State
                 seedTimer += Time.deltaTime;
             if (!once && seedTimer > spawnSeedAt) 
             {
-                EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);
+                EnemySpawner.INSTANCE.SpawnEnemy();
                 seedTimer = 0;
                 //spawnSeedAt = Random.Range(5, 25);
                 once = true;
