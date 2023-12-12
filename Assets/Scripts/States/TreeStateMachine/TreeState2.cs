@@ -12,8 +12,7 @@ public class TreeState2 : State
 
     public void Start()
     {
-        GameValueManager.INSTANCE.nextStageScore = 100;
-
+        
 
         FindAnyObjectByType<Movement>().isCrawling = false;
         FindAnyObjectByType<Movement>().IncreaseSpeed();
@@ -54,7 +53,7 @@ public class TreeState2 : State
         seedCD = true;
         if (seedCD)
         {
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 1; i++)
                 EnemySpawner.INSTANCE.SpawnEnemy();
         }
         yield return new WaitForSeconds(Random.Range(13, 15));
@@ -65,7 +64,7 @@ public class TreeState2 : State
     {
         batCD = true;
         EnemySpawner.INSTANCE.SpawnStage2();
-        yield return new WaitForSeconds(Random.Range(5, 15));
+        yield return new WaitForSeconds(Random.Range(9, 15));
         batCD = false;
     }
     public IEnumerator StartBatTimer()

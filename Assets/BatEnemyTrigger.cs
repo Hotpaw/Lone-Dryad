@@ -9,6 +9,7 @@ public class BatEnemyTrigger : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             TreeState2.INSTANCE.enemyWaveActive = true;
+            GameValueManager.INSTANCE.progressActive = true;
         }
     }
 }

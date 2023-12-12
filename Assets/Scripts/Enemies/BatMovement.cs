@@ -28,7 +28,7 @@ public class BatMovement : MonoBehaviour
     void Update()
     {
         
-     
+     // fix null referens on game over
         if (FindAnyObjectByType<Tree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
         {
             gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);

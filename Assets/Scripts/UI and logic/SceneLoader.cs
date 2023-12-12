@@ -25,7 +25,7 @@ public class SceneLoader : MonoBehaviour
                 }
             case 1:
                 {
-                    SceneManager.LoadScene("Stage1.1");
+                    SceneManager.LoadScene(1);
                     break;
                 }
             case 2:

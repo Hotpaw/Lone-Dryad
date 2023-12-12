@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameValueManager : MonoBehaviour
 {
@@ -24,10 +25,12 @@ public class GameValueManager : MonoBehaviour
     //Unlockable stats
     public bool thePowerToThrowNuts;
 
+    public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;
 
     public void Awake()
     {
+        currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;
       
@@ -41,8 +44,8 @@ public class GameValueManager : MonoBehaviour
         }        
         if (progressScore >= nextStageScore)
         {
-            
-            SceneLoader.INSTANCE.LoadScene(2);
+
+            SceneLoader.INSTANCE.LoadScene(currentsceneBuildIndex + 1);
         }
     }    
 }
