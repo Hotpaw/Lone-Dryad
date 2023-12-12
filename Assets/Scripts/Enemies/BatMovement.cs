@@ -7,19 +7,18 @@ public class BatMovement : MonoBehaviour
 {
     public Transform waitAfterSpawn;
     public Transform target;
-   
+    public Animator sucker;
 
     public bool isPausing;
 
     public float flyingSpeed;
 
-    bool suckInitiated = false;
+   
     // Start is called before the first frame update
     void Start()
     {
         
-      
-        SpawnInAir();
+    
         isPausing = true;
         
 
@@ -29,11 +28,14 @@ public class BatMovement : MonoBehaviour
     void Update()
     {
         Pause();
-       if(!suckInitiated && transform.position == target.position)
+     
+        if (gameObject.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
         {
-            GetComponentInChildren<Animator>().SetTrigger("StartSucking");
-            suckInitiated = true;
-            /// FIX COD IN THE SUCKER TO SUCKITY SUCKY SUCK SUCK
+            gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else
+        {
+            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
         }
 
     }
@@ -55,7 +57,7 @@ public class BatMovement : MonoBehaviour
 
 
         }
-
+      
     }
 
     public void NextPoint()
@@ -65,13 +67,7 @@ public class BatMovement : MonoBehaviour
 
     }
 
-    public void SpawnInAir()
-    {
-
-        Vector3 airSpawn = new Vector3(transform.position.x, transform.position.y, 4f); //4 är position av z. innebär att objectet spawnar över marken. 
-        transform.position = airSpawn;
-
-    }
+ 
 
 
 }

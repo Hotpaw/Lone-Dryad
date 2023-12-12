@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2879847166901325148}
   - component: {fileID: 4252935050728090113}
   - component: {fileID: 6092420955762586670}
-  m_Layer: 0
+  - component: {fileID: 2029901567348713892}
+  m_Layer: 11
   m_Name: Sucker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 13
   m_Sprite: {fileID: 1114624992, guid: a2b9a3a077777444b9a1cb31ba8939ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -106,6 +107,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2029901567348713892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3991564880112167489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f97ece59751177240a4388549c5f72e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7656578003032323306
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,10 +131,10 @@ GameObject:
   - component: {fileID: 7880823146384379712}
   - component: {fileID: 3389265561370428981}
   - component: {fileID: -2475092907818342163}
-  - component: {fileID: 6294758653889628156}
   - component: {fileID: 2386809975456436088}
   - component: {fileID: 5914938685432745212}
-  m_Layer: 0
+  - component: {fileID: 4342270648474804048}
+  m_Layer: 11
   m_Name: BatEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -229,21 +242,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ebfd2da6479124ab4d822bb02a4dba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6294758653889628156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7656578003032323306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8422ba287ad2914408550c5c3d9900cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackCooldown: 10
-  timer: 0
-  projectile: {fileID: 8596294730695136599, guid: 866d6b3e19e820b468ec9d65f47a09f9, type: 3}
+  waitAfterSpawn: {fileID: 0}
+  target: {fileID: 0}
+  sucker: {fileID: 6092420955762586670}
+  isPausing: 0
+  flyingSpeed: 7.79
 --- !u!58 &2386809975456436088
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -293,3 +296,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maxHealth: 1
+--- !u!50 &4342270648474804048
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7656578003032323306}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
