@@ -26,6 +26,8 @@ public class PickUpObject : MonoBehaviour
 
             //logic för att släppa/kasta objektet
 
+
+
           }
           else
           {
