@@ -14,12 +14,22 @@ public class SlowEasyEnemy : MonoBehaviour
     public int patrolDestination;
     public bool attacking; 
     Rigidbody2D rigidbody2D;
+
+    public Animator animator;
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
     private void Update()
     {
+        if (FindAnyObjectByType<Tree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
+        {
+            gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+        }
+        else
+        {
+            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
         if (!attacking)
         {
             rigidbody2D.gravityScale = gravity;
@@ -37,6 +47,7 @@ public class SlowEasyEnemy : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[1].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[1].position) < 1.5f)
                 {
+                    animator.SetTrigger("Jump");
                     attacking = true;
                     patrolDestination = 2;
                 }
@@ -55,6 +66,7 @@ public class SlowEasyEnemy : MonoBehaviour
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[3].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[3].position) < 1.5f)
                 {
+                    animator.SetTrigger("Jump");
                     attacking = true;
                     patrolDestination = 0;
                 }
@@ -66,7 +78,7 @@ public class SlowEasyEnemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, attackPoint.position, attackSpeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, attackPoint.position) < 0.7f)
             {
-                
+                animator.SetTrigger("Ball");
                 FindAnyObjectByType<TreeScript>().GetComponent<Health>().TakeDamage(1);
                 attacking = false;                
             }

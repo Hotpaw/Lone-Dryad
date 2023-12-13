@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5710117788964065973}
   - component: {fileID: 6763611412830432140}
   - component: {fileID: 1172104222412266515}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: SlowEnemy Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,8 +65,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04, y: 0}
-  m_Size: {x: 1.75, y: 1}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.58, y: 0.3}
   m_Direction: 1
 --- !u!212 &1172104222412266515
 SpriteRenderer:
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566559807088409008}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -133,8 +133,9 @@ GameObject:
   - component: {fileID: 6539495550285287065}
   - component: {fileID: 9074977232912670914}
   - component: {fileID: -5112996905315101483}
-  m_Layer: 8
-  m_Name: SlowEnemy
+  - component: {fileID: 881197261910337096}
+  m_Layer: 11
+  m_Name: Centipede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,7 +199,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 93ad00ac9c17ee7439ab338a9d54f14e, type: 3}
-  m_Color: {r: 0.7075472, g: 0.017799873, b: 0.017799873, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -272,3 +273,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maxHealth: 1
+--- !u!95 &881197261910337096
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231108213161858580}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 369edb13ca8f6df4ea3ace5edfb34e25, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
