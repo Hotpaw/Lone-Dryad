@@ -42,7 +42,7 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            GameObject clone = Instantiate(enemies[0], spawnPoints[i].transform.position, Quaternion.identity);
+            GameObject clone = Instantiate(enemies[2], spawnPoints[i].transform.position, Quaternion.identity);
             clone.GetComponent<SlowEasyEnemy>().patrolPoints[0]= patrolPoints[0];
             clone.GetComponent<SlowEasyEnemy>().patrolPoints[1] = patrolPoints[1];
             clone.GetComponent<SlowEasyEnemy>().patrolPoints[2] = patrolPoints[2];
