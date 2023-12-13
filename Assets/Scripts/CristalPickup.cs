@@ -8,6 +8,7 @@ public class CristalPickup : InteractableObject
     {
         // Koden här körs mär du aktiver interactable object i scenen med B eller E
         TreeState3.INSTANCE.numberOfCrystallPieces++;
+        
         Debug.Log("I was pressed");
     }
 
