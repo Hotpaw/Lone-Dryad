@@ -23,7 +23,7 @@ public class InteractWith : MonoBehaviour
     }
     private void Update()
     {
-        transform.localScale = new Vector3(1, 1, 1);
+       
         // Update the icon to change during runtime whenever a controll is disconnected
 
     }
@@ -82,15 +82,12 @@ public class InteractWith : MonoBehaviour
 
 
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        OnTriggerEnter2D(collision);
-    }
+   
     private void DisplayInteractableIcon()
     {
        playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
         playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
-        playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 2, 2).SetEase(Ease.InBounce);
+        playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1,1).SetEase(Ease.InBounce);
         playerInteractIcon.enabled = true;
        
         if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
