@@ -9811,6 +9811,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
   m_PrefabInstance: {fileID: 946665035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2079166043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8188395392744925077, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+  m_PrefabInstance: {fileID: 2908949077995096593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2079166048
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079166043}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.7372484, y: -1.5392408}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 20.201792, y: 3.2384815}
+  m_EdgeRadius: 0
 --- !u!1001 &209147529989136723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10274,7 +10324,8 @@ PrefabInstance:
       propertyPath: currentState
       value: 
       objectReference: {fileID: 892762276}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7568546744107500387, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
     m_RemovedGameObjects:
     - {fileID: 5974716016956314183, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
     m_AddedGameObjects:
@@ -10312,6 +10363,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 965910403189544994, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 171308005}
+    - targetCorrespondingSourceObject: {fileID: 8188395392744925077, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2079166048}
     - targetCorrespondingSourceObject: {fileID: 2921842314210004106, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1600805937}

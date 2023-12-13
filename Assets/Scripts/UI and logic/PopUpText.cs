@@ -7,6 +7,7 @@ using UnityEngine;
 public class PopUpText : MonoBehaviour
 {
     public static PopUpText INSTANCE;
+    public GameObject popUpDialogue;
     public TextMeshProUGUI popUpText;
     public int timer;
     private void Awake()
@@ -28,7 +29,7 @@ public class PopUpText : MonoBehaviour
     IEnumerator showText(string message, Color color)
     {
         popUpText.gameObject.SetActive(true);
-        popUpText.color = color;
+        popUpText.color = Color.white;
         popUpText.text = message;
         yield return new WaitForSeconds(timer);
         popUpText.gameObject.SetActive(false);
