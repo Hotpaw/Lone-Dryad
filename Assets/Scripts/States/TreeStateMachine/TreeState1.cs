@@ -7,12 +7,12 @@ public class TreeState1 : State
     public static TreeState1 INSTANCE;
     public float seedTimer;
     public float spawnSeedAt;
-    public float triggerTimer;
-    public List<Transform> spawnPoints;
+    public float triggerTime;
     
     public bool trigger1;
     public bool trigger2;
     public bool once;
+    public bool once2;
 
     public void Awake()
     {
@@ -39,15 +39,15 @@ public class TreeState1 : State
             {
                 once = true;
                 EnemySpawner.INSTANCE.SpawnEnemy();
-                seedTimer = 0;
+                
                 //spawnSeedAt = Random.Range(5, 25);
             }
-            if (seedTimer == triggerTimer)
+            if (seedTimer > triggerTime)
                 trigger2 = true;
-            if (trigger2)
+            if (trigger2 && !once2)
             {
                 EnemySpawner.INSTANCE.SpawnStage1();
-                trigger2 = false;
+                once2 = true;
             }
 
             return this;

@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour
     //KC
     bool kc;
     Vector2 position;
+    public SpriteRenderer InteractableObject;
 
     private void Start()
     {
@@ -133,7 +134,7 @@ public class Movement : MonoBehaviour
         }
         if (!pickedUp && !isCrawling && Keyboard.current.eKey.wasPressedThisFrame)
             StartCoroutine(PickingUp());
-        else if(controllers.Length < 1 && !pickedUp && !isCrawling && Gamepad.current.wasUpdatedThisFrame)
+        else if(Gamepad.current != null && !pickedUp && !isCrawling && Gamepad.current.wasUpdatedThisFrame)
         {
             StartCoroutine(PickingUp());
         }
