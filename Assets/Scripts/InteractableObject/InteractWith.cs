@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.InputSystem;
 public class InteractWith : MonoBehaviour
 {
@@ -88,7 +89,8 @@ public class InteractWith : MonoBehaviour
     private void DisplayInteractableIcon()
     {
        playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
-
+        playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
+        playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 2, 2).SetEase(Ease.InBounce);
         playerInteractIcon.enabled = true;
        
         if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
