@@ -13,7 +13,7 @@ public class InteractWith : MonoBehaviour
     bool used = false;
     public bool unlimitedUses = false;
     SpriteRenderer playerInteractIcon;
-
+    bool activated = false;
     private void Start()
     {
         InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -23,7 +23,7 @@ public class InteractWith : MonoBehaviour
     }
     private void Update()
     {
-       
+
         // Update the icon to change during runtime whenever a controll is disconnected
 
     }
@@ -82,20 +82,29 @@ public class InteractWith : MonoBehaviour
 
 
     }
-   
+
     private void DisplayInteractableIcon()
     {
-       playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
-        playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
-        playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1,1).SetEase(Ease.InBounce);
-        playerInteractIcon.enabled = true;
-       
-        if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
-        else playerInteractIcon.sprite = Icons[1];
-    }
+        if (!activated)
+        {
+            activated = true;
+            playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+            playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
+            playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
+            playerInteractIcon.enabled = true;
 
+            if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
+            else playerInteractIcon.sprite = Icons[1];
+        }
+
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        OnTriggerEnter2D(collision);
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        activated = false;
         playerInteractIcon.enabled = false;
     }
 
