@@ -244,7 +244,7 @@ public class Movement : MonoBehaviour
     private IEnumerator PickingUp()
     {
         pickedUp = true;
-        Debug.Log("Många");
+       
         animator.SetTrigger("PickingUP");
         yield return new WaitForSeconds(0.1f);
         pickedUp = false;
