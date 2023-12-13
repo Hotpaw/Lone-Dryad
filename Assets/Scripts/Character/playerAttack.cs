@@ -33,6 +33,14 @@ public class playerAttack : MonoBehaviour
     }
     public void FireProjectile()
     {
-       GameObject projectileClone = Instantiate(Projectiles[0], attackPoint.transform.position, Quaternion.identity);
+        GameObject projectileClone = Instantiate(Projectiles[0], attackPoint.transform.position, Quaternion.identity);
+        if (GameValueManager.INSTANCE.stones > 0)
+        {
+            GameValueManager.INSTANCE.stones--;
+            if (GameValueManager.INSTANCE.stones <= 0)
+            {
+                GameValueManager.INSTANCE.thePowerToThrowNuts = false;
+            }
+        }
     }
 }

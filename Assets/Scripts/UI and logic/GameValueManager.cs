@@ -24,6 +24,7 @@ public class GameValueManager : MonoBehaviour
 
     //Unlockable stats
     public bool thePowerToThrowNuts;
+    public int stones;
 
     public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;
