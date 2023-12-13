@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,8 +13,8 @@ public class TreeState2 : State
 
     public void Start()
     {
-        
 
+        Invoke("StartShake", 1);
         FindAnyObjectByType<Movement>().isCrawling = false;
         FindAnyObjectByType<Movement>().IncreaseSpeed();
         FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
@@ -43,6 +44,10 @@ public class TreeState2 : State
                 StartCoroutine(SpawnSeeds());
             }
         }
+    }public void StartShake()
+    {
+        Camera.main.gameObject.transform.DOShakePosition(1, 5, 10, 1);
+        PopUpText.INSTANCE.PopUpMessage("Something happened in the cave", Color.white);
     }
     public override State RunCurrentState()
     {

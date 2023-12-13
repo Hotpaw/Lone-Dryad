@@ -1807,67 +1807,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 618571621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1837490500
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 879502321754886990, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370699298713374567, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_Name
-      value: ScreenTransitioner
-      objectReference: {fileID: 0}
-    - target: {fileID: 6370699298713374567, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3df53032c55eebd4497d8be3aabe3347, type: 3}
 --- !u!1001 &1855357521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2787,7 +2726,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1837490500}
   - {fileID: 840529936820498569}
   - {fileID: 6089427728683567186}
   - {fileID: 758867939}
