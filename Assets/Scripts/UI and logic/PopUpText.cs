@@ -28,7 +28,7 @@ public class PopUpText : MonoBehaviour
     }
     IEnumerator showText(string message, Color color)
     {
-        popUpText.gameObject.SetActive(true);
+        popUpDialogue.gameObject.SetActive(true);
         popUpText.color = Color.white;
         popUpText.text = message;
         yield return new WaitForSeconds(timer);
