@@ -36,6 +36,13 @@ public class EnemySpawner : MonoBehaviour
 
 
     }
+    public void SpawnStage1()
+    {
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            GameObject clone = Instantiate(enemies[0], spawnPoints[i].transform.position, Quaternion.identity);            
+        }
+    }
     public void SpawnStage2()
     {
         int rand = Random.Range(0,waitPoints.Length);

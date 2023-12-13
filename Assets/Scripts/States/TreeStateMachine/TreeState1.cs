@@ -37,25 +37,16 @@ public class TreeState1 : State
                 seedTimer += Time.deltaTime;
             if (!once && seedTimer > spawnSeedAt) 
             {
-<<<<<<< Updated upstream
+                once = true;
                 EnemySpawner.INSTANCE.SpawnEnemy();
                 seedTimer = 0;
                 //spawnSeedAt = Random.Range(5, 25);
-=======
->>>>>>> Stashed changes
-                once = true;
-                EnemySpawner.INSTANCE.SpawnEnemy(1, EnemySpawner.INSTANCE.transform.position);                
-                //spawnSeedAt = Random.Range(5, 25);
-                
             }
             if (seedTimer == triggerTimer)
                 trigger2 = true;
             if (trigger2)
             {
-                for (int i = 0; i < 3; i++) 
-                { 
-                    EnemySpawner.INSTANCE.SpawnEnemy(0, spawnPoints[i].position);
-                }
+                EnemySpawner.INSTANCE.SpawnStage1();
                 trigger2 = false;
             }
 
