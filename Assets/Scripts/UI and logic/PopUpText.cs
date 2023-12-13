@@ -32,7 +32,7 @@ public class PopUpText : MonoBehaviour
         popUpText.color = Color.white;
         popUpText.text = message;
         yield return new WaitForSeconds(timer);
-        popUpText.gameObject.SetActive(false);
+        popUpDialogue.gameObject.SetActive(false);
 
     }
 }
