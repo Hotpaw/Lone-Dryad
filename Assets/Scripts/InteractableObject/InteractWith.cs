@@ -11,10 +11,14 @@ public class InteractWith : MonoBehaviour
     public Vector2 iconOffset;
     bool used = false;
     public bool unlimitedUses = false;
+    SpriteRenderer playerInteractIcon;
 
     private void Start()
     {
         InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+        playerInteractIcon.enabled = false;
     }
     private void Update()
     {
@@ -83,15 +87,17 @@ public class InteractWith : MonoBehaviour
     }
     private void DisplayInteractableIcon()
     {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        InteractableIcon.transform.localPosition = iconOffset;
-        if (Gamepad.current != null) InteractableIcon.gameObject.GetComponent<SpriteRenderer>().sprite = Icons[0];
-        else InteractableIcon.gameObject.GetComponent<SpriteRenderer>().sprite = Icons[1];
+       playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+
+        playerInteractIcon.enabled = true;
+       
+        if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
+        else playerInteractIcon.sprite = Icons[1];
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        playerInteractIcon.enabled = false;
     }
 
 

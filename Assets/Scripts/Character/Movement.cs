@@ -57,6 +57,7 @@ public class Movement : MonoBehaviour
     //KC
     bool kc;
     Vector2 position;
+    public SpriteRenderer InteractableObject;
 
     private void Start()
     {
