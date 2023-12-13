@@ -9,17 +9,21 @@ public class Tree : InteractableObject
     public override void Interact()
     {
         if (GameValueManager.INSTANCE.gotWater)
-        {            
-            FindObjectOfType<Movement>().IncreaseSpeed();
-            FindObjectOfType<Movement>().isCrawling = false;
+        {    
             PopUpText.INSTANCE.PopUpMessage("Watered tree", Color.blue);            
-            GameValueManager.INSTANCE.addingWater = true; 
+            GameValueManager.INSTANCE.addingWater = true;
+            StartCoroutine(StopCrawling());
 
-            if(!firstTime)
+            if (!firstTime)
             {
                 distanceChecker.active = true;
                 firstTime = true;
             }
         }
+    }
+    public IEnumerator StopCrawling()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<Movement>().IncreaseSpeed();
     }
 }
