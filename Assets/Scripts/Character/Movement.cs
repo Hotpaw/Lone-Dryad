@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -52,6 +53,7 @@ public class Movement : MonoBehaviour
 
     public bool right;
     public float savedMaxSpeed;
+    bool pickedUp = false;
     //KC
     bool kc;
     Vector2 position;
@@ -128,11 +130,11 @@ public class Movement : MonoBehaviour
             position.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
             transform.position = position;
         }
-
-
+        if (!pickedUp && Keyboard.current.eKey.IsActuated() && !isCrawling || Gamepad.current.buttonEast.IsActuated() && !isCrawling)
+            StartCoroutine(PickingUp());
     }
 
-  
+
     public void IncreaseSpeed()
     {
         isCrawling = false;
@@ -233,6 +235,13 @@ public class Movement : MonoBehaviour
 
         rb.velocity = new Vector2(velocityX, rb.velocity.y);
     }
-
+    private IEnumerator PickingUp()
+    {
+        pickedUp = true;
+        Debug.Log("Många");
+        animator.SetTrigger("PickingUP");
+        yield return new WaitForSeconds(0.1f);
+        pickedUp = false;
+    }
 
 }

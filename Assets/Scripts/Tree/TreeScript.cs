@@ -9,9 +9,7 @@ public class TreeScript : MonoBehaviour
     public GameObject wiltingTree;    
 
     void Update()
-    {   
-        if (health.currentHealth <= 0 && !GameValueManager.INSTANCE.gameWon)
-            WiltingTree();        
+    {           
         if (health.currentHealth == health.maxHealth)
             GameValueManager.INSTANCE.IncreaseProgress();
     }
