@@ -39,7 +39,7 @@ public class cullBackground : MonoBehaviour
     {
         used = true;
         ChangeBackground(a);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.5f);
         used = false;
     }
 }
