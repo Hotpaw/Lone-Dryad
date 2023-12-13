@@ -130,7 +130,7 @@ public class Movement : MonoBehaviour
             position.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
             transform.position = position;
         }
-        if (!pickedUp && Keyboard.current.eKey.IsActuated() && !isCrawling || Gamepad.current.buttonEast.IsActuated() && !isCrawling)
+        if (!pickedUp && Keyboard.current.eKey.wasPressedThisFrame && !isCrawling || Gamepad.current.buttonEast.wasPressedThisFrame && !isCrawling)
             StartCoroutine(PickingUp());
     }
 
