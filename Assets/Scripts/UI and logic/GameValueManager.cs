@@ -15,6 +15,7 @@ public class GameValueManager : MonoBehaviour
     public bool treeIsALive = true;
     public bool gameWon;
     public int sceneNr;
+    public bool nextLevelAvailable;
 
     //Dryad stats
     public TeleportScript teleportScript;    
@@ -41,12 +42,13 @@ public class GameValueManager : MonoBehaviour
     {
         if (progressActive)
         {
-            progressScore += 1f * Time.deltaTime;
+            progressScore += 10;
         }        
         if (progressScore >= nextStageScore)
         {
-
-            SceneLoader.INSTANCE.LoadScene(currentsceneBuildIndex + 1);
+            nextLevelAvailable = true;
+            PopUpText.INSTANCE.PopUpMessage("My tree is doing well now, i can go back and sleep for a couple of years", Color.green);
+            
         }
     }    
 }

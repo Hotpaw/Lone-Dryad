@@ -58,8 +58,7 @@ public class PlantScript : MonoBehaviour
                 damageTreeTimer = 0;
                 treeHealth.TakeDamage(damage);
                 PopUpText.INSTANCE.PopUpMessage("parasitic plant is stealing the lifeenergy from the tree", Color.red);
-            }
-            GameValueManager.INSTANCE.progressScore -= 0.2f * Time.deltaTime;
+            }            
         }
         if (tree == null)
         {
