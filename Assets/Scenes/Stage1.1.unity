@@ -234,6 +234,10 @@ PrefabInstance:
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: attackPoint
+      value: 
+      objectReference: {fileID: 1248031089}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: enemies.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -250,6 +254,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: spawnPoints.Array.data[0]
       value: 
       objectReference: {fileID: 1216942599}
@@ -261,6 +269,22 @@ PrefabInstance:
       propertyPath: spawnPoints.Array.data[2]
       value: 
       objectReference: {fileID: 262841651}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1826865617}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1037754347}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1819193477}
+    - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1722198083}
     - target: {fileID: 696759956649016547, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: destinationPoints.Array.size
       value: 1

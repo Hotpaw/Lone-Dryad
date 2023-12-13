@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> enemies;
     public Transform[] spawnPoints;
     public Transform[] destinationPoints;
+    public Transform[] patrolPoints;
+    public Transform attackPoint;
 
 
     [Header("stage 2")]
@@ -40,7 +42,12 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            GameObject clone = Instantiate(enemies[0], spawnPoints[i].transform.position, Quaternion.identity);            
+            GameObject clone = Instantiate(enemies[0], spawnPoints[i].transform.position, Quaternion.identity);
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[0]= patrolPoints[0];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[1] = patrolPoints[1];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[2] = patrolPoints[2];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[3] = patrolPoints[3];
+            clone.GetComponent<SlowEasyEnemy>().attackPoint = attackPoint;
         }
     }
     public void SpawnStage2()

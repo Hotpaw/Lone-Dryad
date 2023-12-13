@@ -12,7 +12,7 @@ public class TreeState1 : State
     
     public bool trigger1;
     public bool trigger2;
-    bool once;
+    public bool once;
 
     public void Awake()
     {
