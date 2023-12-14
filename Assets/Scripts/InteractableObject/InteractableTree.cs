@@ -20,6 +20,10 @@ public class Tree : InteractableObject
                 firstTime = true;
             }
         }
+        if (GameValueManager.INSTANCE.nextLevelAvailable)
+        {
+            SceneLoader.INSTANCE.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
+        }
     }
     public IEnumerator StopCrawling()
     {

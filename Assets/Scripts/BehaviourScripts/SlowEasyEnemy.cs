@@ -12,7 +12,8 @@ public class SlowEasyEnemy : MonoBehaviour
     public float attackSpeed;
     public float gravity;
     public int patrolDestination;
-    public bool attacking; 
+    public bool attacking;
+    bool once;
     Rigidbody2D rigidbody2D;
 
     public Animator animator;
@@ -22,6 +23,14 @@ public class SlowEasyEnemy : MonoBehaviour
     }
     private void Update()
     {
+        if (GetComponent<Health>().currentHealth <= 0 && !once)
+        {
+            once = true;
+            animator.SetTrigger("Ball");
+            gravity = -3;
+            StartCoroutine(DelayGravity());
+
+        }
         if (FindAnyObjectByType<Tree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
         {
             gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
@@ -48,7 +57,7 @@ public class SlowEasyEnemy : MonoBehaviour
                 if (Vector2.Distance(transform.position, patrolPoints[1].position) < 1.5f)
                 {
                     animator.SetTrigger("Jump");
-                    attacking = true;
+                    StartCoroutine(DelayAttack());
                     patrolDestination = 2;
                 }
             }
@@ -67,7 +76,7 @@ public class SlowEasyEnemy : MonoBehaviour
                 if (Vector2.Distance(transform.position, patrolPoints[3].position) < 1.5f)
                 {
                     animator.SetTrigger("Jump");
-                    attacking = true;
+                    StartCoroutine(DelayAttack());
                     patrolDestination = 0;
                 }
             }
@@ -83,5 +92,15 @@ public class SlowEasyEnemy : MonoBehaviour
                 attacking = false;                
             }
         }
+    }
+    public IEnumerator DelayAttack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        attacking = true;
+    }
+    public IEnumerator DelayGravity()
+    {
+        yield return new WaitForSeconds(0.2f);
+        gravity = 5;
     }
 }
