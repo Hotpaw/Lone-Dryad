@@ -35,7 +35,7 @@ public class Health : MonoBehaviour
             else if (isCentipede)
             {
                 StartCoroutine(YieldDie(0.5f));
-                GameValueManager.INSTANCE.IncreaseProgress();
+                //GameValueManager.INSTANCE.IncreaseProgress();
             }
             else
                 Die();
