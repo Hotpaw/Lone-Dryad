@@ -16,8 +16,7 @@ public class tentacle : MonoBehaviour
     {
         target = FindAnyObjectByType<Movement>().transform;
         rb = GetComponent<Rigidbody2D>();
-        lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, target.position);
+        
     }
     private void Update()
     {
