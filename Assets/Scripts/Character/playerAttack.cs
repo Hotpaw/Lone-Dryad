@@ -15,9 +15,9 @@ public class playerAttack : MonoBehaviour
     }
     public void Fire(InputAction.CallbackContext context)
     {
-        if (!coolDown && context.action.IsPressed() && GameValueManager.INSTANCE.thePowerToThrowNuts)
+        if (!coolDown && context.action.IsPressed() && GameValueManager.INSTANCE.thePowerToThrowNuts && FindAnyObjectByType<Movement>().isCrawling == false)
         {
-            Debug.Log("PRESSED ATTACK");
+         
             StartCoroutine(AttackCooldown());
         }
     }
