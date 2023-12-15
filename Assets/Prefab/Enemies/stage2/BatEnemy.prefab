@@ -297,6 +297,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealth: 1
   maxHealth: 1
+  isCentipede: 0
 --- !u!50 &4342270648474804048
 Rigidbody2D:
   serializedVersion: 4

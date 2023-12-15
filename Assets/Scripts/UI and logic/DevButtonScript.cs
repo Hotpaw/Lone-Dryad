@@ -51,5 +51,9 @@ public class DevButtonScript : MonoBehaviour
         {
             health.Heal(1);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 }

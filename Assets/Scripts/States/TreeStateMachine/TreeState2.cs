@@ -30,6 +30,10 @@ public class TreeState2 : State
     }
     private void Update()
     {
+        if(GameValueManager.INSTANCE.progressScore == GameValueManager.INSTANCE.nextStageScore)
+        {
+            enemyWaveActive = false;
+        }
         if (enemyWaveActive && GameValueManager.INSTANCE.treeIsALive)
         {
             if (!batCD)
@@ -46,8 +50,15 @@ public class TreeState2 : State
         }
     }public void StartShake()
     {
+       StartCoroutine(ShakeEffect());
+    }
+    IEnumerator ShakeEffect()
+    {
+        FindAnyObjectByType<cameraFollow>().enabled = false;
         Camera.main.gameObject.transform.DOShakePosition(1, 5, 10, 1);
-        PopUpText.INSTANCE.PopUpMessage("Something happened in the cave", Color.white);
+        PopUpText.INSTANCE.PopUpMessage("Something happened in the cave", Color.white, 3);
+        yield return new WaitForSeconds(1);
+        FindAnyObjectByType<cameraFollow>().enabled = true;
     }
     public override State RunCurrentState()
     {

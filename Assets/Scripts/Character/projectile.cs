@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
-
+    float timer;
+    float cooldown = 0.6f;
     public int damage;
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer > cooldown)
+        {
+            gameObject.SetActive(false);
+        }
+    }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -14,9 +23,6 @@ public class projectile : MonoBehaviour
             gameObject.SetActive(false);
 
         }
-        if (collision.gameObject.layer == 6)
-        {
-            gameObject.SetActive(false);
-        }
+
     }
 }

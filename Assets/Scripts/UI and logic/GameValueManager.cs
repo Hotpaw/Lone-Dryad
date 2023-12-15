@@ -32,6 +32,7 @@ public class GameValueManager : MonoBehaviour
 
     public void Awake()
     {
+        Cursor.visible = false;
         currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;
@@ -47,7 +48,7 @@ public class GameValueManager : MonoBehaviour
         if (progressScore >= nextStageScore)
         {
             nextLevelAvailable = true;
-            PopUpText.INSTANCE.PopUpMessage("My tree is doing well now, i can go back and sleep for a couple of years", Color.green);
+            PopUpText.INSTANCE.PopUpMessage("My tree is doing well now, i can go back and sleep for a couple of years", Color.green, 5);
             
         }
     }    

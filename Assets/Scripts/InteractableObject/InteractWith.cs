@@ -16,7 +16,10 @@ public class InteractWith : MonoBehaviour
     bool activated = false;
     private void Start()
     {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        if (interactableObject != null)
+        {
+            InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
 
         playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
         playerInteractIcon.enabled = false;
