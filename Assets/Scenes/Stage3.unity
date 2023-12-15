@@ -6314,7 +6314,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 655465397}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
   m_Name: 
@@ -15472,6 +15472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2f77ecdf80fdf43abcc136fdc59362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneCrystal: 0
+  crystal: {fileID: 0}
 --- !u!1 &2077444759
 GameObject:
   m_ObjectHideFlags: 0

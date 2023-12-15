@@ -29,6 +29,7 @@ public class GameValueManager : MonoBehaviour
     public int stones;
     public int maxStones;
 
+
     public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;
 

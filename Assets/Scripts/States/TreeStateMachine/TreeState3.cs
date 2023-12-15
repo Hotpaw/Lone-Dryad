@@ -7,6 +7,7 @@ public class TreeState3 : State
     public static TreeState3 INSTANCE;
     bool once;
     public int numberOfCrystallPieces;
+    public int maxCrystals;
 
     public void Awake()
     {
