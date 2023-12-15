@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameValueManager : MonoBehaviour
@@ -26,6 +27,7 @@ public class GameValueManager : MonoBehaviour
     //Unlockable stats
     public bool thePowerToThrowNuts;
     public int stones;
+    public int maxStones;
 
     public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;
@@ -33,6 +35,7 @@ public class GameValueManager : MonoBehaviour
     public void Awake()
     {
         Cursor.visible = false;
+        
         currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;

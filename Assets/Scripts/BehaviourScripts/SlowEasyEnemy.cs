@@ -8,18 +8,20 @@ public class SlowEasyEnemy : MonoBehaviour
 {
     public Transform[] patrolPoints;
     public Transform attackPoint;
+    public Transform theLeftSpawnPoint;
     public float moveSpeed;
     public float attackSpeed;
     public float gravity;
     public int patrolDestination;
     public bool attacking;
     bool once;
+    public bool movingRight;
     Rigidbody2D rigidbody2D;
 
     public Animator animator;
     private void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();        
     }
     private void Update()
     {
@@ -31,7 +33,7 @@ public class SlowEasyEnemy : MonoBehaviour
             StartCoroutine(DelayGravity());
 
         }
-        if (FindAnyObjectByType<InteractableTree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<InteractableTree>().gameObject.transform.position.x)
+        if (movingRight)
         {
             gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
         }
@@ -46,7 +48,8 @@ public class SlowEasyEnemy : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[0].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[0].position) < 1.5f)
-                {                    
+                {
+                    movingRight = false;
                     patrolDestination = 1;
                 }
             }
@@ -65,7 +68,8 @@ public class SlowEasyEnemy : MonoBehaviour
             {
                 transform.position = Vector2.MoveTowards(transform.position, patrolPoints[2].position, moveSpeed * Time.deltaTime);
                 if (Vector2.Distance(transform.position, patrolPoints[2].position) < 1.5f)
-                {                    
+                {
+                    movingRight = true;
                     patrolDestination = 3;
                 }
             }

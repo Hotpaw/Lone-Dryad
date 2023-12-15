@@ -283,6 +283,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2105057825307366007, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -1050003910203191588, guid: b4fcf6ba30018dd4fbe047cb60b13fd4, type: 2}
+    - target: {fileID: 3075999384798643634, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075999384798643634, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 54e2aae6cdf97f2449a6579e566ca0ff, type: 3}
+    - target: {fileID: 3075999384798643634, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -6010630589782568778, guid: b4fcf6ba30018dd4fbe047cb60b13fd4, type: 2}
     - target: {fileID: 3766091423276650992, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -407,7 +423,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed82e59ea44dd3418ef50ca0a429280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioManager: {fileID: 0}
 --- !u!114 &541562253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1485,8 +1500,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07371fe626dc0b43abd66c1f0433691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: b4fcf6ba30018dd4fbe047cb60b13fd4, type: 2}
-  volumeStateText: {fileID: 944690327}
 --- !u!1 &1619931055
 GameObject:
   m_ObjectHideFlags: 0

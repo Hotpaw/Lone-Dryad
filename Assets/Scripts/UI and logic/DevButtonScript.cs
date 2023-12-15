@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class DevButtonScript : MonoBehaviour
@@ -51,7 +52,7 @@ public class DevButtonScript : MonoBehaviour
         {
             health.Heal(1);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
         {
             Application.Quit();
         }

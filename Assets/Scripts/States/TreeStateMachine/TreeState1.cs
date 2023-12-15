@@ -13,6 +13,7 @@ public class TreeState1 : State
     public bool trigger2;
     public bool once;
     public bool once2;
+    public bool once3;
 
     public void Awake()
     {
@@ -51,6 +52,11 @@ public class TreeState1 : State
             {
                 EnemySpawner.INSTANCE.SpawnStage1();
                 once2 = true;
+            }
+            if (!once3 && seedTimer > triggerTime + 20)
+            {
+                EnemySpawner.INSTANCE.SpawnStage1();
+                once3 = true;
             }
 
             return this;
