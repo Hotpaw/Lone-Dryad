@@ -12,8 +12,8 @@ public class cameraFollow : MonoBehaviour
 
     private void Awake()
     {
-      
-     
+
+        cameraDistance = 11;
             cameras = FindObjectsOfType<Camera>();
         
         foreach (Camera cam in cameras)
