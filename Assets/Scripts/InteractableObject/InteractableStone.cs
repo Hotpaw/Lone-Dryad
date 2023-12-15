@@ -11,11 +11,13 @@ public class InteractableStone : InteractableObject
     public override void Interact()
     {
         if (!once && GameValueManager.INSTANCE.stones < GameValueManager.INSTANCE.maxStones)
-        {            
+        {
             GameValueManager.INSTANCE.thePowerToThrowNuts = true;
             once = true;
-            GameValueManager.INSTANCE.stones++;    
+            GameValueManager.INSTANCE.stones++;
             Destroy(stone);
         }
+        else
+            PopUpText.INSTANCE.PopUpMessage("I cant carry anymore stones", Color.black, 2);
     }
 }
