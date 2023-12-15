@@ -121,7 +121,7 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
-        animator.SetBool("Crawl", isCrawling);
+      //  animator.SetBool("Crawl", isCrawling);
         //KC
         kc = GameValueManager.INSTANCE.KC;
         animator.SetBool("KC", kc);
@@ -144,14 +144,32 @@ public class Movement : MonoBehaviour
     public void IncreaseSpeed()
     {
         isCrawling = false;
-        animator.SetBool("Crawl", !isCrawling);
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+            animator.SetBool("Crawl", false);
+        }
+        else
+        {
+            animator.SetBool("Crawl", false);
+        }
         maxSpeed = savedMaxSpeed;
     }
     public void DecreaseSpeed()
     {
-        isCrawling = true;
-        animator.SetBool("Crawl", isCrawling);
         maxSpeed *= 0.5f;
+        isCrawling = true;
+        if(animator == null)
+        {
+            animator = GetComponent<Animator>();
+            animator.SetBool("Crawl", true);
+        }
+        else
+        {
+            animator.SetBool("Crawl", true);
+        }
+       
+      
     }
 
     public void Flip()

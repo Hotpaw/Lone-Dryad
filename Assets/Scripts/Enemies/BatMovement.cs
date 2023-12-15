@@ -29,7 +29,7 @@ public class BatMovement : MonoBehaviour
     {
         
      // fix null referens on game over
-        if (FindAnyObjectByType<Tree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
+        if (FindAnyObjectByType<InteractableTree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<InteractableTree>().gameObject.transform.position.x)
         {
             gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
         }

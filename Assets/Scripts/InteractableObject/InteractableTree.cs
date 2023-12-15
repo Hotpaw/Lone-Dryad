@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tree : InteractableObject
+public class InteractableTree : InteractableObject
 {
     public bool firstTime;
     public DistanceChecker distanceChecker;
