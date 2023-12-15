@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-
+      
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
@@ -234,7 +234,7 @@ public class Movement : MonoBehaviour
         isGrounded = Physics2D.BoxCast(transform.position, groundCheckBoxSize, 0, -transform.up, groundCheckLength, groundLayer);
         if (isGrounded)
         {
-            doubleJump = true;
+            doubleJump = false;
             timeSinceGrounded = 0;
         }
 
