@@ -8,7 +8,7 @@ public class ThrowingAttackBoon : InteractableObject
     public GameObject batTrigger;
     public override void Interact()
     {
-        PopUpText.INSTANCE.PopUpMessage("Use Your Action Key to Attack", Color.green, 0.5f);
+        PopUpText.INSTANCE.PopUpMessage("Use Your Action Key to Attack", Color.green, 3f, true);
         GameValueManager.INSTANCE.thePowerToThrowNuts = true;
        
         Stage2Event.INSTANCE.SpawnBats();
