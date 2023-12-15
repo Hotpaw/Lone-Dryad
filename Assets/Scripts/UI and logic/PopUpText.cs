@@ -29,6 +29,7 @@ public class PopUpText : MonoBehaviour
     }
     IEnumerator showText(string message, Color color)
     {
+        popUpDialogue.gameObject.transform.position = windowPosition[0].position;
         popUpDialogue.gameObject.SetActive(true);
         popUpText.color = color;
         popUpText.text = message;
@@ -42,6 +43,7 @@ public class PopUpText : MonoBehaviour
     }
     IEnumerator showText(string message, Color color, float duration)
     {
+        popUpDialogue.gameObject.transform.position = windowPosition[0].position;
         popUpDialogue.gameObject.SetActive(true);
         popUpText.color = color;
         popUpText.text = message;
@@ -67,7 +69,8 @@ public class PopUpText : MonoBehaviour
         popUpText.color = color;
         popUpText.text = message;
         yield return new WaitForSeconds(duration);
+       
         popUpDialogue.gameObject.SetActive(false);
-
+       
     }
 }
