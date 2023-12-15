@@ -18,7 +18,7 @@ public class TreeState1 : State
     public void Awake()
     {
         spawnSeedAt = 10;
-        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray, 3);
+        
 
 
         FindAnyObjectByType<Movement>().isCrawling = true;
@@ -27,6 +27,7 @@ public class TreeState1 : State
     private void Start()
     {
         GameValueManager.INSTANCE.progressActive = true;
+        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray, 3);
     }
 
 

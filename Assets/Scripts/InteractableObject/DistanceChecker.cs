@@ -13,6 +13,7 @@ public class DistanceChecker : MonoBehaviour
             {
                 if (inside)
                 {
+                    PopUpText.INSTANCE.PopUpMessage("I am too far away from my tree, I am feeling weak", Color.red, 3);
                     FindAnyObjectByType<Movement>().isCrawling = true;
                     FindAnyObjectByType<Movement>().DecreaseSpeed();
                     inside = !inside;

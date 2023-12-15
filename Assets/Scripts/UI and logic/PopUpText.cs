@@ -73,4 +73,31 @@ public class PopUpText : MonoBehaviour
         popUpDialogue.gameObject.SetActive(false);
        
     }
+    public void PopUpMessage(string message, Color color, float duration, bool position, bool Priority)
+    {
+        if(Priority == true)
+        {
+            popUpDialogue.SetActive(false);
+            StartCoroutine(showText(message, color, duration, position, Priority));
+        }
+    
+    }
+    IEnumerator showText(string message, Color color, float duration, bool position, bool Priority)
+    {
+        if (position == true)
+        {
+            popUpDialogue.gameObject.transform.position = windowPosition[1].position;
+        }
+        else
+        {
+            popUpDialogue.gameObject.transform.position = windowPosition[0].position;
+        }
+        popUpDialogue.gameObject.SetActive(true);
+        popUpText.color = color;
+        popUpText.text = message;
+        yield return new WaitForSeconds(duration);
+
+        popUpDialogue.gameObject.SetActive(false);
+
+    }
 }
