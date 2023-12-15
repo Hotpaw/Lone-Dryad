@@ -10,21 +10,23 @@ public class cameraFollow : MonoBehaviour
     Camera[] cameras;
     // Start is called before the first frame update
 
-    private void Awake()
+    private void Start()
     {
-      
-     
-            cameras = FindObjectsOfType<Camera>();
-        
-        foreach (Camera cam in cameras)
+        if (Application.isEditor)
         {
-            cam.orthographicSize = cameraDistance;
+            cameras = FindObjectsOfType<Camera>();
         }
     }
     // Update is called once per frame
     void Update()
     {
-      
+        if(Application.isEditor)
+        {
+           foreach(Camera cam in cameras)
+            {
+                cam.orthographicSize = cameraDistance;
+            }
+        }
         playerPosition = new Vector3 (FindAnyObjectByType<Movement>().transform.position.x, FindAnyObjectByType<Movement>().transform.position.y, -10);
         transform.position = playerPosition;
         

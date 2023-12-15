@@ -14,7 +14,9 @@ public class DevButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+        playerY = PlayerPrefs.GetFloat("PlayerY");
+        playerX = PlayerPrefs.GetFloat("PlayerX");
+        player.transform.position = new Vector2(playerX, playerY);
         health = GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>();
     }
 

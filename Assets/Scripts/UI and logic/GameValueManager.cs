@@ -47,7 +47,7 @@ public class GameValueManager : MonoBehaviour
         if (progressScore >= nextStageScore)
         {
             nextLevelAvailable = true;
-            PopUpText.INSTANCE.PopUpMessage("My tree is doing well now, i can go back and sleep for a couple of years", Color.green);
+            PopUpText.INSTANCE.PopUpMessage("My tree is doing well now, i can go back and sleep for a couple of years", Color.green, 5);
             
         }
     }    

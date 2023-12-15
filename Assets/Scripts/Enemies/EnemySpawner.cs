@@ -57,7 +57,7 @@ public class EnemySpawner : MonoBehaviour
         GameObject clone = Instantiate(enemies[1], spawnPoints[rand].transform.position, Quaternion.identity);
        
         clone.GetComponent<BatMovement>().target = suckPoints[rand2];
-        if (clone.transform.position.x < FindAnyObjectByType<InteractableTree>().gameObject.transform.position.x)
+        if (clone.transform.position.x < FindAnyObjectByType<Tree>().gameObject.transform.position.x)
         {
             clone.transform.rotation = new Quaternion(0,180,0,0);
         }

@@ -8,7 +8,7 @@ public class TreeState1 : State
     public float seedTimer;
     public float spawnSeedAt;
     public float triggerTime;
-
+    
     public bool trigger1;
     public bool trigger2;
     public bool once;
@@ -16,33 +16,30 @@ public class TreeState1 : State
 
     public void Awake()
     {
-        spawnSeedAt = 10;
-        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
-
-
-        FindAnyObjectByType<Movement>().isCrawling = true;
-        FindAnyObjectByType<Movement>().DecreaseSpeed();
+        spawnSeedAt = 10;      
     }
     private void Start()
     {
+        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray);
+        
         GameValueManager.INSTANCE.progressActive = true;
+        FindAnyObjectByType<Movement>().isCrawling = true;
+        FindAnyObjectByType<Movement>().DecreaseSpeed();
     }
 
-
-
     public override State RunCurrentState()
-    {
+    {        
         if (GameValueManager.INSTANCE.treeLevel == 1)
         {
             if (GameValueManager.INSTANCE.addingWater)
                 trigger1 = true;
             if (trigger1)
                 seedTimer += Time.deltaTime;
-            if (!once && seedTimer > spawnSeedAt)
+            if (!once && seedTimer > spawnSeedAt) 
             {
                 once = true;
                 EnemySpawner.INSTANCE.SpawnEnemy();
-
+                
                 //spawnSeedAt = Random.Range(5, 25);
             }
             if (seedTimer > triggerTime)

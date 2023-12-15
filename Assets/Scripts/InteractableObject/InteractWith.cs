@@ -87,38 +87,24 @@ public class InteractWith : MonoBehaviour
     {
         if (!activated)
         {
-            if (playerInteractIcon.transform.localScale.x >= 2)
-            {
-                playerInteractIcon.transform.localScale = Vector3.one;
-            }
-
             activated = true;
             playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
             playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
-            if (playerInteractIcon.transform.localScale == new Vector3(2, 2, 2))
-                playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
-
-
+            playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
             playerInteractIcon.enabled = true;
 
             if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
             else playerInteractIcon.sprite = Icons[1];
         }
 
-
-
-
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
         OnTriggerEnter2D(collision);
-
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-
         activated = false;
-        playerInteractIcon.gameObject.transform.localScale = Vector3.one;
         playerInteractIcon.enabled = false;
     }
 

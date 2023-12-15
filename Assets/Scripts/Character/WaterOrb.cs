@@ -91,7 +91,7 @@ public class WaterOrb : MonoBehaviour
                     {
                         GameValueManager.INSTANCE.addingWater = false;                                               
                         wateringCountDown = 10;
-                        GameValueManager.INSTANCE.gotWater = false;
+                        GameValueManager.INSTANCE.gotWater = false; ;
                     }    
                 }
             }
