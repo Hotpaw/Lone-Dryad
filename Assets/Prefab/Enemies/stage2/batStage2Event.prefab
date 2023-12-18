@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3370642393651062314}
   - component: {fileID: 7880823146384379712}
   - component: {fileID: 3389265561370428981}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: batStage2Event
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 12
   m_Sprite: {fileID: -816291703, guid: e0d15c3a21d17794395e3228a948b2df, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
