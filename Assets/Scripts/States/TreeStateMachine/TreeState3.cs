@@ -6,22 +6,25 @@ public class TreeState3 : State
 {
     public static TreeState3 INSTANCE;
     bool once;
+    public int numberOfCrystallPieces;
+    public int maxCrystals;
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+        GameValueManager.INSTANCE.progressActive = false;
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+
+    }
+    private void Update()
+    {
+        if(numberOfCrystallPieces == 5)
+        {
+            GameValueManager.INSTANCE.progressActive = true;
+        }
     }
     public override State RunCurrentState()
     {
-        if (GameValueManager.INSTANCE.treeLevel == 3)
-        {
-            return this;
-        }
-        else
-        {
-            return TreeState4.INSTANCE;
-        }
+        return this;
     }
+
 }

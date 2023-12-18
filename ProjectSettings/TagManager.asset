@@ -12,6 +12,8 @@ TagManager:
   - Jump
   - DistanceChecker
   - Amulet
+  - JumpStop
+  - PlayerFeet
   layers:
   - Default
   - TransparentFX
@@ -26,8 +28,8 @@ TagManager:
   - TreeTop
   - PostProcessing
   - Shield
-  - 
-  - 
+  - pickUpMask
+  - EnemyThatCollides
   - 
   - 
   - 

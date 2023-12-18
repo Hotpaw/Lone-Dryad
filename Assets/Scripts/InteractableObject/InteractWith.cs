@@ -1,24 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 using UnityEngine.InputSystem;
+using TMPro;
 public class InteractWith : MonoBehaviour
 {
     public InteractableObject interactableObject;
+    public string interactableDescription;
     public GameObject InteractableIcon;
     public Sprite[] Icons;
     public bool interactable;
     public Vector2 iconOffset;
     bool used = false;
     public bool unlimitedUses = false;
-
+    SpriteRenderer playerInteractIcon;
+    bool activated = false;
     private void Start()
     {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        if (interactableObject != null)
+        {
+            InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+        playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+        playerInteractIcon.enabled = false;
     }
     private void Update()
     {
-        transform.localScale = new Vector3(1, 1, 1);
+
         // Update the icon to change during runtime whenever a controll is disconnected
 
     }
@@ -77,21 +87,51 @@ public class InteractWith : MonoBehaviour
 
 
     }
+
+    private void DisplayInteractableIcon()
+    {
+        if (!activated)
+        {
+            playerInteractIcon.gameObject.SetActive(true);
+            if(interactableDescription != null && playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>() != null)
+            {
+                playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>().text = interactableDescription;
+            }
+         
+            if (playerInteractIcon.transform.localScale.x >= 2)
+            {
+                playerInteractIcon.transform.localScale = Vector3.one;
+            }
+
+            activated = true;
+            playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+            playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
+            if (playerInteractIcon.transform.localScale == new Vector3(2, 2, 2))
+                playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
+
+            playerInteractIcon.enabled = true;
+
+
+            if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
+            else playerInteractIcon.sprite = Icons[1];
+        }
+
+
+
+
+    }
     private void OnTriggerStay2D(Collider2D collision)
     {
         OnTriggerEnter2D(collision);
-    }
-    private void DisplayInteractableIcon()
-    {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        InteractableIcon.transform.localPosition = iconOffset;
-        if (Gamepad.current != null) InteractableIcon.gameObject.GetComponent<SpriteRenderer>().sprite = Icons[0];
-        else InteractableIcon.gameObject.GetComponent<SpriteRenderer>().sprite = Icons[1];
-    }
 
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+
+        activated = false;
+        playerInteractIcon.gameObject.transform.localScale = Vector3.one;
+        playerInteractIcon.enabled = false;
+        playerInteractIcon.gameObject.SetActive(false);
     }
 
 

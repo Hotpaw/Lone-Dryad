@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class ThrowingAttackBoon : InteractableObject
 {
+    public GameObject batTrigger;
     public override void Interact()
     {
-        PopUpText.INSTANCE.PopUpMessage("YOU CAN NOW THROW NUTS! USE LMB OR X", Color.green);
+        PopUpText.INSTANCE.PopUpMessage("Use Your Action Key to Attack", Color.green, 3f, true);
         GameValueManager.INSTANCE.thePowerToThrowNuts = true;
-        GameValueManager.INSTANCE.progressActive = true;
-        Stage2Event.INSTANCE.SpawnBats();
-        TreeState2.INSTANCE.batsReleased = true;
-        Destroy(gameObject, 0.1f);
        
+        Stage2Event.INSTANCE.SpawnBats();
+        batTrigger.SetActive(true);
+        Destroy(gameObject, 0.1f);
+
     }
 
-   
+
 }

@@ -2,24 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tree : InteractableObject
+public class InteractableTree : InteractableObject
 {
     public bool firstTime;
     public DistanceChecker distanceChecker;
     public override void Interact()
     {
         if (GameValueManager.INSTANCE.gotWater)
-        {            
-            FindObjectOfType<Movement>().IncreaseSpeed();
-            FindObjectOfType<Movement>().isCrawling = false;
-            PopUpText.INSTANCE.PopUpMessage("Watered tree", Color.blue);            
-            GameValueManager.INSTANCE.addingWater = true; 
+        {    
+            PopUpText.INSTANCE.PopUpMessage("The Trees Health Return", Color.blue, 2);            
+            GameValueManager.INSTANCE.addingWater = true;
+            StartCoroutine(StopCrawling());
 
-            if(!firstTime)
+            if (!firstTime)
             {
                 distanceChecker.active = true;
                 firstTime = true;
             }
         }
+        if (GameValueManager.INSTANCE.nextLevelAvailable)
+        {
+            SceneLoader.INSTANCE.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
+        }
+    }
+    public IEnumerator StopCrawling()
+    {
+        yield return new WaitForSeconds(2f);
+        FindObjectOfType<Movement>().IncreaseSpeed();
     }
 }

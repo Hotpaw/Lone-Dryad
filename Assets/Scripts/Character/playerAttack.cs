@@ -15,9 +15,9 @@ public class playerAttack : MonoBehaviour
     }
     public void Fire(InputAction.CallbackContext context)
     {
-        if (!coolDown && context.action.IsPressed() && GameValueManager.INSTANCE.thePowerToThrowNuts)
+        if (!coolDown && context.action.IsPressed() && GameValueManager.INSTANCE.thePowerToThrowNuts && FindAnyObjectByType<Movement>().isCrawling == false)
         {
-            Debug.Log("PRESSED ATTACK");
+         
             StartCoroutine(AttackCooldown());
         }
     }
@@ -33,6 +33,14 @@ public class playerAttack : MonoBehaviour
     }
     public void FireProjectile()
     {
-       GameObject projectileClone = Instantiate(Projectiles[0], attackPoint.transform.position, Quaternion.identity);
+        GameObject projectileClone = Instantiate(Projectiles[0], attackPoint.transform.position, Quaternion.identity);
+        if (GameValueManager.INSTANCE.stones > 0)
+        {
+            GameValueManager.INSTANCE.stones--;
+            if (GameValueManager.INSTANCE.stones <= 0)
+            {
+                GameValueManager.INSTANCE.thePowerToThrowNuts = false;
+            }
+        }
     }
 }

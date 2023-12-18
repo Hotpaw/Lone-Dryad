@@ -1,10 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.visible = true;
+        if(Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
+        {
+            Application.Quit();
+        }
+    }
+    private void Update()
+    {
+        if(Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
+        {
+            PlayGame();
+        }
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene("Stage1.1");
@@ -22,6 +38,19 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void BackToGame()  //tillbaka till spelet knapp efter man gått in på settings
+    {
+        SceneManager.LoadScene("Stage1.1");
+    }
+    //public void EscapeButton()
+    //{
+        
+    //    if (Input.GetKey(KeyCode.Escape)) 
+    //    {
+    //      SceneManager.LoadScene("MainMenu"); //esc knapp till menu
+    //    }
+    //}
+
 
     public void QuiteGame()
     {

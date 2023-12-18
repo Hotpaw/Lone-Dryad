@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
+    public bool isCentipede;
     
     // Start is called before the first frame update    
     public void Heal(int amount)
@@ -29,24 +30,25 @@ public class Health : MonoBehaviour
             {
                 GameValueManager.INSTANCE.treeIsALive = false;
                 this.GetComponent<TreeScript>().WiltingTree();
-                StartCoroutine(YieldDie());
+                StartCoroutine(YieldDie(0.1f));
+            }
+            else if (isCentipede)
+            {
+                StartCoroutine(YieldDie(0.5f));
+                //GameValueManager.INSTANCE.IncreaseProgress();
             }
             else
-            {
-                Die();                
-            }
+                Die();
+                GameValueManager.INSTANCE.IncreaseProgress();
         }            
     }
-    public IEnumerator YieldDie()
-    {
-        yield return new WaitForSeconds(0.1f);
+    public IEnumerator YieldDie(float waitTime)
+    {        
+        yield return new WaitForSeconds(waitTime);
         Die();
     }
     public void Die()
-    {
-        if (this.CompareTag("Tree"))
-            this.GetComponent<SpriteRenderer>().enabled = false;
-        else
+    {           
             Destroy(gameObject);
     }
 

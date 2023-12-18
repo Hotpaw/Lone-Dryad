@@ -7,8 +7,8 @@ using System.Linq;
 
 public class BatCocoon : MonoBehaviour
 {
-    public Ease Ease { get; private set; }
-    
+    public Ease Ease;
+
     Animator animator;
     private void Start()
     {
@@ -21,7 +21,7 @@ public class BatCocoon : MonoBehaviour
     }
     IEnumerator StartAnimation()
     {
-        yield return new WaitForSeconds(Random.Range(0.1f,0.5f));
+        yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
         animator.SetTrigger("Idle");
     }
     IEnumerator BatSpawner(GameObject coco)
@@ -31,8 +31,10 @@ public class BatCocoon : MonoBehaviour
         yield return new WaitForSeconds(2.4f);
         Transform[] paths = Stage2Event.INSTANCE.paths;
         GameObject BatClone = Instantiate(Stage2Event.INSTANCE.Bat, coco.gameObject.transform.position, Quaternion.identity);
-        // Easin in path, check documentation
-        BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(7f, 10f), PathType.Linear).SetEase(Ease);
+        BatClone.transform.rotation = new Quaternion(0, 180, 0, 0);
+       
+        // Fixa något så att batsen förstörs i slutet av sin path.
+        BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(2f, 3f), PathType.Linear).SetEase(Ease);
         Destroy(coco.gameObject);
         Destroy(BatClone, 10f);
         yield return new WaitForSeconds(0.5f);
@@ -40,4 +42,6 @@ public class BatCocoon : MonoBehaviour
 
 
     }
+   
+
 }

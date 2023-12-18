@@ -27,7 +27,7 @@ public class FloatingObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        xOffset = Random.Range(GameValueManager.INSTANCE.treeLevel * 15, GameValueManager.INSTANCE.treeLevel * -15);
+        xOffset = 0;
         floating2D = GetComponent<Rigidbody2D>();
     }
 
@@ -53,7 +53,7 @@ public class FloatingObject : MonoBehaviour
 
             floating2D.AddForce(directionTarget * floatStrength);
 
-         
+
 
             if (Vector2.Distance(floatingTo.transform.position, transform.position) < 1)
             {
@@ -65,13 +65,16 @@ public class FloatingObject : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!destroyThisSeed && GameValueManager.INSTANCE.treeIsALive)
+        if (collision.gameObject.layer == 6)
         {
-            GameObject plant = Instantiate(corruptPlant, landingPosition.transform.position, Quaternion.identity);
-            plant.transform.SetParent(null);
-            destroyThisSeed = true;
+            if (!destroyThisSeed && GameValueManager.INSTANCE.treeIsALive)
+            {
+                GameObject plant = Instantiate(corruptPlant, landingPosition.transform.position, Quaternion.identity);
+                plant.transform.SetParent(null);
+                destroyThisSeed = true;
+            }
+            else
+                Destroy(gameObject);
         }
-        else
-            Destroy(gameObject);        
     }
 }

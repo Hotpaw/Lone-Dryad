@@ -15,6 +15,7 @@ public class WaterOrb : MonoBehaviour
 
     public Vector3 WateringTreePosition;
     public float WateringYOffset;
+    public bool once;
 
     //Healing bools
     bool heal1;
@@ -47,6 +48,11 @@ public class WaterOrb : MonoBehaviour
         }
         if (GameValueManager.INSTANCE.gotWater)
         {
+            if (!once)
+            {
+                transform.position = new Vector3(-25,-16);
+                once = true;
+            }
             var subEmitters = PS.subEmitters;
             subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
             var emission = PS.emission;
@@ -55,7 +61,8 @@ public class WaterOrb : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, WateringTreePosition, 0.1f);
                 if (transform.position == WateringTreePosition)
-                {                    
+                {
+                    
                     subEmitters.SetSubEmitterEmitProbability(0, 1f);
                     wateringCountDown -= (2 *Time.deltaTime);                    
 
@@ -91,7 +98,8 @@ public class WaterOrb : MonoBehaviour
                     {
                         GameValueManager.INSTANCE.addingWater = false;                                               
                         wateringCountDown = 10;
-                        GameValueManager.INSTANCE.gotWater = false; ;
+                        GameValueManager.INSTANCE.gotWater = false;
+                        once = false;
                     }    
                 }
             }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class DevButtonScript : MonoBehaviour
@@ -11,21 +12,33 @@ public class DevButtonScript : MonoBehaviour
     public float playerY;
     public float playerX;
     Health health;
+    public bool stage2;
     // Start is called before the first frame update
     void Start()
     {
-        playerY = PlayerPrefs.GetFloat("PlayerY");
-        playerX = PlayerPrefs.GetFloat("PlayerX");
-        player.transform.position = new Vector2(playerX, playerY);
+      if(GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>() != null)
+        {
+
         health = GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>();
+        }
+        else
+        {
+            Debug.LogError("Tree Reference Is missing");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
         {
             StopAllCoroutines();
+            if (stage2 && GameValueManager.INSTANCE.gameLost)
+            {
+                GameValueManager.INSTANCE.thePowerToThrowNuts = true;
+                TreeState2.INSTANCE.enemyWaveActive = true;
+                GameValueManager.INSTANCE.progressActive = true;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
            
@@ -52,6 +65,10 @@ public class DevButtonScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             health.Heal(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
+        {
+            Application.Quit();
         }
     }
 }

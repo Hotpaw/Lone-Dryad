@@ -45,4 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 2820279264199627435, guid: 1b479dde518d3d64f83a5ecf29f3e176, type: 3}
+  - {fileID: 6666037858815235475, guid: 66e41ba71ac6ad84c871310c71d34960, type: 3}
+  - {fileID: 7656578003032323306, guid: f76a5b8389f246f4e8ff0dcdc3ca22c4, type: 3}
+  - {fileID: 7231108213161858580, guid: 3ef6a1d5dbe306d4e97d14b12336addb, type: 3}
+  spawnPoints: []
+  destinationPoints: []
+  patrolPoints: []
+  attackPoint: {fileID: 0}
+  waitPoints: []
+  suckPoints: []

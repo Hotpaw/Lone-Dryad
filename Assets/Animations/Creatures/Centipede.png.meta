@@ -1,0 +1,479 @@
+fileFormatVersion: 2
+guid: 497c52b10a29a7c4397b0d567c9ec0d0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Centipede_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1005
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8705bc88243540498f51b047b988e63
+      internalID: 1588348441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_1
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 1005
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c21f8f0ba99ce24385e32dbd738ed53
+      internalID: -357233220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_2
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 1005
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f817e7fdad50c00409e4c9a248564847
+      internalID: 1622895445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_3
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 1005
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a73ef417ab489e41a81a9ff084e02ff
+      internalID: -1139860281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 670
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea8d7a6be26804468b1c2cf75f19ecf
+      internalID: 2715043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_5
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 670
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16136a6ace64bc94f931cdd4010fe95b
+      internalID: 214602874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_6
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 677
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43978b6581611b40b3c1cf0447db901
+      internalID: -1903289448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_7
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 677
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aeedec310330704183e0c11bd931412
+      internalID: 1241142732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 342
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c10743afac60ca4bad4e7b5fb5f2c9d
+      internalID: -43523610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_9
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 338
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba177b7f485646a4e967fbfcc92775c9
+      internalID: 1719300833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_10
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 335
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850d00d5441ddbd4898f2bcaa1206826
+      internalID: 480363934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_11
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 335
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd9ae58e0735ae43af5bf00ec305964
+      internalID: 1383482145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d56307c84d84c4d8b1a8124c02d6cf
+      internalID: 448006647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_13
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 0
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d010e807677082942802f0eee7bc211e
+      internalID: 898939491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_14
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 0
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca419a8896143c44a193973995b9856
+      internalID: -142536607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Centipede_15
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 0
+        width: 1126
+        height: 335
+      alignment: 9
+      pivot: {x: 0.4, y: 0.29}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d0f829d6772d04b973841643a29376
+      internalID: 856493135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Centipede_0: 1588348441
+      Centipede_1: -357233220
+      Centipede_10: 480363934
+      Centipede_11: 1383482145
+      Centipede_12: 448006647
+      Centipede_13: 898939491
+      Centipede_14: -142536607
+      Centipede_15: 856493135
+      Centipede_2: 1622895445
+      Centipede_3: -1139860281
+      Centipede_4: 2715043
+      Centipede_5: 214602874
+      Centipede_6: -1903289448
+      Centipede_7: 1241142732
+      Centipede_8: -43523610
+      Centipede_9: 1719300833
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
