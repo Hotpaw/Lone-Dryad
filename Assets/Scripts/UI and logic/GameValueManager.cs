@@ -14,7 +14,8 @@ public class GameValueManager : MonoBehaviour
     public bool progressActive;
     public float treeLevel;
     public bool treeIsALive = true;
-    public bool gameWon;
+    public bool gameWon = false;
+    public bool gameLost = false;
     public int sceneNr;
     public bool nextLevelAvailable;
 

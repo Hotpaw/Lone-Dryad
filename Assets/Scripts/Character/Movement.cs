@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-      
+
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
@@ -121,7 +121,9 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
-      //  animator.SetBool("Crawl", isCrawling);
+      
+        
+        //  animator.SetBool("Crawl", isCrawling);
         //KC
         kc = GameValueManager.INSTANCE.KC;
         animator.SetBool("KC", kc);
@@ -134,7 +136,7 @@ public class Movement : MonoBehaviour
         }
         if (!pickedUp && !isCrawling && Keyboard.current.eKey.wasPressedThisFrame)
             StartCoroutine(PickingUp());
-        else if(Gamepad.current != null && !pickedUp && !isCrawling && Gamepad.current.buttonEast.wasPressedThisFrame)
+        else if (Gamepad.current != null && !pickedUp && !isCrawling && Gamepad.current.buttonEast.wasPressedThisFrame)
         {
             StartCoroutine(PickingUp());
         }
@@ -159,7 +161,7 @@ public class Movement : MonoBehaviour
     {
         maxSpeed *= 0.5f;
         isCrawling = true;
-        if(animator == null)
+        if (animator == null)
         {
             animator = GetComponent<Animator>();
             animator.SetBool("Crawl", true);
@@ -168,8 +170,8 @@ public class Movement : MonoBehaviour
         {
             animator.SetBool("Crawl", true);
         }
-       
-      
+
+
     }
 
     public void Flip()
@@ -262,7 +264,7 @@ public class Movement : MonoBehaviour
     private IEnumerator PickingUp()
     {
         pickedUp = true;
-       
+
         animator.SetTrigger("PickingUP");
         yield return new WaitForSeconds(0.1f);
         pickedUp = false;

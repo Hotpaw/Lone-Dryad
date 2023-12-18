@@ -208,7 +208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1665752337316682503, guid: 619e756d039642841b5f2a45b6e6905d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4716456710114666557, guid: 619e756d039642841b5f2a45b6e6905d, type: 3}
       propertyPath: m_Pivot.x
@@ -490,6 +490,10 @@ PrefabInstance:
       propertyPath: m_fontStyle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7058984792733100229, guid: 2fac419a58bc08849a7ebd6e9b3eb6c2, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 754c6f84f35cd3942a74670055376751, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

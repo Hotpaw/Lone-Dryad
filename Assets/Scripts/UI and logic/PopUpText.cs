@@ -33,7 +33,7 @@ public class PopUpText : MonoBehaviour
         popUpDialogue.gameObject.SetActive(true);
         popUpText.color = color;
         popUpText.text = message;
-        yield return new WaitForSeconds(timer);
+        yield return new WaitForSeconds(timer + 1);
         popUpDialogue.gameObject.SetActive(false);
 
     }
@@ -47,7 +47,7 @@ public class PopUpText : MonoBehaviour
         popUpDialogue.gameObject.SetActive(true);
         popUpText.color = color;
         popUpText.text = message;
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(duration + 1);
         popUpDialogue.gameObject.SetActive(false);
 
     }
@@ -95,7 +95,7 @@ public class PopUpText : MonoBehaviour
         popUpDialogue.gameObject.SetActive(true);
         popUpText.color = color;
         popUpText.text = message;
-        yield return new WaitForSeconds(duration);
+        yield return new WaitForSeconds(duration + 1);
 
         popUpDialogue.gameObject.SetActive(false);
 

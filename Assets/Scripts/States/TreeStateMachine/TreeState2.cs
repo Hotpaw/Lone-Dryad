@@ -11,6 +11,8 @@ public class TreeState2 : State
     bool batCD = false;
     bool seedCD = false;
 
+    public Vector2 batTimer;
+    public Vector2 seedTimer;
     public void Start()
     {
 
@@ -55,7 +57,7 @@ public class TreeState2 : State
     IEnumerator ShakeEffect()
     {
         FindAnyObjectByType<cameraFollow>().enabled = false;
-        Camera.main.gameObject.transform.DOShakePosition(1, 5, 10, 1);
+        Camera.main.gameObject.transform.DOShakePosition(1, 2, 10, 90);
         PopUpText.INSTANCE.PopUpMessage("Something happened in the cave", Color.white, 3);
         yield return new WaitForSeconds(1);
         FindAnyObjectByType<cameraFollow>().enabled = true;
@@ -72,7 +74,7 @@ public class TreeState2 : State
             for (int i = 0; i < 1; i++)
                 EnemySpawner.INSTANCE.SpawnEnemy();
         }
-        yield return new WaitForSeconds(Random.Range(13, 15));
+        yield return new WaitForSeconds(Random.Range(seedTimer.x, seedTimer.y));
 
         seedCD = false;
     }
@@ -80,7 +82,7 @@ public class TreeState2 : State
     {
         batCD = true;
         EnemySpawner.INSTANCE.SpawnStage2();
-        yield return new WaitForSeconds(Random.Range(9, 15));
+        yield return new WaitForSeconds(Random.Range(batTimer.x, batTimer.y));
         batCD = false;
     }
     public IEnumerator StartBatTimer()

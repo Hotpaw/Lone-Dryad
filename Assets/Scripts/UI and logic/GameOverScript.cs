@@ -21,6 +21,7 @@ public class GameOverScript : MonoBehaviour
     {
         if (!GameValueManager.INSTANCE.gameWon)
         {
+            GameValueManager.INSTANCE.gameLost = true;
             //FindAnyObjectByType<Movement>().enabled = false;
             panel.SetActive(true);
             infoText.text = "The Tree is rotten, you dead!\r\nPress R to restart";
