@@ -3303,6 +3303,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 432537949227958006, guid: b5cb217213b869d44b471d109300264a, type: 3}
   m_PrefabInstance: {fileID: 1504777810}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1536087992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1536087993}
+  - component: {fileID: 1536087995}
+  m_Layer: 0
+  m_Name: EscapeButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1536087993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536087992}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 799.9527, y: 386.0484, z: -9.736114}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1536087995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536087992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f7f5e3577925c9409d06e61fb594d01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1566855390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27086,7 +27130,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 129.6, y: 72.9}
+    oldSize: {x: 129.59999, y: 72.899994}
     newSize: {x: 3.93, y: 5.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -67305,3 +67349,4 @@ SceneRoots:
   - {fileID: 235836860}
   - {fileID: 1471000993}
   - {fileID: 210054196}
+  - {fileID: 1536087993}
