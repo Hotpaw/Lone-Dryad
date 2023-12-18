@@ -30,6 +30,19 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+    public void BackToGame()  //tillbaka till spelet knapp efter man gått in på settings
+    {
+        SceneManager.LoadScene("Stage1.1");
+    }
+    //public void EscapeButton()
+    //{
+        
+    //    if (Input.GetKey(KeyCode.Escape)) 
+    //    {
+    //      SceneManager.LoadScene("MainMenu"); //esc knapp till menu
+    //    }
+    //}
+
 
     public void QuiteGame()
     {

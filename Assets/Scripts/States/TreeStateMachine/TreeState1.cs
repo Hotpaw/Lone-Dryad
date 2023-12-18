@@ -17,7 +17,7 @@ public class TreeState1 : State
 
     public void Awake()
     {
-        spawnSeedAt = 10;
+        spawnSeedAt = 3;
         
 
 
