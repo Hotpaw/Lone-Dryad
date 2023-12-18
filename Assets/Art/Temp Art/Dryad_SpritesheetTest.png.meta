@@ -1,0 +1,1535 @@
+fileFormatVersion: 2
+guid: b01f1f04d4a7a6840b1fb1ffe31a460b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8818be760a72ffe4ebd483c99a9888ba
+      internalID: -1379439177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b050567ecd8f6c4ea6849d9ea4bd6d3
+      internalID: -801621631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_2
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54050ea32dfefe947bf696c5cb67cb0e
+      internalID: 1497328700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_3
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4bc4250a73ade4f81fea76caad3976
+      internalID: -941277877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_4
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecb2c0950592c146bff59405641d715
+      internalID: 938322464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_5
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d32f975a616bb2345b28e366559d4842
+      internalID: -1772782933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_6
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93e70f1a1a829a4fb272e6ea6e14aca
+      internalID: -484312372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_7
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 3563
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c0c1538a324ddf4db3bd163b30e8dba
+      internalID: -75121571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d52bcb9241ac844ab564bf7e87f35a
+      internalID: -516782836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_9
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75b541e13a1f4b744ba1ad2935f244bc
+      internalID: 1294954303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_10
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5a22cfafd79514d9d41e4fce0a2df6
+      internalID: -731638760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_11
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a766b7aede7db142afa33da68a301e7
+      internalID: -1368022921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_12
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bc196759a42a94b9be5015f7efd378
+      internalID: -290275316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_13
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c105e93e667bfee4cb159f8a15811d64
+      internalID: 1330481783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_14
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b55163b79a6d6843b2f477fb5ce059c
+      internalID: -1708421378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_15
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 3054
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05f8da24edf70ac4baa31554677ebdd9
+      internalID: 1868148943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8750653694808844886fd2463e59cd9
+      internalID: 936209400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_17
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98e11c5274ec3647a75f7144c7e1217
+      internalID: -548374167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_18
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2803a51d31965469edb3806a63c611
+      internalID: 1262757278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_19
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34240d0ac74f60846855e374ab747a83
+      internalID: 2053731135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_20
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9feb482e7fbce364d92e432f26861ad0
+      internalID: -200260823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_21
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20862d249d29174ba4f4de2078f13ba
+      internalID: 77424154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_22
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffb7aa66f1b7d140b321542667f85a4
+      internalID: 1166847092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_23
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 2545
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c35f2207ff02f9408018f680a99f561
+      internalID: -1765685782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8ad0fb5f7c49f14ba845fc447385ecd
+      internalID: -83460238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_25
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a9022b7365940498f0676603617555
+      internalID: 817736054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_26
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8168306fd4e9a468dd2b089e41e0c3
+      internalID: -107234809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_27
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba3b7a03ca916a4e8833013bc311e29
+      internalID: -940949220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_28
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2424eb2c8820264483c6b3cb2e34228
+      internalID: 822222337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_29
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad881b899c86000499b0021b688502d4
+      internalID: -1502584888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_30
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bb85c8cf5107a4985e30d10bd30451
+      internalID: -1839859130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_31
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 2036
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95ff481bc541145449498a54fe98f6c1
+      internalID: 1331668530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764262b6f1951d24f81bc3c50f6e5e7b
+      internalID: -1191520657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_33
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65231176ba8629a43a5c333ab524923d
+      internalID: 92476529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_34
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7789dfd94bc983143982935681aa8051
+      internalID: -770504520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_35
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f93f1c5a2b14194dab268850b4d66df
+      internalID: 1130019632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_36
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2300cfc4a84065441aab8f987020d29f
+      internalID: -1611612502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_37
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa8e405bcf0b204ca1d889eb69975b0
+      internalID: -1426087934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_38
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32cc12a0fdc990645a6894f2126f5c98
+      internalID: 514478552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_39
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 1527
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1af4c4ff4d9dac4ea710943333bf8da
+      internalID: -1916590632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27f8ffee03086c45a47269572d3c501
+      internalID: 1757658308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_41
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9dc427bbfd14f479e661784db1c583
+      internalID: 729477366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_42
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb2c27d3f023194983613938fc44591
+      internalID: 1939569162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_43
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839fb972588fbca4ca9a62fad7742a43
+      internalID: -1906562452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_44
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f281a00d5786c93489fe6c53d7479766
+      internalID: 716777523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_45
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f478d5eaee969854e9b75bb69a50fe34
+      internalID: 1353770370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_46
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eda3deaa046c6b740acf5230aa364466
+      internalID: -1820617284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_47
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 1018
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c3f12dbe80e844c85bfd366d49f81f
+      internalID: -848411038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5190fa21761eb1f48be6f445d05acad7
+      internalID: -740011261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_49
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62720a08dd5f6854eaa89e64be4a3d9e
+      internalID: -752387314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_50
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fc828717c5d924ba7326a681dc434d
+      internalID: -1809869166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_51
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e51803b0e2a8f4a9f6816bd7d3c877
+      internalID: 794896901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_52
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b304971da965f4880b67a268fc9689
+      internalID: -249568774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_53
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aae671d7273c8b458a27eda6edd2176
+      internalID: 67465032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_54
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66888a508f32e1a4a9cd98aa2b5c9132
+      internalID: -1340449594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_55
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 509
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b66baef0848ff49a4422abec4d732f
+      internalID: 497568601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9820c9bb2397a2f49bf20501be0e1089
+      internalID: 1436277201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_57
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31df1796c855ddc43ada552fc5fb4b6d
+      internalID: -1271012944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_58
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c6917ac5830e2e4ba04b90e08b49634
+      internalID: -1210203618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_59
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f651c3b0956077843ab65e807a9afc81
+      internalID: -463904134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_60
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60dd07526f41484cb69bfbc61af7785
+      internalID: 2019969953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_61
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe43fbe13cc7cd640bd29475ed095e97
+      internalID: 1683065806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_62
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 842fe177c864ff3448101438d2623ebb
+      internalID: -1082225347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dryad_SpritesheetTest_63
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 0
+        width: 424
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f474239d5607fe84dbcd0eb28555bfb3
+      internalID: -1529448657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dryad_SpritesheetTest_0: -1379439177
+      Dryad_SpritesheetTest_1: -801621631
+      Dryad_SpritesheetTest_10: -731638760
+      Dryad_SpritesheetTest_11: -1368022921
+      Dryad_SpritesheetTest_12: -290275316
+      Dryad_SpritesheetTest_13: 1330481783
+      Dryad_SpritesheetTest_14: -1708421378
+      Dryad_SpritesheetTest_15: 1868148943
+      Dryad_SpritesheetTest_16: 936209400
+      Dryad_SpritesheetTest_17: -548374167
+      Dryad_SpritesheetTest_18: 1262757278
+      Dryad_SpritesheetTest_19: 2053731135
+      Dryad_SpritesheetTest_2: 1497328700
+      Dryad_SpritesheetTest_20: -200260823
+      Dryad_SpritesheetTest_21: 77424154
+      Dryad_SpritesheetTest_22: 1166847092
+      Dryad_SpritesheetTest_23: -1765685782
+      Dryad_SpritesheetTest_24: -83460238
+      Dryad_SpritesheetTest_25: 817736054
+      Dryad_SpritesheetTest_26: -107234809
+      Dryad_SpritesheetTest_27: -940949220
+      Dryad_SpritesheetTest_28: 822222337
+      Dryad_SpritesheetTest_29: -1502584888
+      Dryad_SpritesheetTest_3: -941277877
+      Dryad_SpritesheetTest_30: -1839859130
+      Dryad_SpritesheetTest_31: 1331668530
+      Dryad_SpritesheetTest_32: -1191520657
+      Dryad_SpritesheetTest_33: 92476529
+      Dryad_SpritesheetTest_34: -770504520
+      Dryad_SpritesheetTest_35: 1130019632
+      Dryad_SpritesheetTest_36: -1611612502
+      Dryad_SpritesheetTest_37: -1426087934
+      Dryad_SpritesheetTest_38: 514478552
+      Dryad_SpritesheetTest_39: -1916590632
+      Dryad_SpritesheetTest_4: 938322464
+      Dryad_SpritesheetTest_40: 1757658308
+      Dryad_SpritesheetTest_41: 729477366
+      Dryad_SpritesheetTest_42: 1939569162
+      Dryad_SpritesheetTest_43: -1906562452
+      Dryad_SpritesheetTest_44: 716777523
+      Dryad_SpritesheetTest_45: 1353770370
+      Dryad_SpritesheetTest_46: -1820617284
+      Dryad_SpritesheetTest_47: -848411038
+      Dryad_SpritesheetTest_48: -740011261
+      Dryad_SpritesheetTest_49: -752387314
+      Dryad_SpritesheetTest_5: -1772782933
+      Dryad_SpritesheetTest_50: -1809869166
+      Dryad_SpritesheetTest_51: 794896901
+      Dryad_SpritesheetTest_52: -249568774
+      Dryad_SpritesheetTest_53: 67465032
+      Dryad_SpritesheetTest_54: -1340449594
+      Dryad_SpritesheetTest_55: 497568601
+      Dryad_SpritesheetTest_56: 1436277201
+      Dryad_SpritesheetTest_57: -1271012944
+      Dryad_SpritesheetTest_58: -1210203618
+      Dryad_SpritesheetTest_59: -463904134
+      Dryad_SpritesheetTest_6: -484312372
+      Dryad_SpritesheetTest_60: 2019969953
+      Dryad_SpritesheetTest_61: 1683065806
+      Dryad_SpritesheetTest_62: -1082225347
+      Dryad_SpritesheetTest_63: -1529448657
+      Dryad_SpritesheetTest_7: -75121571
+      Dryad_SpritesheetTest_8: -516782836
+      Dryad_SpritesheetTest_9: 1294954303
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
