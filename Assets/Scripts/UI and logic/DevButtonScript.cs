@@ -16,14 +16,21 @@ public class DevButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+      if(GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>() != null)
+        {
+
         health = GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>();
+        }
+        else
+        {
+            Debug.LogError("Tree Reference Is missing");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
         {
             StopAllCoroutines();
             if (stage2 && GameValueManager.INSTANCE.gameLost)
@@ -59,7 +66,7 @@ public class DevButtonScript : MonoBehaviour
         {
             health.Heal(1);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
         {
             Application.Quit();
         }
