@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.InputSystem;
+using TMPro;
 public class InteractWith : MonoBehaviour
 {
     public InteractableObject interactableObject;
+    public string interactableDescription;
     public GameObject InteractableIcon;
     public Sprite[] Icons;
     public bool interactable;
@@ -90,6 +92,12 @@ public class InteractWith : MonoBehaviour
     {
         if (!activated)
         {
+            playerInteractIcon.gameObject.SetActive(true);
+            if(interactableDescription != null && playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>() != null)
+            {
+                playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>().text = interactableDescription;
+            }
+         
             if (playerInteractIcon.transform.localScale.x >= 2)
             {
                 playerInteractIcon.transform.localScale = Vector3.one;
@@ -101,8 +109,8 @@ public class InteractWith : MonoBehaviour
             if (playerInteractIcon.transform.localScale == new Vector3(2, 2, 2))
                 playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
 
-
             playerInteractIcon.enabled = true;
+
 
             if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
             else playerInteractIcon.sprite = Icons[1];
@@ -123,6 +131,7 @@ public class InteractWith : MonoBehaviour
         activated = false;
         playerInteractIcon.gameObject.transform.localScale = Vector3.one;
         playerInteractIcon.enabled = false;
+        playerInteractIcon.gameObject.SetActive(false);
     }
 
 

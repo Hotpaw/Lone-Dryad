@@ -12,6 +12,7 @@ public class DevButtonScript : MonoBehaviour
     public float playerY;
     public float playerX;
     Health health;
+    public bool stage2;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,12 @@ public class DevButtonScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             StopAllCoroutines();
+            if (stage2 && GameValueManager.INSTANCE.gameLost)
+            {
+                GameValueManager.INSTANCE.thePowerToThrowNuts = true;
+                TreeState2.INSTANCE.enemyWaveActive = true;
+                GameValueManager.INSTANCE.progressActive = true;
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
            
