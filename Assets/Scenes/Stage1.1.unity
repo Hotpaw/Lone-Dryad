@@ -21820,7 +21820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seedTimer: 0
   spawnSeedAt: 0
-  triggerTime: 20
+  triggerTime: 10
   trigger1: 0
   trigger2: 0
   once: 0

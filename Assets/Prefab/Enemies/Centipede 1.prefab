@@ -54,11 +54,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   attackPoint: {fileID: 0}
+  theLeftSpawnPoint: {fileID: 0}
   moveSpeed: 1
   attackSpeed: 20
   gravity: 5
   patrolDestination: 0
   attacking: 0
+  movingRight: 0
   animator: {fileID: 3089470109200690390}
 --- !u!114 &7917178200977626567
 MonoBehaviour:
