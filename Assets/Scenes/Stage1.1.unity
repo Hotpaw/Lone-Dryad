@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &5 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6908549365073698798, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+  m_PrefabInstance: {fileID: 1799167156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &55497793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4232,6 +4237,10 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 894840275722828158, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1020250558922792702, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.74367
@@ -5120,6 +5129,7 @@ MonoBehaviour:
   treeLevel: 1
   treeIsALive: 1
   gameWon: 0
+  gameLost: 0
   sceneNr: 1
   nextLevelAvailable: 0
   teleportScript: {fileID: 8530224297840892623}
@@ -5216,7 +5226,7 @@ Transform:
   - {fileID: 2763747081939175842}
   - {fileID: 8646581837380710119}
   - {fileID: 534782740429846293}
-  - {fileID: 6908549364972400126}
+  - {fileID: 5}
   - {fileID: 6741281126369370287}
   - {fileID: 6874593007903606796}
   - {fileID: 8298153201566217718}
@@ -15759,6 +15769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableObject: {fileID: 3031553613762186169}
+  interactableDescription: 
   InteractableIcon: {fileID: 9031523429195163}
   Icons:
   - {fileID: 21300000, guid: ba1b52b758af1e745b53685a075d34f0, type: 3}
@@ -26408,6 +26419,7 @@ MonoBehaviour:
   checkPoint: {x: 0, y: 0}
   playerY: 0
   playerX: 0
+  stage2: 0
 --- !u!199 &4900038870723150123
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -36242,6 +36254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableObject: {fileID: 7167624475347288233}
+  interactableDescription: 
   InteractableIcon: {fileID: 7193952706363291363}
   Icons:
   - {fileID: 21300000, guid: ba1b52b758af1e745b53685a075d34f0, type: 3}
@@ -41873,11 +41886,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 726639059806222744}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &6908549364972400126 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6908549365073698798, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
-  m_PrefabInstance: {fileID: 1799167156}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6933487476078107968
 GameObject:
   m_ObjectHideFlags: 0
