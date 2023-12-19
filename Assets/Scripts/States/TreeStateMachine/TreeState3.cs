@@ -6,14 +6,18 @@ using UnityEngine;
 public class TreeState3 : State
 {
     public static TreeState3 INSTANCE;
-    bool once;
+    public bool once;
     public int numberOfCrystallPieces;
     public int maxCrystals;
     public GameObject waterPosition;
     public GameObject playerPosition;
-    public GardenGnome gardenGnome;
+    public GameObject trigger2Position;
+    public GardenGnome1 gardenGnome;
+    public GardenGnome2 gardenGnome2;
     public bool trigger1;
+    public bool trigger2;
     public float checkDist;
+    public float checkDist2;
 
     public void Start()
     {
@@ -31,6 +35,20 @@ public class TreeState3 : State
                 {
                     gardenGnome.SpookedGnome();
                     once = true;
+                    StartCoroutine(YieldTrigger());
+                }
+            }
+        }
+        else if (!trigger2)
+        {
+            checkDist2 = Vector2.Distance(trigger2Position.transform.position, playerPosition.transform.position);            
+            if (checkDist2 < 1.2f)
+            {
+                if (!once)
+                {
+                    gardenGnome.SpookedGnome();
+                    once = true;
+                    trigger2 = true;
                 }
                 StartCoroutine(YieldTrigger());
             }
@@ -44,7 +62,14 @@ public class TreeState3 : State
     public IEnumerator YieldTrigger()
     {
         yield return new WaitForSeconds(1);
-        trigger1 = true;
+
+        if (!trigger1)        
+            trigger1 = true;        
+        else        
+            trigger2 = true;
+
+        once = false;
+
     }
     public override State RunCurrentState()
     {

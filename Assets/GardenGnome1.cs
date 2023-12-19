@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using DG.Tweening;
 
-public class GardenGnome : MonoBehaviour
+public class GardenGnome1 : MonoBehaviour
 {
     public Transform waterfallCave;
     public float movementSpeed;
@@ -22,6 +22,8 @@ public class GardenGnome : MonoBehaviour
             transform.DORotate(new Vector3(transform.rotation.x + 45, transform.rotation.y , transform.rotation.z), 1, RotateMode.Fast)
                 .SetLoops(-1);            
         }
+        if (Vector2.Distance(transform.position, new Vector2(waterfallCave.position.x - 4, waterfallCave.position.y)) < 1)
+            Destroy(gameObject);
 
     }
     public void SpookedGnome()

@@ -105,10 +105,21 @@ public class Movement : MonoBehaviour
 
                 if (timeSinceGrounded > coyoteTime)
                     doubleJump = false;
+                animator.SetBool("Jump",true);
 
-                animator.SetTrigger("Jump");
             }
-            RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
+            else
+            {
+                animator.SetBool("Jump", false);
+            }
+          
+                if (isGrounded)
+                {
+                   
+                }
+            
+
+                RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
             //if (ray && ray.collider.gameObject.CompareTag("Ice"))
             //    deacceleration = 0;
@@ -142,7 +153,7 @@ public class Movement : MonoBehaviour
         }
     }
 
-
+  
     public void IncreaseSpeed()
     {
         isCrawling = false;
