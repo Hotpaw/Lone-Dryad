@@ -18,6 +18,10 @@ public class CaveSwitch : InteractableObject
             {
                 cullBackground.INSTANCE.CullingModeCall(2);
             }
+            if(mode == 2)
+            {
+                cullBackground.INSTANCE.CullingModeCall(3);
+            }
         }
         else
         {
