@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cameraFollow : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class cameraFollow : MonoBehaviour
 
     private void Awake()
     {
+        if (SceneManager.GetActiveScene().name != "EndStage")
+        {
+            cameraDistance = 11;
+        }
+        cameras = FindObjectsOfType<Camera>();
 
-        cameraDistance = 11;
-            cameras = FindObjectsOfType<Camera>();
-        
         foreach (Camera cam in cameras)
         {
             cam.orthographicSize = cameraDistance;
@@ -24,11 +27,13 @@ public class cameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-        playerPosition = new Vector3 (FindAnyObjectByType<Movement>().transform.position.x, FindAnyObjectByType<Movement>().transform.position.y, -10);
-        transform.position = playerPosition;
-        
-        
+        if (playerPosition != null)
+        {
+            playerPosition = new Vector3(FindAnyObjectByType<Movement>().transform.position.x, FindAnyObjectByType<Movement>().transform.position.y, -10);
+            transform.position = playerPosition;
+        }
+
+
     }
-    
+
 }

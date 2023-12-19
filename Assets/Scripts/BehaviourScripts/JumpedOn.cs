@@ -12,13 +12,13 @@ public class JumpedOn : MonoBehaviour
     void Start()
     {
         originalScale = transform.localScale;
-        newScale = new Vector3 (1.2f, originalScale.y * 0.4f ,1 );
+        newScale = new Vector3 (1.5f, originalScale.y * 0.4f ,1 );
     }
 
     public void JumpedOnScale()
-    {
-        transform.DOScale(newScale, 0.3f)
+    {                    
+        transform.DOScale(newScale, 0.1f)
                     .SetEase(Ease.InOutSine)
-                    .SetLoops(2, LoopType.Yoyo); 
+                    .SetLoops(2, LoopType.Yoyo);
     }
 }
