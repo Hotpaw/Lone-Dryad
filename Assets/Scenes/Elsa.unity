@@ -8524,6 +8524,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4701930157428590289, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701930157428590289, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4701930157428590289, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4948624059443056969, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10975,7 +10987,6 @@ Transform:
   - {fileID: 1525642890}
   - {fileID: 560796436}
   - {fileID: 166455054}
-  - {fileID: 863436205}
   - {fileID: 599638962}
   - {fileID: 1111272962}
   - {fileID: 1994097595}
@@ -14717,7 +14728,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -1761416870, guid: 160b8cc9c67460a43b7b59a710ab0dd2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -14738,11 +14749,11 @@ Transform:
   m_GameObject: {fileID: 863436203}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4612226, y: -2.4769487, z: 0}
+  m_LocalPosition: {x: -4.22, y: -7.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 628489618}
+  m_Father: {fileID: 863464192}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &863464191
 GameObject:
@@ -14788,6 +14799,7 @@ Transform:
   - {fileID: 741611211}
   - {fileID: 730311603}
   - {fileID: 1014450636}
+  - {fileID: 863436205}
   m_Father: {fileID: 61557171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &865775562
