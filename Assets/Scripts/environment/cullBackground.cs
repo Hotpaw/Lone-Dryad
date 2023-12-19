@@ -34,6 +34,10 @@ public class cullBackground : MonoBehaviour
         {
             Backgrounds[1].SetActive(true);
         }
+        if (a == 2)
+        {
+            Backgrounds[2].SetActive(true);
+        }
     }
     IEnumerator cullingMode(int a)
     {

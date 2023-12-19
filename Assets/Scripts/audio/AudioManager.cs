@@ -90,6 +90,9 @@ public class AudioManager : MonoBehaviour
             case "JUMP":
                 SFX.clip = SFXClips[0];
                 break;
+            case "SCAREDGNOME":
+                SFX.clip = SFXClips[1];
+                break;
         }
         SFX.Play();
     }
