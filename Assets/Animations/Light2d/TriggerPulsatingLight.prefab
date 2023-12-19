@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7414991567948449680}
   - component: {fileID: 4293331354260096530}
   m_Layer: 0
-  m_Name: TriggerLight
+  m_Name: TriggerPulsatingLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
