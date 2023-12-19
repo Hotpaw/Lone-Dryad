@@ -13,6 +13,7 @@ public class DevButtonScript : MonoBehaviour
     public float playerX;
     Health health;
     public bool stage2;
+    public GameObject settings;
     // Start is called before the first frame update
     void Start()
     {
@@ -68,7 +69,22 @@ public class DevButtonScript : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
         {
-            Application.Quit();
+            ToggleSettings();
         }
+    }
+    public void ToggleSettings()
+    {
+        if(settings != null)
+        {
+            if(settings.activeInHierarchy)
+            {
+                settings.gameObject.SetActive(false);
+            }
+            else
+            {
+                settings.gameObject.SetActive(true);
+            }
+        }else
+            Debug.LogError("Settings Window referenc is null");
     }
 }
