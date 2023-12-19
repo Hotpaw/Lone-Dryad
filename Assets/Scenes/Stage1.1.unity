@@ -14019,27 +14019,35 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1464375327749048603, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2867929823664827839, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4447823675351657274, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6092479281565595557, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857559090320081624, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6888874850791362704, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7404918974929488719, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_Name
       value: AudioInterfaceWithDevButtons
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404918974929488719, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7807621804752363510, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14083,7 +14091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8894399358873566128, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
