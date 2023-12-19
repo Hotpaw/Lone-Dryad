@@ -17,6 +17,7 @@ public class SlowEasyEnemy : MonoBehaviour
     bool once;
     public bool movingRight;
     Rigidbody2D rigidbody2D;
+    public bool isBall;
 
     public Animator animator;
     private void Start()
@@ -25,10 +26,11 @@ public class SlowEasyEnemy : MonoBehaviour
     }
     private void Update()
     {
+        animator.SetBool("Ball", isBall);
         if (GetComponent<Health>().currentHealth <= 0 && !once)
         {
             once = true;
-            animator.SetTrigger("Ball");
+            isBall = true;
             gravity = -3;
             StartCoroutine(DelayGravity());
 
@@ -91,10 +93,17 @@ public class SlowEasyEnemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, attackPoint.position, attackSpeed * Time.deltaTime);
             if (Vector2.Distance(transform.position, attackPoint.position) < 0.7f)
             {
-                animator.SetTrigger("Ball");
+                isBall = true;
                 FindAnyObjectByType<TreeScript>().GetComponent<Health>().TakeDamage(1);
                 attacking = false;                
             }
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            isBall = false;
         }
     }
     public IEnumerator DelayAttack()

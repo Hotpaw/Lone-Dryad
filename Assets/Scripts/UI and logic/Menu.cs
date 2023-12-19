@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    private void Start()
+    {
+        Cursor.visible = true;
+        if(Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
+        {
+            Application.Quit();
+        }
+    }
     private void Update()
     {
         if(Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
