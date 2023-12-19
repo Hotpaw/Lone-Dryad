@@ -5,33 +5,34 @@ using UnityEngine;
 public class PlantSeed : InteractableObject
 {
     public GameObject PlantPart;
-    public GameObject FlowerPart;
-    public float Height;
-    public float speed;
+    bool usable = true;
 
-    bool growing = false;
     void Start()
     {
 
     }
     void Update()
     {
-        if (growing)
-        {
-            if (PlantPart.transform.position.y < Height)
-            {
-                PlantPart.transform.position += new Vector3(0, 1) * speed *Time.deltaTime;
-            }
 
-        }
     }
     public override void Interact()
     {
-        StartCoroutine(growPlant());
+        if (usable)
+        {
+           
+
+           
+            PlantPart.GetComponent<Animator>().Play("Grow");
+            StartCoroutine(Decay());
+        }
     }
-    IEnumerator growPlant()
+    IEnumerator Decay()
     {
-        growing = true;
-        yield return null;
+        usable = false;
+       
+        yield return new WaitForSeconds(3);
+        PlantPart.GetComponent<Animator>().Play("Ungrow");
+        usable = true;
     }
+
 }
