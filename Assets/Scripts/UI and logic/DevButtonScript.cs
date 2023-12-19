@@ -67,7 +67,7 @@ public class DevButtonScript : MonoBehaviour
         {
             health.Heal(1);
         }
-        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.Escape) || Gamepad.current != null && Gamepad.current.selectButton.wasPressedThisFrame) 
         {
             ToggleSettings();
         }
