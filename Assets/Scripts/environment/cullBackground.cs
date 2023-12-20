@@ -28,7 +28,7 @@ public class cullBackground : MonoBehaviour
         }
         if (a == 0)
         {
-            Backgrounds[0].SetActive(true);
+            Backgrounds[0].SetActive(true);            
         }
         if (a == 1)
         {
