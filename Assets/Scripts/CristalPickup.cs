@@ -8,43 +8,14 @@ public class CristalPickup : InteractableObject
     public GameObject crystal;
     public override void Interact()
     {
-        // Koden här körs mär du aktiver interactable object i scenen med B eller E
-        
-       //if (!oneCrystal && TreeState3.INSTANCE.numberOfCrystallPieces < TreeState3.INSTANCE.maxCrystals)
-       //{
-         TreeState3.INSTANCE.numberOfCrystallPieces++;
-         oneCrystal = true;
-         Destroy(crystal);
-
-         Debug.Log("picked up crystal!");
-        
-       //}
-       //else
-       //{
-            Debug.Log("Crystal not picked up");
-        //}
-
-
-        //PopUpText.INSTANCE.PopUpMessage("Picked up crystal", Color.black, 2);
-       
-
-        if (Input.GetKeyDown(KeyCode.K)) 
+        if (GameValueManager.INSTANCE.thePowerToPickUpCrystals)
         {
-        
-        
-          TreeState3.INSTANCE.numberOfCrystallPieces++;
-           oneCrystal = true;
-          Destroy(crystal);
-
-          Debug.Log("picked up crystal!");
-
-        
-         //Debug.Log("Crystal not picked up");
-        
-        
+            GameValueManager.INSTANCE.numberOfCrystallPieces++;
+            PopUpText.INSTANCE.PopUpMessage("Found A Crystal", Color.black, 2f);
+            oneCrystal = true;
+            Destroy(crystal);
         }
-
     }
 
- 
+
 }

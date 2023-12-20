@@ -28,9 +28,11 @@ public class GameValueManager : MonoBehaviour
     //Unlockable stats
     public bool thePowerToThrowNuts;
     public bool thePowerToPlant;
+    public bool thePowerToPickUpCrystals;
+    public bool theShieldIsActive;
     public int stones;
     public int maxStones;
-
+    public int numberOfCrystallPieces;
 
     public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;

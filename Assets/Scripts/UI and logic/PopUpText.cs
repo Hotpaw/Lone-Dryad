@@ -76,7 +76,7 @@ public class PopUpText : MonoBehaviour
         popUpText.text = message;
         yield return new WaitForSeconds(duration + 1);
         popUpDialogue.gameObject.SetActive(false);
-
+        IconImage.sprite = icons[0];
     }
 
     public void PopUpMessage(string message, Color color, float duration, bool position)

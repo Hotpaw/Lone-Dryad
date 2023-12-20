@@ -8,7 +8,7 @@ public class activatePlant : InteractableObject
     {
         GameValueManager.INSTANCE.thePowerToPlant = true;
         PopUpText.INSTANCE.PopUpMessage("You gained the power to regrow plants",Color.black,5f);
-        transform.GetComponentInParent<GameObject>().SetActive(false);
+       
     }
 
     
