@@ -48,9 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a965128397c4b49bc74a503ef7c70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
   interactableObject: {fileID: 3623022625422266956}
-  interactableDescription: Pick Up
   InteractableIcon: {fileID: 8685653826902294578}
   Icons:
   - {fileID: 21300000, guid: ba1b52b758af1e745b53685a075d34f0, type: 3}
