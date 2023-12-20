@@ -4,17 +4,23 @@ using UnityEngine;
 using DG.Tweening;
 
 public class shieldScript : MonoBehaviour
-{    
-    public Vector3 scaleSize;
-    // Start is called before the first frame update
-    void Start()
-    {
-        scaleSize = transform.localScale;
-    }
-
-    // Update is called once per frame
+{
+    public Collider2D shieldCollider;
+    
+    
     void Update()
     {
-        transform.DOScale(scaleSize * 1.1f, 0.1f).SetLoops(-1, LoopType.Yoyo);
+        if (GameValueManager.INSTANCE.theShieldIsActive)
+        {
+            shieldCollider.enabled = true;
+        }
+    }
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!collision.gameObject.CompareTag("Storm"))
+        {
+            Collider2D collider1 = collision.gameObject.GetComponent<Collider2D>();
+            Physics2D.IgnoreCollision(collider1, shieldCollider, true);
+        }
     }
 }

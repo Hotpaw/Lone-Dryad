@@ -8,14 +8,13 @@ public class CristalPickup : InteractableObject
     public GameObject crystal;
     public override void Interact()
     {
-
-        GameValueManager.INSTANCE.numberOfCrystallPieces++;
-        PopUpText.INSTANCE.PopUpMessage("Found A Crystal", Color.black, 2f);
-        oneCrystal = true;
-        Destroy(crystal);
-
-
-
+        if (GameValueManager.INSTANCE.thePowerToPickUpCrystals)
+        {
+            GameValueManager.INSTANCE.numberOfCrystallPieces++;
+            PopUpText.INSTANCE.PopUpMessage("Found A Crystal", Color.black, 2f);
+            oneCrystal = true;
+            Destroy(crystal);
+        }
     }
 
 

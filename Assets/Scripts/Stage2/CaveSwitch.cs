@@ -10,10 +10,9 @@ public class CaveSwitch : InteractableObject
     public override void Interact()
     {
 
-        if (!once){
-
+        if (!once)
+		{
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
-
 			{
 				once = true;
 				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
@@ -49,6 +48,5 @@ public class CaveSwitch : InteractableObject
         yield return new WaitForSeconds(1f);
         once = false;
     }
-
-    
+	    
 }

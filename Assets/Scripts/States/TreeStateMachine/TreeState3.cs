@@ -46,17 +46,17 @@ public class TreeState3 : State
             {
                 if (!once)
                 {
-                    
+                    FindAnyObjectByType<Storm>().IncreaseStormIntensity();
                     once = true;
                     trigger2 = true;
                 }
                 StartCoroutine(YieldTrigger());
             }
-        }
-        if(numberOfCrystallPieces == 5)
-        {
-            GameValueManager.INSTANCE.progressActive = true;
         }        
+        if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5) 
+        {
+            FindAnyObjectByType<Storm>().IncreaseStormIntensity();
+        }
         
     }
     public IEnumerator YieldTrigger()
