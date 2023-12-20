@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableGnome : MonoBehaviour
+public class InteractableGnome : InteractableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Interact()
     {
-        
+        PopUpText.INSTANCE.PopUpMessage("The storm is coming!", Color.red, 4);
+        StartCoroutine(TalkingGnome());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator TalkingGnome()
     {
-        
+        yield return new WaitForSeconds(4);
+        PopUpText.INSTANCE.PopUpMessage("Your tree will die in a short while if you do not repair the crystall", Color.red, 4);
+        yield return new WaitForSeconds(4);
+        PopUpText.INSTANCE.PopUpMessage("Bring me seven crystallpieces, and i can help you!", Color.red, 4);
     }
 }
+
+
