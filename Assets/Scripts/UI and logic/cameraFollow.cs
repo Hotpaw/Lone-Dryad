@@ -13,7 +13,11 @@ public class cameraFollow : MonoBehaviour
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name != "EndStage")
+        if (SceneManager.GetActiveScene().name == "Stage3.1")
+        {
+            cameraDistance = 14;
+        }
+        else if (SceneManager.GetActiveScene().name != "EndStage")
         {
             cameraDistance = 11;
         }
