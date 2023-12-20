@@ -21,7 +21,7 @@ public class BatCocoon : MonoBehaviour
     }
     IEnumerator StartAnimation()
     {
-        yield return new WaitForSeconds(Random.Range(0.1f, 0.5f));
+        yield return new WaitForSeconds(Random.Range(0.1f, 0.9f));
         animator.SetTrigger("Idle");
     }
     IEnumerator BatSpawner(GameObject coco)
