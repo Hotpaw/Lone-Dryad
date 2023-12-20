@@ -8,6 +8,7 @@ public class PlantSeed : InteractableObject
     bool usable = true;
     public Animator animator;
 
+    public GameObject Crystal;
     public enum Type { event1, grow, crystal };
     public Type type;
 
@@ -24,7 +25,11 @@ public class PlantSeed : InteractableObject
     {
         if (GameValueManager.INSTANCE.thePowerToPlant)
         {
-
+            if (type == Type.crystal)
+            {
+                PlantPart.GetComponent<Animator>().Play("Grow");
+                StartCoroutine(Decay());
+            }
             if (type == Type.event1 && !eventUsed)
             {
                 eventUsed = true;
@@ -42,9 +47,17 @@ public class PlantSeed : InteractableObject
     IEnumerator Decay()
     {
         usable = false;
+        if (Crystal != null)
+            if (type == Type.crystal)
+            {
+
+                yield return new WaitForSeconds(0.8f);
+                Crystal.gameObject.SetActive(true);
+            }
 
         yield return new WaitForSeconds(3);
         PlantPart.GetComponent<Animator>().Play("Ungrow");
+
         usable = true;
     }
 

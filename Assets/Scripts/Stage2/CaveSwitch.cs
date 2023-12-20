@@ -9,36 +9,40 @@ public class CaveSwitch : InteractableObject
     public bool once;
     public override void Interact()
     {
-        if (!once)
-        {
-            once = true;
-            if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
-                FindAnyObjectByType<Movement>().gameObject.layer = 0;
-            else if (FindAnyObjectByType<Movement>().gameObject.layer == 0)
-                FindAnyObjectByType<Movement>().gameObject.layer = 11;
 
-            if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
-            {            
-                if (mode == 0)
-                {                
-                    cullBackground.INSTANCE.CullingModeCall(1);                
-                }
-                if(mode == 1)
-                {
-                    cullBackground.INSTANCE.CullingModeCall(2);
-                }
-                if(mode == 2)
-                {
-                    cullBackground.INSTANCE.CullingModeCall(3);
-                }
-            }
-            else
-            {            
-                cullBackground.INSTANCE.CullingModeCall(0);           
-            }
-            StartCoroutine(Wait());
+        if (!once){
+
+			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
+
+			{
+				once = true;
+				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
+					FindAnyObjectByType<Movement>().gameObject.layer = 0;
+				else if (FindAnyObjectByType<Movement>().gameObject.layer == 0)
+					FindAnyObjectByType<Movement>().gameObject.layer = 11;
+
+				if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
+				{            
+					if (mode == 0)
+					{                
+						cullBackground.INSTANCE.CullingModeCall(1);                
+					}
+					if(mode == 1)
+					{
+						cullBackground.INSTANCE.CullingModeCall(2);
+					}
+					if(mode == 2)
+					{
+						cullBackground.INSTANCE.CullingModeCall(3);
+					}
+				}
+				else
+				{            
+					cullBackground.INSTANCE.CullingModeCall(0);           
+				}
+				StartCoroutine(Wait());
+			}
         }
-        
     }
     public IEnumerator Wait()
     {
