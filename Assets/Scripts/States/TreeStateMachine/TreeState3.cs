@@ -46,7 +46,7 @@ public class TreeState3 : State
             {
                 if (!once)
                 {
-                    gardenGnome.SpookedGnome();
+                    
                     once = true;
                     trigger2 = true;
                 }
