@@ -7,6 +7,7 @@ public class CaveSwitch : InteractableObject
     public int mode = 0;
     public override void Interact()
     {
+        
         if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
         {
             if(mode == 0)

@@ -30,7 +30,7 @@ public class GameValueManager : MonoBehaviour
     public bool thePowerToPlant;
     public int stones;
     public int maxStones;
-
+    public int numberOfCrystallPieces;
 
     public int currentsceneBuildIndex;
     [HideInInspector] public bool KC;
