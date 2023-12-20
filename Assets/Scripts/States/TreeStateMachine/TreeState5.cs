@@ -9,9 +9,9 @@ public class TreeState5 : State
 
     public void Awake()
     {
-        if (INSTANCE != null) Destroy(this.gameObject);
+      
         INSTANCE = this;
-        DontDestroyOnLoad(this.gameObject);
+      
     }
     public override State RunCurrentState()
     {

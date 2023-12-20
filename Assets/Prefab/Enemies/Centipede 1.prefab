@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 2926654943260578741}
   - component: {fileID: 6252629052445137156}
   - component: {fileID: 3271951856563362386}
-  m_Layer: 11
+  m_Layer: 14
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5073,7 +5073,7 @@ GameObject:
   - component: {fileID: 4811726224814991568}
   - component: {fileID: 8874614255826832938}
   - component: {fileID: 3089470109200690390}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: Centipede
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5180,7 +5180,7 @@ GameObject:
   - component: {fileID: 4468726974213933494}
   - component: {fileID: 1092123759969069691}
   - component: {fileID: 4890981158114105030}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: WeakPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

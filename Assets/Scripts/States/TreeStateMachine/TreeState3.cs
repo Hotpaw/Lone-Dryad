@@ -29,7 +29,7 @@ public class TreeState3 : State
         if (!trigger1)
         {            
             checkDist = Vector2.Distance(waterPosition.transform.position, playerPosition.transform.position);
-            if (checkDist < 1)
+            if (checkDist < 4)
             {
                 if (!once)
                 {
@@ -46,7 +46,7 @@ public class TreeState3 : State
             {
                 if (!once)
                 {
-                    gardenGnome.SpookedGnome();
+                    
                     once = true;
                     trigger2 = true;
                 }

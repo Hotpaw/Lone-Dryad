@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PopUpText : MonoBehaviour
 {
     public static PopUpText INSTANCE;
+    public enum Icon { Dryad, Gnome};
+    public Icon icon;
+    public Image IconImage;
+    public Sprite[] icons;
     public Transform[] windowPosition;
     public GameObject popUpDialogue;
     public TextMeshProUGUI popUpText;
@@ -51,6 +56,29 @@ public class PopUpText : MonoBehaviour
         popUpDialogue.gameObject.SetActive(false);
 
     }
+    public void PopUpMessage(string message, Color color, float duration, Icon icon)
+    {
+        StartCoroutine(showText(message, color, duration, icon));
+    }
+    IEnumerator showText(string message, Color color, float duration, Icon icon)
+    {
+        if(icon == Icon.Gnome)
+        {
+            IconImage.sprite = icons[1];
+        }
+        else if(icon == Icon.Dryad)
+        {
+            IconImage.sprite = icons[0];
+        }
+        popUpDialogue.gameObject.transform.position = windowPosition[0].position;
+        popUpDialogue.gameObject.SetActive(true);
+        popUpText.color = color;
+        popUpText.text = message;
+        yield return new WaitForSeconds(duration + 1);
+        popUpDialogue.gameObject.SetActive(false);
+
+    }
+
     public void PopUpMessage(string message, Color color, float duration, bool position)
     {
         StartCoroutine(showText(message, color, duration, position));
