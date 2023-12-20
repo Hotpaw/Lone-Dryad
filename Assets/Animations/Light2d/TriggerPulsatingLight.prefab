@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5710544730338092283}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.17288798, w: 0.9849415}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17289178, w: 0.9849408}
   m_LocalPosition: {x: -13.26, y: 14.41, z: 355.85016}
   m_LocalScale: {x: 0.7141249, y: 0.64180225, z: 1.0017986}
   m_ConstrainProportionsScale: 0
@@ -187,3 +187,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightPuls: {fileID: 0}
+  light2D: {fileID: 0}

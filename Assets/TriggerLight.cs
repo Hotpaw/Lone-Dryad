@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class TriggerLight : MonoBehaviour
 {
     public Animator lightPuls;
 
+    public Light2D light2D;
+
     private void Start()
     {
-        // Get the Animator component on the same GameObject.
+        
         //lightPuls = GetComponentInParent<Animator>();
+        light2D.enabled = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("here");
-        // Check if the entering object is the player (you may want to use tags or layers).
+       
         if (other.gameObject.CompareTag("Player"))
         {
-            // Trigger the animation when the player enters the collider.
+            // setter bool till true när playern är inom trigger området. 
             lightPuls.SetBool("TriggerLight", true);
+            light2D.enabled=true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        // Check if the exiting object is the player (you may want to use tags or layers).
+        
         if (other.gameObject.CompareTag("Player"))
         {
             lightPuls.SetBool("TriggerLight", false); //resetar triggern i animatorn
+            light2D.enabled=false;
            
            
         }

@@ -8,7 +8,10 @@ public class TriggerLight2D : MonoBehaviour
 {
     public Light2D Light;
 
-
+    public void Start()
+    {
+        Light.enabled = false;
+    }
 
 
     private void OnTriggerEnter2D(Collider2D other)
