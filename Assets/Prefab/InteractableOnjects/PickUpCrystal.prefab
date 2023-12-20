@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2f77ecdf80fdf43abcc136fdc59362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  oneCrystal: 0
+  crystal: {fileID: 5312200722384392094}
 --- !u!212 &7794067972653751001
 SpriteRenderer:
   m_ObjectHideFlags: 0

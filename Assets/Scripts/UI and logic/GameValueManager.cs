@@ -18,7 +18,7 @@ public class GameValueManager : MonoBehaviour
     public bool gameLost = false;
     public int sceneNr;
     public bool nextLevelAvailable;
-
+    
     //Dryad stats
     public TeleportScript teleportScript;    
 
@@ -27,6 +27,7 @@ public class GameValueManager : MonoBehaviour
 
     //Unlockable stats
     public bool thePowerToThrowNuts;
+    public bool thePowerToPlant;
     public int stones;
     public int maxStones;
 

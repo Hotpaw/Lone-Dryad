@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class InteractWith : MonoBehaviour
 {
+    public enum Type { Tree, plant, normal }
+    public Type type;
     public InteractableObject interactableObject;
     public string interactableDescription;
     public GameObject InteractableIcon;
@@ -16,6 +18,8 @@ public class InteractWith : MonoBehaviour
     public bool unlimitedUses = false;
     SpriteRenderer playerInteractIcon;
     bool activated = false;
+
+
     private void Start()
     {
         if (interactableObject != null)
@@ -34,18 +38,36 @@ public class InteractWith : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DisplayInteractableIcon();
 
 
-        if (interactable)
+        if (type == Type.Tree && GameValueManager.INSTANCE.gotWater || type == Type.Tree && GameValueManager.INSTANCE.nextLevelAvailable)
         {
-
-            if (collision.gameObject.CompareTag("Player"))
+            DisplayInteractableIcon();
+            if (interactable)
             {
 
-                if (Gamepad.current != null)
+                if (collision.gameObject.CompareTag("Player"))
                 {
-                    if (Gamepad.current.buttonEast.IsActuated())
+
+                    if (Gamepad.current != null)
+                    {
+                        if (Gamepad.current.buttonEast.IsActuated())
+                        {
+
+                            if (!used)
+                            {
+                                if (!unlimitedUses)
+                                {
+                                    used = true;
+                                    interactableObject.Interact();
+
+                                }
+                                else
+                                    interactableObject.Interact();
+                            }
+                        }
+                    }
+                    else if (Keyboard.current.eKey.IsActuated())
                     {
 
                         if (!used)
@@ -59,29 +81,116 @@ public class InteractWith : MonoBehaviour
                             else
                                 interactableObject.Interact();
                         }
+
                     }
+
                 }
-                else if (Keyboard.current.eKey.IsActuated())
+                else
+                {
+                    return;
+                }
+            }
+        }
+        if (type == Type.plant && GameValueManager.INSTANCE.thePowerToPlant)
+        {
+            DisplayInteractableIcon();
+            if (interactable)
+            {
+
+                if (collision.gameObject.CompareTag("Player"))
                 {
 
-                    if (!used)
+                    if (Gamepad.current != null)
                     {
-                        if (!unlimitedUses)
+                        if (Gamepad.current.buttonEast.IsActuated())
                         {
-                            used = true;
-                            interactableObject.Interact();
 
+                            if (!used)
+                            {
+                                if (!unlimitedUses)
+                                {
+                                    used = true;
+                                    interactableObject.Interact();
+
+                                }
+                                else
+                                    interactableObject.Interact();
+                            }
                         }
-                        else
-                            interactableObject.Interact();
+                    }
+                    else if (Keyboard.current.eKey.IsActuated())
+                    {
+
+                        if (!used)
+                        {
+                            if (!unlimitedUses)
+                            {
+                                used = true;
+                                interactableObject.Interact();
+
+                            }
+                            else
+                                interactableObject.Interact();
+                        }
+
                     }
 
                 }
-
+                else
+                {
+                    return;
+                }
             }
-            else
+        }
+        if (type == Type.normal)
+        {
+            DisplayInteractableIcon();
+            if (interactable)
             {
-                return;
+
+                if (collision.gameObject.CompareTag("Player"))
+                {
+
+                    if (Gamepad.current != null)
+                    {
+                        if (Gamepad.current.buttonEast.IsActuated())
+                        {
+
+                            if (!used)
+                            {
+                                if (!unlimitedUses)
+                                {
+                                    used = true;
+                                    interactableObject.Interact();
+
+                                }
+                                else
+                                    interactableObject.Interact();
+                            }
+                        }
+                    }
+                    else if (Keyboard.current.eKey.IsActuated())
+                    {
+
+                        if (!used)
+                        {
+                            if (!unlimitedUses)
+                            {
+                                used = true;
+                                interactableObject.Interact();
+
+                            }
+                            else
+                                interactableObject.Interact();
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    return;
+                }
             }
         }
 
@@ -93,11 +202,11 @@ public class InteractWith : MonoBehaviour
         if (!activated)
         {
             playerInteractIcon.gameObject.SetActive(true);
-            if(interactableDescription != null && playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>() != null)
+            if (interactableDescription != null && playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>() != null)
             {
                 playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>().text = interactableDescription;
             }
-         
+
             if (playerInteractIcon.transform.localScale.x >= 2)
             {
                 playerInteractIcon.transform.localScale = Vector3.one;

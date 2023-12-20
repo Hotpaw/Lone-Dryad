@@ -132,7 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a965128397c4b49bc74a503ef7c70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   interactableObject: {fileID: 137622811793143999}
+  interactableDescription: Enter
   InteractableIcon: {fileID: 346783074775395057}
   Icons:
   - {fileID: 21300000, guid: ba1b52b758af1e745b53685a075d34f0, type: 3}
@@ -239,3 +241,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e111d071cc539d249b1e528c041d4d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mode: 0
