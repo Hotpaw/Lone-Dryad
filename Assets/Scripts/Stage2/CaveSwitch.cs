@@ -16,14 +16,18 @@ public class CaveSwitch : InteractableObject
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 			{
 				GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-				foreach(var enemy in enemies)
+				if(enemies.Length > 0)
 				{
-					enemyList.Add(enemy);
-				}
-				foreach(var enemy in enemyList)
-				{
-					enemy.gameObject.SetActive(false);
-				}
+                    foreach (var enemy in enemies)
+                    {
+                        enemyList.Add(enemy);
+                    }
+                    foreach (var enemy in enemyList)
+                    {
+                        enemy.gameObject.SetActive(false);
+                    }
+                }
+			
                 Debug.Log(" Switch start Activated");
                 once = true;
 				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
