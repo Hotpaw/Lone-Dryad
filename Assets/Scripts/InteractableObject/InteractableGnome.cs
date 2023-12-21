@@ -21,7 +21,7 @@ public class InteractableGnome : InteractableObject
             GameValueManager.INSTANCE.theShieldIsActive = true;
             GameValueManager.INSTANCE.stormStrenght += 2;
             GameValueManager.INSTANCE.nextLevelAvailable = true;
-            FindFirstObjectByType<cameraFollow>().ZoomOutNow();
+            
         }
     }
 
