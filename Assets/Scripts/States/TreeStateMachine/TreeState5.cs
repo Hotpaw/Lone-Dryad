@@ -9,19 +9,18 @@ public class TreeState5 : State
 
     public void Awake()
     {
-      
+        PopUpText.INSTANCE.PopUpMessage("The water is Gone, I can climb the tree branches to check it out", Color.black,5f);
         INSTANCE = this;
       
     }
     public override State RunCurrentState()
     {
-        if (GameValueManager.INSTANCE.treeLevel == 5)
+        
+        if(GameValueManager.INSTANCE.numberOfCrystallPieces == 4)
         {
+            GameValueManager.INSTANCE.nextLevelAvailable = true;
+        }
             return this;
-        }
-        else
-        {
-            return TreeState6.INSTANCE;
-        }
+     
     }
 }
