@@ -34,6 +34,7 @@ public class PlantSeed : InteractableObject
             {
                 eventUsed = true;
                 animator.SetTrigger("Event");
+                PopUpText.INSTANCE.PopUpMessage("The Water is back", Color.white, 3f);
 
             }
             if (usable)
