@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class cameraFollow : MonoBehaviour
 {
     public float cameraDistance;
-    Vector3 playerPosition;
+    Vector3 playerPosition;    
     Camera[] cameras;
     // Start is called before the first frame update
 
@@ -15,7 +15,7 @@ public class cameraFollow : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Stage3.1")
         {
-            cameraDistance = 14;
+            cameraDistance = 11;
         }
         else if (SceneManager.GetActiveScene().name != "EndStage")
         {
@@ -31,13 +31,15 @@ public class cameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (playerPosition != null)
         {
             playerPosition = new Vector3(FindAnyObjectByType<Movement>().transform.position.x, FindAnyObjectByType<Movement>().transform.position.y, -10);
             transform.position = playerPosition;
-        }
-
+        }        
 
     }
-
+    
 }
+
+

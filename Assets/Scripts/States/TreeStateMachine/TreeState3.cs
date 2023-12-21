@@ -16,6 +16,7 @@ public class TreeState3 : State
     public GardenGnome2 gardenGnome2;
     public bool trigger1;
     public bool trigger2;
+    public bool trigger3;
     public float checkDist;
     public float checkDist2;
 
@@ -45,17 +46,17 @@ public class TreeState3 : State
             if (checkDist2 < 1.2f)
             {
                 if (!once)
-                {
-                    FindAnyObjectByType<Storm>().IncreaseStormIntensity();
+                {                    
                     once = true;
                     trigger2 = true;
                 }
                 StartCoroutine(YieldTrigger());
             }
         }        
-        if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5) 
+        if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && !trigger3) 
         {
-            FindAnyObjectByType<Storm>().IncreaseStormIntensity();
+            GameValueManager.INSTANCE.stormStrenght +=2;
+            trigger3 = true;
         }
         
     }

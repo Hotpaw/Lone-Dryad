@@ -7,14 +7,29 @@ public class CaveSwitch : InteractableObject
 {    
     public int mode = 0;
     public bool once;
+	List<GameObject> enemyList;
     public override void Interact()
     {
-
+        Debug.Log("Pressed");
         if (!once)
 		{
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 			{
-				once = true;
+				GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+				if(enemies.Length > 0)
+				{
+                    foreach (var enemy in enemies)
+                    {
+                        enemyList.Add(enemy);
+                    }
+                    foreach (var enemy in enemyList)
+                    {
+                        enemy.gameObject.SetActive(false);
+                    }
+                }
+			
+                Debug.Log(" Switch start Activated");
+                once = true;
 				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
 					FindAnyObjectByType<Movement>().gameObject.layer = 0;
 				else if (FindAnyObjectByType<Movement>().gameObject.layer == 0)
@@ -23,7 +38,8 @@ public class CaveSwitch : InteractableObject
 				if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 				{            
 					if (mode == 0)
-					{                
+					{
+						Debug.Log(" Switch 0 Activated");
 						cullBackground.INSTANCE.CullingModeCall(1);                
 					}
 					if(mode == 1)
@@ -35,12 +51,17 @@ public class CaveSwitch : InteractableObject
 						cullBackground.INSTANCE.CullingModeCall(3);
 					}
 				}
-				else
-				{            
-					cullBackground.INSTANCE.CullingModeCall(0);           
-				}
+				
 				StartCoroutine(Wait());
 			}
+            else
+            {
+                cullBackground.INSTANCE.CullingModeCall(0);
+                foreach (var enemy in enemyList)
+                {
+                    enemy.gameObject.SetActive(true);
+                }
+            }
         }
     }
     public IEnumerator Wait()
