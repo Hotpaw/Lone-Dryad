@@ -7,7 +7,7 @@ public class TreeState5 : State
     public static TreeState5 INSTANCE;
     bool once;
 
-    public void Awake()
+    public void Start()
     {
         PopUpText.INSTANCE.PopUpMessage("The water is Gone, I can climb the tree branches to check it out", Color.black,5f);
         INSTANCE = this;
