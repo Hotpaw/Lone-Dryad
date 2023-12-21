@@ -10,6 +10,7 @@ public class InteractableGnome : InteractableObject
     {
         if (GameValueManager.INSTANCE.thePowerToPickUpCrystals == false)
         {
+            GameValueManager.INSTANCE.stormStrenght++;
             GameValueManager.INSTANCE.thePowerToPickUpCrystals = true;
             PopUpText.INSTANCE.PopUpMessage("The storm is coming!", Color.red, 12, PopUpText.Icon.Gnome);
             StartCoroutine(TalkingGnome());
@@ -18,8 +19,7 @@ public class InteractableGnome : InteractableObject
         {            
             PopUpText.INSTANCE.PopUpMessage("I will now repair the crystal for you!", Color.red, 5, PopUpText.Icon.Gnome);
             GameValueManager.INSTANCE.theShieldIsActive = true;
-            FindAnyObjectByType<Storm>().IncreaseStormIntensity();
-            FindAnyObjectByType<Storm>().IncreaseStormIntensity();
+            GameValueManager.INSTANCE.stormStrenght += 2;
         }
     }
 

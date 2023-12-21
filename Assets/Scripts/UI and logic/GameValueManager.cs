@@ -35,6 +35,9 @@ public class GameValueManager : MonoBehaviour
     public int numberOfCrystallPieces;
 
     public int currentsceneBuildIndex;
+
+    //Storm stats
+    public float stormStrenght;
     [HideInInspector] public bool KC;
 
     public void Awake()

@@ -17,8 +17,7 @@ public class GardenGnome1 : MonoBehaviour
     {
         if (TreeState3.INSTANCE.trigger1)
         {            
-            transform.position = Vector3.MoveTowards(transform.position,new Vector3(waterfallCave.position.x-4, waterfallCave.position.y), movementSpeed * Time.deltaTime);
-                        
+            transform.position = Vector3.MoveTowards(transform.position,new Vector3(waterfallCave.position.x-4, waterfallCave.position.y), movementSpeed * Time.deltaTime);                        
         }
         if (Vector2.Distance(transform.position, new Vector2(waterfallCave.position.x - 4, waterfallCave.position.y)) < 1)
             Destroy(gameObject);
