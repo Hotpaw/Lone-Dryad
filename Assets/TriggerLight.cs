@@ -13,7 +13,7 @@ public class TriggerLight : MonoBehaviour
     {
         
         //lightPuls = GetComponentInParent<Animator>();
-        light2D.enabled = false;
+        
 
     }
 
