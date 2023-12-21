@@ -180,9 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Back
-
-'
+  m_text: Back to game
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -645,7 +643,7 @@ GameObject:
   - component: {fileID: 566415644}
   - component: {fileID: 566415647}
   m_Layer: 0
-  m_Name: Back
+  m_Name: BackToGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,7 +715,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 566415647}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: BackButton
+        m_MethodName: BackToGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1084,7 +1082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.00077004}
+  m_AnchoredPosition: {x: 0, y: -0.00059509}
   m_SizeDelta: {x: 800, y: 600.97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1092176072
@@ -1698,19 +1696,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9096410867802082814, guid: 0bdd90d54258ae647aab31656ab1ff12, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 799.9544
+      value: 797.9449
       objectReference: {fileID: 0}
     - target: {fileID: 9096410867802082814, guid: 0bdd90d54258ae647aab31656ab1ff12, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 244.4733
+      value: 80.0335
       objectReference: {fileID: 0}
     - target: {fileID: 9096410867802082814, guid: 0bdd90d54258ae647aab31656ab1ff12, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 58.0171
+      value: 57.9472
       objectReference: {fileID: 0}
     - target: {fileID: 9096410867802082814, guid: 0bdd90d54258ae647aab31656ab1ff12, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -141.82858
+      value: -184.1323
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

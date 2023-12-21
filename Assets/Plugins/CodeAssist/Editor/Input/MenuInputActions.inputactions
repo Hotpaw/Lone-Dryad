@@ -19,7 +19,7 @@
                 {
                     "name": "",
                     "id": "037a7ad2-eb4d-455f-8e34-b9d095ab8a15",
-                    "path": "<XInputController>/leftStick/up",
+                    "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
@@ -30,7 +30,18 @@
                 {
                     "name": "",
                     "id": "8bd0415b-4045-4b74-a00a-c4f9a674e99b",
-                    "path": "<XInputController>/leftStick/down",
+                    "path": "<Joystick>/stick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "GamePad",
+                    "action": "MenuNavigation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0c1955c-1ba1-4af1-ab37-1a77e9ead983",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "GamePad",
