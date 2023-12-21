@@ -55,7 +55,7 @@ public class TreeState3 : State
         }        
         if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && !trigger3) 
         {
-            GameValueManager.INSTANCE.stormStrenght++;
+            GameValueManager.INSTANCE.stormStrenght +=2;
             trigger3 = true;
         }
         

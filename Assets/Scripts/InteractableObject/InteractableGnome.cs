@@ -20,6 +20,8 @@ public class InteractableGnome : InteractableObject
             PopUpText.INSTANCE.PopUpMessage("I will now repair the crystal for you!", Color.red, 5, PopUpText.Icon.Gnome);
             GameValueManager.INSTANCE.theShieldIsActive = true;
             GameValueManager.INSTANCE.stormStrenght += 2;
+            GameValueManager.INSTANCE.nextLevelAvailable = true;
+            FindFirstObjectByType<cameraFollow>().ZoomOutNow();
         }
     }
 
