@@ -62,7 +62,7 @@ public class MenuController : MonoBehaviour
     private void Navigate(int direction)
     {
         int currentButtonIndex = GetCurrentButtonIndex(); //för att veta vilken knapp via dess index
-        menuButtons[currentButtonIndex].Deselect (); //deselect nuvarande knapp
+       //deselect nuvarande knapp
         int nextIndex = (currentButtonIndex + direction + menuButtons.Count); //beräkna nästa knapp index baserat på riktningen 
         menuButtons[nextIndex].Select(); //välj knappen
     }

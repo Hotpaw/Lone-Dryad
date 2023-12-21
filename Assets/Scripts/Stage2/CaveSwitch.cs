@@ -9,12 +9,13 @@ public class CaveSwitch : InteractableObject
     public bool once;
     public override void Interact()
     {
-
+        Debug.Log("Pressed");
         if (!once)
 		{
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 			{
-				once = true;
+                Debug.Log(" Switch start Activated");
+                once = true;
 				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
 					FindAnyObjectByType<Movement>().gameObject.layer = 0;
 				else if (FindAnyObjectByType<Movement>().gameObject.layer == 0)
@@ -23,7 +24,8 @@ public class CaveSwitch : InteractableObject
 				if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 				{            
 					if (mode == 0)
-					{                
+					{
+						Debug.Log(" Switch 0 Activated");
 						cullBackground.INSTANCE.CullingModeCall(1);                
 					}
 					if(mode == 1)
@@ -35,12 +37,13 @@ public class CaveSwitch : InteractableObject
 						cullBackground.INSTANCE.CullingModeCall(3);
 					}
 				}
-				else
-				{            
-					cullBackground.INSTANCE.CullingModeCall(0);           
-				}
+				
 				StartCoroutine(Wait());
 			}
+            else
+            {
+                cullBackground.INSTANCE.CullingModeCall(0);
+            }
         }
     }
     public IEnumerator Wait()
