@@ -15,7 +15,7 @@ public class cameraFollow : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Stage3.1")
         {
-            cameraDistance = 15;
+            cameraDistance = 11;
         }
         else if (SceneManager.GetActiveScene().name != "EndStage")
         {
@@ -39,17 +39,7 @@ public class cameraFollow : MonoBehaviour
         }        
 
     }
-    public void ZoomOutNow()
-    {
-        cameras = FindObjectsOfType<Camera>();
-
-        cameraDistance = 18;
-
-        foreach (Camera cam in cameras)
-        {
-            cam.orthographicSize = cameraDistance;
-        }
-    }
+    
 }
 
 
