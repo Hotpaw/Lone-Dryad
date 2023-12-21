@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class InteractWith : MonoBehaviour
 {
-    public enum Type { Tree, plant, normal }
+    public enum Type { Tree, plant, normal, crystal }
     public Type type;
     public InteractableObject interactableObject;
     public string interactableDescription;
@@ -42,7 +42,57 @@ public class InteractWith : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        if(type == Type.crystal && GameValueManager.INSTANCE.thePowerToPickUpCrystals)
+        {
+            DisplayInteractableIcon();
+            if (interactable)
+            {
 
+                if (collision.gameObject.CompareTag("Player"))
+                {
+
+                    if (Gamepad.current != null)
+                    {
+                        if (Gamepad.current.buttonEast.IsActuated())
+                        {
+
+                            if (!used)
+                            {
+                                if (!unlimitedUses)
+                                {
+                                    used = true;
+                                    interactableObject.Interact();
+
+                                }
+                                else
+                                    interactableObject.Interact();
+                            }
+                        }
+                    }
+                    else if (Keyboard.current.eKey.IsActuated())
+                    {
+
+                        if (!used)
+                        {
+                            if (!unlimitedUses)
+                            {
+                                used = true;
+                                interactableObject.Interact();
+
+                            }
+                            else
+                                interactableObject.Interact();
+                        }
+
+                    }
+
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
         if (type == Type.Tree && GameValueManager.INSTANCE.gotWater || type == Type.Tree && GameValueManager.INSTANCE.nextLevelAvailable)
         {
             DisplayInteractableIcon();
