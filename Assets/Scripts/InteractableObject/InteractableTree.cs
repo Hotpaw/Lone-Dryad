@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractableTree : InteractableObject
 {
@@ -22,7 +23,7 @@ public class InteractableTree : InteractableObject
         }
         if (GameValueManager.INSTANCE.nextLevelAvailable)
         {
-            SceneLoader.INSTANCE.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
+            SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
         }
     }
     public IEnumerator StopCrawling()

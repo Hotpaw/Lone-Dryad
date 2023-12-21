@@ -7,6 +7,7 @@ public class CaveSwitch : InteractableObject
 {    
     public int mode = 0;
     public bool once;
+	List<GameObject> enemyList;
     public override void Interact()
     {
         Debug.Log("Pressed");
@@ -14,6 +15,15 @@ public class CaveSwitch : InteractableObject
 		{
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
 			{
+				GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+				foreach(var enemy in enemies)
+				{
+					enemyList.Add(enemy);
+				}
+				foreach(var enemy in enemyList)
+				{
+					enemy.gameObject.SetActive(false);
+				}
                 Debug.Log(" Switch start Activated");
                 once = true;
 				if (FindAnyObjectByType<Movement>().gameObject.layer == 11)
@@ -43,6 +53,10 @@ public class CaveSwitch : InteractableObject
             else
             {
                 cullBackground.INSTANCE.CullingModeCall(0);
+                foreach (var enemy in enemyList)
+                {
+                    enemy.gameObject.SetActive(true);
+                }
             }
         }
     }

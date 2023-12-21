@@ -26,9 +26,12 @@ public class InteractWith : MonoBehaviour
         {
             InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
+        if(FindObjectOfType<Movement>() != null)
+        {
 
         playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
         playerInteractIcon.enabled = false;
+        }
     }
     private void Update()
     {
