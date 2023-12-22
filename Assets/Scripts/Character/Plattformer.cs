@@ -441,10 +441,10 @@ public partial class @Plattformer: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8acbd5de-0175-4177-a6a8-ef73757082b8"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": "";Keyboard&Mouse"",
+                    ""groups"": ""Gamepad;Joystick"",
                     ""action"": ""Click"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
