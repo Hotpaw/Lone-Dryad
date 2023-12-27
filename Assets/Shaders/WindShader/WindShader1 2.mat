@@ -8,8 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: WindShader1 2
-  m_Shader: {fileID: 10755, guid: 0000000000000000e000000000000000, type: 0}
-  m_Parent: {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  m_Shader: {fileID: -6465566751694194690, guid: 2a1bc47cb83749b4f84cc8804f4749bf, type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: 2a1bc47cb83749b4f84cc8804f4749bf, type: 3}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
   m_InvalidKeywords:

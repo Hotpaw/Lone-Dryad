@@ -5637,6 +5637,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 432537949227958006, guid: b5cb217213b869d44b471d109300264a, type: 3}
   m_PrefabInstance: {fileID: 442075187}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &730961734
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409644302171075587, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6756811593068748081, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+      propertyPath: m_Name
+      value: CameraBorders
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+--- !u!65 &730961735 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 3233950264948272921, guid: 71952cc5ad4cde14bbf2c4601b189a17, type: 3}
+  m_PrefabInstance: {fileID: 730961734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &760681900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23053,6 +23115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraDistance: 11
+  player: {fileID: 1020250558499488330}
+  boundsCollider: {fileID: 730961735}
 --- !u!4 &2042703427690616988
 Transform:
   m_ObjectHideFlags: 0
@@ -28415,6 +28479,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 0}
 --- !u!1 &2921842314519704988
 GameObject:
   m_ObjectHideFlags: 0
@@ -28981,11 +29046,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5dffd9cc160bd8409759131a574796d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 0
-  attackSpeed: 1
-  Projectiles:
-  - {fileID: 1507772101223891192, guid: cf2cca465e01ca34abfd1f34f146fcdf, type: 3}
+  projectilePrefab: {fileID: 0}
   attackPoint: {fileID: 3626746282101926292}
+  thrust: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  trajectoryLine: {fileID: 0}
+  attackSpeed: 1
 --- !u!4 &3626746282101926292
 Transform:
   m_ObjectHideFlags: 0
@@ -49348,6 +49416,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 0}
 --- !u!114 &5462291702153021031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70598,6 +70667,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 840529936820498569}
   - {fileID: 6089427728683567186}
+  - {fileID: 730961734}
   - {fileID: 8171207671847006063}
   - {fileID: 670143789}
   - {fileID: 488338169}
