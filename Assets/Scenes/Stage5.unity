@@ -1992,6 +1992,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
+    - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
     - target: {fileID: 7534602477940033186, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: animator
       value: 
@@ -2197,6 +2201,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 642069369448917574, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
     - target: {fileID: 2117829643539332074, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: m_SortingOrder
       value: 3
@@ -2204,7 +2212,11 @@ PrefabInstance:
     - target: {fileID: 2117829643539332074, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+      objectReference: {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
+    - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
     - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: interactableDescription
       value: Regrow
@@ -2389,7 +2401,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2524,7 +2536,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2659,7 +2671,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3677,7 +3689,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3725,6 +3737,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -1.67
       objectReference: {fileID: 0}
+    - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
     - target: {fileID: 7534602477940033186, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: type
       value: 1
@@ -5908,7 +5924,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6043,7 +6059,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6087,6 +6103,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
+    - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
     - target: {fileID: 7534602477940033186, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: type
       value: 1
@@ -6243,7 +6263,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6726,7 +6746,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6892,7 +6912,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7027,7 +7047,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7188,7 +7208,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7323,6 +7343,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -1.67
       objectReference: {fileID: 0}
+    - target: {fileID: 4144461246610465462, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
+      propertyPath: particleSystemPrefab
+      value: 
+      objectReference: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
     - target: {fileID: 7534602477940033186, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
       propertyPath: type
       value: 1
@@ -8168,7 +8192,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e9bbcc9777fb2564ca5d3b8e8fcc4cb2, type: 2}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9626,6 +9650,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 0}
 --- !u!1 &4277025747354862264
 GameObject:
   m_ObjectHideFlags: 0

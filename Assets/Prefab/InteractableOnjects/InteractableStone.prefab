@@ -58,6 +58,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
 --- !u!212 &2978147427417781916
 SpriteRenderer:
   m_ObjectHideFlags: 0

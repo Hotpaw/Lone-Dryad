@@ -20,24 +20,59 @@ public class InteractWith : MonoBehaviour
     bool activated = false;
 
 
+    public ParticleSystem particleSystemPrefab; // Reference to the particle system prefab
+    private ParticleSystem instantiatedParticleSystem; // To
     private void Start()
     {
+
         if (interactableObject != null)
         {
             InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-        if(FindObjectOfType<Movement>() != null)
+        if (FindObjectOfType<Movement>() != null)
         {
-
-        playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
-        playerInteractIcon.enabled = false;
+            playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
+            playerInteractIcon.enabled = false;
         }
     }
     private void Update()
     {
 
-        // Update the icon to change during runtime whenever a controll is disconnected
+        HandleParticleSystem();
 
+    }
+    private void HandleParticleSystem()
+    { // Check if the particle system prefab is assigned
+        if (particleSystemPrefab == null)
+        {
+            return; // Exit the method if the prefab is not assigned
+        }
+        bool shouldHaveParticleSystem = false;
+        if(type == Type.cave)
+        {
+            shouldHaveParticleSystem = false;
+            return;
+        }
+        // Check conditions for each type and set shouldHaveParticleSystem accordingly
+        if ((type == Type.crystal && GameValueManager.INSTANCE.thePowerToPickUpCrystals) ||
+            (type == Type.Tree && (GameValueManager.INSTANCE.gotWater || GameValueManager.INSTANCE.nextLevelAvailable)) ||
+            (type == Type.plant && GameValueManager.INSTANCE.thePowerToPlant) ||
+            (type == Type.normal || type == Type.cave))
+        {
+            shouldHaveParticleSystem = true;
+        }
+
+        // Instantiate the particle system if needed
+        if (shouldHaveParticleSystem && instantiatedParticleSystem == null)
+        {
+            instantiatedParticleSystem = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity, transform);
+        }
+
+        // Enable or disable the particle system based on the condition
+        if (instantiatedParticleSystem != null)
+        {
+            instantiatedParticleSystem.gameObject.SetActive(shouldHaveParticleSystem);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

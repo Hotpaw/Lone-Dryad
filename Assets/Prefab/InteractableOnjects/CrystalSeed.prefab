@@ -165,6 +165,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
 --- !u!212 &6483060136968871379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8bd09c02e41e68d4c89f3777b0afdec9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -754,6 +755,7 @@ MonoBehaviour:
   interactable: 1
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
+  particleSystemPrefab: {fileID: 0}
 --- !u!212 &4917618580096667136
 SpriteRenderer:
   m_ObjectHideFlags: 0
