@@ -34,7 +34,7 @@ public class suckLogic : MonoBehaviour
 
         FindObjectOfType<TreeScript>().gameObject.GetComponent<Health>().TakeDamage(1);
         }
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7.5f);
         sucking = true;
     }
 }

@@ -8,7 +8,7 @@ using System.Linq;
 public class BatCocoon : MonoBehaviour
 {
     public Ease Ease;
-
+   
     Animator animator;
     private void Start()
     {
