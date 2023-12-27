@@ -79,6 +79,19 @@ public class Movement : MonoBehaviour
         timeSinceGrounded += Time.deltaTime;
         timeSinceJumpPressed += Time.deltaTime;
 
+
+        bool isSprinting = false;
+        if (Gamepad.current != null)
+        {
+            isSprinting = Gamepad.current.leftShoulder.isPressed;
+        }
+        if (Keyboard.current != null)
+        {
+            isSprinting = isSprinting || Keyboard.current.shiftKey.isPressed;
+        }
+
+        // Adjust maxSpeed based on whether the player is sprinting
+        maxSpeed = isSprinting ? 12f : 8f;
         if (!isDashing && !dead)
         {
             if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
