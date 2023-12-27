@@ -17,26 +17,68 @@ public class playerAttack : MonoBehaviour
     private float gravityScale = 9.8f; // Gravity scale of the projectile
     private float theta = 45f; // Launch angle in degrees
 
+    public Material lineMaterial; 
+    private float textureOffset = 0f;
+    public float textureScrollSpeed = 1f; 
+
     private void Start()
     {
       
             // Set the initial width of the LineRenderer
-            trajectoryLine.startWidth *= 0.5f; // 50% thinner
-            trajectoryLine.endWidth *= 0.5f;   // 50% thinner
+            trajectoryLine.startWidth = 1; // 50% thinner
+            trajectoryLine.endWidth = 1;   // 50% thinner
+        if (trajectoryLine != null)
+        {
+            trajectoryLine.material = lineMaterial;
+        }
 
-            // Set the color to green with 30% opacity
-            Color greenColor = new Color(0, 1, 0, 0.3f); // Green with 30% opacity
-            trajectoryLine.material.color = greenColor;
-        
+
     }
     void Update()
     {
         if (isCharging && !coolDown)
         {
             ShowTrajectory();
+            ScrollTexture();
+            UpdateTextureTiling();
+        }
+    }
+    private void UpdateTextureTiling()
+    {
+        if (trajectoryLine != null)
+        {
+            float lineLength = CalculateLineLength();
+            float tilingFactor = lineLength / 1; // desiredTileLength is the length you want each tile to cover
+
+            // Adjust the tiling of the texture
+            Vector2 textureScale = new Vector2(tilingFactor, 1);
+            trajectoryLine.material.mainTextureScale = textureScale;
         }
     }
 
+    private float CalculateLineLength()
+    {
+        float length = 0f;
+
+        for (int i = 0; i < trajectoryLine.positionCount - 1; i++)
+        {
+            length += Vector3.Distance(trajectoryLine.GetPosition(i), trajectoryLine.GetPosition(i + 1));
+        }
+
+        return length;
+    }
+    private void ScrollTexture()
+    {
+        if (trajectoryLine.material != null)
+        {
+            textureOffset -= Time.deltaTime * textureScrollSpeed;
+
+            // Loop the offset
+            textureOffset = textureOffset % 1.0f;
+
+            trajectoryLine.material.mainTextureOffset = new Vector2(textureOffset, 0);
+        }
+    }
     public void Fire(InputAction.CallbackContext context)
     {
         // Check if the player has the power to attack
