@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class InteractWith : MonoBehaviour
 {
-    public enum Type { Tree, plant, normal, crystal }
+    public enum Type { Tree, plant, normal, crystal , cave}
     public Type type;
     public InteractableObject interactableObject;
     public string interactableDescription;
@@ -195,7 +195,7 @@ public class InteractWith : MonoBehaviour
                 }
             }
         }
-        if (type == Type.normal)
+        if (type == Type.normal || type == Type.cave)
         {
             DisplayInteractableIcon();
             if (interactable)

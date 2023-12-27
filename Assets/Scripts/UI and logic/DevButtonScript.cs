@@ -34,8 +34,9 @@ public class DevButtonScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R) || Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
         {
             StopAllCoroutines();
-            if (stage2 && GameValueManager.INSTANCE.gameLost)
+            if (stage2)
             {
+               // FIXA CHECKPOINT
                 GameValueManager.INSTANCE.thePowerToThrowNuts = true;
                 TreeState2.INSTANCE.enemyWaveActive = true;
                 GameValueManager.INSTANCE.progressActive = true;

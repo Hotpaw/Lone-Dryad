@@ -8,6 +8,7 @@ public class activatePlant : InteractableObject
     public override void Interact()
     {
         GameValueManager.INSTANCE.thePowerToPlant = true;
+        GameValueManager.INSTANCE.thePowerToPickUpCrystals = true;
         PopUpText.INSTANCE.PopUpMessage("You gained the power to regrow plants",Color.black,5f);
         Destroy(parent);
     }

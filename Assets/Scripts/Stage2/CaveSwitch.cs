@@ -14,8 +14,9 @@ public class CaveSwitch : InteractableObject
         if (!once)
 		{
 			if (cullBackground.INSTANCE.Backgrounds[0].activeInHierarchy)
-			{
-				GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            {
+               
+                GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 				if(enemies.Length > 0)
 				{
                     foreach (var enemy in enemies)
@@ -56,7 +57,9 @@ public class CaveSwitch : InteractableObject
 			}
             else
             {
+  
                 cullBackground.INSTANCE.CullingModeCall(0);
+               
                 foreach (var enemy in enemyList)
                 {
                     enemy.gameObject.SetActive(true);

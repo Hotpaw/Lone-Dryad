@@ -26,6 +26,24 @@ public class cullBackground : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
+
+        if(a == 0)
+        {
+            CaveSwitch[] switches = FindObjectsOfType<CaveSwitch>();
+            foreach (CaveSwitch sw in switches)
+            {
+                sw.gameObject.GetComponent<InteractWith>().interactableDescription = "Enter";
+            }
+        }
+        else
+        {
+            CaveSwitch[] switches = FindObjectsOfType<CaveSwitch>();
+            foreach (CaveSwitch sw in switches)
+            {
+                sw.gameObject.GetComponent<InteractWith>().interactableDescription = "Exit";
+            }
+        }
+
         if (a == 0)
         {
             Backgrounds[0].SetActive(true);            
@@ -41,6 +59,12 @@ public class cullBackground : MonoBehaviour
         if (a == 3)
         {
             Backgrounds[3].SetActive(true);
+        }
+        CaveSwitch[] switches1 = FindObjectsOfType<CaveSwitch>();
+        foreach(CaveSwitch sw in switches1)
+        {
+            sw.gameObject.SetActive(false);
+            sw.gameObject.SetActive(true);
         }
     }
     IEnumerator cullingMode(int a)
