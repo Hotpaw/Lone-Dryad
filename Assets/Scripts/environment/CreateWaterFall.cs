@@ -10,39 +10,102 @@ public class CreateWaterFall : MonoBehaviour
     public float waterFallLength;
     public int waterAmount;
     public float waterFallWidth;
-    List<GameObject> waterList = new();
-    float lineWithMultiplier;
+    public SpriteMask spriteMask; // Assuming you have a SpriteMask in the scene
+
+    List<GameObject> waterList = new List<GameObject>();
+    float lineWidthMultiplier;
+    private int previousWaterAmount;
 
     private void Start()
     {
-        firstFallPosition.GetComponent<LineRenderer>().startWidth = waterFallWidth;
-        firstFallPosition.GetComponent<WaterController>().fallSpeed = waterFallSpeed;
-        firstFallPosition.GetComponent<WaterController>().maxLenght = waterFallLength;
-        lineWithMultiplier = firstFallPosition.GetComponent<LineRenderer>().startWidth;
-        waterList.Add(firstFallPosition.gameObject);
-        for (int i = 0; i < waterAmount; i++)
-        {
-            GameObject WaterfallClone = Instantiate(waterfall, firstFallPosition);
-            waterList.Add(WaterfallClone);
-            WaterfallClone.GetComponent<WaterController>().fallSpeed = firstFallPosition.GetComponent<WaterController>().fallSpeed;
-            WaterfallClone.GetComponent<WaterController>().maxLenght = firstFallPosition.GetComponent<WaterController>().maxLenght;
-            WaterfallClone.transform.position = firstFallPosition.position + new Vector3(lineWithMultiplier * i,0,0);
-            WaterfallClone.GetComponent<LineRenderer>().startWidth = lineWithMultiplier;
-        }
-      
-        
+        InitializeFirstWaterfall();
+        previousWaterAmount = waterAmount;
+        CreateInitialWaterfalls();
     }
+
     private void Update()
     {
-        ChangeWaterFallValues();
+        if (waterAmount != previousWaterAmount)
+        {
+            RecreateWaterfalls();
+            previousWaterAmount = waterAmount;
+        }
+        else
+        {
+            ChangeWaterFallValues();
+        }
     }
-    public void ChangeWaterFallValues()
+
+    private void InitializeFirstWaterfall()
+    {
+        LineRenderer firstLineRenderer = firstFallPosition.GetComponent<LineRenderer>();
+        firstLineRenderer.startWidth = waterFallWidth;
+        firstLineRenderer.endWidth = waterFallWidth;
+        lineWidthMultiplier = firstLineRenderer.startWidth;
+
+        if (spriteMask != null)
+        {
+            firstLineRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+        }
+
+        WaterController firstWaterController = firstFallPosition.GetComponent<WaterController>();
+        firstWaterController.fallSpeed = waterFallSpeed;
+        firstWaterController.maxLenght = waterFallLength;
+
+        waterList.Add(firstFallPosition.gameObject);
+    }
+
+    private void CreateInitialWaterfalls()
+    {
+        int postProcessingLayer = LayerMask.NameToLayer("Default"); // Change this to postprossesing if you want
+
+        for (int i = 1; i < waterAmount; i++)
+        {
+            GameObject WaterfallClone = Instantiate(waterfall, firstFallPosition.position + new Vector3(lineWidthMultiplier * i, 0, 0), Quaternion.identity, firstFallPosition.parent);
+            waterList.Add(WaterfallClone);
+
+            // Set the instantiated object to the PostProcessing layer
+            WaterfallClone.layer = postProcessingLayer;
+
+            LineRenderer lineRenderer = WaterfallClone.GetComponent<LineRenderer>();
+            lineRenderer.startWidth = lineWidthMultiplier;
+            lineRenderer.endWidth = lineWidthMultiplier;
+            if (spriteMask != null)
+            {
+                lineRenderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+            }
+
+            WaterController waterController = WaterfallClone.GetComponent<WaterController>();
+            waterController.fallSpeed = waterFallSpeed;
+            waterController.maxLenght = waterFallLength;
+        }
+    }
+
+    private void RecreateWaterfalls()
     {
         foreach (GameObject WaterfallClone in waterList)
         {
-            WaterfallClone.GetComponent<WaterController>().fallSpeed = waterFallSpeed;
-            WaterfallClone.GetComponent<WaterController>().maxLenght = waterFallLength;
-   
+            if (WaterfallClone != firstFallPosition.gameObject)
+            {
+                Destroy(WaterfallClone);
+            }
+        }
+        waterList.Clear();
+        waterList.Add(firstFallPosition.gameObject);
+        CreateInitialWaterfalls();
+    }
+
+    private void ChangeWaterFallValues()
+    {
+        foreach (GameObject WaterfallClone in waterList)
+        {
+            LineRenderer lineRenderer = WaterfallClone.GetComponent<LineRenderer>();
+            lineRenderer.startWidth = waterFallWidth;
+            lineRenderer.endWidth = waterFallWidth;
+
+            WaterController waterController = WaterfallClone.GetComponent<WaterController>();
+            waterController.fallSpeed = waterFallSpeed;
+            waterController.maxLenght = waterFallLength;
         }
     }
 }

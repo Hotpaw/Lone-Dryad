@@ -11,6 +11,13 @@ Shader "Custom/FlowingWater"
         Tags { "RenderType"="Opaque" }
         LOD 200
 
+        // Stencil operations to work with Sprite Masks
+        Stencil
+        {
+            Ref 1
+            Comp equal
+        }
+
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
         #pragma surface surf Standard fullforwardshadows
@@ -37,15 +44,15 @@ Shader "Custom/FlowingWater"
             // put more per-instance properties here
         UNITY_INSTANCING_BUFFER_END(Props)
 
-float2 TillAndOffset(float2 uv, float value)
-{
-    return uv * float2(_Length, 1) + float2(value * _WaterSpeed, 0);
-}
+        float2 TiltAndOffset(float2 uv, float value)
+        {
+            return uv * float2(_Length, 1) + float2(value * _WaterSpeed, 0);
+        }
 
         void surf (Input IN, inout SurfaceOutputStandard o)
         {
             // Albedo comes from a texture tinted by color
-             fixed4 c = tex2D(_MainTex, TillAndOffset(IN.uv_MainTex, _Time) * _Color;
+            fixed4 c = tex2D(_MainTex, TiltAndOffset(IN.uv_MainTex, _Time.y)) * _Color;
             o.Albedo = c.rgb;
             // Metallic and smoothness come from slider variables
             o.Metallic = _Metallic;

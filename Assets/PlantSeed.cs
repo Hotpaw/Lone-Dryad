@@ -13,6 +13,7 @@ public class PlantSeed : InteractableObject
     public Type type;
 
     bool eventUsed = false;
+    public GameObject[] waterfalls;
     void Start()
     {
 
@@ -34,9 +35,11 @@ public class PlantSeed : InteractableObject
             {
                 eventUsed = true;
                 animator.SetTrigger("Event");
-                PopUpText.INSTANCE.PopUpMessage("The Water is back", Color.white, 3f);
-
+                waterfalls[0].SetActive(true);
+               // StartCoroutine(CheckWaterfallLength());
+                PopUpText.INSTANCE.PopUpMessage("The Water is returning", Color.white, 3f);
             }
+
             if (usable)
             {
                 PlantPart.GetComponent<Animator>().Play("Grow");
@@ -44,6 +47,43 @@ public class PlantSeed : InteractableObject
             }
         }
 
+    }
+    private IEnumerator CheckWaterfallLength()
+    {
+        // Null check for waterfalls[0]
+        if (waterfalls[0] == null)
+        {
+            Debug.LogError("waterfalls[0] is not assigned.");
+            yield break; // Exit the coroutine if waterfalls[0] is null
+        }
+
+        bool anyWaterfallReachedFullLength = false;
+
+        // Wait until any of the child waterfalls reach their full length
+        while (!anyWaterfallReachedFullLength)
+        {
+            foreach (Transform child in waterfalls[0].transform)
+            {
+                WaterController waterController = child.GetComponent<WaterController>();
+                if (waterController != null && waterController.HasReachedFullLength())
+                {
+                    anyWaterfallReachedFullLength = true;
+                    break;
+                }
+            }
+
+            yield return null; // Wait for the next frame before checking again
+        }
+
+        // Activate waterfalls[1] if it's assigned
+        if (waterfalls[1] != null)
+        {
+            waterfalls[1].SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("waterfalls[1] is not assigned.");
+        }
     }
     IEnumerator Decay()
     {
