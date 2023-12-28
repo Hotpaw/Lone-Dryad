@@ -58,7 +58,8 @@ public class Movement : MonoBehaviour
     bool kc;
     Vector2 position;
     public SpriteRenderer InteractableObject;
-
+    public GameObject dropShadow;
+    
     private void Start()
     {
 
@@ -74,6 +75,7 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        UpdateShadow();
         var controllers = Input.GetJoystickNames();
         dashTimer += Time.deltaTime;
         timeSinceGrounded += Time.deltaTime;
@@ -293,5 +295,20 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         pickedUp = false;
     }
+    void UpdateShadow()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer);
+        if (hit.collider != null)
+        {
+            // Calculate the distance to the ground
+            float distanceToGround = Vector2.Distance(hit.point, transform.position);
+            // Adjust the scale of the shadow based on the distance
+            float shadowScale = Mathf.Clamp(1 - distanceToGround / 10, 0.1f, 1); // Adjust these values as needed
 
+            // Position the shadow directly above the ground layer
+            dropShadow.transform.position = new Vector2(transform.position.x, hit.point.y);
+            // Scale the shadow
+            dropShadow.transform.localScale = new Vector3(shadowScale, shadowScale, 1);
+        }
+    }
 }

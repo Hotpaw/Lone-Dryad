@@ -7119,6 +7119,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &1751921696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2658867501446756505, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+  m_PrefabInstance: {fileID: 4214894298896323729}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1760448349
 GameObject:
   m_ObjectHideFlags: 0
@@ -24826,6 +24831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerObject
       objectReference: {fileID: 0}
+    - target: {fileID: 2553664546516223078, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+      propertyPath: dropShadow
+      value: 
+      objectReference: {fileID: 1751921696}
     - target: {fileID: 6908549365073698798, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2
@@ -24865,6 +24874,14 @@ PrefabInstance:
     - target: {fileID: 6908549365073698798, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347290138253707983, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+      propertyPath: m_Size.y
+      value: 3.4950905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8347290138253707983, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.1315605
       objectReference: {fileID: 0}
     - target: {fileID: 8530224298679314655, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: treeScript
