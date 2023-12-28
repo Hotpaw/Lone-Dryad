@@ -13744,7 +13744,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: 39.3
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -18955,7 +18955,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 39.3
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -24540,9 +24540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57177a7aa945894298cfb9fd79309f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistance: 17.83
+  cameraDistance: 21.3
   player: {fileID: 6265096367726190597}
   boundsCollider: {fileID: 430739307}
+  isCameraDistanceChangeable: 0
 --- !u!114 &3847448534407617007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61667,7 +61668,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 39.3
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2

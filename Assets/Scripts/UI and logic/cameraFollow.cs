@@ -7,32 +7,38 @@ using UnityEngine.SceneManagement;
 public class cameraFollow : MonoBehaviour
 {
     public float cameraDistance;
-    Vector3 playerPosition;    
     Camera[] cameras;
     public Transform player;
     public Collider boundsCollider;
+    public bool isCameraDistanceChangeable = true;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().name == "Stage3.1")
-        {
-            cameraDistance = 11;
-        }
-        else if (SceneManager.GetActiveScene().name != "EndStage")
-        {
-            cameraDistance = 11;
-        }
-        cameras = FindObjectsOfType<Camera>();
 
-        foreach (Camera cam in cameras)
+
+        cameras = FindObjectsOfType<Camera>();
+        if (isCameraDistanceChangeable)
         {
-            cam.orthographicSize = cameraDistance;
+            foreach (Camera cam in cameras)
+            {
+                cam.orthographicSize = cameraDistance;
+            }
+
+        }
+        else if(!isCameraDistanceChangeable)
+        {
+            foreach (Camera cam in cameras)
+            {
+                cam.orthographicSize = 11f;
+            }
         }
     }
     // Update is called once per frame
     void LateUpdate()
     {
+        UpdateCameraSizes();
+
         if (boundsCollider == null || player == null)
         {
             return;
@@ -49,18 +55,36 @@ public class cameraFollow : MonoBehaviour
         cameraPosition.x = Mathf.Clamp(player.position.x, boundsCollider.bounds.min.x, boundsCollider.bounds.max.x);
 
         // Keep the camera's z-coordinate unchanged
-       
+
 
         // Update the camera's position
         transform.position = cameraPosition;
     }
-
-    private bool IsWithinBounds(Vector3 position)
+    private void UpdateCameraSizes()
     {
-        // Check if the position is within the collider's bounds
-        return boundsCollider.bounds.Contains(new Vector3(position.x, position.y, boundsCollider.bounds.center.z));
-    }
+        if (isCameraDistanceChangeable)
+        {
+            foreach (Camera cam in cameras)
+            {
+                cam.orthographicSize = cameraDistance;
+            }
 
+        }
+        else if (!isCameraDistanceChangeable)
+        {
+            foreach (Camera cam in cameras)
+            {
+                cam.orthographicSize = 11f;
+            }
+        }
+    }
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        cameras = FindObjectsOfType<Camera>();
+        UpdateCameraSizes();
+    }
+#endif
 }
 
 
