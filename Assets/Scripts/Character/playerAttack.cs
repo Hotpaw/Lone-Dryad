@@ -25,8 +25,8 @@ public class playerAttack : MonoBehaviour
     {
       
             // Set the initial width of the LineRenderer
-            trajectoryLine.startWidth = 1; // 50% thinner
-            trajectoryLine.endWidth = 1;   // 50% thinner
+            trajectoryLine.startWidth = 1;
+            trajectoryLine.endWidth = 1;  
         if (trajectoryLine != null)
         {
             trajectoryLine.material = lineMaterial;

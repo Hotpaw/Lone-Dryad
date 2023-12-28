@@ -8055,7 +8055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5a965128397c4b49bc74a503ef7c70a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 0
   interactableObject: {fileID: 0}
   interactableDescription: Embrace
   InteractableIcon: {fileID: 2917980548733972124}
