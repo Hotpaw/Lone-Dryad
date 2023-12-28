@@ -8650,7 +8650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 568861011508631251, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: 40
+      value: -28.8
       objectReference: {fileID: 0}
     - target: {fileID: 3753088386194906362, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8722,7 +8722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: 40
+      value: -28.8
       objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -8734,7 +8734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7533677016948200986, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: 40
+      value: -28.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
