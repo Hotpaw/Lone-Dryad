@@ -13,6 +13,10 @@ public class TreeState4 : State
         INSTANCE = this;
         DontDestroyOnLoad(this.gameObject);
     }
+    public void Update()
+    {
+        
+    }
     public override State RunCurrentState()
     {
         if (GameValueManager.INSTANCE.treeLevel == 4)

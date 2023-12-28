@@ -9,10 +9,10 @@ public class InteractableTree : InteractableObject
     public DistanceChecker distanceChecker;
     public override void Interact()
     {
-        if (GuideTimer.INSTANCE.canStartGuide)
-        {
-            GuideTimer.INSTANCE.guideIsActive = true;
-        }
+        //if (GuideTimer.INSTANCE.canStartGuide)
+        //{
+        //    GuideTimer.INSTANCE.guideIsActive = true;
+        //}
         if (GameValueManager.INSTANCE.gotWater)
         {    
             PopUpText.INSTANCE.PopUpMessage("The Trees Health Return", Color.blue, 2);            
