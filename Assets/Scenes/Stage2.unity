@@ -10894,6 +10894,10 @@ PrefabInstance:
       propertyPath: interactableDescription
       value: Embrace
       objectReference: {fileID: 0}
+    - target: {fileID: 3305571617185889849, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3414871205515799300, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.18
@@ -11197,6 +11201,10 @@ PrefabInstance:
     - target: {fileID: 7009746747318323397, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_LocalPosition.y
       value: -17.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009746747318323397, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.75
       objectReference: {fileID: 0}
     - target: {fileID: 7700856967492348470, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Layer

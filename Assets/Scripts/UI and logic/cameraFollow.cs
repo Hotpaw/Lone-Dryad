@@ -49,7 +49,7 @@ public class cameraFollow : MonoBehaviour
         cameraPosition.x = Mathf.Clamp(player.position.x, boundsCollider.bounds.min.x, boundsCollider.bounds.max.x);
 
         // Keep the camera's z-coordinate unchanged
-        cameraPosition.z = transform.position.z;
+       
 
         // Update the camera's position
         transform.position = cameraPosition;
