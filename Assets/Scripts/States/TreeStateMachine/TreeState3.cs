@@ -14,9 +14,11 @@ public class TreeState3 : State
     public GameObject trigger2Position;
     public GardenGnome1 gardenGnome;
     public GardenGnome2 gardenGnome2;
+    public blackOut blackOut;
     public bool trigger1;
     public bool trigger2;
     public bool trigger3;
+    public bool trigger4;
     public float checkDist;
     public float checkDist2;
 
@@ -57,6 +59,11 @@ public class TreeState3 : State
         {
             GameValueManager.INSTANCE.stormStrenght +=2;
             trigger3 = true;
+        }
+        if (trigger4)
+        {
+            blackOut.startBlackOut = true;
+            
         }
         
     }
