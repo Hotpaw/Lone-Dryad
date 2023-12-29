@@ -33,6 +33,7 @@ public class GameValueManager : MonoBehaviour
     public int stones;
     public int maxStones;
     public int numberOfCrystallPieces;
+    public int maxNumberOfCrystallPieces = 7;
 
     public int currentsceneBuildIndex;
 

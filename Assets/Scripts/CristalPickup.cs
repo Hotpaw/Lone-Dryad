@@ -11,7 +11,7 @@ public class CristalPickup : InteractableObject
         if (GameValueManager.INSTANCE.thePowerToPickUpCrystals)
         {
             GameValueManager.INSTANCE.numberOfCrystallPieces++;
-            PopUpText.INSTANCE.PopUpMessage("Found A Crystal", Color.black, 2f);
+            PopUpText.INSTANCE.PopUpMessage("Found " + GameValueManager.INSTANCE.numberOfCrystallPieces +"/" + GameValueManager.INSTANCE.maxNumberOfCrystallPieces + " Crystals", Color.black, 2f);
             oneCrystal = true;
             Destroy(crystal);
         }
