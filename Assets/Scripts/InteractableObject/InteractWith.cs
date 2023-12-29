@@ -4,9 +4,10 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.InputSystem;
 using TMPro;
+
 public class InteractWith : MonoBehaviour
 {
-    public enum Type { Tree, plant, normal, crystal , cave}
+    public enum Type { Tree, Plant, Normal, Crystal, Cave }
     public Type type;
     public InteractableObject interactableObject;
     public string interactableDescription;
@@ -14,17 +15,18 @@ public class InteractWith : MonoBehaviour
     public Sprite[] Icons;
     public bool interactable;
     public Vector2 iconOffset;
-    bool used = false;
+    private bool used = false;
     public bool unlimitedUses = false;
-    SpriteRenderer playerInteractIcon;
-    bool activated = false;
-
-
+    private SpriteRenderer playerInteractIcon;
+    private bool activated = false;
+    private bool playerIsWithinRange = false;
     public ParticleSystem particleSystemPrefab; // Reference to the particle system prefab
-    private ParticleSystem instantiatedParticleSystem; // To
+    private ParticleSystem instantiatedParticleSystem; // Instance of the particle system
+    LayerMask groundLayer;
+
     private void Start()
     {
-
+        groundLayer = LayerMask.GetMask("Ground");
         if (interactableObject != null)
         {
             InteractableIcon.gameObject.GetComponent<SpriteRenderer>().enabled = false;
@@ -35,254 +37,159 @@ public class InteractWith : MonoBehaviour
             playerInteractIcon.enabled = false;
         }
     }
+
     private void Update()
     {
-
         HandleParticleSystem();
-
+        CheckForInteraction();
     }
+
     private void HandleParticleSystem()
-    { // Check if the particle system prefab is assigned
+    {
         if (particleSystemPrefab == null)
         {
             return; // Exit the method if the prefab is not assigned
         }
+
         bool shouldHaveParticleSystem = false;
-        if(type == Type.cave)
-        {
-            shouldHaveParticleSystem = false;
-            return;
-        }
-        // Check conditions for each type and set shouldHaveParticleSystem accordingly
-        if ((type == Type.crystal && GameValueManager.INSTANCE.thePowerToPickUpCrystals) ||
-            (type == Type.Tree && (GameValueManager.INSTANCE.gotWater || GameValueManager.INSTANCE.nextLevelAvailable)) ||
-            (type == Type.plant && GameValueManager.INSTANCE.thePowerToPlant) ||
-            (type == Type.normal || type == Type.cave))
-        {
-            shouldHaveParticleSystem = true;
-        }
+        // ... [Your existing conditions for shouldHaveParticleSystem]
 
-        // Instantiate the particle system if needed
-        if (shouldHaveParticleSystem && instantiatedParticleSystem == null)
-        {
-            instantiatedParticleSystem = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity, transform);
-        }
+        // Evaluate conditions to determine if the particle system should be present
+        shouldHaveParticleSystem = DetermineIfParticleSystemShouldBePresent();
 
-        // Enable or disable the particle system based on the condition
-        if (instantiatedParticleSystem != null)
+        // Instantiate or adjust the particle system if needed
+        if (shouldHaveParticleSystem)
         {
-            instantiatedParticleSystem.gameObject.SetActive(shouldHaveParticleSystem);
+            if (instantiatedParticleSystem == null)
+            {
+                // Instantiate at the ground position
+                instantiatedParticleSystem = Instantiate(particleSystemPrefab, CalculateGroundPosition(), Quaternion.identity);
+            }
+            else
+            {
+                // Update position to the ground position
+                instantiatedParticleSystem.transform.position = CalculateGroundPosition();
+            }
+        }
+        else
+        {
+            // If particle system exists but should not, destroy it
+            if (instantiatedParticleSystem != null)
+            {
+                Destroy(instantiatedParticleSystem.gameObject);
+                instantiatedParticleSystem = null;
+            }
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    // Method to calculate the closest ground position downwards
+    private Vector2 CalculateGroundPosition()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer);
+        return hit.collider != null ? hit.point : transform.position;
+    }
+
+    // Method to determine if the particle system should be present
+    private bool DetermineIfParticleSystemShouldBePresent()
     {
 
-        if(type == Type.crystal && GameValueManager.INSTANCE.thePowerToPickUpCrystals)
+        switch (type)
         {
-            DisplayInteractableIcon();
-            if (interactable)
-            {
+            case Type.Plant:
+                return GameValueManager.INSTANCE.thePowerToPlant;
+            case Type.Crystal:
+                return GameValueManager.INSTANCE.thePowerToPickUpCrystals;
+            case Type.Tree: 
+                return true;
+            case Type.Normal:
+                return true;
+            default:
+                return false;
+        }
+    }
 
-                if (collision.gameObject.CompareTag("Player"))
-                {
+    private void CheckForInteraction()
+    {
+        if (!interactable || !playerIsWithinRange) return;
 
-                    if (Gamepad.current != null)
-                    {
-                        if (Gamepad.current.buttonEast.IsActuated())
-                        {
+        Movement player = FindObjectOfType<Movement>();
+        if (player == null || player.pickedUp || player.isCrawling) return;
 
-                            if (!used)
-                            {
-                                if (!unlimitedUses)
-                                {
-                                    used = true;
-                                    interactableObject.Interact();
+        if (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            player.PickupAnimation();
+        }
+        else if (Gamepad.current != null && Gamepad.current.buttonEast.wasPressedThisFrame)
+        {
+            player.PickupAnimation();
+        }
+    }
 
-                                }
-                                else
-                                    interactableObject.Interact();
-                            }
-                        }
-                    }
-                    else if (Keyboard.current.eKey.IsActuated())
-                    {
-
-                        if (!used)
-                        {
-                            if (!unlimitedUses)
-                            {
-                                used = true;
-                                interactableObject.Interact();
-
-                            }
-                            else
-                                interactableObject.Interact();
-                        }
-
-                    }
-
-                }
-                else
-                {
-                    return;
-                }
-            }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerIsWithinRange = true;
+          
+        }
+        if (type == Type.Crystal && GameValueManager.INSTANCE.thePowerToPickUpCrystals)
+        {
+            InteractLogic(collision);
         }
         if (type == Type.Tree && GameValueManager.INSTANCE.gotWater || type == Type.Tree && GameValueManager.INSTANCE.nextLevelAvailable)
         {
-            DisplayInteractableIcon();
-            if (interactable)
-            {
-
-                if (collision.gameObject.CompareTag("Player"))
-                {
-
-                    if (Gamepad.current != null)
-                    {
-                        if (Gamepad.current.buttonEast.IsActuated())
-                        {
-
-                            if (!used)
-                            {
-                                if (!unlimitedUses)
-                                {
-                                    used = true;
-                                    interactableObject.Interact();
-
-                                }
-                                else
-                                    interactableObject.Interact();
-                            }
-                        }
-                    }
-                    else if (Keyboard.current.eKey.IsActuated())
-                    {
-
-                        if (!used)
-                        {
-                            if (!unlimitedUses)
-                            {
-                                used = true;
-                                interactableObject.Interact();
-
-                            }
-                            else
-                                interactableObject.Interact();
-                        }
-
-                    }
-
-                }
-                else
-                {
-                    return;
-                }
-            }
+            InteractLogic(collision);
         }
-        if (type == Type.plant && GameValueManager.INSTANCE.thePowerToPlant)
+        if (type == Type.Plant && GameValueManager.INSTANCE.thePowerToPlant)
         {
-            DisplayInteractableIcon();
-            if (interactable)
-            {
-
-                if (collision.gameObject.CompareTag("Player"))
-                {
-
-                    if (Gamepad.current != null)
-                    {
-                        if (Gamepad.current.buttonEast.IsActuated())
-                        {
-
-                            if (!used)
-                            {
-                                if (!unlimitedUses)
-                                {
-                                    used = true;
-                                    interactableObject.Interact();
-
-                                }
-                                else
-                                    interactableObject.Interact();
-                            }
-                        }
-                    }
-                    else if (Keyboard.current.eKey.IsActuated())
-                    {
-
-                        if (!used)
-                        {
-                            if (!unlimitedUses)
-                            {
-                                used = true;
-                                interactableObject.Interact();
-
-                            }
-                            else
-                                interactableObject.Interact();
-                        }
-
-                    }
-
-                }
-                else
-                {
-                    return;
-                }
-            }
+            InteractLogic(collision);
         }
-        if (type == Type.normal || type == Type.cave)
+        if (type == Type.Normal || type == Type.Cave)
         {
-            DisplayInteractableIcon();
-            if (interactable)
+            InteractLogic(collision, true);
+        }
+    }
+
+    public void InteractLogic(Collider2D collision, bool cantPickup = false)
+    {
+        DisplayInteractableIcon();
+        if (interactable)
+        {
+            if (collision.gameObject.CompareTag("Player"))
             {
-
-                if (collision.gameObject.CompareTag("Player"))
+                if (Gamepad.current != null)
                 {
-
-                    if (Gamepad.current != null)
+                    if (Gamepad.current.buttonEast.IsActuated())
                     {
-                        if (Gamepad.current.buttonEast.IsActuated())
-                        {
-
-                            if (!used)
-                            {
-                                if (!unlimitedUses)
-                                {
-                                    used = true;
-                                    interactableObject.Interact();
-
-                                }
-                                else
-                                    interactableObject.Interact();
-                            }
-                        }
+                        PerformInteraction();
                     }
-                    else if (Keyboard.current.eKey.IsActuated())
-                    {
-
-                        if (!used)
-                        {
-                            if (!unlimitedUses)
-                            {
-                                used = true;
-                                interactableObject.Interact();
-
-                            }
-                            else
-                                interactableObject.Interact();
-                        }
-
-                    }
-
                 }
-                else
+                else if (Keyboard.current.eKey.IsActuated())
                 {
-                    return;
+                    PerformInteraction();
                 }
             }
+            else
+            {
+                return;
+            }
         }
+    }
 
-
+    private void PerformInteraction()
+    {
+        if (!used)
+        {
+            if (!unlimitedUses)
+            {
+                used = true;
+                interactableObject.Interact();
+            }
+            else
+            {
+                interactableObject.Interact();
+            }
+        }
     }
 
     private void DisplayInteractableIcon()
@@ -295,42 +202,38 @@ public class InteractWith : MonoBehaviour
                 playerInteractIcon.GetComponentInChildren<TextMeshProUGUI>().text = interactableDescription;
             }
 
-            if (playerInteractIcon.transform.localScale.x >= 2)
-            {
-                playerInteractIcon.transform.localScale = Vector3.one;
-            }
+            // Reset scale to original before applying new animation
+            playerInteractIcon.transform.localScale = Vector3.one;
 
             activated = true;
-            playerInteractIcon = FindObjectOfType<Movement>().InteractableObject;
             playerInteractIcon.DOFade(1, 0.2f).SetEase(Ease.InFlash);
-            if (playerInteractIcon.transform.localScale == new Vector3(2, 2, 2))
-                playerInteractIcon.gameObject.transform.DOPunchScale(Vector3.one, 1, 1, 1).SetEase(Ease.InBounce);
+
+            // Apply scale animation
+            playerInteractIcon.gameObject.transform.DOScale(Vector3.one * 1.1f, 1).SetEase(Ease.InBounce).OnComplete(() =>
+            {
+                playerInteractIcon.transform.localScale = Vector3.one;
+            });
 
             playerInteractIcon.enabled = true;
-
-
-            if (Gamepad.current != null) playerInteractIcon.sprite = Icons[0];
-            else playerInteractIcon.sprite = Icons[1];
+            playerInteractIcon.sprite = Gamepad.current != null ? Icons[0] : Icons[1];
         }
-
-
-
-
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         OnTriggerEnter2D(collision);
-
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-
-        activated = false;
+        activated = false; 
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            playerIsWithinRange = false;
+           
+        }
         playerInteractIcon.gameObject.transform.localScale = Vector3.one;
         playerInteractIcon.enabled = false;
         playerInteractIcon.gameObject.SetActive(false);
     }
-
-
-
 }

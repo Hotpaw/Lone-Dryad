@@ -59,11 +59,17 @@ public class CaveSwitch : InteractableObject
             {
   
                 cullBackground.INSTANCE.CullingModeCall(0);
-               
-                foreach (var enemy in enemyList)
+                if (enemyList != null && enemyList.Count > 0)
                 {
-                    enemy.gameObject.SetActive(true);
+                    foreach (var enemy in enemyList)
+                    {
+                        if (enemy != null) // Additional null check for each enemy
+                        {
+                            enemy.gameObject.SetActive(true);
+                        }
+                    }
                 }
+
             }
         }
     }

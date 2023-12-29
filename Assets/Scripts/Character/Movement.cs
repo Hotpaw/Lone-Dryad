@@ -53,7 +53,7 @@ public class Movement : MonoBehaviour
 
     public bool right;
     public float savedMaxSpeed;
-    bool pickedUp = false;
+    public bool pickedUp = false;
     //KC
     bool kc;
     Vector2 position;
@@ -128,10 +128,7 @@ public class Movement : MonoBehaviour
                 animator.SetBool("Jump", false);
             }
           
-                if (isGrounded)
-                {
-                   
-                }
+                
             
 
                 RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
@@ -160,15 +157,14 @@ public class Movement : MonoBehaviour
             position.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
             transform.position = position;
         }
-        if (!pickedUp && !isCrawling && Keyboard.current.eKey.wasPressedThisFrame)
-            StartCoroutine(PickingUp());
-        else if (Gamepad.current != null && !pickedUp && !isCrawling && Gamepad.current.buttonEast.wasPressedThisFrame)
-        {
-            StartCoroutine(PickingUp());
-        }
+       
     }
 
-  
+    public void PickupAnimation()
+    {
+        animator.SetTrigger("PickingUP");
+    }
+
     public void IncreaseSpeed()
     {
         isCrawling = false;
@@ -287,14 +283,7 @@ public class Movement : MonoBehaviour
 
         rb.velocity = new Vector2(velocityX, rb.velocity.y);
     }
-    private IEnumerator PickingUp()
-    {
-        pickedUp = true;
-
-        animator.SetTrigger("PickingUP");
-        yield return new WaitForSeconds(0.1f);
-        pickedUp = false;
-    }
+   
     void UpdateShadow()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer);

@@ -41,9 +41,12 @@ public class PlantSeed : InteractableObject
             }
 
             if (usable)
-            {
-                PlantPart.GetComponent<Animator>().Play("Grow");
-                StartCoroutine(Decay());
+            {if(PlantPart != null)
+                {
+                    PlantPart.GetComponent<Animator>().Play("Grow");
+                    StartCoroutine(Decay());
+                }
+              
             }
         }
 
@@ -93,7 +96,10 @@ public class PlantSeed : InteractableObject
             {
 
                 yield return new WaitForSeconds(0.8f);
+                if(Crystal != null)
+                {
                 Crystal.gameObject.SetActive(true);
+                }
             }
 
         yield return new WaitForSeconds(3);
