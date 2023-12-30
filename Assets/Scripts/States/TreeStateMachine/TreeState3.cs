@@ -7,20 +7,31 @@ public class TreeState3 : State
 {
     public static TreeState3 INSTANCE;
     public bool once;
+    
     public int numberOfCrystallPieces;
-    public int maxCrystals;
+    public int maxCrystals;    
     public GameObject waterPosition;
     public GameObject playerPosition;
     public GameObject trigger2Position;
     public GardenGnome1 gardenGnome;
     public GardenGnome2 gardenGnome2;
-    public blackOut blackOut;
+    
     public bool trigger1;
     public bool trigger2;
     public bool trigger3;
-    public bool trigger4;
+    
     public float checkDist;
     public float checkDist2;
+
+    //For ending
+    public blackOut blackOut;
+    public bool trigger4;
+    public bool once2;
+    public bool once3;
+    public GameObject cavefull;
+    public GameObject background;
+    public GameObject shieldCrystalLight;
+    public GameObject gardenGnome3;
 
     public void Start()
     {
@@ -60,10 +71,23 @@ public class TreeState3 : State
             GameValueManager.INSTANCE.stormStrenght +=2;
             trigger3 = true;
         }
-        if (trigger4)
+
+        //Start cutscene
+        if (trigger4 && !once2)
         {
-            blackOut.startBlackOut = true;
-            
+            once2 = true;
+            blackOut.fadeForSec = 2;
+            blackOut.startBlackOut = true;            
+        }
+        if (blackOut.fadedTime > 1 && !once3)
+        {
+            once3 = true;
+            cavefull.gameObject.SetActive(true);
+            shieldCrystalLight.gameObject.SetActive(true);
+            background.gameObject.SetActive(false);
+
+            playerPosition.transform.position = new Vector3(55.5f, -11f);
+            gardenGnome3.gameObject.SetActive(true);
         }
         
     }

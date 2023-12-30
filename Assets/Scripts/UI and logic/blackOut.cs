@@ -14,6 +14,7 @@ public class blackOut : MonoBehaviour
     public float alphaColor;
     public float fadeSpeed;
     public float fadedTime;
+    public float fadeForSec;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +32,15 @@ public class blackOut : MonoBehaviour
             if (alphaColor > 1)
             {
                 alphaColor = 1;
-                if (fadedTime > 0) { }
+                
+            }
+            if (alphaColor >= 1)
+                fadedTime += Time.deltaTime; //Starting timer
+
+            if (fadedTime > fadeForSec)  //When timer is more then the set time, it will start to fade back
+            {
                 startBlackOut = false;
+                endBlackOut = true;
             }
         }
         if (endBlackOut)
