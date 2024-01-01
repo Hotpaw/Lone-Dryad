@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 3690963864398414237}
   - component: {fileID: 8530224298679314655}
   - component: {fileID: 3518732695571583954}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18631ed259436254ca27b3543e3666e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 8
+  maxSpeed: 5
   acceleration: 30
   deacceleration: 15
   jumpPower: 11.89
@@ -267,6 +267,7 @@ MonoBehaviour:
   dead: 0
   right: 0
   savedMaxSpeed: 8
+  pickedUp: 0
   InteractableObject: {fileID: 4188635054153001250}
   dropShadow: {fileID: 2658867501446756505}
 --- !u!114 &7538903822014611799
@@ -459,7 +460,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.09129536}
+  m_Offset: {x: 0, y: -0.1315605}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -470,7 +471,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 3.41456}
+  m_Size: {x: 0.5, y: 3.4950905}
   m_EdgeRadius: 0
 --- !u!95 &3690963864398414237
 Animator:
@@ -538,7 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8821785832929179438}
   - component: {fileID: 4408253049881669958}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: dropshadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -623,7 +624,7 @@ GameObject:
   - component: {fileID: 7458564209755598929}
   - component: {fileID: 4670098693512139006}
   - component: {fileID: 5341001882777437120}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +759,7 @@ GameObject:
   - component: {fileID: 1556274121818991120}
   - component: {fileID: 5388321408536459755}
   - component: {fileID: 1279223381705632033}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059531013933387630}
   - component: {fileID: 2367866964785802104}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: Linerender
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1111,7 +1112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5424773478442606202}
   - component: {fileID: 4188635054153001250}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InteractIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3626746282453398816}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -1229,7 +1230,7 @@ GameObject:
   - component: {fileID: 1494373609016148086}
   - component: {fileID: 3301386911034196595}
   - component: {fileID: 6631777834447485406}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: AmuletParticles
   m_TagString: Amulet
   m_Icon: {fileID: 0}
@@ -6073,7 +6074,7 @@ GameObject:
   - component: {fileID: 8233539261991618225}
   - component: {fileID: 7114907070477975763}
   - component: {fileID: 4015243539922999200}
-  m_Layer: 11
+  m_Layer: 3
   m_Name: Wind
   m_TagString: Untagged
   m_Icon: {fileID: 0}

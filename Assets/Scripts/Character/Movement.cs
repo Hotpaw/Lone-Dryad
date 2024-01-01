@@ -93,7 +93,7 @@ public class Movement : MonoBehaviour
         }
 
         // Adjust maxSpeed based on whether the player is sprinting
-        maxSpeed = isSprinting ? 12f : 8f;
+        maxSpeed = isSprinting ? 12f : 5f;
         if (!isDashing && !dead)
         {
             if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
