@@ -204,6 +204,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   splashEffectObject: {fileID: 3943291844365589949}
+  spriteMask: {fileID: 0}
 --- !u!1001 &7856005294488826136
 PrefabInstance:
   m_ObjectHideFlags: 0
