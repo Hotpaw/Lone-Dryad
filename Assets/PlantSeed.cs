@@ -14,6 +14,7 @@ public class PlantSeed : InteractableObject
 
     bool eventUsed = false;
     public GameObject[] waterfalls;
+
     void Start()
     {
 
@@ -36,17 +37,22 @@ public class PlantSeed : InteractableObject
                 eventUsed = true;
                 animator.SetTrigger("Event");
                 waterfalls[0].SetActive(true);
-               // StartCoroutine(CheckWaterfallLength());
+                if (waterfalls.Length > 0)
+                {
+
+                    StartCoroutine(CheckWaterfallLength());
+                }
                 PopUpText.INSTANCE.PopUpMessage("The Water is returning", Color.white, 3f);
             }
 
             if (usable)
-            {if(PlantPart != null)
+            {
+                if (PlantPart != null)
                 {
                     PlantPart.GetComponent<Animator>().Play("Grow");
                     StartCoroutine(Decay());
                 }
-              
+
             }
         }
 
@@ -96,9 +102,9 @@ public class PlantSeed : InteractableObject
             {
 
                 yield return new WaitForSeconds(0.8f);
-                if(Crystal != null)
+                if (Crystal != null)
                 {
-                Crystal.gameObject.SetActive(true);
+                    Crystal.gameObject.SetActive(true);
                 }
             }
 
