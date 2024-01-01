@@ -54,12 +54,13 @@ public class Movement : MonoBehaviour
     public bool right;
     public float savedMaxSpeed;
     public bool pickedUp = false;
+    private bool isAlwaysRunning = false;
     //KC
     bool kc;
     Vector2 position;
     public SpriteRenderer InteractableObject;
     public GameObject dropShadow;
-    
+
     private void Start()
     {
 
@@ -80,7 +81,7 @@ public class Movement : MonoBehaviour
         dashTimer += Time.deltaTime;
         timeSinceGrounded += Time.deltaTime;
         timeSinceJumpPressed += Time.deltaTime;
-
+        ToggleRun();
 
         bool isSprinting = false;
         if (Gamepad.current != null)
@@ -120,18 +121,18 @@ public class Movement : MonoBehaviour
 
                 if (timeSinceGrounded > coyoteTime)
                     doubleJump = false;
-                animator.SetBool("Jump",true);
+                animator.SetBool("Jump", true);
 
             }
             else
             {
                 animator.SetBool("Jump", false);
             }
-          
-                
-            
 
-                RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
+
+
+
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, -transform.up, groundCheckLength + 0.1f, groundLayer);
 
             //if (ray && ray.collider.gameObject.CompareTag("Ice"))
             //    deacceleration = 0;
@@ -144,8 +145,8 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         animator.SetFloat("VerticalSpeed", rb.velocity.y);
         animator.SetBool("Dead", dead);
-      
-        
+
+
         //  animator.SetBool("Crawl", isCrawling);
         //KC
         kc = GameValueManager.INSTANCE.KC;
@@ -157,9 +158,33 @@ public class Movement : MonoBehaviour
             position.y += Input.GetAxis("Vertical") * maxSpeed * Time.deltaTime;
             transform.position = position;
         }
-       
+
     }
 
+    private void ToggleRun()
+    {
+        if ((Gamepad.current != null && Gamepad.current.leftShoulder.wasPressedThisFrame) ||
+       Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            ToggleRunWalk();
+        }
+
+        
+        if (isAlwaysRunning)
+        {
+            maxSpeed = 12f; // Running speed
+        }
+        else
+        {
+            maxSpeed = 5f; // Walking speed
+        }
+    }
+
+    public void ToggleRunWalk()
+    {
+        isAlwaysRunning = !isAlwaysRunning;
+        savedMaxSpeed = maxSpeed; // Save the current maxSpeed
+    }
     public void PickupAnimation()
     {
         animator.SetTrigger("PickingUP");
@@ -283,7 +308,7 @@ public class Movement : MonoBehaviour
 
         rb.velocity = new Vector2(velocityX, rb.velocity.y);
     }
-   
+
     void UpdateShadow()
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, Mathf.Infinity, groundLayer);
