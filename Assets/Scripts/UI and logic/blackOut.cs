@@ -41,6 +41,7 @@ public class blackOut : MonoBehaviour
             {
                 startBlackOut = false;
                 endBlackOut = true;
+                fadedTime = 0;
             }
         }
         if (endBlackOut)
