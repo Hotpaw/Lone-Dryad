@@ -75,7 +75,7 @@ public class TreeState3 : State
         }        
         if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && !trigger3) 
         {
-            GameValueManager.INSTANCE.stormStrenght +=2;
+            GameValueManager.INSTANCE.stormStrenght +=4;
             trigger3 = true;
         }
 
@@ -88,7 +88,7 @@ public class TreeState3 : State
         }
         if (blackOut.fadedTime > 1 && !once3)
         {
-            GameValueManager.INSTANCE.stormStrenght += 5;
+            GameValueManager.INSTANCE.stormStrenght += 8;
             once3 = true;
             cavefull.gameObject.SetActive(true);
             shieldCrystalLight.gameObject.SetActive(true);
