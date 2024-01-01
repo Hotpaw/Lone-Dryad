@@ -15,6 +15,7 @@ TagManager:
   - JumpStop
   - PlayerFeet
   - Storm
+  - CameraPoint
   layers:
   - Default
   - TransparentFX
