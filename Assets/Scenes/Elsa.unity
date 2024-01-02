@@ -1160,7 +1160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &61557171
 Transform:
   m_ObjectHideFlags: 0
@@ -8650,7 +8650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 568861011508631251, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -30.8
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 3753088386194906362, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8722,15 +8722,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5292205380755220172, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: cameraDistance
-      value: 29.9
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 5292205380755220172, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: isCameraDistanceChangeable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -30.8
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -8742,7 +8742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7533677016948200986, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -30.8
+      value: 11.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16426,7 +16426,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1013359278
 Transform:
   m_ObjectHideFlags: 0
