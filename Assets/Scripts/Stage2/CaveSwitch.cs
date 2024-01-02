@@ -32,10 +32,11 @@ public class CaveSwitch : InteractableObject
             ToggleOtherSwitches();
             HandleCullingAndMovement();
             StartCoroutine(Wait());
-            if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && once2)
+            if (GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && !once2)
             {
                 once2 = true;
-                EnemySpawner.INSTANCE.SpawnEnemy();
+                EnemySpawner.INSTANCE.SpawnStage3();
+                TreeState3.INSTANCE.enemyAttacking = true;
             }
         }
     }

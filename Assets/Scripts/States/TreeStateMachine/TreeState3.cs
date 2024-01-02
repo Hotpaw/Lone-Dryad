@@ -21,6 +21,13 @@ public class TreeState3 : State
     public bool trigger2;
     public bool trigger3;
     public bool enemyAttacking;
+    public bool enemyAttackingOnce;
+    public bool enemyAttackingDone;
+
+    //Cave switches
+    public GameObject caveOne;
+    public GameObject caveTwo;
+
     
     public float checkDist;
     public float checkDist2;
@@ -41,8 +48,7 @@ public class TreeState3 : State
     public GameObject gardenGnome3;
 
     public void Start()
-    {
-        GameValueManager.INSTANCE.progressActive = false;
+    {        
         INSTANCE = this;
         cameraZoomScale = cameraFoll.cameraDistance;
     }
@@ -78,8 +84,24 @@ public class TreeState3 : State
         {
             GameValueManager.INSTANCE.stormStrenght +=4;
             trigger3 = true;
+        }        
+        if(GameValueManager.INSTANCE.progressScore >= 30)
+        {
+            caveOne.SetActive(true);
+            caveTwo.SetActive(true);
         }
-        if(trigger3)
+        if (enemyAttacking && !enemyAttackingOnce)
+        {
+            enemyAttackingOnce = true;
+            PopUpText.INSTANCE.PopUpMessage("I have to stop the enemies before i go on", Color.black, 3);
+            caveOne.SetActive(false);
+            caveTwo.SetActive(false);
+        }
+        if (!enemyAttacking)
+        {
+            
+          
+        }
 
         //Start cutscene
         if (trigger4 && !once2)
