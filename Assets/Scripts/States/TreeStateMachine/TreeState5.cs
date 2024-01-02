@@ -8,7 +8,8 @@ public class TreeState5 : State
     public static TreeState5 INSTANCE;
     bool once;
     public Animator wereWolfEyes;
-   public GameObject caveleft;
+    public GameObject caveleft;
+    public GameObject background;
     public void Start()
     {
         PopUpText.INSTANCE.PopUpMessage("The water is Gone, i should climb the branches to find out what happened", Color.black, 5f);
@@ -37,14 +38,18 @@ public class TreeState5 : State
     {
         blackOut blackout = FindObjectOfType<blackOut>();
         blackout.startBlackOut = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.6f);
         cameraFollow cam = FindObjectOfType<cameraFollow>();
-        cam.transform.position = wereWolfEyes.gameObject.transform.position;
+        cam.player = wereWolfEyes.gameObject.transform;
+        background.SetActive(false);
         caveleft.SetActive(true);
-       
         wereWolfEyes.SetTrigger("EyeTrigger");
-        blackout.startBlackOut = true;
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+        blackout.fadeSpeed = 0.3f;
+        blackout.StartBlackOutTransition();
+        yield return new WaitForSeconds(4);
+       
+       
         SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
 
     }

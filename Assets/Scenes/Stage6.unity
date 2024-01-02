@@ -4323,6 +4323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wereWolfEyes: {fileID: 0}
+  caveleft: {fileID: 0}
+  background: {fileID: 0}
 --- !u!1 &893286495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6518,6 +6520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 3
   once: 0
+  once2: 0
 --- !u!4 &1862482128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}
@@ -25595,6 +25598,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 1
   once: 0
+  once2: 0
 --- !u!199 &2975880709714915128
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -32974,6 +32978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 1
   once: 0
+  once2: 0
 --- !u!114 &5433291032168991224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44052,7 +44057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!251 &6970004854192163078
 PlatformEffector2D:
   m_ObjectHideFlags: 0
