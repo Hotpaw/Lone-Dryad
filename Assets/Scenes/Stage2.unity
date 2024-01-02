@@ -2595,16 +2595,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1070327465}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &931304449 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4063835706577242240, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-  m_PrefabInstance: {fileID: 2096234968590095539}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &931304450 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-  m_PrefabInstance: {fileID: 2096234968590095539}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &934196010
 GameObject:
   m_ObjectHideFlags: 0
@@ -10633,63 +10623,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff00af05fd1c7341b018d32489fff6e, type: 3}
---- !u!1001 &2096234968590095539
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2908949077995096594}
-    m_Modifications:
-    - target: {fileID: 4063835706577242240, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_Name
-      value: Footsteps
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
 --- !u!1001 &2908949077995096593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11353,9 +11286,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2763747081714036916, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 510021271}
-    - targetCorrespondingSourceObject: {fileID: 9127879683750357524, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 931304450}
     - targetCorrespondingSourceObject: {fileID: 8442688341241119042, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1170554532}
@@ -11423,7 +11353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af33d6c031ecf5447964138762e56937, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStep: {fileID: 931304449}
+  footStep: {fileID: 0}
 --- !u!1001 &4560809782425185019
 PrefabInstance:
   m_ObjectHideFlags: 0
