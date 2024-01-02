@@ -17,23 +17,26 @@ public class playerAttack : MonoBehaviour
     private float gravityScale = 9.8f; // Gravity scale of the projectile
     private float theta = 45f; // Launch angle in degrees
 
-    public Material lineMaterial; 
+    public Material lineMaterial;
     private float textureOffset = 0f;
-    public float textureScrollSpeed = 1f; 
-
+    public float textureScrollSpeed = 1f;
+    private bool hasThrown = false;
+    private Animator playerAnimator;
+  
+    bool used = false;
     private void Start()
     {
-      
-            // Set the initial width of the LineRenderer
-            trajectoryLine.startWidth = 1;
-            trajectoryLine.endWidth = 1;  
+        // Set the initial width of the LineRenderer
+        trajectoryLine.startWidth = 1;
+        trajectoryLine.endWidth = 1;
         if (trajectoryLine != null)
         {
             trajectoryLine.material = lineMaterial;
         }
+        playerAnimator = FindObjectOfType<Movement>().gameObject.GetComponent<Animator>();
 
+}
 
-    }
     void Update()
     {
         if (isCharging && !coolDown)
@@ -42,7 +45,9 @@ public class playerAttack : MonoBehaviour
             ScrollTexture();
             UpdateTextureTiling();
         }
+
     }
+
     private void UpdateTextureTiling()
     {
         if (trajectoryLine != null)
@@ -67,6 +72,7 @@ public class playerAttack : MonoBehaviour
 
         return length;
     }
+
     private void ScrollTexture()
     {
         if (trajectoryLine.material != null)
@@ -79,34 +85,64 @@ public class playerAttack : MonoBehaviour
             trajectoryLine.material.mainTextureOffset = new Vector2(textureOffset, 0);
         }
     }
+
     public void Fire(InputAction.CallbackContext context)
     {
+        Debug.Log("Fire");
+
         // Check if the player has the power to attack
         bool canAttack = GameValueManager.INSTANCE.thePowerToThrowNuts;
 
-        if (context.performed && !coolDown && canAttack)
+        if (context.performed && canAttack)
         {
-            isCharging = !isCharging; // Toggle charging state
-            trajectoryLine.enabled = isCharging; // Toggle LineRenderer visibility
 
-            if (!isCharging) // If charging is turned off, fire the projectile
+            if (!coolDown && !hasThrown && used == false)
             {
-                FireProjectile();
-                StartCoroutine(AttackCooldown());
+
+                isCharging = !isCharging; // Toggle charging state
+                trajectoryLine.enabled = isCharging; // Toggle LineRenderer visibility
+
+                if (!isCharging && used == false) // If charging is turned off
+                {
+
+                    Attacking();
+                    hasThrown = true;
+                }
             }
+        }
+    }
+
+
+
+    public void Attacking()
+    {
+        Debug.Log("ATTACK");
+        if (!used)
+        {
+            
+            used = true;
+            StartCoroutine(AttackCooldown());
         }
     }
 
     IEnumerator AttackCooldown()
     {
+        
         coolDown = true;
+       
+        //  yield return new WaitForSeconds(0.1f);
+        playerAnimator.SetTrigger("Thrown");
+        yield return new WaitForSeconds(0.3f);
+        FireProjectile();
         yield return new WaitForSeconds(attackSpeed);
         coolDown = false;
+        used = false;
+        hasThrown = false; // Reset the hasThrown flag after cooldown
+       
     }
 
     private void FireProjectile()
     {
-        FindObjectOfType<Movement>().gameObject.GetComponent<Animator>().SetTrigger("Throw");
         GameObject projectile = Instantiate(projectilePrefab, attackPoint.position, Quaternion.identity);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale; // Set gravity scale
@@ -145,5 +181,4 @@ public class playerAttack : MonoBehaviour
         }
     }
 
-    // Implement FindAnyObjectByType<Movement>() method if it's not already defined
 }
