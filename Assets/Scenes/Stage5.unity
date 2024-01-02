@@ -4324,6 +4324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wereWolfEyes: {fileID: 350262705}
   caveleft: {fileID: 913670100}
+  background: {fileID: 3488198461364248200}
 --- !u!1 &893286495
 GameObject:
   m_ObjectHideFlags: 0
@@ -26583,11 +26584,11 @@ MonoBehaviour:
   - {fileID: 350262703}
   currentTarget: {fileID: 0}
   transitionDuration: 2
-  targetOrthographicSize: 0
+  targetOrthographicSize: 8
   player: {fileID: 6265096367726190597}
   boundsCollider: {fileID: 430739307}
   isCameraDistanceChangeable: 0
-  returnToPlayerAfterTransition: 1
+  returnToPlayerAfterTransition: 0
 --- !u!114 &3847448534407617007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44056,7 +44057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!251 &6970004854192163078
 PlatformEffector2D:
   m_ObjectHideFlags: 0
