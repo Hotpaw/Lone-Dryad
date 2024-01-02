@@ -38,19 +38,18 @@ public class TreeState5 : State
     {
         blackOut blackout = FindObjectOfType<blackOut>();
         blackout.startBlackOut = true;
-        yield return new WaitForSeconds(1.7f);
+        yield return new WaitForSeconds(1.6f);
         cameraFollow cam = FindObjectOfType<cameraFollow>();
         cam.player = wereWolfEyes.gameObject.transform;
         background.SetActive(false);
         caveleft.SetActive(true);
-        yield return new WaitForSeconds(2);
         wereWolfEyes.SetTrigger("EyeTrigger");
-        blackout.endBlackOut = false;
-        blackout.startBlackOut = true;
-        blackout.fadeSpeed = 3f;
-        yield return new WaitForSeconds(3);
-       
         yield return new WaitForSeconds(2);
+        blackout.fadeSpeed = 0.3f;
+        blackout.StartBlackOutTransition();
+        yield return new WaitForSeconds(4);
+       
+       
         SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
 
     }
