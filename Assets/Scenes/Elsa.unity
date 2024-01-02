@@ -8650,7 +8650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 568861011508631251, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 3753088386194906362, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8720,9 +8720,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5292205380755220172, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
+      propertyPath: cameraDistance
+      value: 29.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5292205380755220172, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
+      propertyPath: isCameraDistanceChangeable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 7194391507771221393, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: m_CullingMask.m_Bits
@@ -8734,7 +8742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7533677016948200986, guid: 4255d6d5ee02fb641a94389fa39f977e, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19652,7 +19660,7 @@ Transform:
   m_GameObject: {fileID: 1227869726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 58.6, y: -12.2, z: 0}
+  m_LocalPosition: {x: 53.9, y: -14.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20425,6 +20433,10 @@ PrefabInstance:
     - target: {fileID: 1859102023842208760, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: m_Name
       value: PlayerObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1859102023842208760, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6908549365073698798, guid: fe368dfaeaf154d4f8034f9d2306a98e, type: 3}
       propertyPath: m_LocalPosition.x

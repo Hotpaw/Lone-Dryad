@@ -446,7 +446,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57177a7aa945894298cfb9fd79309f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraDistance: -28.8
+  cameraDistance: -30.8
+  targetTransforms: []
+  currentTarget: {fileID: 0}
+  transitionDuration: 2
+  targetOrthographicSize: 0
+  player: {fileID: 0}
+  boundsCollider: {fileID: 0}
+  isCameraDistanceChangeable: 1
+  returnToPlayerAfterTransition: 1
 --- !u!1 &8466041831850629064
 GameObject:
   m_ObjectHideFlags: 0
