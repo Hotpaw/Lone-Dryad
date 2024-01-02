@@ -25,9 +25,12 @@ public class InteractableTree : InteractableObject
                 firstTime = true;
             }
         }
-        if (GameValueManager.INSTANCE.nextLevelAvailable)
+        if (GameValueManager.INSTANCE.nextLevelAvailable && SceneManager.GetActiveScene().name != "Stage5")
         {
             SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);
+        }else if(GameValueManager.INSTANCE.nextLevelAvailable && SceneManager.GetActiveScene().name != "Stage5")
+        {
+            TreeState5.INSTANCE.ActivateWereWolfEvent();
         }
     }
     public IEnumerator StopCrawling()
@@ -35,4 +38,5 @@ public class InteractableTree : InteractableObject
         yield return new WaitForSeconds(2f);
         FindObjectOfType<Movement>().IncreaseSpeed();
     }
+    
 }
