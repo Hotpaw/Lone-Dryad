@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
 
 public class GameValueManager : MonoBehaviour
 {
@@ -40,7 +42,9 @@ public class GameValueManager : MonoBehaviour
     //Storm stats
     public float stormStrenght;
     [HideInInspector] public bool KC;
-
+    //Post Processing
+    public Volume postProcessingVolume;
+    Bloom bloomEffect = null;
     public void Awake()
     {
         Cursor.visible = false;
@@ -48,9 +52,18 @@ public class GameValueManager : MonoBehaviour
         currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;
-      
+        if (postProcessingVolume.profile.TryGet<Bloom>(out bloomEffect))
+        {
+            // Bloom effect is accessible now
+        }
     }
-
+    public void SetBloomIntensity(float intensity)
+    {
+        if (bloomEffect != null)
+        {
+            bloomEffect.intensity.Override(intensity);
+        }
+    }
     public void IncreaseProgress()
     {
         if (progressActive)

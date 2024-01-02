@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal; // Assuming this is required for your specific implementation
 
 public class CaveSwitch : InteractableObject
@@ -88,11 +89,14 @@ public class CaveSwitch : InteractableObject
         if (movementGameObject.layer == 3)
         {
             movementGameObject.layer = 11;
+            GameValueManager.INSTANCE.SetBloomIntensity(1);
+           
             Debug.Log("Layer changed to 11");
         }
         else if (movementGameObject.layer == 11)
         {
             movementGameObject.layer = 3;
+            GameValueManager.INSTANCE.SetBloomIntensity(50);
             Debug.Log("Layer changed to 3");
         }
         else
