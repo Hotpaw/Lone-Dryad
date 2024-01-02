@@ -8,6 +8,7 @@ public class CaveSwitch : InteractableObject
 {
     public int mode;
     public bool once;
+    public bool once2;
     List<GameObject> enemyList = new List<GameObject>();
     public static bool areSwitchesDeactivated = false;
     private static List<CaveSwitch> allCaveSwitches = new List<CaveSwitch>();
@@ -31,6 +32,11 @@ public class CaveSwitch : InteractableObject
             ToggleOtherSwitches();
             HandleCullingAndMovement();
             StartCoroutine(Wait());
+            if(GameValueManager.INSTANCE.numberOfCrystallPieces > 5 && once2)
+            {
+                once2 = true;
+                EnemySpawner.INSTANCE.SpawnEnemy();
+            }
         }
     }
 

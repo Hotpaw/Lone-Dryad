@@ -20,6 +20,7 @@ public class TreeState3 : State
     public bool trigger1;
     public bool trigger2;
     public bool trigger3;
+    public bool enemyAttacking;
     
     public float checkDist;
     public float checkDist2;
@@ -78,6 +79,7 @@ public class TreeState3 : State
             GameValueManager.INSTANCE.stormStrenght +=4;
             trigger3 = true;
         }
+        if(trigger3)
 
         //Start cutscene
         if (trigger4 && !once2)
