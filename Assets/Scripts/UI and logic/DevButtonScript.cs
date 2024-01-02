@@ -17,6 +17,7 @@ public class DevButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
       if(GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>() != null)
         {
 

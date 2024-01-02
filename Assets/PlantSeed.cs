@@ -14,7 +14,7 @@ public class PlantSeed : InteractableObject
 
     bool eventUsed = false;
     public GameObject[] waterfalls;
-
+    public bool stage5 = false;
     void Start()
     {
 
@@ -36,13 +36,14 @@ public class PlantSeed : InteractableObject
             {
                 eventUsed = true;
                 animator.SetTrigger("Event");
-                waterfalls[0].SetActive(true);
+              
                 if (waterfalls.Length > 0)
                 {
-
+                    waterfalls[0].SetActive(true);
                     StartCoroutine(CheckWaterfallLength());
+                    PopUpText.INSTANCE.PopUpMessage("The Water is returning", Color.white, 3f);
                 }
-                PopUpText.INSTANCE.PopUpMessage("The Water is returning", Color.white, 3f);
+              
             }
 
             if (usable)
@@ -54,6 +55,11 @@ public class PlantSeed : InteractableObject
                 }
 
             }
+        }
+        if (stage5)
+        {
+            PopUpText.INSTANCE.PopUpMessage("Enough playing around, time to return to go back to my tree..", Color.white);
+            GameValueManager.INSTANCE.nextLevelAvailable = true;
         }
 
     }
