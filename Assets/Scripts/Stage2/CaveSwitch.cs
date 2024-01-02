@@ -97,16 +97,14 @@ public class CaveSwitch : InteractableObject
         {
             movementGameObject.layer = 11;
             GameValueManager.INSTANCE.SetBloomIntensity(1);
-           FindAnyObjectByType<EchoFoosteps>().gameObject.SetActive(true);
-           FindAnyObjectByType<RegularFootSteps>().gameObject.SetActive(false);
+            FindAnyObjectByType<Movement>().steps = FindAnyObjectByType<Movement>().footStep[1];
             Debug.Log("Layer changed to 11");
         }
         else if (movementGameObject.layer == 11)
         {
             movementGameObject.layer = 3;
             GameValueManager.INSTANCE.SetBloomIntensity(50);
-            FindAnyObjectByType<EchoFoosteps>().gameObject.SetActive(false);
-            FindAnyObjectByType<RegularFootSteps>().gameObject.SetActive(true);
+            FindAnyObjectByType<Movement>().steps = FindAnyObjectByType<Movement>().footStep[0];
             Debug.Log("Layer changed to 3");
         }
         else

@@ -62,12 +62,12 @@ public class Movement : MonoBehaviour
     public GameObject dropShadow;
 
     [Header ("Regular Footsteps")]
-    public GameObject footStep;
-
+    public GameObject[] footStep;
+    public GameObject steps;
 
     private void Start()
     {
-
+        steps = footStep[0];
         Physics2D.queriesStartInColliders = false;
         rb = GetComponent<Rigidbody2D>();
         playerSprite = GetComponent<SpriteRenderer>();
@@ -82,22 +82,7 @@ public class Movement : MonoBehaviour
     {
 
 
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            FootSteps();
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            StopFootSteps();
-        }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            FootSteps();
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            StopFootSteps();
-        }
+
 
         UpdateShadow();
         var controllers = Input.GetJoystickNames();
@@ -118,6 +103,8 @@ public class Movement : MonoBehaviour
 
         // Adjust maxSpeed based on whether the player is sprinting
         maxSpeed = isSprinting ? 12f : 5f;
+        if(rb.velocity.x > 0.1 || rb.velocity.x < -0.1 && isGrounded) steps.SetActive(true);
+        else steps.SetActive(false);
         if (!isDashing && !dead)
         {
             if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
@@ -186,12 +173,12 @@ public class Movement : MonoBehaviour
 
     public void FootSteps()
     {
-        footStep.SetActive(true);
+        steps.SetActive(true);
     }
 
     public void StopFootSteps()
     {
-        footStep.SetActive(false);
+        steps.SetActive(false);
     }
 
 
