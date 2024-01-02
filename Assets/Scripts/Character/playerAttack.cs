@@ -106,6 +106,7 @@ public class playerAttack : MonoBehaviour
 
     private void FireProjectile()
     {
+        FindObjectOfType<Movement>().gameObject.GetComponent<Animator>().SetTrigger("Throw");
         GameObject projectile = Instantiate(projectilePrefab, attackPoint.position, Quaternion.identity);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.gravityScale = gravityScale; // Set gravity scale
