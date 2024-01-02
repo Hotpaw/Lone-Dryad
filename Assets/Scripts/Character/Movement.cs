@@ -61,6 +61,10 @@ public class Movement : MonoBehaviour
     public SpriteRenderer InteractableObject;
     public GameObject dropShadow;
 
+    [Header ("Regular Footsteps")]
+    public GameObject footStep;
+
+
     private void Start()
     {
 
@@ -76,6 +80,25 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            FootSteps();
+        }
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            StopFootSteps();
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            FootSteps();
+        }
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            StopFootSteps();
+        }
+
         UpdateShadow();
         var controllers = Input.GetJoystickNames();
         dashTimer += Time.deltaTime;
@@ -160,6 +183,17 @@ public class Movement : MonoBehaviour
         }
 
     }
+
+    public void FootSteps()
+    {
+        footStep.SetActive(true);
+    }
+
+    public void StopFootSteps()
+    {
+        footStep.SetActive(false);
+    }
+
 
     private void ToggleRun()
     {
