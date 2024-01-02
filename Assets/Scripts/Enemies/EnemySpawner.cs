@@ -71,4 +71,22 @@ public class EnemySpawner : MonoBehaviour
        
 
     }
+    public void SpawnStage3()
+    {
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            GameObject clone = Instantiate(enemies[2], spawnPoints[i].transform.position, Quaternion.identity);
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[0] = patrolPoints[0];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[1] = patrolPoints[1];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[2] = patrolPoints[2];
+            clone.GetComponent<SlowEasyEnemy>().patrolPoints[3] = patrolPoints[3];
+            clone.GetComponent<SlowEasyEnemy>().attackPoint = attackPoint;
+            clone.GetComponent<SlowEasyEnemy>().theLeftSpawnPoint = spawnPoints[1];
+            if (i == 1)
+            {
+                clone.GetComponent<SlowEasyEnemy>().patrolDestination = 2;
+                clone.GetComponent<SlowEasyEnemy>().movingRight = true;
+            }
+        }
+    }
 }
