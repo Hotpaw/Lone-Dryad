@@ -20,9 +20,15 @@ public class SlowEasyEnemy : MonoBehaviour
     public bool isBall;
 
     public Animator animator;
+
+    [Header("Crawl Audio")]
+    public GameObject crawlSound;
+ 
+
     private void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();        
+        rigidbody2D = GetComponent<Rigidbody2D>(); 
+        
     }
     private void Update()
     {
@@ -33,6 +39,7 @@ public class SlowEasyEnemy : MonoBehaviour
             isBall = true;
             gravity = -3;
             StartCoroutine(DelayGravity());
+            crawlSound.SetActive(false); //stänga av crawl ljud
 
         }
         if (movingRight)
@@ -45,6 +52,8 @@ public class SlowEasyEnemy : MonoBehaviour
         }
         if (!attacking)
         {
+            crawlSound.SetActive(true); //sätta på kräl när den börjar röra sig
+            
             rigidbody2D.gravityScale = gravity;
             if (patrolDestination == 0)
             {
@@ -84,6 +93,7 @@ public class SlowEasyEnemy : MonoBehaviour
                     animator.SetTrigger("Jump");
                     StartCoroutine(DelayAttack());
                     patrolDestination = 0;
+                    crawlSound.SetActive(false); //stänga av kräl när den hoppar
                 }
             }
         }

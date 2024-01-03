@@ -16,6 +16,9 @@ public class CreateWaterFall : MonoBehaviour
     float lineWidthMultiplier;
     private int previousWaterAmount;
 
+    [Header("Waterfall Audio")]
+    public GameObject waterAudio;
+
     private void Start()
     {
         InitializeFirstWaterfall();
