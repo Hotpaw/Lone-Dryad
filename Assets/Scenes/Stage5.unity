@@ -4265,6 +4265,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3301931404876716818, guid: f6cd8422462959c42a1962e6c88ebdb0, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b47e069b983e5f042a313c8052c089bb, type: 3}
     - target: {fileID: 6476136304909508264, guid: f6cd8422462959c42a1962e6c88ebdb0, type: 3}
       propertyPath: m_Name
       value: EchoFootsteps
