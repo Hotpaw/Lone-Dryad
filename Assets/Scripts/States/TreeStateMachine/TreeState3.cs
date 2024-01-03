@@ -5,8 +5,20 @@ using UnityEngine;
 
 public class TreeState3 : State
 {
+    //Checking stuff
+    public float distance;
+
     public static TreeState3 INSTANCE;
-    public bool once;    
+    public bool once;
+
+    //Intro
+    public GameObject swarm1;
+    public GameObject cameraPoint2;
+    public Transform cameraPoint2Target;
+    public Transform triggerPoint;
+    public bool startOnce;
+    public bool startMovingCamera;
+    public bool startScene;
     
     public GameObject waterPosition;
     public GameObject playerPosition;
@@ -54,6 +66,30 @@ public class TreeState3 : State
     }
     private void Update()
     {
+        distance = Vector2.Distance(cameraPoint2.transform.position, triggerPoint.position);
+        if (!startScene)
+        {
+            cameraPoint2Target.position = triggerPoint.position;
+            cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint2").transform;
+            StartCoroutine(YieldCameraStart());
+            if (startMovingCamera)
+            {
+                cameraPoint2.transform.position = Vector2.MoveTowards(cameraPoint2.transform.position, cameraPoint2Target.position, 5 * Time.deltaTime);
+                if (Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 1f)  
+                {
+                    if (!startOnce)
+                    {
+                        StartCoroutine(YieldStart());
+                        cameraPoint2Target.position = playerPosition.transform.position;
+                    }
+                    if (startOnce)
+                    {
+                        StartCoroutine(YieldStart());
+                    }
+                }
+            }
+                          
+        }
         if (!trigger1)
         {            
             checkDist = Vector2.Distance(waterPosition.transform.position, playerPosition.transform.position);
@@ -114,8 +150,7 @@ public class TreeState3 : State
             background.gameObject.SetActive(false);
 
             playerPosition.transform.position = new Vector3(57.5f, -9f);
-            gardenGnome3.gameObject.SetActive(true);
-            gardenGnome3.GetComponent<Animator>().SetBool("Magic", true);
+            gardenGnome3.gameObject.SetActive(true);            
             StartCoroutine(Yieldblackout());
         }
         if (trigger5 && blackOut.fadedTime > 1 && !once4)
@@ -128,8 +163,7 @@ public class TreeState3 : State
             shieldCrystal.gameObject.SetActive(false);
             cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint").transform;
             cameraZoomOut = true;
-            gardenGnome3.gameObject.SetActive(false);
-            
+            gardenGnome3.gameObject.SetActive(false);            
         }
         if (cameraZoomOut && cameraZoomScale < 24.9f)
         {
@@ -137,8 +171,7 @@ public class TreeState3 : State
             cameraFoll.cameraDistance = cameraZoomScale;            
         }
         if (isBuildingCrystal)
-        {
-            shieldCrystal.GetComponent<BuildingCrystal>().BuildCrystal();
+        {            
             if (shieldCrystal.GetComponent<BuildingCrystal>().buildTimer > 8f)
             {
                 shieldCrystalLight.gameObject.SetActive(true);
@@ -147,6 +180,24 @@ public class TreeState3 : State
         }
         
         
+    }
+    public IEnumerator YieldCameraStart()
+    {
+        yield return new WaitForSeconds(3);
+        startMovingCamera = true;
+    }
+    public IEnumerator YieldStart()
+    {    
+        yield return new WaitForSeconds(1);
+        if (!startOnce)
+        {
+            startOnce = true;
+        }
+        else
+        {
+            cameraFoll.player = playerPosition.transform;
+            startScene = true;
+        }
     }
     public IEnumerator YieldTrigger()
     {
