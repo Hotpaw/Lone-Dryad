@@ -65,6 +65,7 @@ MonoBehaviour:
   movingRight: 0
   isBall: 0
   animator: {fileID: 3089470109200690390}
+  crawlSound: {fileID: 5717271569112128327, guid: ac88741cf1bb39c429811d0d6f6b1f2b, type: 3}
 --- !u!114 &7917178200977626567
 MonoBehaviour:
   m_ObjectHideFlags: 0

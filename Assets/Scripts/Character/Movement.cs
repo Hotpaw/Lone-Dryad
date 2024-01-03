@@ -80,10 +80,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-
-
-
-
         UpdateShadow();
         var controllers = Input.GetJoystickNames();
         dashTimer += Time.deltaTime;
