@@ -136,21 +136,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2908949077995096594}
     m_Modifications:
-    - target: {fileID: 1019035384130035652, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_Volume
-      value: 0.469
-      objectReference: {fileID: 0}
-    - target: {fileID: 1019035384130035652, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4063835706577242240, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
       propertyPath: m_Name
       value: Footsteps
-      objectReference: {fileID: 0}
-    - target: {fileID: 4063835706577242240, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7147723918512288977, guid: 26751f59ef683854cb24b9b997f1633b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11080,7 +11068,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928728162507895214, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 3928728162507895214, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -11108,7 +11096,7 @@ PrefabInstance:
       objectReference: {fileID: 1948493817}
     - target: {fileID: 4458219291978334757, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 4668986654378255266, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Layer
@@ -11164,7 +11152,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 27647eca92e23274e92fb1a0ff87fef1, type: 2}
     - target: {fileID: 5960295943275004652, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: -28.8
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 5968246061782436622, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Layer
