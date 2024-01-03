@@ -6,10 +6,8 @@ using UnityEngine;
 public class TreeState3 : State
 {
     public static TreeState3 INSTANCE;
-    public bool once;
+    public bool once;    
     
-    public int numberOfCrystallPieces;
-    public int maxCrystals;    
     public GameObject waterPosition;
     public GameObject playerPosition;
     public GameObject trigger2Position;
@@ -22,7 +20,7 @@ public class TreeState3 : State
     public bool trigger3;
     public bool enemyAttacking;
     public bool enemyAttackingOnce;
-    public bool enemyAttackingDone;
+    
 
     //Cave switches
     public GameObject caveOne;
@@ -39,11 +37,13 @@ public class TreeState3 : State
     public bool once2;
     public bool once3;
     public bool once4;
+    public bool isBuildingCrystal;
     public bool cameraZoomOut;
     public float cameraZoomScale;
     public GameObject cavefull;
     public GameObject background;
     public GameObject caveleft;
+    public GameObject shieldCrystal;
     public GameObject shieldCrystalLight;
     public GameObject gardenGnome3;
 
@@ -96,13 +96,7 @@ public class TreeState3 : State
             PopUpText.INSTANCE.PopUpMessage("I have to stop the enemies before i go on", Color.black, 3);
             caveOne.SetActive(false);
             caveTwo.SetActive(false);
-        }
-        if (!enemyAttacking)
-        {
-            
-          
-        }
-
+        }    
         //Start cutscene
         if (trigger4 && !once2)
         {
@@ -115,11 +109,13 @@ public class TreeState3 : State
             GameValueManager.INSTANCE.stormStrenght += 8;
             once3 = true;
             cavefull.gameObject.SetActive(true);
-            shieldCrystalLight.gameObject.SetActive(true);
+            shieldCrystal.gameObject.SetActive(true);
+            isBuildingCrystal = true;
             background.gameObject.SetActive(false);
 
-            playerPosition.transform.position = new Vector3(55.5f, -11f);
+            playerPosition.transform.position = new Vector3(57.5f, -9f);
             gardenGnome3.gameObject.SetActive(true);
+            gardenGnome3.GetComponent<Animator>().SetBool("Magic", true);
             StartCoroutine(Yieldblackout());
         }
         if (trigger5 && blackOut.fadedTime > 1 && !once4)
@@ -129,17 +125,24 @@ public class TreeState3 : State
             background.gameObject.SetActive(true);
             cavefull.gameObject.SetActive(false);
             caveleft.gameObject.SetActive(false);
-            shieldCrystalLight.gameObject.SetActive(false);
+            shieldCrystal.gameObject.SetActive(false);
             cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint").transform;
             cameraZoomOut = true;
+            gardenGnome3.gameObject.SetActive(false);
+            
         }
         if (cameraZoomOut && cameraZoomScale < 24.9f)
         {
             cameraZoomScale += Time.deltaTime;
-            cameraFoll.cameraDistance = cameraZoomScale;
-            if (cameraZoomScale >= 25 ) 
+            cameraFoll.cameraDistance = cameraZoomScale;            
+        }
+        if (isBuildingCrystal)
+        {
+            shieldCrystal.GetComponent<BuildingCrystal>().BuildCrystal();
+            if (shieldCrystal.GetComponent<BuildingCrystal>().buildTimer > 8f)
             {
-                cameraZoomScale = 25;
+                shieldCrystalLight.gameObject.SetActive(true);
+                isBuildingCrystal = false;
             }
         }
         
@@ -159,7 +162,7 @@ public class TreeState3 : State
     }
     public IEnumerator Yieldblackout()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(8);
         blackOut.startBlackOut = true;
         trigger5 = true;
     }
