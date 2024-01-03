@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9d09a1e3b5d44d34c9cd16722bcd5318
+guid: 21e5cf4cfae11bb499ea5b0f4d452de0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tomteluckasheet_0
+      name: water-blob-rain_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 361
-        width: 290
-        height: 360
+        y: 404
+        width: 411
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 623fd54e89890494d9ade7bd9d5d4cd8
-      internalID: -148405410
+      spriteID: b2f696287cb4f9242bccddc234e26498
+      internalID: -882168591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomteluckasheet_1
+      name: water-blob-rain_1
       rect:
         serializedVersion: 2
-        x: 290
-        y: 361
-        width: 290
-        height: 360
+        x: 411
+        y: 404
+        width: 411
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,62 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ebad0c59789ccc45b4832f98da56df9
-      internalID: -539221454
+      spriteID: 1c6b0f44e5326d344a3735721db33cb0
+      internalID: 598161638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomteluckasheet_2
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 361
-        width: 290
-        height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c94f701fdcfe37a428d86a9a7f575126
-      internalID: 112157332
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomteluckasheet_3
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 361
-        width: 290
-        height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c59d740ce8c2ed4489f011606512444
-      internalID: -1142222391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomteluckasheet_4
+      name: water-blob-rain_2
       rect:
         serializedVersion: 2
         x: 0
-        y: 1
-        width: 290
-        height: 360
+        y: 0
+        width: 411
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93e42d7ebc5e33e47af3c93b56bcc4e6
-      internalID: -1579180712
+      spriteID: b599668068da63d4e83f11b3cc2dd4ce
+      internalID: -503553277
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomteluckasheet_5
+      name: water-blob-rain_3
       rect:
         serializedVersion: 2
-        x: 290
-        y: 1
-        width: 290
-        height: 360
+        x: 411
+        y: 0
+        width: 411
+        height: 404
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,50 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 774f5960c04be88439a92245c6233fac
-      internalID: 1329311556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomteluckasheet_6
-      rect:
-        serializedVersion: 2
-        x: 580
-        y: 1
-        width: 290
-        height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a49c544ed90ce444aaec427e13b480e
-      internalID: 700860526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tomteluckasheet_7
-      rect:
-        serializedVersion: 2
-        x: 870
-        y: 1
-        width: 290
-        height: 360
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7ce19d9a62f941f428ac0bfec66f857d
-      internalID: -1962919373
+      spriteID: 7ae7d385a79090241a24d4527a2da79a
+      internalID: -1909635301
       vertices: []
       indices: 
       edges: []
@@ -288,14 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tomteluckasheet_0: -148405410
-      tomteluckasheet_1: -539221454
-      tomteluckasheet_2: 112157332
-      tomteluckasheet_3: -1142222391
-      tomteluckasheet_4: -1579180712
-      tomteluckasheet_5: 1329311556
-      tomteluckasheet_6: 700860526
-      tomteluckasheet_7: -1962919373
+      water-blob-rain_0: -882168591
+      water-blob-rain_1: 598161638
+      water-blob-rain_2: -503553277
+      water-blob-rain_3: -1909635301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

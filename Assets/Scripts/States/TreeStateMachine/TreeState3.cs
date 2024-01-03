@@ -18,16 +18,17 @@ public class TreeState3 : State
     public Transform triggerPoint;
     public bool startOnce;
     public bool startMovingCamera;
+    public bool gnomeWentHome;
     public bool startScene;
+    public float cameraMoveSpeed;
     
     public GameObject waterPosition;
     public GameObject playerPosition;
     public GameObject trigger2Position;
-    public GardenGnome1 gardenGnome;
-    public GardenGnome2 gardenGnome2;
-    public cameraFollow cameraFoll;
+    public GameObject gardenGnome1;
+    public GardenGnome2 gardenGnome2;   
+    public cameraFollow cameraFoll;    
     
-    public bool trigger1;
     public bool trigger2;
     public bool trigger3;
     public bool enemyAttacking;
@@ -74,13 +75,19 @@ public class TreeState3 : State
             StartCoroutine(YieldCameraStart());
             if (startMovingCamera)
             {
-                cameraPoint2.transform.position = Vector2.MoveTowards(cameraPoint2.transform.position, cameraPoint2Target.position, 5 * Time.deltaTime);
+                cameraPoint2.transform.position = Vector2.MoveTowards(cameraPoint2.transform.position, cameraPoint2Target.position, cameraMoveSpeed * Time.deltaTime);
+                if (Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 8 && !gnomeWentHome)
+                {
+                    gnomeWentHome = true;
+                    gardenGnome1.GetComponent<Animator>().SetBool("GoingIn", true);
+                }
                 if (Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 1f)  
                 {
                     if (!startOnce)
-                    {
+                    {                        
                         StartCoroutine(YieldStart());
                         cameraPoint2Target.position = playerPosition.transform.position;
+                        cameraMoveSpeed = 10;
                     }
                     if (startOnce)
                     {
@@ -89,21 +96,8 @@ public class TreeState3 : State
                 }
             }
                           
-        }
-        if (!trigger1)
-        {            
-            checkDist = Vector2.Distance(waterPosition.transform.position, playerPosition.transform.position);
-            if (checkDist < 4)
-            {
-                if (!once)
-                {
-                    gardenGnome.SpookedGnome();
-                    once = true;
-                    StartCoroutine(YieldTrigger());
-                }
-            }
-        }
-        else if (!trigger2)
+        }        
+        if (!trigger2)
         {
             checkDist2 = Vector2.Distance(trigger2Position.transform.position, playerPosition.transform.position);            
             if (checkDist2 < 1.2f)
@@ -191,21 +185,20 @@ public class TreeState3 : State
         yield return new WaitForSeconds(1);
         if (!startOnce)
         {
-            startOnce = true;
+            startOnce = true;            
         }
         else
         {
             cameraFoll.player = playerPosition.transform;
             startScene = true;
+            Destroy(gardenGnome1);
+            Destroy(swarm1);
+            GameValueManager.INSTANCE.stormStrenght += 1;
         }
     }
     public IEnumerator YieldTrigger()
     {
-        yield return new WaitForSeconds(1);
-
-        if (!trigger1)        
-            trigger1 = true;        
-        else        
+        yield return new WaitForSeconds(1);        
             trigger2 = true;
 
         once = false;
