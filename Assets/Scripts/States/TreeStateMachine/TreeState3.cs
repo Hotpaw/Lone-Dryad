@@ -26,7 +26,7 @@ public class TreeState3 : State
     public GameObject playerPosition;
     public GameObject trigger2Position;
     public GameObject gardenGnome1;
-    public GardenGnome2 gardenGnome2;
+    public GardenGnome2 gardenGnome2;   
     public cameraFollow cameraFoll;    
     
     public bool trigger2;
@@ -193,6 +193,7 @@ public class TreeState3 : State
             startScene = true;
             Destroy(gardenGnome1);
             Destroy(swarm1);
+            GameValueManager.INSTANCE.stormStrenght += 1;
         }
     }
     public IEnumerator YieldTrigger()
