@@ -245,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mode: 1
   once: 0
+  once2: 0
 --- !u!114 &4021576640357784573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bb8a231a77e3764fad43224b065a2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &6247270473669188574
 GameObject:
   m_ObjectHideFlags: 0

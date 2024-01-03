@@ -20,6 +20,6 @@ public class Storm : MonoBehaviour
     public void SetStormIntensity()
     {
         var emmision = particleSystem.emission;
-        emmision.rateOverTime = GameValueManager.INSTANCE.stormStrenght * 70;
+        emmision.rateOverTime = GameValueManager.INSTANCE.stormStrenght * 30;
     }
 }
