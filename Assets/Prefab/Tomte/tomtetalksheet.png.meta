@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: tomtetalksheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 740
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece32fecf5d113041859299032f204c7
+      internalID: 1358091815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 740
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6a0caa6a6a920448234d3b536e8856
+      internalID: -673235470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_2
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 740
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f4e8d3ad4c9504589028bbae5ae220
+      internalID: 807065650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_3
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 740
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2401b0b903873054cb06f3ed0e07bc66
+      internalID: -1577354586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e06cb5af651b9843b64a85eaa58fb2a
+      internalID: -874074987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_5
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 0
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf54556657d3a241afc431ef643e7e3
+      internalID: 1613163090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_6
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 0
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4615f9b73e33ff04887e5409ba983d75
+      internalID: -880858740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomtetalksheet_7
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 0
+        width: 590
+        height: 740
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af91b693078478e4c9be475493533cc4
+      internalID: 1465201335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +287,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tomtetalksheet_0: 1358091815
+      tomtetalksheet_1: -673235470
+      tomtetalksheet_2: 807065650
+      tomtetalksheet_3: -1577354586
+      tomtetalksheet_4: -874074987
+      tomtetalksheet_5: 1613163090
+      tomtetalksheet_6: -880858740
+      tomtetalksheet_7: 1465201335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
