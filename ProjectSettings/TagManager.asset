@@ -16,6 +16,7 @@ TagManager:
   - PlayerFeet
   - Storm
   - CameraPoint
+  - CameraPoint2
   layers:
   - Default
   - TransparentFX
