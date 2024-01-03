@@ -93,8 +93,13 @@ public class AudioManager : MonoBehaviour
             case "SCAREDGNOME":
                 SFX.clip = SFXClips[1];
                 break;
+            case "BATSCREECHandFLY":
+                SFX.clip = SFXClips[2]; //bat
+                break;
+           
         }
         SFX.Play();
+       
     }
     public void PlayMusic(string clip)
     {
@@ -114,6 +119,11 @@ public class AudioManager : MonoBehaviour
         PlayerPrefs.SetFloat("Music", musicslider.value);
         PlayerPrefs.SetFloat("Master", masterSlider.value);
         PlayerPrefs.Save();
+    }
+
+    private void Update()
+    {
+        
     }
 
     public void LoadVolumeSettings() //ska ladda volymerna in till näsat scen

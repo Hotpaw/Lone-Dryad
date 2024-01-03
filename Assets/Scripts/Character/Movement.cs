@@ -95,6 +95,7 @@ public class Movement : MonoBehaviour
         if (Keyboard.current != null)
         {
             isSprinting = isSprinting || Keyboard.current.shiftKey.isPressed;
+           
         }
 
         // Adjust maxSpeed based on whether the player is sprinting
@@ -108,6 +109,12 @@ public class Movement : MonoBehaviour
         }
         else
             steps.SetActive(false);
+        if (maxSpeed > 5) 
+        {
+          steps.SetActive(false);
+            Debug.Log("SLUTA SPRINGA");
+        }
+
         if (!isDashing && !dead)
         {
             if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
@@ -115,7 +122,7 @@ public class Movement : MonoBehaviour
                 rb.velocity = Vector2.zero;
             }
             else
-                MovementHorizontal();
+                MovementHorizontal(); 
 
             GroundCheck();
             Flip();
@@ -187,20 +194,27 @@ public class Movement : MonoBehaviour
 
     private void ToggleRun()
     {
+      
         if ((Gamepad.current != null && Gamepad.current.leftShoulder.wasPressedThisFrame) ||
        Keyboard.current.rKey.wasPressedThisFrame)
         {
             ToggleRunWalk();
+            
         }
 
 
         if (isAlwaysRunning)
         {
             maxSpeed = 12f; // Running speed
+            
+           
         }
         else
         {
             maxSpeed = 5f; // Walking speed
+            
+         
+
         }
     }
 
@@ -208,6 +222,7 @@ public class Movement : MonoBehaviour
     {
         isAlwaysRunning = !isAlwaysRunning;
         savedMaxSpeed = maxSpeed; // Save the current maxSpeed
+       
     }
     public void PickupAnimation()
     {
@@ -286,6 +301,7 @@ public class Movement : MonoBehaviour
         isDashing = false;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         animator.SetBool("Dash", false);
+        
     }
 
     public void Jump(InputAction.CallbackContext context)

@@ -1,11 +1,12 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BatLogic : MonoBehaviour
 {
-    public float attackCooldown;
-    public float timer;
+   public float attackCooldown;
+   public float timer;
    public GameObject projectile;
 
     private void Update()

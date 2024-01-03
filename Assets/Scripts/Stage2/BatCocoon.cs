@@ -8,7 +8,9 @@ using System.Linq;
 public class BatCocoon : MonoBehaviour
 {
     public Ease Ease;
-   
+
+    public AudioManager audioManager;
+
     Animator animator;
     private void Start()
     {
@@ -28,11 +30,18 @@ public class BatCocoon : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         animator.SetTrigger("React");
+        Invoke("BatFlySound", 0.9f);
         yield return new WaitForSeconds(2.4f);
         Transform[] paths = Stage2Event.INSTANCE.paths;
+
+
+        Debug.Log(audioManager);
+
         GameObject BatClone = Instantiate(Stage2Event.INSTANCE.Bat, coco.gameObject.transform.position, Quaternion.identity);
+
         BatClone.transform.rotation = new Quaternion(0, 180, 0, 0);
-       
+
+
         // Fixa något så att batsen förstörs i slutet av sin path.
         BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(2f, 3f), PathType.Linear).SetEase(Ease);
         Destroy(coco.gameObject);
@@ -42,6 +51,9 @@ public class BatCocoon : MonoBehaviour
 
 
     }
-   
 
+    private void BatFlySound()
+    {
+        audioManager.PlaySFX("BATSCREECHandFLY");
+    }
 }
