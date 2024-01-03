@@ -342,6 +342,7 @@ MonoBehaviour:
   waterAmount: 5
   waterFallWidth: 1.4
   spriteMask: {fileID: 7531339224566019543}
+  waterAudio: {fileID: 4053331890445871919, guid: 6d0092f9c64735240b93ee5ac8541e18, type: 3}
 --- !u!1 &4018593500635729413
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,6 +395,7 @@ MonoBehaviour:
   waterAmount: 10
   waterFallWidth: 1.4
   spriteMask: {fileID: 7531339224566019543}
+  waterAudio: {fileID: 0}
 --- !u!1 &4389255486807116124
 GameObject:
   m_ObjectHideFlags: 0
