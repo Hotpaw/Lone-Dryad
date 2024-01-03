@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public AudioSource soundEffect;
+    public AudioClip audioClip;
+
     private void Start()
     {
         Cursor.visible = true;
@@ -29,10 +32,12 @@ public class Menu : MonoBehaviour
     public void BackButton()
     {
         SceneManager.LoadScene("MainMenu");
+    
     }
     public void Settings()
     {
         SceneManager.LoadScene("Settings");
+      
     }
     public void Credits()
     {

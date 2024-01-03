@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9419c637df3bba49998cca682934e31
-      internalID: 513545296
+      spriteID: d1e4f5f7c48125a42b28a46c68a76d4d
+      internalID: -1168665055
       vertices: []
       indices: 
       edges: []
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00aa6ffccca93e94186de3364b184f17
-      internalID: -1905086195
+      spriteID: ad83050a1bd64a44dbd309d16af31080
+      internalID: 711057556
       vertices: []
       indices: 
       edges: []
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6de6adc2f5d95348a3aacd3b97f0689
-      internalID: -461110230
+      spriteID: 4c69a81bca7353f4f85d04a182123e6c
+      internalID: 1821704995
       vertices: []
       indices: 
       edges: []
@@ -176,8 +176,8 @@ TextureImporter:
       name: water-blob_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 408
+        x: 1233
+        y: 816
         width: 411
         height: 408
       alignment: 0
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 580ba4441e22d404382cfd5208f19df8
-      internalID: 40891719
+      spriteID: b71c498d991df5d4d85a2d05372d13e9
+      internalID: -1311425292
       vertices: []
       indices: 
       edges: []
@@ -197,6 +197,27 @@ TextureImporter:
       name: water-blob_4
       rect:
         serializedVersion: 2
+        x: 0
+        y: 408
+        width: 411
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3ea942840bea7458463ff051dd25ec
+      internalID: -1963532337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water-blob_5
+      rect:
+        serializedVersion: 2
         x: 411
         y: 408
         width: 411
@@ -208,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0deabacd9303bf44f947eaf24fc825eb
-      internalID: -788101898
+      spriteID: a75e6ee01b6997847ab8fa0107c01c30
+      internalID: 367874800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-blob_5
+      name: water-blob_6
       rect:
         serializedVersion: 2
         x: 822
@@ -229,14 +250,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d071bae5951455b4aaefcca384a0cfa4
-      internalID: -230540518
+      spriteID: a3d5447d216a346499a670987aa7806e
+      internalID: 1155524994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-blob_6
+      name: water-blob_7
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 408
+        width: 411
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a1f65be7dc91042916b61d534f5d87
+      internalID: -1975572463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water-blob_8
       rect:
         serializedVersion: 2
         x: 0
@@ -250,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 455bb1c75ab0d2042987165054888bcb
-      internalID: -484038474
+      spriteID: 7c5059db9898d07409ce3da8bc82cd5f
+      internalID: -513841927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-blob_7
+      name: water-blob_9
       rect:
         serializedVersion: 2
         x: 411
@@ -271,29 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a241fb958764d054aa887d7d33597c62
-      internalID: 1545887211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: water-blob_8
-      rect:
-        serializedVersion: 2
-        x: 822
-        y: 0
-        width: 411
-        height: 408
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d3078b1f4a77a445a161f014a900e0e
-      internalID: -1443834830
+      spriteID: 668ab46829556d944af5d69ac66df8d8
+      internalID: -547993244
       vertices: []
       indices: 
       edges: []
@@ -309,15 +330,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      water-blob_0: 513545296
-      water-blob_1: -1905086195
-      water-blob_2: -461110230
-      water-blob_3: 40891719
-      water-blob_4: -788101898
-      water-blob_5: -230540518
-      water-blob_6: -484038474
-      water-blob_7: 1545887211
-      water-blob_8: -1443834830
+      water-blob_0: -1168665055
+      water-blob_1: 711057556
+      water-blob_2: 1821704995
+      water-blob_3: -1311425292
+      water-blob_4: -1963532337
+      water-blob_5: 367874800
+      water-blob_6: 1155524994
+      water-blob_7: -1975572463
+      water-blob_8: -513841927
+      water-blob_9: -547993244
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
