@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
     public SpriteRenderer InteractableObject;
     public GameObject dropShadow;
 
-    [Header ("Regular Footsteps")]
+    [Header("Regular Footsteps")]
     public GameObject[] footStep;
     public GameObject steps;
 
@@ -99,8 +99,15 @@ public class Movement : MonoBehaviour
 
         // Adjust maxSpeed based on whether the player is sprinting
         maxSpeed = isSprinting ? 12f : 5f;
-        if(rb.velocity.x > 0.1 || rb.velocity.x < -0.1 && isGrounded) steps.SetActive(true);
-        else steps.SetActive(false);
+        if (rb.velocity.x > 0.1 || rb.velocity.x < -0.1 && isGrounded)
+        {
+            Debug.Log("STEP");
+            Debug.Log(steps.name);
+            steps.SetActive(true);
+            Debug.Log(steps.gameObject.activeInHierarchy);
+        }
+        else
+            steps.SetActive(false);
         if (!isDashing && !dead)
         {
             if (!GameValueManager.INSTANCE.treeIsALive || GameValueManager.INSTANCE.gameWon)
@@ -186,7 +193,7 @@ public class Movement : MonoBehaviour
             ToggleRunWalk();
         }
 
-        
+
         if (isAlwaysRunning)
         {
             maxSpeed = 12f; // Running speed
