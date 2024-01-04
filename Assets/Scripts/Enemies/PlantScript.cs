@@ -26,6 +26,9 @@ public class PlantScript : MonoBehaviour
     public Health treeHealth;
     public GameObject energystealer;
 
+    [Header("AudioPlant")]
+    public AudioManager plantSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,13 +72,17 @@ public class PlantScript : MonoBehaviour
     {        
         particleSystem.Play();
         Wilt();
-        wilting = true;        
+        wilting = true;
+       
+       
     }
     public void Wilt()
     {
+        Debug.Log("playing twig sound");
         wiltTimerAlpha -= (0.55f * Time.deltaTime);
         wiltTimerColor -= (0.70f * Time.deltaTime);
         spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);
+        plantSound.PlaySFX("PLUCKEVILPLANT"); //plant
         Destroy(gameObject, 4.5f);
     }        
 }
