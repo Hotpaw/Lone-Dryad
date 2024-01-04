@@ -91,7 +91,7 @@ public class WerewolfIntroState : State
             {
                 WereWolf.INSTANCE.moveToAttack = false;
                 introSet = false;
-                WereWolf.INSTANCE.ResetRigidbodyProperties();
+              
                 attack = false;
 
                 collidedWithTarget = false; // Reset the collision flag

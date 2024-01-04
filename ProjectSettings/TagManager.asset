@@ -18,11 +18,7 @@ TagManager:
   - CameraPoint
   - CameraPoint2
   - RevealParticle
-<<<<<<< Updated upstream
   - AudioManager
-=======
-  - Wtarget
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
