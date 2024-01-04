@@ -9,7 +9,7 @@ public class WereWolfAttackState : State
     public bool idle = false;
 
 
- 
+
     public override State RunCurrentState()
     {
 
@@ -34,11 +34,11 @@ public class WereWolfAttackState : State
         idle = true;
     }
 
-        
 
-   
+
+
 
     // Update is called once per frame
-  
+
 
 }
