@@ -11685,7 +11685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4631756500229712406, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: SFXClips.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4631756500229712406, guid: c20fe88bb2c923e46ac2d43d199e82af, type: 3}
       propertyPath: SFXClips.Array.data[2]
