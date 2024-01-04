@@ -154,7 +154,7 @@ public class TreeState3 : State
         if (enemyAttacking && !enemyAttackingOnce)
         {
             enemyAttackingOnce = true;
-            PopUpText.INSTANCE.PopUpMessage("I have to stop the enemies before i go on", Color.black, 3);
+            PopUpText.INSTANCE.PopUpMessage("My tree is in danger, I need to get rid of the enemies or my tree will be destroyed", Color.black, 3);
             caveOne.SetActive(false);
             caveTwo.SetActive(false);
         }    

@@ -40,9 +40,9 @@ public class InteractableGnome : InteractableObject
     {
         yield return new WaitForSeconds(3);
         GameValueManager.INSTANCE.thePowerToPickUpCrystals = true;
-        PopUpText.INSTANCE.PopUpMessage("Your tree will die in a short while if you do not repair the crystal", Color.red, 3, PopUpText.Icon.Gnome);
+        PopUpText.INSTANCE.PopUpMessage("You need to repair the crystal or your tree will perish soon", Color.red, 3, PopUpText.Icon.Gnome);
         yield return new WaitForSeconds(4);
-        PopUpText.INSTANCE.PopUpMessage("Bring me seven crystalpieces, and i will help you!", Color.red, 3, PopUpText.Icon.Gnome);
+        PopUpText.INSTANCE.PopUpMessage("If you bring me seven crystal pieces, I will be able to repair it for you", Color.red, 3, PopUpText.Icon.Gnome);
         animator.SetBool("Talking", false);
 
     }
