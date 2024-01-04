@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class WerewolfIntroState : State
 {
-
+    public float speed = 5f; // Speed of horizontal movement
+    public float forceMultiplier = 1; // Adjust the force applied for movement
 
     public Rigidbody2D rb;
+    public Collider2D coll;
     private Transform target;
     bool introSet = false;
     public float closeEnoughDistance = 1.0f;
-
     public bool attack = false;
-    public bool collidedWithTarget = false; // New variable to track collision
-    public float speed = 5f; // Speed of horizontal movement
-      public float forceMultiplier = 1; // Adjust the force applied for movement
+    private bool collidedWithTarget = false; // New variable to track collision
 
-    
-   
+    void Start()
+    {
+        FindClosestTarget();
+        WereWolf.INSTANCE.moveToAttack = false;
+    }
 
     private void FindClosestTarget()
     {
@@ -60,81 +62,35 @@ public class WerewolfIntroState : State
             collidedWithTarget = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Wtarget"))
-        {
-            collidedWithTarget = false;
-        }
-    }
 
-  
-    void Start()
+    public override State RunCurrentState()
     {
         FindClosestTarget();
-        WereWolf.INSTANCE.moveToAttack = false;
 
         if (!introSet)
         {
-
             introSet = true;
             WereWolf.INSTANCE.animator.SetTrigger("Walk");
             WereWolf.INSTANCE.FlipBasedOnTreePosition();
         }
-        // Find the Tree GameObject and get its transform
-        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
-        if (tree != null)
-        {
-            target = tree.transform;
-        }
-        else
-        {
-            Debug.LogError("No GameObject with tag 'Tree' found in the scene.");
-        }
-    }
 
-    void FixedUpdate()
-    {
-
-    }
-
-    private void MoveTowardsTarget()
-    {
-        Vector2 targetPosition = new Vector2(target.position.x, rb.position.y);
-        Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
-
-        // Apply the movement
-        rb.MovePosition(newPosition);
-    }
-
-    public override State RunCurrentState()
-    {
         if (target != null)
         {
-            MoveTowardsTarget();
-        }
-        if (target != null)
-        {
+            MoveTowardsTargetAffectedByGravity();
+
             float distanceToTarget = Vector2.Distance(rb.position, target.position);
 
-            if (distanceToTarget <= closeEnoughDistance)
+            if (distanceToTarget <= closeEnoughDistance || attack || collidedWithTarget)
             {
-
                 WereWolf.INSTANCE.moveToAttack = false;
                 introSet = false;
-
+                WereWolf.INSTANCE.ResetRigidbodyProperties();
                 attack = false;
-
                 collidedWithTarget = false; // Reset the collision flag
-
                 return WereWolf.INSTANCE.AttackState;
             }
-            else { return this; }
-        }
-        else
-        {
-              return this;
         }
 
+        return this;
     }
 }

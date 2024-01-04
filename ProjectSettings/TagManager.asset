@@ -19,6 +19,7 @@ TagManager:
   - CameraPoint2
   - RevealParticle
   - AudioManager
+  - Wtarget
   layers:
   - Default
   - TransparentFX
@@ -37,7 +38,7 @@ TagManager:
   - EnemyThatCollides
   - Storm
   - PlayerFeet
-  - 
+  - Wtarget
   - 
   - 
   - 

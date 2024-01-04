@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class WereWolfAttackState : State
 {
-
     public bool isAttacking = false;
     public bool idle = false;
 
-
-
     public override State RunCurrentState()
     {
+        if (idle)
+        {
+            // Reset the flags and transition to IdleState
+            isAttacking = false;
+            idle = false;
+            return WereWolf.INSTANCE.IdleState;
+        }
 
         if (!isAttacking)
         {
             // Start the attack coroutine and stay in this state
             isAttacking = true;
-
             StartCoroutine(Attack());
         }
 
@@ -33,12 +36,4 @@ public class WereWolfAttackState : State
         FindObjectOfType<TreeScript>().GetComponent<Health>().TakeDamage(1);
         idle = true;
     }
-
-
-
-
-
-    // Update is called once per frame
-
-
 }
