@@ -10,7 +10,11 @@ public class activateSuck : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Debug.Log(gameObject.name);
+            if(collision.GetComponent<BatMovement>() != null)
+            {
+
             collision.GetComponent<BatMovement>().sucker.SetTrigger("StartSucking");
+            }
         }
     }
 }

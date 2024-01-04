@@ -9,6 +9,10 @@ public class WerewolfSummonstate : State
     bool hasSpawned = false;
     public override State RunCurrentState()
     {
+        if (WereWolf.INSTANCE.moveToAttack)
+        {
+            return WereWolf.INSTANCE.IntroState;
+        }
         if (!done)
         {
             done = true;
@@ -32,8 +36,8 @@ public class WerewolfSummonstate : State
         yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("Werewolf_Howl")+ 1);
         EnemySpawner.INSTANCE.SpawnStage2();
         PopUpText.INSTANCE.PopUpMessage("The winged beasts return",Color.black);
-      
-      
+
+     
         yield return new WaitForSeconds(1);
        
       

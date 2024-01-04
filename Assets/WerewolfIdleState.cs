@@ -33,6 +33,7 @@ public class WerewolfIdleState : State
             }
             // Reset the timer if you want the cooldown to start again after jumping
             timer = 0;
+            cooldown = 5;
             idleSet = false;
             return WereWolf.INSTANCE.JumpState;
         }

@@ -40,6 +40,7 @@ public class WerewolfJumpState : State
         else if (Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps == jumpToAttack)
         {
             WereWolf.INSTANCE.moveToAttack = true;
+            jumps = 0;
             collider.enabled = true; // Re-enable collider
             rb.velocity = Vector2.zero; // Stop the werewolf
             rb.gravityScale = 10; // Reset gravity to normal
