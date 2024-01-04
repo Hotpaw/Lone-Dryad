@@ -8,7 +8,7 @@ public class ThrowingAttackBoon : InteractableObject
     public GameObject batTrigger;
     public override void Interact()
     {
-        PopUpText.INSTANCE.PopUpMessage("You can now throw magical nuts", Color.green, 3f, true);
+        PopUpText.INSTANCE.PopUpMessage("You can now throw akorns", Color.green, 3f, true);
         GameValueManager.INSTANCE.thePowerToThrowNuts = true;
        
         Stage2Event.INSTANCE.SpawnBats();

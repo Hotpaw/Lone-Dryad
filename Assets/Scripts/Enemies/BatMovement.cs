@@ -13,47 +13,44 @@ public class BatMovement : MonoBehaviour
 
     public float flyingSpeed;
 
-   
     // Start is called before the first frame update
     void Start()
     {
-        
-    
         isPausing = true;
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-     // fix null referens on game over
-        if (FindAnyObjectByType<InteractableTree>().gameObject != null && gameObject.transform.position.x < FindAnyObjectByType<InteractableTree>().gameObject.transform.position.x)
+        var interactableTree = FindAnyObjectByType<InteractableTree>();
+
+        // Ensure interactableTree is not null before accessing its properties
+        if (interactableTree != null)
         {
-            gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+            var treeGameObject = interactableTree.gameObject;
+            if (treeGameObject != null && gameObject.transform.position.x < treeGameObject.transform.position.x)
+            {
+                gameObject.transform.rotation = new Quaternion(0, 180, 0, 0);
+            }
+            else
+            {
+                gameObject.transform.rotation = Quaternion.identity;
+            }
         }
-        else
-        {
-            gameObject.transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
+
         MoveTowards();
     }
 
-   
     public void Pause()
     {
-       
+        // Pause logic here
     }
 
     public void MoveTowards()
     {
-
         transform.position = Vector2.MoveTowards(transform.position, target.position, flyingSpeed * Time.deltaTime);
-
     }
 
- 
 
 
 }

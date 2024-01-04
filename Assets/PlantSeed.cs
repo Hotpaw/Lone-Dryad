@@ -58,7 +58,7 @@ public class PlantSeed : InteractableObject
         }
         if (stage5)
         {
-            PopUpText.INSTANCE.PopUpMessage("Enough playing around, time to return to go back to my tree..", Color.white);
+            PopUpText.INSTANCE.PopUpMessage("Enough playing around, time to return to my tree..", Color.white);
             GameValueManager.INSTANCE.nextLevelAvailable = true;
         }
 

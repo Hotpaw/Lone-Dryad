@@ -9,6 +9,7 @@ public class SlowEasyEnemy : MonoBehaviour
     public Transform[] patrolPoints;
     public Transform attackPoint;
     public Transform theLeftSpawnPoint;
+    public Transform DiePoint;
     public float moveSpeed;
     public float attackSpeed;
     public float gravity;
@@ -115,6 +116,10 @@ public class SlowEasyEnemy : MonoBehaviour
         {
             isBall = false;
         }
+        if (collision.gameObject.layer == 12)
+        {
+            this.GetComponent<Health>().TakeDamage(1);
+        }
     }
     public IEnumerator DelayAttack()
     {
@@ -126,4 +131,5 @@ public class SlowEasyEnemy : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         gravity = 5;
     }
+    
 }
