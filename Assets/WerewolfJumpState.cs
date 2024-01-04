@@ -28,7 +28,7 @@ public class WerewolfJumpState : State
             collider.enabled = true; // Re-enable collider
             rb.velocity = Vector2.zero; // Stop the werewolf
             rb.gravityScale = 10; // Reset gravity to normal
-            return WereWolf.INSTANCE.IdleState;
+           return WereWolf.INSTANCE.IdleState;
         }
         return this;
     }

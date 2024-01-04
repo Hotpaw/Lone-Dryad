@@ -15,7 +15,7 @@ public class WerewolfIdleState : State
         timer += Time.deltaTime;
         if (!idleSet)
         {
-            animator.SetBool("Idle", true);
+            animator.SetTrigger("Idle");
             idleSet = true;
         }
      
