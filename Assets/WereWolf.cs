@@ -11,6 +11,7 @@ public class WereWolf : MonoBehaviour
     public State JumpState;
     public State DieState;
     public State IntroState;
+    public State SummonState;
 
     public Animator animator;
     public Rigidbody2D rb;
