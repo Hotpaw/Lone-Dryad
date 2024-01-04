@@ -3864,7 +3864,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 172795103
-  m_SortingLayer: -1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ab25c1d22b8852343baaffefb650d026, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4300,6 +4300,90 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2471107963845266079}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &888373000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 888373002}
+  - component: {fileID: 888373001}
+  m_Layer: 0
+  m_Name: Luckabackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &888373001
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888373000}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 94e60bd4f3d8d8a4a80125fbeb22251e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 129.6, y: 72.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &888373002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888373000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &892762278
 MonoBehaviour:
@@ -6192,11 +6276,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3315571624285481397, guid: 6d6a8a51ddde4c344995ee81759af30b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.625433
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3315571624285481397, guid: 6d6a8a51ddde4c344995ee81759af30b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.613327
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3315571624285481397, guid: 6d6a8a51ddde4c344995ee81759af30b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6238,6 +6322,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8327835020806114331, guid: 6d6a8a51ddde4c344995ee81759af30b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 91074d6375841ef41a7ed1b8389406dc, type: 3}
     - target: {fileID: 8327835020806114331, guid: 6d6a8a51ddde4c344995ee81759af30b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6865,6 +6953,90 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1951846614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1951846616}
+  - component: {fileID: 1951846615}
+  m_Layer: 0
+  m_Name: Luckaopen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &1951846615
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951846614}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 21300000, guid: 27f10e27ba60b674c864a6eb4e763cb5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 129.6, y: 72.9}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1951846616
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1951846614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2003674299
 GameObject:
   m_ObjectHideFlags: 0
@@ -7335,6 +7507,7 @@ MonoBehaviour:
   iconOffset: {x: 0, y: 4}
   unlimitedUses: 1
   particleSystemPrefab: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
+  noParticles: 0
 --- !u!1 &28391171755039256
 GameObject:
   m_ObjectHideFlags: 0
@@ -7829,6 +8002,7 @@ MonoBehaviour:
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
   particleSystemPrefab: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
+  noParticles: 0
 --- !u!1001 &436910021373293106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14303,7 +14477,7 @@ Camera:
   far clip plane: 1000
   field of view: 60.000004
   orthographic: 1
-  orthographic size: -30.8
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -19803,7 +19977,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: -30.8
+  orthographic size: 11
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -26872,6 +27046,7 @@ MonoBehaviour:
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
   particleSystemPrefab: {fileID: 0}
+  noParticles: 0
 --- !u!4 &4152770882332675943
 Transform:
   m_ObjectHideFlags: 0
@@ -26902,6 +27077,8 @@ MonoBehaviour:
   currentHealth: 1
   maxHealth: 5
   isCentipede: 0
+  type: 0
+  slider: {fileID: 0}
 --- !u!114 &4163862920688291528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43527,7 +43704,8 @@ MonoBehaviour:
   playerfollowraidus: 1
   followPosition: {x: 0, y: 0, z: 0}
   wateringCountDown: 10
-  WateringTreePosition: {x: 0, y: 0, z: 0}
+  scaleScaler: 0
+  wateringTreePosition: {fileID: 0}
   WateringYOffset: 0
   once: 0
 --- !u!4 &6734250981398891347
@@ -49263,6 +49441,7 @@ MonoBehaviour:
   iconOffset: {x: 0, y: 4.13}
   unlimitedUses: 1
   particleSystemPrefab: {fileID: 9056180148135012634, guid: be477781f91392e4eacecdd2e5de0fd3, type: 3}
+  noParticles: 0
 --- !u!114 &7175835734866872547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54494,7 +54673,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstTime: 1
-  distanceChecker: {fileID: 0}
 --- !u!199 &7671932711432163287
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -65125,7 +65303,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: -30.8
+  orthographic size: 11
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -65555,3 +65733,5 @@ SceneRoots:
   - {fileID: 115960448}
   - {fileID: 1480144275}
   - {fileID: 205145340}
+  - {fileID: 1951846616}
+  - {fileID: 888373002}
