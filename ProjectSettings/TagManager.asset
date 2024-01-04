@@ -17,6 +17,7 @@ TagManager:
   - Storm
   - CameraPoint
   - CameraPoint2
+  - RevealParticle
   layers:
   - Default
   - TransparentFX
