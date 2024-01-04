@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeState3 : State
 {
@@ -12,6 +13,8 @@ public class TreeState3 : State
     public bool once;
 
     //Intro
+    public InteractWith interactWithTree;
+    public InteractWith interactWithWater;
     public GameObject swarm1;
     public GameObject cameraPoint2;
     public Transform cameraPoint2Target;
@@ -70,6 +73,8 @@ public class TreeState3 : State
         distance = Vector2.Distance(cameraPoint2.transform.position, triggerPoint.position);
         if (!startScene)
         {
+            interactWithTree.enabled = false;
+            interactWithWater.enabled = false;
             cameraPoint2Target.position = triggerPoint.position;
             cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint2").transform;
             StartCoroutine(YieldCameraStart());
@@ -159,18 +164,22 @@ public class TreeState3 : State
             cameraZoomOut = true;
             gardenGnome3.gameObject.SetActive(false);            
         }
-        if (cameraZoomOut && cameraZoomScale < 24.9f)
-        {
-            cameraZoomScale += Time.deltaTime;
-            cameraFoll.cameraDistance = cameraZoomScale;            
-        }
         if (isBuildingCrystal)
         {            
             if (shieldCrystal.GetComponent<BuildingCrystal>().buildTimer > 8f)
             {
                 shieldCrystalLight.gameObject.SetActive(true);
                 isBuildingCrystal = false;
+                interactWithTree.enabled = false;
+                interactWithWater.enabled = false;
             }
+        }
+        if (cameraZoomOut && cameraZoomScale < 24.9f)
+        {
+            cameraZoomScale += Time.deltaTime;
+            cameraFoll.cameraDistance = cameraZoomScale;
+            if (cameraZoomScale > 24.5f)
+                StartCoroutine(YieldNextStage());
         }
         
         
@@ -187,13 +196,15 @@ public class TreeState3 : State
         {
             startOnce = true;            
         }
-        else
+        else if (!startScene)
         {
             cameraFoll.player = playerPosition.transform;
             startScene = true;
             Destroy(gardenGnome1);
             Destroy(swarm1);
             GameValueManager.INSTANCE.stormStrenght += 1;
+            interactWithTree.enabled = true;
+            interactWithWater.enabled = true;
         }
     }
     public IEnumerator YieldTrigger()
@@ -209,6 +220,11 @@ public class TreeState3 : State
         yield return new WaitForSeconds(8);
         blackOut.startBlackOut = true;
         trigger5 = true;
+    }
+    public IEnumerator YieldNextStage()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);        
     }
     public override State RunCurrentState()
     {
