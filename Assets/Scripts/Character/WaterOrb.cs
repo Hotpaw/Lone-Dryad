@@ -10,7 +10,7 @@ public class WaterOrb : MonoBehaviour
     public float playerfollowraidus;
     public Vector3 followPosition;
 
-    //ParticleSystem PS;
+    
     public float wateringCountDown = 10;
     SpriteRenderer SpriteRenderer;
     public float scaleScaler;
@@ -29,13 +29,13 @@ public class WaterOrb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {        
-        //PS = this.GetComponentInChildren<ParticleSystem>();
+        
         SpriteRenderer = GetComponent<SpriteRenderer>();
         
         SpriteRenderer.enabled = false;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (!GameValueManager.INSTANCE.addingWater)
@@ -64,10 +64,7 @@ public class WaterOrb : MonoBehaviour
                 once = true;
             }
             SpriteRenderer.enabled = true;
-            //var subEmitters = PS.subEmitters;
-            //subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
-            //var emission = PS.emission;
-            //emission.rateOverTime = 100;            
+                     
             if (GameValueManager.INSTANCE.addingWater)
             {
                 transform.position = Vector3.MoveTowards(transform.position, wateringTreePosition.position, 0.1f);
@@ -78,14 +75,9 @@ public class WaterOrb : MonoBehaviour
                         scaleScaler -= 0.4f * Time.deltaTime;
                         transform.localScale = new Vector2(scaleScaler, scaleScaler);
                         this.GetComponent<Animator>().SetBool("Watering", true);
-                    }
-                    //subEmitters.SetSubEmitterEmitProbability(0, 1f);
-                    wateringCountDown -= (2 *Time.deltaTime);                    
-
-                    //if(wateringCountDown >= 0 && wateringCountDown < 9.9f)
-                    //{                         
-                    //    emission.rateOverTime = 10 * wateringCountDown;
-                    //}
+                    }                    
+                    wateringCountDown -= (2 *Time.deltaTime);                   
+                                        
                     if (wateringCountDown < 7 && !heal1)
                     {
                         
