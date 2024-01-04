@@ -13,6 +13,8 @@ public class WerewolfIdleState : State
     {
         animator = WereWolf.INSTANCE.animator;
         timer += Time.deltaTime;
+        
+       
         if (!idleSet)
         {
             WereWolf.INSTANCE.FlipBasedOnTreePosition();
@@ -24,6 +26,11 @@ public class WerewolfIdleState : State
         // Check if the timer has exceeded the cooldown period
         if (timer >= cooldown && !WereWolf.INSTANCE.moveToAttack)
         {
+            float random = Random.Range(0, 10f);
+            if(random < 3)
+            {
+                return WereWolf.INSTANCE.SummonState;
+            }
             // Reset the timer if you want the cooldown to start again after jumping
             timer = 0;
             idleSet = false;
