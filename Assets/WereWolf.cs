@@ -18,11 +18,11 @@ public class WereWolf : MonoBehaviour
     public float xThreshold = 0f;
     private Transform treeTransform;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         INSTANCE = this;
         // Find the Tree GameObject and get its transform
-        GameObject tree = GameObject.FindGameObjectWithTag("Tree");
+        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
         if (tree != null)
         {
             treeTransform = tree.transform;
@@ -38,7 +38,7 @@ public class WereWolf : MonoBehaviour
     {
         
     }
-    private void FlipBasedOnTreePosition()
+    public void FlipBasedOnTreePosition()
     {
         // Determine if the GameObject should face left or right based on the Tree's position
         bool shouldFaceLeft = transform.position.x < treeTransform.position.x;
@@ -85,5 +85,9 @@ public class WereWolf : MonoBehaviour
                 animator.SetBool(parameter.name, false);
             }
         }
+    }
+    public void WereWolfattack()
+    {
+        StateManager.INSTANCE.ChangeState("ATTACKTOIDLE");
     }
 }

@@ -17,6 +17,10 @@ public class WerewolfJumpState : State
         animator = WereWolf.INSTANCE.animator;
         if (!jumped)
         {
+
+            SelectNewTarget();
+
+
             Jump();
             jumped = true;
         }
@@ -28,11 +32,28 @@ public class WerewolfJumpState : State
             collider.enabled = true; // Re-enable collider
             rb.velocity = Vector2.zero; // Stop the werewolf
             rb.gravityScale = 10; // Reset gravity to normal
-           return WereWolf.INSTANCE.IdleState;
+            jumped = false;
+            return WereWolf.INSTANCE.IdleState;
         }
         return this;
     }
+    private void SelectNewTarget()
+    {
+        if (WereWolf.INSTANCE.stages.Length <= 1)
+        {
+            Debug.LogError("Not enough stages to select a new target.");
+            return;
+        }
 
+        Transform newTarget;
+        do
+        {
+            newTarget = WereWolf.INSTANCE.stages[Random.Range(0, WereWolf.INSTANCE.stages.Length)];
+        }
+        while (newTarget == target);
+
+        target = newTarget;
+    }
     void Jump()
     {
         WereWolf.INSTANCE.ResetAllAnimatorBools();
@@ -40,7 +61,7 @@ public class WerewolfJumpState : State
     }
     IEnumerator JumpLogic()
     {
-        target = WereWolf.INSTANCE.stages[Random.Range(0, WereWolf.INSTANCE.stages.Length)];
+        
         if (target != null)
         {
             animator.SetTrigger("Jump");

@@ -7,14 +7,15 @@ public class WerewolfIdleState : State
 {
     Animator animator;
     public int cooldown = 5;
-    float timer;
-    private bool idleSet = false;
+    public float timer;
+    public bool idleSet = false;
     public override State RunCurrentState()
     {
         animator = WereWolf.INSTANCE.animator;
         timer += Time.deltaTime;
         if (!idleSet)
         {
+            WereWolf.INSTANCE.FlipBasedOnTreePosition();
             animator.SetTrigger("Idle");
             idleSet = true;
         }
