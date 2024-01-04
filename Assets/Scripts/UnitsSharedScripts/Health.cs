@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -9,7 +10,16 @@ public class Health : MonoBehaviour
     public bool isCentipede;
     public enum Type { normal, Boss}
     public Type type;
-    
+    public Slider slider;
+    private void Update()
+    {
+        if (type == Type.Boss)
+        {
+            slider.maxValue = maxHealth;
+            slider.value = currentHealth;
+            return;
+        }
+    }
     // Start is called before the first frame update    
     public void Heal(int amount)
     {
