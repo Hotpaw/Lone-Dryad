@@ -30,16 +30,14 @@ public class PlantScript : MonoBehaviour
     public AudioManager plantSound;
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        plantSound = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
-    }
+    
     void Start()
     {
         tree = GameObject.FindGameObjectWithTag("Tree");
         treeHealth = tree.GetComponent<Health>();
         particleSystem = GetComponent<ParticleSystem>();
-        spriteRenderer = GetComponent<SpriteRenderer>();   
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        plantSound = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
     // Update is called once per frame
@@ -76,9 +74,7 @@ public class PlantScript : MonoBehaviour
     {        
         particleSystem.Play();
         Wilt();
-        wilting = true;
-       
-       
+        wilting = true;   
     }
     public void Wilt()
     {
@@ -86,6 +82,6 @@ public class PlantScript : MonoBehaviour
         wiltTimerAlpha -= (0.55f * Time.deltaTime);
         wiltTimerColor -= (0.70f * Time.deltaTime);
         spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);        
-        Destroy(gameObject, 4.5f);
+        Destroy(gameObject, 3.5f);
     }        
 }

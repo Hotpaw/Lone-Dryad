@@ -22,6 +22,7 @@ public class InteractWith : MonoBehaviour
     private bool playerIsWithinRange = false;
     public ParticleSystem particleSystemPrefab; // Reference to the particle system prefab
     private ParticleSystem instantiatedParticleSystem; // Instance of the particle system
+    public bool noParticles;
     LayerMask groundLayer;
 
     private void Start()
@@ -40,7 +41,10 @@ public class InteractWith : MonoBehaviour
 
     private void Update()
     {
-        HandleParticleSystem();
+        if (!noParticles)
+        {
+            HandleParticleSystem();
+        }
         CheckForInteraction();
     }
 
