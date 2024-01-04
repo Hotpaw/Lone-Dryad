@@ -131,6 +131,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2763747081939175842}
     m_Modifications:
+    - target: {fileID: 61278415153874913, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1271915805564382084, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4532972554436825736, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4611713038764887054, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
       propertyPath: m_Name
       value: Tree0Root 1
@@ -178,6 +190,10 @@ PrefabInstance:
     - target: {fileID: 5699133324447129974, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7684849935761544094, guid: d96bfcc1af6d5cf45bb5c07584eeacea, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7064,7 +7080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressScore: 0
-  nextStageScore: 70
+  nextStageScore: 60
   progressActive: 0
   treeLevel: 1
   treeIsALive: 1
