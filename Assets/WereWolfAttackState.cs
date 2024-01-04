@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class WereWolfAttackState : State
 {
+    bool isAttacking = false;
     public override State RunCurrentState()
     {
-        throw new System.NotImplementedException();
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            WereWolf.INSTANCE.animator.SetTrigger("Attack");
+        }
+        Debug.Log(" ATTACK");
+        return this;
     }
 
     // Start is called before the first frame update
@@ -16,8 +23,5 @@ public class WereWolfAttackState : State
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 }

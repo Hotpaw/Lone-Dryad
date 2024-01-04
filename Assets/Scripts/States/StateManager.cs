@@ -7,8 +7,11 @@ public class StateManager : MonoBehaviour
 {
     
     public State currentState;
-
-   
+    public static StateManager INSTANCE;
+    private void Start()
+    {
+        INSTANCE = this;
+    }
     void Update()
     {
             RunStateMachine();
@@ -27,5 +30,14 @@ public class StateManager : MonoBehaviour
     public void SwitchToTheNextState(State nextState)
     {
         currentState = nextState;
+    }
+    public void ChangeState(string state)
+    {
+        switch (state)
+        {
+            case "ATTACKTOIDLE": currentState = WereWolf.INSTANCE.IdleState;
+                FindObjectOfType<TreeScript>().gameObject.GetComponent<Health>().TakeDamage(1);
+                break;
+        }
     }
 }
