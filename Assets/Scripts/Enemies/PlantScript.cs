@@ -30,6 +30,10 @@ public class PlantScript : MonoBehaviour
     public AudioManager plantSound;
 
     // Start is called before the first frame update
+    private void Awake()
+    {
+        plantSound = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
     void Start()
     {
         tree = GameObject.FindGameObjectWithTag("Tree");
@@ -81,8 +85,7 @@ public class PlantScript : MonoBehaviour
         Debug.Log("playing twig sound");
         wiltTimerAlpha -= (0.55f * Time.deltaTime);
         wiltTimerColor -= (0.70f * Time.deltaTime);
-        spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);
-        plantSound.PlaySFX("PLUCKEVILPLANT"); //plant
+        spriteRenderer.color = new Color(wiltTimerColor, wiltTimerColor, wiltTimerColor, wiltTimerAlpha);        
         Destroy(gameObject, 4.5f);
     }        
 }

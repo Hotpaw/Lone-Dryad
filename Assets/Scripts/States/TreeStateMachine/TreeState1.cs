@@ -5,6 +5,24 @@ using UnityEngine;
 public class TreeState1 : State
 {
     public static TreeState1 INSTANCE;
+
+    //Intro
+    public blackOut blackOut;
+    public cameraFollow cameraFoll;
+    
+    public Transform cameraPoint2Target;
+    public Transform triggerPoint;
+    
+    public bool startOnce1;
+    public bool startOnce2;
+    public bool startMovingCamera;
+    public bool gnomeWentHome;
+    public bool startScene;
+    public float cameraMoveSpeed;
+
+    public bool cameraZoomOut;
+    public float cameraZoomScale;
+
     public float seedTimer;
     public float spawnSeedAt;
     public float triggerTime;
@@ -17,21 +35,38 @@ public class TreeState1 : State
 
     public void Awake()
     {
-        spawnSeedAt = 3;
-        
-
-
-        FindAnyObjectByType<Movement>().isCrawling = true;
-        FindAnyObjectByType<Movement>().DecreaseSpeed();
+        spawnSeedAt = 3;        
     }
     private void Start()
     {
-        GameValueManager.INSTANCE.progressActive = true;
-        PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray, 3);
+        cameraFoll.cameraDistance = 3;
+        GameValueManager.INSTANCE.progressActive = true;        
     }
+    private void Update()
+    {
+        if (!startOnce1) 
+        {
+            StartCoroutine(YieldZoomOut());            
+        }
+        if (cameraFoll.cameraDistance < 11 && startOnce1)
+            cameraFoll.cameraDistance += 10 * Time.deltaTime;
+        else if(startOnce1 && !startOnce2)
+        {
+            PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray, 3);
+            startOnce2 = true;
+        }
 
-
-
+    }
+    public IEnumerator YieldZoomOut()
+    {
+        yield return new WaitForSeconds(3);
+        startOnce1 = true;
+    }
+    public IEnumerator Yieldblackout()
+    {        
+        yield return new WaitForSeconds(3);
+        blackOut.startBlackOut = true;
+    }
     public override State RunCurrentState()
     {
         if (GameValueManager.INSTANCE.treeLevel == 1)

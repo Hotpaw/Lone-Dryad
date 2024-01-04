@@ -18,6 +18,7 @@ TagManager:
   - CameraPoint
   - CameraPoint2
   - RevealParticle
+  - AudioManager
   layers:
   - Default
   - TransparentFX
