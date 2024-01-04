@@ -58,7 +58,7 @@ public class TreeState2 : State
     {
         FindAnyObjectByType<cameraFollow>().enabled = false;
         Camera.main.gameObject.transform.DOShakePosition(1.8f, 2, 7, 60);
-        PopUpText.INSTANCE.PopUpMessage("Something happened in the cave", Color.white, 3);
+        PopUpText.INSTANCE.PopUpMessage("There's a rumble in the cave, something has happned", Color.white, 3);
         yield return new WaitForSeconds(1);
         FindAnyObjectByType<cameraFollow>().enabled = true;
     }
