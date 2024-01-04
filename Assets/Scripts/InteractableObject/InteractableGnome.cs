@@ -15,7 +15,7 @@ public class InteractableGnome : InteractableObject
             GameValueManager.INSTANCE.stormStrenght++;
             
 
-            PopUpText.INSTANCE.PopUpMessage("The storm is coming!", Color.red, 12, PopUpText.Icon.Gnome);
+            PopUpText.INSTANCE.PopUpMessage("The swarm is coming!", Color.red, 12, PopUpText.Icon.Gnome);
             StartCoroutine(TalkingGnome());
         }
         else if (GameValueManager.INSTANCE.thePowerToPickUpCrystals == true && GameValueManager.INSTANCE.numberOfCrystallPieces < 7)
@@ -40,9 +40,9 @@ public class InteractableGnome : InteractableObject
     {
         yield return new WaitForSeconds(3);
         GameValueManager.INSTANCE.thePowerToPickUpCrystals = true;
-        PopUpText.INSTANCE.PopUpMessage("Your tree will die in a short while if you do not repair the crystall", Color.red, 3, PopUpText.Icon.Gnome);
+        PopUpText.INSTANCE.PopUpMessage("Your tree will die in a short while if you do not repair the crystal", Color.red, 3, PopUpText.Icon.Gnome);
         yield return new WaitForSeconds(4);
-        PopUpText.INSTANCE.PopUpMessage("Bring me seven crystallpieces, and i will help you!", Color.red, 3, PopUpText.Icon.Gnome);
+        PopUpText.INSTANCE.PopUpMessage("Bring me seven crystalpieces, and i will help you!", Color.red, 3, PopUpText.Icon.Gnome);
         animator.SetBool("Talking", false);
 
     }
