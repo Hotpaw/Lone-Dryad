@@ -5,7 +5,7 @@ using UnityEngine;
 public class WereWolf : MonoBehaviour
 {
     public static WereWolf INSTANCE;
-   
+
     public State IdleState;
     public State AttackState;
     public State JumpState;
@@ -13,35 +13,81 @@ public class WereWolf : MonoBehaviour
     public State IntroState;
 
     public Animator animator;
+    public Rigidbody2D rb;
 
     public Transform[] stages;
     public float xThreshold = 0f;
-    private Transform treeTransform;
-    // Start is called before the first frame update
-    void Start()
+
+    private Transform closestTarget;
+    public bool moveToAttack = false;
+
+    void Awake()
     {
         INSTANCE = this;
-        // Find the Tree GameObject and get its transform
-        GameObject tree = GameObject.FindGameObjectWithTag("Tree");
-        if (tree != null)
+        FindClosestWATarget();
+    }
+
+    void Update()
+    {
+        if (moveToAttack)
         {
-            treeTransform = tree.transform;
-        }
-        else
-        {
-            Debug.LogError("No GameObject with tag 'Tree' found in the scene.");
+            FindClosestWATarget();
+            if (closestTarget != null)
+            {
+                // Add your logic here to transition to the AttackState
+                // when the werewolf is closest to one of the "WA" targets
+                // Example: TransitionToAttackState();
+            }
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FindClosestWATarget()
     {
-        
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("WA");
+        float closestDistance = float.MaxValue;
+        closestTarget = null;
+
+        foreach (GameObject target in targets)
+        {
+            float distance = Vector2.Distance(transform.position, target.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestTarget = target.transform;
+            }
+        }
+
+        if (closestTarget == null)
+        {
+            Debug.LogError("No GameObject with tag 'WA' found in the scene.");
+        }
     }
-    private void FlipBasedOnTreePosition()
+
+    public void FlipBasedOnTreePosition()
     {
+        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
+        if (tree != null)
+        {
+            Transform target = tree.transform;
+            // Determine if the GameObject should face left or right based on the Tree's position
+            bool shouldFaceLeft = transform.position.x < target.position.x;
+
+            // Flip the sprite by adjusting the local scale
+            if (shouldFaceLeft && transform.localScale.x > 0 || !shouldFaceLeft && transform.localScale.x < 0)
+            {
+                Flip();
+            }
+        }
+    }
+
+    public void FlipBasedOnTreePosition(bool jump, Transform targetToJump)
+    {
+        if (jump)
+        {
+            closestTarget = targetToJump;
+        }
         // Determine if the GameObject should face left or right based on the Tree's position
-        bool shouldFaceLeft = transform.position.x < treeTransform.position.x;
+        bool shouldFaceLeft = transform.position.x < closestTarget.position.x;
 
         // Flip the sprite by adjusting the local scale
         if (shouldFaceLeft && transform.localScale.x > 0 || !shouldFaceLeft && transform.localScale.x < 0)
@@ -56,6 +102,7 @@ public class WereWolf : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
     public float GetAnimationClipDuration(string clipName)
     {
         if (animator.runtimeAnimatorController != null)
@@ -72,6 +119,7 @@ public class WereWolf : MonoBehaviour
         Debug.LogError($"Animation clip '{clipName}' not found");
         return 0f;
     }
+
     public void ResetAllAnimatorBools()
     {
         if (animator == null) return;
@@ -86,4 +134,12 @@ public class WereWolf : MonoBehaviour
             }
         }
     }
+
+    public void ResetRigidbodyProperties()
+    {
+        rb.velocity = Vector2.zero; // Reset velocity
+        rb.gravityScale = 1; // Reset gravity scale to default
+    }
+
+    // Add any additional methods or logic here...
 }

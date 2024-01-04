@@ -52,10 +52,10 @@ public class GameValueManager : MonoBehaviour
         currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;
-        if (postProcessingVolume.profile.TryGet<Bloom>(out bloomEffect))
-        {
-            // Bloom effect is accessible now
-        }
+        //if (postProcessingVolume.profile.TryGet<Bloom>(out bloomEffect))
+        //{
+        //    // Bloom effect is accessible now
+        //}
     }
     public void SetBloomIntensity(float intensity)
     {

@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class WereWolfAttackState : State
 {
+    public bool isAttacking = false;
+    public bool idle = false;
+
     public override State RunCurrentState()
     {
-        throw new System.NotImplementedException();
+        if (idle)
+        {
+            // Reset the flags and transition to IdleState
+            isAttacking = false;
+            idle = false;
+            return WereWolf.INSTANCE.IdleState;
+        }
+
+        if (!isAttacking)
+        {
+            // Start the attack coroutine and stay in this state
+            isAttacking = true;
+            StartCoroutine(Attack());
+        }
+
+        // Stay in the current state until the attack is finished
+        return this;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator Attack()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("WA");
+        WereWolf.INSTANCE.animator.SetTrigger("Attack");
+        yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("werewolf_attack"));
+        FindObjectOfType<TreeScript>().GetComponent<Health>().TakeDamage(1);
+        idle = true;
     }
 }
