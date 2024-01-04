@@ -5,7 +5,7 @@ using UnityEngine;
 public class projectile : MonoBehaviour
 {
     float timer;
-    float cooldown = 0.6f;
+    float cooldown = 1f;
     public int damage;
     private void Update()
     {
