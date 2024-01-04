@@ -281,10 +281,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalSeed (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 4616923804004175108, guid: d5b9872204ca3c743b78896312e36316, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4782885049388136214, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6883,10 +6879,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CrystalSeed (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4616923804004175108, guid: d5b9872204ca3c743b78896312e36316, type: 3}
-      propertyPath: type
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4782885049388136214, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -8654,10 +8646,6 @@ PrefabInstance:
     - target: {fileID: 4049659202500774634, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_Name
       value: CrystalSeed (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616923804004175108, guid: d5b9872204ca3c743b78896312e36316, type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4782885049388136214, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_IsActive
@@ -41371,10 +41359,6 @@ PrefabInstance:
     - target: {fileID: 4049659202500774634, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_Name
       value: CrystalSeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616923804004175108, guid: d5b9872204ca3c743b78896312e36316, type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4782885049388136214, guid: d5b9872204ca3c743b78896312e36316, type: 3}
       propertyPath: m_IsActive
