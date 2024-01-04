@@ -8,17 +8,10 @@ public class TreeState1 : State
 
     //Intro
     public blackOut blackOut;
-    public cameraFollow cameraFoll;
-    
-    public Transform cameraPoint2Target;
-    public Transform triggerPoint;
+    public cameraFollow cameraFoll;  
     
     public bool startOnce1;
-    public bool startOnce2;
-    public bool startMovingCamera;
-    public bool gnomeWentHome;
-    public bool startScene;
-    public float cameraMoveSpeed;
+    public bool startOnce2;      
 
     public bool cameraZoomOut;
     public float cameraZoomScale;

@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class InteractableTree : InteractableObject
 {
-    public bool firstTime;
-    public DistanceChecker distanceChecker;
+    public bool firstTime;    
     public override void Interact()
     {
         //if (GuideTimer.INSTANCE.canStartGuide)
@@ -18,12 +17,7 @@ public class InteractableTree : InteractableObject
             PopUpText.INSTANCE.PopUpMessage("The Trees Health Return", Color.blue, 2);
             GameValueManager.INSTANCE.addingWater = true;
             StartCoroutine(StopCrawling());
-
-            if (!firstTime)
-            {
-                distanceChecker.active = true;
-                firstTime = true;
-            }
+            
         }
         if (GameValueManager.INSTANCE.nextLevelAvailable && SceneManager.GetActiveScene().name != "Stage5")
         {

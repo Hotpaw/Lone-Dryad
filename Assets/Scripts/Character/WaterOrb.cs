@@ -10,10 +10,13 @@ public class WaterOrb : MonoBehaviour
     public float playerfollowraidus;
     public Vector3 followPosition;
 
-    ParticleSystem PS;
+    //ParticleSystem PS;
     public float wateringCountDown = 10;
+    SpriteRenderer SpriteRenderer;
+    public float scaleScaler;
 
-    public Vector3 WateringTreePosition;
+
+    public Transform wateringTreePosition;
     public float WateringYOffset;
     public bool once;
 
@@ -26,8 +29,10 @@ public class WaterOrb : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {        
-        PS = this.GetComponentInChildren<ParticleSystem>();
-        WateringTreePosition = new Vector2(tree.transform.position.x, tree.transform.position.y + WateringYOffset);        
+        //PS = this.GetComponentInChildren<ParticleSystem>();
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+        
+        SpriteRenderer.enabled = false;
     }
 
     // Update is called once per frame
@@ -48,30 +53,42 @@ public class WaterOrb : MonoBehaviour
         }
         if (GameValueManager.INSTANCE.gotWater)
         {
+            if (transform.localScale.x < 1 && !GameValueManager.INSTANCE.addingWater) 
+            {
+                scaleScaler += 0.5f * Time.deltaTime;
+                transform.localScale = new Vector2(scaleScaler, scaleScaler); 
+            }
             if (!once)
             {
                 transform.position = new Vector3(-25,-16);
                 once = true;
             }
-            var subEmitters = PS.subEmitters;
-            subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
-            var emission = PS.emission;
-            emission.rateOverTime = 100;            
+            SpriteRenderer.enabled = true;
+            //var subEmitters = PS.subEmitters;
+            //subEmitters.SetSubEmitterEmitProbability(0, 0.02f);
+            //var emission = PS.emission;
+            //emission.rateOverTime = 100;            
             if (GameValueManager.INSTANCE.addingWater)
             {
-                transform.position = Vector3.MoveTowards(transform.position, WateringTreePosition, 0.1f);
-                if (transform.position == WateringTreePosition)
+                transform.position = Vector3.MoveTowards(transform.position, wateringTreePosition.position, 0.1f);
+                if (transform.position == wateringTreePosition.position)
                 {
-                    
-                    subEmitters.SetSubEmitterEmitProbability(0, 1f);
+                    if (transform.localScale.x > 0)
+                    {
+                        scaleScaler -= 0.4f * Time.deltaTime;
+                        transform.localScale = new Vector2(scaleScaler, scaleScaler);
+                        this.GetComponent<Animator>().SetBool("Watering", true);
+                    }
+                    //subEmitters.SetSubEmitterEmitProbability(0, 1f);
                     wateringCountDown -= (2 *Time.deltaTime);                    
 
-                    if(wateringCountDown >= 0 && wateringCountDown < 9.9f)
-                    {                         
-                        emission.rateOverTime = 10 * wateringCountDown;
-                    }
+                    //if(wateringCountDown >= 0 && wateringCountDown < 9.9f)
+                    //{                         
+                    //    emission.rateOverTime = 10 * wateringCountDown;
+                    //}
                     if (wateringCountDown < 7 && !heal1)
                     {
+                        
                         tree.gameObject.GetComponent<Health>().Heal(1);
                         heal1 = true;
                     }
@@ -92,7 +109,8 @@ public class WaterOrb : MonoBehaviour
                     }
                     if (wateringCountDown < 0)
                     {
-                        subEmitters.SetSubEmitterEmitProbability(0, 0f);                        
+                        SpriteRenderer.enabled = false;
+                        this.GetComponent<Animator>().SetBool("Watering", false);
                     }                
                     if (wateringCountDown < -4)
                     {
@@ -103,12 +121,7 @@ public class WaterOrb : MonoBehaviour
                     }    
                 }
             }
-        }
-        else
-        {
-            var emission = PS.emission;
-            emission.rateOverTime = 0;
-        }
+        }        
     }
     private void OnDrawGizmos()
     {
