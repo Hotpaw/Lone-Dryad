@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class WereWolf : MonoBehaviour
@@ -16,21 +17,24 @@ public class WereWolf : MonoBehaviour
 
     public Transform[] stages;
     public float xThreshold = 0f;
-    private Transform treeTransform;
+    private Transform target;
+    public bool moveToAttack = false;
+    public Rigidbody2D rb;
     // Start is called before the first frame update
     void Awake()
     {
         INSTANCE = this;
         // Find the Tree GameObject and get its transform
-        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
-        if (tree != null)
+        GameObject currentTarget = GameObject.FindGameObjectWithTag("Wtarget");
+        if (currentTarget != null)
         {
-            treeTransform = tree.transform;
+            target = currentTarget.transform;
         }
         else
         {
             Debug.LogError("No GameObject with tag 'Tree' found in the scene.");
         }
+   
     }
 
     // Update is called once per frame
@@ -40,8 +44,25 @@ public class WereWolf : MonoBehaviour
     }
     public void FlipBasedOnTreePosition()
     {
+        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
+        target = tree.transform;
         // Determine if the GameObject should face left or right based on the Tree's position
-        bool shouldFaceLeft = transform.position.x < treeTransform.position.x;
+        bool shouldFaceLeft = transform.position.x < target.position.x;
+
+        // Flip the sprite by adjusting the local scale
+        if (shouldFaceLeft && transform.localScale.x > 0 || !shouldFaceLeft && transform.localScale.x < 0)
+        {
+            Flip();
+        }
+    }
+    public void FlipBasedOnTreePosition(bool jump, Transform targetToJump)
+    {
+        if(jump)
+        {
+            target = targetToJump;
+        }
+        // Determine if the GameObject should face left or right based on the Tree's position
+        bool shouldFaceLeft = transform.position.x < target.position.x;
 
         // Flip the sprite by adjusting the local scale
         if (shouldFaceLeft && transform.localScale.x > 0 || !shouldFaceLeft && transform.localScale.x < 0)
@@ -86,8 +107,10 @@ public class WereWolf : MonoBehaviour
             }
         }
     }
-    public void WereWolfattack()
+    public void ResetRigidbodyProperties()
     {
-        StateManager.INSTANCE.ChangeState("ATTACKTOIDLE");
+        rb.velocity = Vector2.zero; // Reset velocity
+        rb.gravityScale = 1; // Reset gravity scale to default
+       
     }
 }

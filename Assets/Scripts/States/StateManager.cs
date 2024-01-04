@@ -31,13 +31,5 @@ public class StateManager : MonoBehaviour
     {
         currentState = nextState;
     }
-    public void ChangeState(string state)
-    {
-        switch (state)
-        {
-            case "ATTACKTOIDLE": currentState = WereWolf.INSTANCE.IdleState;
-                FindObjectOfType<TreeScript>().gameObject.GetComponent<Health>().TakeDamage(1);
-                break;
-        }
-    }
+   
 }
