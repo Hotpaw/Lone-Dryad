@@ -41,7 +41,7 @@ public class Menu : MonoBehaviour
     }
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits2");
     }
     public void BackToGame()  //tillbaka till spelet knapp efter man gått in på settings
     {
