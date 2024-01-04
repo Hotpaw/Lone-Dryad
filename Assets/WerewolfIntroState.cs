@@ -13,6 +13,8 @@ public class WerewolfIntroState : State
     public float closeEnoughDistance = 1.0f;
    public  bool hasTriggeredWithTarget = false; // New variable to track collision
 
+    [Header("wereWolfGrowling")]
+    public GameObject growling;
     void Start()
     {
         FindClosestTarget();
@@ -69,6 +71,8 @@ public class WerewolfIntroState : State
     }
     public override State RunCurrentState()
     {
+        growling.SetActive(true);
+        Debug.Log(growling.gameObject.activeInHierarchy);
         WereWolf.INSTANCE.moveToAttack = false;
         if (!introSet)
         {

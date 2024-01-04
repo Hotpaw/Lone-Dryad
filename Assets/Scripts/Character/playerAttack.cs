@@ -189,7 +189,7 @@ public class playerAttack : MonoBehaviour
     private void ThrowingSound()
     {
         throwingSound.SetActive(true);
-        Debug.Log(throwingSound.gameObject.activeInHierarchy);
+        //Debug.Log(throwingSound.gameObject.activeInHierarchy);
     }
     private void StopThrowingSound()
     {

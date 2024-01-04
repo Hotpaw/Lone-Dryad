@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class WerewolfDieState : State
 {
+    public GameObject stopGrowling;
+
     bool used = true;
     public override State RunCurrentState()
     {
@@ -14,6 +16,7 @@ public class WerewolfDieState : State
             used = false;
             GameValueManager.INSTANCE.nextLevelAvailable = true;
             PopUpText.INSTANCE.PopUpMessage("Finally, i am safe. Now i can rest...",Color.black);
+            stopGrowling.SetActive(false);
             StartCoroutine(endScene());
             return this;
 
