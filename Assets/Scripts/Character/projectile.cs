@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class projectile : MonoBehaviour
 {
+   
+
     float timer;
     float cooldown = 0.6f;
     public int damage;
@@ -14,6 +16,7 @@ public class projectile : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
+           
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
