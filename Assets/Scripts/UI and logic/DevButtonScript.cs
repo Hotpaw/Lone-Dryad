@@ -17,15 +17,26 @@ public class DevButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
-      if(GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>() != null)
-        {
+     
+  
+        GameObject treeObject = GameObject.FindGameObjectWithTag("Tree");
 
-        health = GameObject.FindGameObjectWithTag("Tree").GetComponent<Health>();
+        if (treeObject != null)
+        {
+            Health healthComponent = treeObject.GetComponent<Health>();
+            if (healthComponent != null)
+            {
+
+                health = healthComponent;
+            }
+            else
+            {
+                Debug.LogError("Health Component is missing on the Tree GameObject");
+            }
         }
         else
         {
-            Debug.LogError("Tree Reference Is missing");
+            Debug.LogWarning("Tree GameObject is missing in the scene");
         }
     }
 

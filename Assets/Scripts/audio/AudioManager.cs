@@ -96,7 +96,10 @@ public class AudioManager : MonoBehaviour
             case "BATSCREECHandFLY":
                 SFX.clip = SFXClips[2]; //bat
                 break;
-           
+            case "PLUCKEVILPLANT":
+                SFX.clip = SFXClips[3]; //evil plant
+                break;
+
         }
         SFX.Play();
        

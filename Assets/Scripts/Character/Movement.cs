@@ -102,17 +102,17 @@ public class Movement : MonoBehaviour
         maxSpeed = isSprinting ? 12f : 5f;
         if (rb.velocity.x > 0.1 || rb.velocity.x < -0.1 && isGrounded)
         {
-            Debug.Log("STEP");
-            Debug.Log(steps.name);
+            
+            //Debug.Log(steps.name);
             steps.SetActive(true);
-            Debug.Log(steps.gameObject.activeInHierarchy);
+            //Debug.Log(steps.gameObject.activeInHierarchy);
         }
         else
             steps.SetActive(false);
         if (maxSpeed > 5) 
         {
           steps.SetActive(false);
-            Debug.Log("SLUTA SPRINGA");
+            
         }
 
         if (!isDashing && !dead)

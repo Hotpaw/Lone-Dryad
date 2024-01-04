@@ -9785,6 +9785,7 @@ MonoBehaviour:
   tree: {fileID: 0}
   treeHealth: {fileID: 0}
   energystealer: {fileID: 3231604390852698379}
+  plantSound: {fileID: 2344194445179898947, guid: af4c0b08f20bdaf43a582239d908c5c1, type: 3}
 --- !u!199 &4488850364767694534
 ParticleSystemRenderer:
   serializedVersion: 6
