@@ -30,6 +30,8 @@ public class TreeState3 : State
     public GameObject playerPosition;
     public GameObject trigger2Position;
     public GameObject gardenGnome1;
+    public GameObject swarmFront;
+    public GameObject swarmBack;
     public GardenGnome2 gardenGnome2;   
     public cameraFollow cameraFoll;    
     
@@ -100,6 +102,9 @@ public class TreeState3 : State
                 {
                     gnomeWentHome = true;
                     gardenGnome1.GetComponent<Animator>().SetBool("GoingIn", true);
+                    GameValueManager.INSTANCE.stormStrenght += 2;
+                    swarmFront.GetComponent<Storm>().SetStormIntensity();
+                    swarmBack.GetComponent<Storm>().SetStormIntensity();
                 }
                 if (!startScene && Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 1f)  
                 {
