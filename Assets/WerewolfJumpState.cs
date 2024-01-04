@@ -10,6 +10,8 @@ public class WerewolfJumpState : State
     public Collider2D collider;
     bool jumped = false;
     Animator animator;
+    public int jumpToAttack = 5;
+    int jumps;
     public float arrivalDistance = 0.5f; // Adjust this threshold as needed
 
     public override State RunCurrentState()
@@ -26,9 +28,18 @@ public class WerewolfJumpState : State
         }
 
         // Check if the werewolf is close to the target position
-        if (Vector3.Distance(transform.position, target.position) <= arrivalDistance)
+        if (Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps != jumpToAttack)
         {
 
+            collider.enabled = true; // Re-enable collider
+            rb.velocity = Vector2.zero; // Stop the werewolf
+            rb.gravityScale = 10; // Reset gravity to normal
+            jumped = false;
+            return WereWolf.INSTANCE.IdleState;
+        }
+        else if (Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps == jumpToAttack)
+        {
+            WereWolf.INSTANCE.moveToAttack = true;
             collider.enabled = true; // Re-enable collider
             rb.velocity = Vector2.zero; // Stop the werewolf
             rb.gravityScale = 10; // Reset gravity to normal
@@ -61,15 +72,16 @@ public class WerewolfJumpState : State
     }
     IEnumerator JumpLogic()
     {
-        
+
         if (target != null)
         {
+            WereWolf.INSTANCE.FlipBasedOnTreePosition(true, target);
             animator.SetTrigger("Jump");
             Debug.Log(WereWolf.INSTANCE.GetAnimationClipDuration("werewolf jump"));
             yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("werewolf jump"));
             collider.enabled = false; // Disable collider during jump
             rb.gravityScale = 0; // Optional: Neutralize gravity during jump
-
+            jumps++;
             Vector3 toTarget = target.position - transform.position;
             Vector3 toTargetXZ = new Vector3(toTarget.x, 0, toTarget.z);
 

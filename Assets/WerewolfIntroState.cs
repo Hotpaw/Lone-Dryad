@@ -4,70 +4,88 @@ using UnityEngine;
 
 public class WerewolfIntroState : State
 {
-
-    public float speed = 5f; // Speed of movement
+    public float speed = 5f; // Speed of horizontal movement
+    public float forceMultiplier = 1; // Adjust the force applied for movement
 
     public Rigidbody2D rb;
     private Transform target;
     bool introSet = false;
     public float closeEnoughDistance = 1.0f;
+    private bool hasTriggeredWithTarget = false; // New variable to track collision
+
     void Start()
     {
+        FindClosestTarget();
+        WereWolf.INSTANCE.moveToAttack = false;
+    }
 
-        if (!introSet)
+    private void FindClosestTarget()
+    {
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Wtarget");
+        float closestDistance = float.MaxValue;
+        target = null;
+
+        foreach (GameObject potentialTarget in targets)
         {
-           
-            introSet = true;
-            WereWolf.INSTANCE.animator.SetTrigger("Walk");
-            WereWolf.INSTANCE.FlipBasedOnTreePosition();
+            float distance = Vector2.Distance(rb.position, potentialTarget.transform.position);
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                target = potentialTarget.transform;
+            }
         }
-        // Find the Tree GameObject and get its transform
-        GameObject tree = GameObject.FindGameObjectWithTag("Wtarget");
-        if (tree != null)
+
+        if (target == null)
         {
-            target = tree.transform;
-        }
-        else
-        {
-            Debug.LogError("No GameObject with tag 'Tree' found in the scene.");
+            Debug.LogError("No GameObject with tag 'Wtarget' found in the scene.");
         }
     }
 
-    void FixedUpdate()
+    private void MoveTowardsTargetAffectedByGravity()
     {
-      
+        if (target != null)
+        {
+            float directionX = target.position.x - rb.position.x;
+            directionX = Mathf.Sign(directionX);
+
+            Vector2 force = new Vector2(directionX * speed * forceMultiplier, rb.velocity.y);
+            rb.velocity = force;
+        }
     }
 
-    private void MoveTowardsTarget()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Vector2 targetPosition = new Vector2(target.position.x, rb.position.y);
-        Vector2 newPosition = Vector2.MoveTowards(rb.position, targetPosition, speed * Time.fixedDeltaTime);
-
-        // Apply the movement
-        rb.MovePosition(newPosition);
+        if (other.transform == target)
+        {
+            hasTriggeredWithTarget = true;
+        }
     }
 
     public override State RunCurrentState()
     {
-        if (target != null)
+        WereWolf.INSTANCE.moveToAttack = false;
+        if (!introSet)
         {
-            MoveTowardsTarget();
+            introSet = true;
+            WereWolf.INSTANCE.animator.SetTrigger("Walk");
+            WereWolf.INSTANCE.FlipBasedOnTreePosition();
         }
+
         if (target != null)
         {
+            MoveTowardsTargetAffectedByGravity();
+
             float distanceToTarget = Vector2.Distance(rb.position, target.position);
 
-            if (distanceToTarget <= closeEnoughDistance)
+            if (distanceToTarget <= closeEnoughDistance || hasTriggeredWithTarget)
             {
+                introSet = false;
+                WereWolf.INSTANCE.ResetRigidbodyProperties();
+                hasTriggeredWithTarget = false; // Reset the flag
                 return WereWolf.INSTANCE.AttackState;
             }
-            else { return this; }
         }
-        else
-        {
-              return this;
-        }
-      
+
+        return this;
     }
 }
-
