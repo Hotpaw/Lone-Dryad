@@ -11,24 +11,34 @@ public class WerewolfJumpState : State
     bool jumped = false;
     Animator animator;
     public float arrivalDistance = 0.5f; // Adjust this threshold as needed
-
+    public int jumpsUntilattack = 5;
+    int jumps = 0;
     public override State RunCurrentState()
     {
+       
         animator = WereWolf.INSTANCE.animator;
         if (!jumped)
         {
-
             SelectNewTarget();
-
 
             Jump();
             jumped = true;
         }
 
         // Check if the werewolf is close to the target position
-        if (Vector3.Distance(transform.position, target.position) <= arrivalDistance)
+        if (Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps != jumpsUntilattack)
         {
-
+           
+            collider.enabled = true; // Re-enable collider
+            rb.velocity = Vector2.zero; // Stop the werewolf
+            rb.gravityScale = 10; // Reset gravity to normal
+            jumped = false;
+            return WereWolf.INSTANCE.IdleState;
+        }
+        else if ((Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps == jumpsUntilattack))
+        {
+            jumps = 0;
+            WereWolf.INSTANCE.moveToAttack = true;
             collider.enabled = true; // Re-enable collider
             rb.velocity = Vector2.zero; // Stop the werewolf
             rb.gravityScale = 10; // Reset gravity to normal
@@ -61,10 +71,14 @@ public class WerewolfJumpState : State
     }
     IEnumerator JumpLogic()
     {
-        
+
         if (target != null)
         {
+            rb.velocity = Vector2.zero;
+           
+            jumps++;
             animator.SetTrigger("Jump");
+            WereWolf.INSTANCE.FlipBasedOnTreePosition(true, target);
             Debug.Log(WereWolf.INSTANCE.GetAnimationClipDuration("werewolf jump"));
             yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("werewolf jump"));
             collider.enabled = false; // Disable collider during jump

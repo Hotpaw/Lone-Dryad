@@ -13,6 +13,10 @@ public class WerewolfIdleState : State
     {
         animator = WereWolf.INSTANCE.animator;
         timer += Time.deltaTime;
+        if (WereWolf.INSTANCE.moveToAttack)
+        {
+            return WereWolf.INSTANCE.IntroState;
+        }
         if (!idleSet)
         {
             WereWolf.INSTANCE.FlipBasedOnTreePosition();
