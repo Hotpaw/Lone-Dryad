@@ -43,7 +43,7 @@ public class WereWolf : MonoBehaviour
 
     public void FindClosestWATarget()
     {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("WA");
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Wtarget");
         float closestDistance = float.MaxValue;
         closestTarget = null;
 
