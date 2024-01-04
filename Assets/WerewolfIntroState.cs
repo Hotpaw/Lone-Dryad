@@ -13,9 +13,9 @@ public class WerewolfIntroState : State
     bool introSet = false;
     public float closeEnoughDistance = 1.0f;
     public bool attack = false;
-    private bool collidedWithTarget = false; // New variable to track collision
+    public bool collidedWithTarget = false; // New variable to track collision
 
-    void Awake()
+    void Start()
     {
         FindClosestTarget();
         WereWolf.INSTANCE.moveToAttack = false;
@@ -57,9 +57,16 @@ public class WerewolfIntroState : State
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("WA"))
+        if (other.CompareTag("Wtarget"))
         {
             collidedWithTarget = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Wtarget"))
+        {
+            collidedWithTarget = false;
         }
     }
 
@@ -86,6 +93,7 @@ public class WerewolfIntroState : State
                 introSet = false;
                 WereWolf.INSTANCE.ResetRigidbodyProperties();
                 attack = false;
+
                 collidedWithTarget = false; // Reset the collision flag
                 return WereWolf.INSTANCE.AttackState;
             }
