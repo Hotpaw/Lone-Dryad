@@ -59,7 +59,7 @@ public class TreeState1 : State
     }
     public IEnumerator YieldZoomOut()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1.5f);
         startOnce1 = true;
     }
     public IEnumerator Yieldblackout()
