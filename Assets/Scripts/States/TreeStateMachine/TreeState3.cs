@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class TreeState3 : State
@@ -13,12 +14,12 @@ public class TreeState3 : State
     public bool once;
 
     //Intro
-    public InteractWith interactWithTree;
-    public InteractWith interactWithWater;
+    public GameObject[] revealParticles; 
     public GameObject swarm1;
     public GameObject cameraPoint2;
     public Transform cameraPoint2Target;
     public Transform triggerPoint;
+    public bool getAllParticles;
     public bool startOnce;
     public bool startMovingCamera;
     public bool gnomeWentHome;
@@ -55,6 +56,8 @@ public class TreeState3 : State
     public bool once4;
     public bool isBuildingCrystal;
     public bool cameraZoomOut;
+    public float buildTimer;
+    public float crystalLightIntensity;
     public float cameraZoomScale;
     public GameObject cavefull;
     public GameObject background;
@@ -62,19 +65,31 @@ public class TreeState3 : State
     public GameObject shieldCrystal;
     public GameObject shieldCrystalLight;
     public GameObject gardenGnome3;
-
+    
     public void Start()
     {        
         INSTANCE = this;
-        cameraZoomScale = cameraFoll.cameraDistance;
+        cameraZoomScale = cameraFoll.cameraDistance; 
     }
     private void Update()
     {
         distance = Vector2.Distance(cameraPoint2.transform.position, triggerPoint.position);
         if (!startScene)
         {
-            interactWithTree.enabled = false;
-            interactWithWater.enabled = false;
+            if (!getAllParticles)
+            {
+                revealParticles = GameObject.FindGameObjectsWithTag("RevealParticle");
+                getAllParticles = true;
+            }
+            else
+            {
+                for (int i = 0; i < revealParticles.Length; i++)
+                {
+                    var emission = revealParticles[i].GetComponent<ParticleSystem>().emission;
+                    emission.rateOverTime = 0;
+                }
+            }
+
             cameraPoint2Target.position = triggerPoint.position;
             cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint2").transform;
             StartCoroutine(YieldCameraStart());
@@ -86,17 +101,23 @@ public class TreeState3 : State
                     gnomeWentHome = true;
                     gardenGnome1.GetComponent<Animator>().SetBool("GoingIn", true);
                 }
-                if (Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 1f)  
+                if (!startScene && Vector2.Distance(cameraPoint2.transform.position, cameraPoint2Target.position) < 1f)  
                 {
                     if (!startOnce)
                     {                        
                         StartCoroutine(YieldStart());
                         cameraPoint2Target.position = playerPosition.transform.position;
                         cameraMoveSpeed = 10;
+
                     }
                     if (startOnce)
                     {
                         StartCoroutine(YieldStart());
+                        for (int i = 0; i < revealParticles.Length; i++)
+                        {
+                            var emission = revealParticles[i].GetComponent<ParticleSystem>().emission;
+                            emission.rateOverTime = 10;
+                        }
                     }
                 }
             }
@@ -165,13 +186,22 @@ public class TreeState3 : State
             gardenGnome3.gameObject.SetActive(false);            
         }
         if (isBuildingCrystal)
-        {            
-            if (shieldCrystal.GetComponent<BuildingCrystal>().buildTimer > 8f)
+        {
+            buildTimer += Time.deltaTime;
+            shieldCrystalLight.gameObject.SetActive(true);
+            shieldCrystalLight.GetComponent<Light2D>().intensity = crystalLightIntensity;
+            if (buildTimer % 1 == 0) 
             {
-                shieldCrystalLight.gameObject.SetActive(true);
+                crystalLightIntensity += 0.4f;
+            }
+            if (buildTimer > 6f)
+            {
                 isBuildingCrystal = false;
-                interactWithTree.enabled = false;
-                interactWithWater.enabled = false;
+                for (int i = 0; i < revealParticles.Length; i++)
+                {
+                    var emission = revealParticles[i].GetComponent<ParticleSystem>().emission;
+                    emission.rateOverTime = 0;
+                }
             }
         }
         if (cameraZoomOut && cameraZoomScale < 24.9f)
@@ -202,9 +232,7 @@ public class TreeState3 : State
             startScene = true;
             Destroy(gardenGnome1);
             Destroy(swarm1);
-            GameValueManager.INSTANCE.stormStrenght += 1;
-            interactWithTree.enabled = true;
-            interactWithWater.enabled = true;
+            GameValueManager.INSTANCE.stormStrenght += 1;            
         }
     }
     public IEnumerator YieldTrigger()
@@ -223,7 +251,9 @@ public class TreeState3 : State
     }
     public IEnumerator YieldNextStage()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(5); 
+        blackOut.startBlackOut = true;
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(GameValueManager.INSTANCE.currentsceneBuildIndex + 1);        
     }
     public override State RunCurrentState()
