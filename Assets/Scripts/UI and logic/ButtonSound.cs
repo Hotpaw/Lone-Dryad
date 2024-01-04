@@ -8,7 +8,8 @@ public class ButtonSound : MonoBehaviour
 {
 
     public AudioSource soundEffect;
-    public AudioClip audioClip;
+    public AudioClip playEffect, settingsEffect, creditEffect, quitEffect; 
+
     
     // Start is called before the first frame update
     void Start()
@@ -22,9 +23,34 @@ public class ButtonSound : MonoBehaviour
         
     }
 
-    public void PlaySoundEffect()
+    public void PlayButton()
     {
+
+        soundEffect.clip = playEffect;
         soundEffect.Play();
         
     }
+    public void SettingsButton()
+    {
+
+        soundEffect.clip = settingsEffect;
+        soundEffect.Play();
+        Debug.Log(soundEffect.clip);
+
+    }
+    public void CreditButton()
+    {
+
+        soundEffect.clip = creditEffect;
+        soundEffect.Play();
+    }
+
+    public void QuitButton()
+    {
+
+        soundEffect.clip = quitEffect;
+        soundEffect.Play();
+
+    }
+
 }
