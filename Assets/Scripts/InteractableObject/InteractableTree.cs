@@ -14,7 +14,7 @@ public class InteractableTree : InteractableObject
         //}
         if (GameValueManager.INSTANCE.gotWater)
         {
-            PopUpText.INSTANCE.PopUpMessage("The Trees Health Return", Color.blue, 2);
+            PopUpText.INSTANCE.PopUpMessage("The tree is feeling better", Color.blue, 2);
             GameValueManager.INSTANCE.addingWater = true;
             StartCoroutine(StopCrawling());
             

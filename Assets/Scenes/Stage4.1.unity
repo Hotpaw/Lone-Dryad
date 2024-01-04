@@ -2574,7 +2574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904115593710347000, guid: 02dfefd30315f8d43ac9af4946853c29, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 6904115593710347000, guid: 02dfefd30315f8d43ac9af4946853c29, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar
@@ -3525,7 +3525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6904115593710347000, guid: 02dfefd30315f8d43ac9af4946853c29, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 6904115593710347000, guid: 02dfefd30315f8d43ac9af4946853c29, type: 3}
       propertyPath: InitialModule.gravityModifier.scalar

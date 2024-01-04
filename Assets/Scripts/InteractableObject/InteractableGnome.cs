@@ -28,7 +28,7 @@ public class InteractableGnome : InteractableObject
         else if (GameValueManager.INSTANCE.numberOfCrystallPieces >= 7)
         {
             animator.SetBool("Talking", true);
-            PopUpText.INSTANCE.PopUpMessage("I will now repair the crystal for you!", Color.red, 5, PopUpText.Icon.Gnome);
+            PopUpText.INSTANCE.PopUpMessage("Now I shall repair the crystal for you", Color.red, 3, PopUpText.Icon.Gnome);
             GameValueManager.INSTANCE.theShieldIsActive = true;
             GameValueManager.INSTANCE.stormStrenght += 2;
             GameValueManager.INSTANCE.nextLevelAvailable = true;
