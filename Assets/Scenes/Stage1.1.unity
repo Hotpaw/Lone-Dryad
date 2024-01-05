@@ -12202,7 +12202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &1354366183678293362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18099,6 +18099,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackOut: {fileID: 1432090234}
   cameraFoll: {fileID: 1061563783}
+  interactableTree: {fileID: 1320995024140203515}
   startOnce1: 0
   startOnce2: 0
   cameraZoomOut: 0
