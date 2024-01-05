@@ -17,6 +17,7 @@ public class WerewolfSummonstate : State
         }
         if (!done)
         {
+            howling.SetActive(true); //howling
             done = true;
             StartCoroutine(summonbats());
         }
@@ -34,7 +35,6 @@ public class WerewolfSummonstate : State
     IEnumerator summonbats()
     {
        
-        howling.SetActive(true); //howling
         WereWolf.INSTANCE.animator.SetTrigger("Howl");
         
         if (howling.activeSelf)
