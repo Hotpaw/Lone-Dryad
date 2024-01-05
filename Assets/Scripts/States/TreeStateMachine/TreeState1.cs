@@ -8,7 +8,8 @@ public class TreeState1 : State
 
     //Intro
     public blackOut blackOut;
-    public cameraFollow cameraFoll;  
+    public cameraFollow cameraFoll;
+    public GameObject interactableTree;
     
     public bool startOnce1;
     public bool startOnce2;      
@@ -37,6 +38,13 @@ public class TreeState1 : State
     }
     private void Update()
     {
+        if (GameValueManager.INSTANCE.gotWater || GameValueManager.INSTANCE.nextLevelAvailable)
+        {
+            interactableTree.SetActive(true);
+        }
+        else
+            interactableTree.SetActive(false);
+
         if (!startOnce1) 
         {
             StartCoroutine(YieldZoomOut());            
@@ -71,7 +79,7 @@ public class TreeState1 : State
             if (!once && seedTimer > spawnSeedAt)
             {
                 once = true;
-                EnemySpawner.INSTANCE.SpawnEnemy();
+                //EnemySpawner.INSTANCE.SpawnEnemy();
 
                 //spawnSeedAt = Random.Range(5, 25);
             }

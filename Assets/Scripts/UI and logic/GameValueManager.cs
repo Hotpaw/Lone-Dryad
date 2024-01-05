@@ -73,7 +73,7 @@ public class GameValueManager : MonoBehaviour
         if (progressScore >= nextStageScore)
         {
             nextLevelAvailable = true;
-            PopUpText.INSTANCE.PopUpMessage("I feel well, my tree is flourashing. I don't need to take care of it for a while now", Color.green, 5);            
+            PopUpText.INSTANCE.PopUpMessage("I feel well, my tree is flourashing. I can rest by my tree for a while now", Color.green, 5);            
         }
     }    
 }
