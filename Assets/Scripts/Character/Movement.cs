@@ -64,7 +64,8 @@ public class Movement : MonoBehaviour
     [Header("Regular Footsteps")]
     public GameObject[] footStep;
     public GameObject steps;
-
+    [Header("JumpSound")]
+    public GameObject jump;
     private void Start()
     {
         steps = footStep[0];
@@ -109,9 +110,11 @@ public class Movement : MonoBehaviour
         }
         else
             steps.SetActive(false);
+      
         if (maxSpeed > 5) 
         {
-          steps.SetActive(false);
+          
+           steps.SetActive(false);
             
         }
 
@@ -128,7 +131,8 @@ public class Movement : MonoBehaviour
             Flip();
 
             if (rb.velocity.y < 0 || !jumpCallBeingPressed)
-                rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime;
+                rb.velocity -= vecGravity * fallMultiplier * Time.deltaTime; 
+
 
             if (Mathf.Abs(rb.velocity.y) < 0.5f)
                 rb.gravityScale = gravityscale / 4;
@@ -143,10 +147,13 @@ public class Movement : MonoBehaviour
                     doubleJump = false;
                 animator.SetBool("Jump", true);
 
+
+                
             }
             else
             {
                 animator.SetBool("Jump", false);
+               
             }
 
 
@@ -310,12 +317,20 @@ public class Movement : MonoBehaviour
         {
             jumpCallBeingPressed = context.action.IsPressed();
 
+               
+
             if (context.action.WasPressedThisFrame())
             {
                 timeSinceJumpPressed = 0;
             }
-
+           
+            if (!isGrounded)
+                jump.SetActive(true);
+            else if (isGrounded)
+                jump.SetActive(false); 
+            
         }
+
     }
 
     private void GroundCheck()
@@ -327,6 +342,7 @@ public class Movement : MonoBehaviour
             timeSinceGrounded = 0;
         }
 
+        
         animator.SetBool("Grounded", isGrounded);
     }
 

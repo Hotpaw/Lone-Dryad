@@ -45,7 +45,7 @@ public class TreeState1 : State
             cameraFoll.cameraDistance += 10 * Time.deltaTime;
         else if(startOnce1 && !startOnce2)
         {
-            PopUpText.INSTANCE.PopUpMessage("I need to get Water for my tree", Color.gray, 3);
+            PopUpText.INSTANCE.PopUpMessage("My tree needs water right now, I need to go get some for it", Color.gray, 3);
             startOnce2 = true;
         }
 
@@ -79,7 +79,7 @@ public class TreeState1 : State
                 trigger2 = true;
             if (trigger2 && !once2)
             {
-                PopUpText.INSTANCE.PopUpMessage("I have to jump on the centipedes to squash them", Color.green, 3);
+                PopUpText.INSTANCE.PopUpMessage("I should squash the centepiedes by jumping on them", Color.green, 3);
                 EnemySpawner.INSTANCE.SpawnStage1();
                 once2 = true;
             }

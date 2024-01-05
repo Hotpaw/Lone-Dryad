@@ -76,7 +76,7 @@ public class DevButtonScript : MonoBehaviour
         {
             health.TakeDamage(1);
         }
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Keypad9))
         {
             health.Heal(1);
         }

@@ -11,8 +11,10 @@ public class WerewolfIntroState : State
     private Transform target;
     bool introSet = false;
     public float closeEnoughDistance = 1.0f;
-    private bool hasTriggeredWithTarget = false; // New variable to track collision
+   public  bool hasTriggeredWithTarget = false; // New variable to track collision
 
+    [Header("wereWolfGrowling")]
+    public GameObject growling;
     void Start()
     {
         FindClosestTarget();
@@ -55,14 +57,22 @@ public class WerewolfIntroState : State
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.transform == target)
+        if (other.gameObject.CompareTag("Wtarget"))
         {
             hasTriggeredWithTarget = true;
         }
     }
-
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wtarget"))
+        {
+            hasTriggeredWithTarget = false;
+        }
+    }
     public override State RunCurrentState()
     {
+        growling.SetActive(true);
+        Debug.Log(growling.gameObject.activeInHierarchy);
         WereWolf.INSTANCE.moveToAttack = false;
         if (!introSet)
         {

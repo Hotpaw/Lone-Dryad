@@ -1,19 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TreeState4 : State
 {
     public static TreeState4 INSTANCE;
-    bool once;
 
     //Intro
     public GameObject cameraPoint;
     public cameraFollow cameraFoll;
     public GameObject player;
+    public blackOut blackOut;
+
+    public Transform walkingAroundPoint;
+    public Transform walkingAroundPoint2;
+    public bool walkBack;
     public bool cameraZoomOut;
     public float cameraZoomScale;
-    public float brokenShieldTimer;
+    public float timer;
+    public bool once;
 
     public void Awake()
     {
@@ -23,32 +29,58 @@ public class TreeState4 : State
     }
     public void Update()
     {
-        brokenShieldTimer += Time.deltaTime;
+        timer += Time.deltaTime;
         cameraFoll.player = GameObject.FindGameObjectWithTag("CameraPoint").transform;
-
-        if (cameraZoomScale > 11f)
+        cameraFoll.cameraDistance = 25;
+        if(timer > 3)
         {
-            cameraZoomScale -= 2 * Time.deltaTime;
-            cameraFoll.cameraDistance = cameraZoomScale;
-            if (cameraZoomScale < 17)
+
+            if (!walkBack)
             {
-                cameraPoint.transform.position = Vector3.MoveTowards(cameraPoint.transform.position, player.transform.position, 5 * Time.deltaTime);
+                player.transform.position = Vector3.MoveTowards(player.transform.position, walkingAroundPoint.position, 3 * Time.deltaTime);
+                player.GetComponent<Animator>().SetFloat("Speed", 0.2f);
+            }
+            else if (walkBack)
+            {
+                player.transform.position = Vector3.MoveTowards(player.transform.position, walkingAroundPoint2.position, 3 * Time.deltaTime);
+                player.GetComponent<Animator>().SetFloat("Speed", 0.2f);
+                player.GetComponent<SpriteRenderer>().flipX = true;
+            }
+            if (Vector2.Distance(player.transform.position, walkingAroundPoint.position) < 1)
+            {
+                player.GetComponent<Animator>().SetFloat("Speed", 0f);
+                player.GetComponent<Animator>().SetTrigger("PickingUP");
+                StartCoroutine(YieldTurnAround());
             }
         }
-        else
-            cameraFoll.player = player.transform;
-
+        if (timer > 7 && !once)
+        {
+            blackOut.fadeSpeed = 0.5f;
+            blackOut.startBlackOut = true;
+            StartCoroutine(YieldNextStage());
+            once = true;
+        }      
     }
     public override State RunCurrentState()
     {
         if (GameValueManager.INSTANCE.treeLevel == 4)
         {
-
             return this;
         }
         else
         {
             return TreeState5.INSTANCE;
         }
+    }
+    public IEnumerator YieldTurnAround()
+    {
+        yield return new WaitForSeconds(1f);
+        walkBack = true;
+    }
+    public IEnumerator YieldNextStage()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(5);
+
     }
 }

@@ -1,13 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
     public int currentHealth;
     public int maxHealth;
     public bool isCentipede;
-    
+    public enum Type { normal, Boss}
+    public Type type;
+    public Slider slider;
+    private void Update()
+    {
+        if (type == Type.Boss)
+        {
+            slider.maxValue = maxHealth;
+            slider.value = currentHealth;
+            return;
+        }
+    }
     // Start is called before the first frame update    
     public void Heal(int amount)
     {
@@ -26,6 +38,11 @@ public class Health : MonoBehaviour
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
+            if(type == Type.Boss)
+            {
+
+                return;
+            }
             if (this.CompareTag("Tree") && !GameValueManager.INSTANCE.gameWon)
             {
                 GameValueManager.INSTANCE.treeIsALive = false;

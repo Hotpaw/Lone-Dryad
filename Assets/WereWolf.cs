@@ -12,7 +12,7 @@ public class WereWolf : MonoBehaviour
     public State DieState;
     public State IntroState;
     public State SummonState;
-
+    public Health health;
     public Animator animator;
     public Rigidbody2D rb;
 
@@ -30,6 +30,11 @@ public class WereWolf : MonoBehaviour
 
     void Update()
     {
+        if(health.currentHealth <= 0)
+        {
+       
+            StateManager.INSTANCE.currentState = WereWolf.INSTANCE.DieState;
+        }
         if (moveToAttack)
         {
             FindClosestWATarget();

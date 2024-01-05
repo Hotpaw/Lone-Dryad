@@ -22,8 +22,11 @@ public class playerAttack : MonoBehaviour
     public float textureScrollSpeed = 1f;
     private bool hasThrown = false;
     private Animator playerAnimator;
-  
+
     bool used = false;
+
+    [Header("throwing")]
+    public GameObject throwingSound;
     private void Start()
     {
         // Set the initial width of the LineRenderer
@@ -35,7 +38,7 @@ public class playerAttack : MonoBehaviour
         }
         playerAnimator = FindObjectOfType<Movement>().gameObject.GetComponent<Animator>();
 
-}
+    }
 
     void Update()
     {
@@ -119,7 +122,7 @@ public class playerAttack : MonoBehaviour
         Debug.Log("ATTACK");
         if (!used)
         {
-            
+
             used = true;
             StartCoroutine(AttackCooldown());
         }
@@ -127,18 +130,20 @@ public class playerAttack : MonoBehaviour
 
     IEnumerator AttackCooldown()
     {
-        
+
         coolDown = true;
-       
+
         //  yield return new WaitForSeconds(0.1f);
         playerAnimator.SetTrigger("Thrown");
+        ThrowingSound();
         yield return new WaitForSeconds(0.3f);
         FireProjectile();
         yield return new WaitForSeconds(attackSpeed);
+        StopThrowingSound();
         coolDown = false;
         used = false;
         hasThrown = false; // Reset the hasThrown flag after cooldown
-       
+
     }
 
     private void FireProjectile()
@@ -181,4 +186,13 @@ public class playerAttack : MonoBehaviour
         }
     }
 
+    private void ThrowingSound()
+    {
+        throwingSound.SetActive(true);
+        //Debug.Log(throwingSound.gameObject.activeInHierarchy);
+    }
+    private void StopThrowingSound()
+    {
+        throwingSound.SetActive(false);
+    }
 }
