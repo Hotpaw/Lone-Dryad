@@ -5135,7 +5135,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1612751244478877764}
   m_Father: {fileID: 6351391682744485424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8268783651442745474
@@ -5150,6 +5151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a561e92e8967048bc4a88dd38bd659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  howling: {fileID: 696583000160275960}
+  noGrowling: {fileID: 6393905519999908473}
 --- !u!1 &7021748941104379998
 GameObject:
   m_ObjectHideFlags: 0
@@ -5338,6 +5341,77 @@ MonoBehaviour:
   collider: {fileID: 0}
   jumpToAttack: 5
   arrivalDistance: 5.28
+--- !u!1001 &4160948695319566970
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5115549535714722300}
+    m_Modifications:
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464510865322334082, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_Name
+      value: howlingWerewolf
+      objectReference: {fileID: 0}
+    - target: {fileID: 3464510865322334082, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+--- !u!1 &696583000160275960 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3464510865322334082, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+  m_PrefabInstance: {fileID: 4160948695319566970}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1612751244478877764 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3449489569511000638, guid: dab9109fd12b10d43ac76e7c708cd5be, type: 3}
+  m_PrefabInstance: {fileID: 4160948695319566970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7502550771992150362
 PrefabInstance:
   m_ObjectHideFlags: 0
