@@ -45,7 +45,7 @@ public class BatCocoon : MonoBehaviour
         // Fixa något så att batsen förstörs i slutet av sin path.
         BatClone.transform.DOPath(paths.Select(path => path.position).ToArray<Vector3>(), Random.Range(2f, 3f), PathType.Linear).SetEase(Ease);
         Destroy(coco.gameObject);
-        Destroy(BatClone, 10f);
+        Destroy(BatClone, 5f);
         yield return new WaitForSeconds(0.5f);
 
 
