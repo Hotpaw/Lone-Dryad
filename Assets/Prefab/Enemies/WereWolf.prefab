@@ -5152,7 +5152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   howling: {fileID: 696583000160275960}
-  noGrowling: {fileID: 6393905519999908473}
+  growling: {fileID: 6393905519999908473}
 --- !u!1 &7021748941104379998
 GameObject:
   m_ObjectHideFlags: 0

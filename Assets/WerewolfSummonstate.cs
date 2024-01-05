@@ -6,13 +6,13 @@ using UnityEngine;
 public class WerewolfSummonstate : State
 {
     public GameObject howling;
+    public GameObject growling;
     bool done = false;
     bool hasSpawned = false;
     public override State RunCurrentState()
     {
         if (WereWolf.INSTANCE.moveToAttack)
         {
-           
             return WereWolf.INSTANCE.IntroState;
         }
         if (!done)
@@ -34,15 +34,20 @@ public class WerewolfSummonstate : State
     IEnumerator summonbats()
     {
        
-       
+        howling.SetActive(true); //howling
         WereWolf.INSTANCE.animator.SetTrigger("Howl");
-         howling.SetActive(true);
-         //Debug.Log(howling.gameObject.activeInHierarchy);
+        
+        if (howling.activeSelf)
+            growling.SetActive(false);
+        
+        else if (!howling.activeSelf)
+            growling.SetActive(true);
+        
+
         yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("Werewolf_Howl")+ 1);
         EnemySpawner.INSTANCE.SpawnStage2();
         PopUpText.INSTANCE.PopUpMessage("The winged beasts return",Color.black);
 
-     
         yield return new WaitForSeconds(1);
        
       
