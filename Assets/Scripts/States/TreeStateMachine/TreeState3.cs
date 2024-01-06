@@ -71,7 +71,8 @@ public class TreeState3 : State
     public void Start()
     {        
         INSTANCE = this;
-        cameraZoomScale = cameraFoll.cameraDistance; 
+        cameraZoomScale = cameraFoll.cameraDistance;
+        FindAnyObjectByType<TreeScript>().GetComponent<Health>().HealToMax();
     }
     private void Update()
     {

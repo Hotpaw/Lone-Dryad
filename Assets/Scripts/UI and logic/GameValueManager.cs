@@ -48,7 +48,8 @@ public class GameValueManager : MonoBehaviour
     public void Awake()
     {
         Cursor.visible = false;
-        
+        thePowerToPickUpCrystals = false;
+
         currentsceneBuildIndex = SceneManager.GetActiveScene().buildIndex;
        
         INSTANCE = this;
