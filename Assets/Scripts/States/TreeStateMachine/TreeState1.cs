@@ -79,7 +79,7 @@ public class TreeState1 : State
             if (!once && seedTimer > spawnSeedAt)
             {
                 once = true;
-                //EnemySpawner.INSTANCE.SpawnEnemy();
+                EnemySpawner.INSTANCE.SpawnEnemy();
 
                 //spawnSeedAt = Random.Range(5, 25);
             }
