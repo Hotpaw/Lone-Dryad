@@ -61,7 +61,7 @@ public class cullBackground : MonoBehaviour
             Backgrounds[3].SetActive(true);
         }
         CaveSwitch[] switches1 = FindObjectsOfType<CaveSwitch>();
-        foreach(CaveSwitch sw in switches1)
+        foreach (CaveSwitch sw in switches1)
         {
             sw.gameObject.SetActive(false);
             sw.gameObject.SetActive(true);

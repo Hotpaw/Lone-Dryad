@@ -68,6 +68,7 @@ public class InteractWith : MonoBehaviour
             {
                 // Instantiate at the ground position
                 instantiatedParticleSystem = Instantiate(particleSystemPrefab, CalculateGroundPosition(), Quaternion.identity);
+                instantiatedParticleSystem.transform.SetParent(transform, false);
             }
             else
             {

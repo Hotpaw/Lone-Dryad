@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class WerewolfJumpState : State
@@ -57,14 +58,30 @@ public class WerewolfJumpState : State
             return;
         }
 
-        Transform newTarget;
-        do
+        // Calculate distances to each target
+        List<(Transform target, float distance)> targetDistances = new List<(Transform, float)>();
+        foreach (Transform potentialTarget in WereWolf.INSTANCE.stages)
         {
-            newTarget = WereWolf.INSTANCE.stages[Random.Range(0, WereWolf.INSTANCE.stages.Length)];
+            float distance = Vector3.Distance(transform.position, potentialTarget.position);
+            targetDistances.Add((potentialTarget, distance));
         }
-        while (newTarget == target);
 
-        target = newTarget;
+        // Sort targets by distance in descending order
+        targetDistances.Sort((a, b) => b.distance.CompareTo(a.distance));
+
+        // Take the two furthest targets
+        var furthestTargets = targetDistances.Take(2).ToList();
+
+        // Randomly select one of the two furthest targets
+        if (furthestTargets.Count == 2)
+        {
+            target = furthestTargets[Random.Range(0, 2)].target;
+        }
+        else
+        {
+            // Fallback in case there's only one furthest target
+            target = furthestTargets.FirstOrDefault().target;
+        }
     }
     void Jump()
     {
