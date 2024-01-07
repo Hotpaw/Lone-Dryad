@@ -40,6 +40,7 @@ public class WerewolfJumpState : State
         }
         else if (Vector3.Distance(transform.position, target.position) <= arrivalDistance && jumps == jumpToAttack)
         {
+            jumpToAttack = Random.Range(3, 5);
             WereWolf.INSTANCE.moveToAttack = true;
             jumps = 0;
             collider.enabled = true; // Re-enable collider

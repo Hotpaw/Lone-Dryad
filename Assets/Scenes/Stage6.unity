@@ -3158,8 +3158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d39b9b684f98dd4eb7c70deffc63964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealth: 40
-  maxHealth: 40
+  currentHealth: 30
+  maxHealth: 30
   isCentipede: 0
   type: 1
   slider: {fileID: 825505281}
