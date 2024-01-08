@@ -5173,6 +5173,26 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 5781091489405145041, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2dac0dd376667954380e5171391d3ac3, type: 2}
+    - target: {fileID: 5781091489405145041, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781091489405145041, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781091489405145041, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781091489405145041, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6350145354620660458, guid: 721092bd148e84943959836a3936503e, type: 3}
       propertyPath: m_Name
       value: PopUpCanvas
@@ -5181,6 +5201,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8464436643223508814, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8464436643223508814, guid: 721092bd148e84943959836a3936503e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2b02dd4fba6eb1f468e582062031c893, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
