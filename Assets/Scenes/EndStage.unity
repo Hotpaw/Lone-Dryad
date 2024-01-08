@@ -4833,8 +4833,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 688.90344, y: -25.581}
-  m_SizeDelta: {x: 482.4079, y: 472.1}
+  m_AnchoredPosition: {x: 688.90344, y: -81.265}
+  m_SizeDelta: {x: 482.4079, y: 583.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &835823796
 MonoBehaviour:
@@ -7276,6 +7276,28 @@ PrefabInstance:
     - target: {fileID: 4566023121557934418, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
       propertyPath: m_Name
       value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118448301709988926, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
+      propertyPath: m_text
+      value: "            \nCredits\nGame Designer:\nAndre Holton\n\nProgrammers:\nAndre
+        Holton\nSofie Reyes Bj\xF6restam\nP\xF6ta Andersson \n\nArtists:\nJoel L\xE4rka\nCharlie
+        Jarl\nElsa Blommaskog\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118448301709988926, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118448301709988926, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118448301709988926, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5118448301709988926, guid: c3045d51fb3f40b479488fb55adb659c, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18300,7 +18322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3928728162507895214, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: 28.7
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 3928728162507895214, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_BackGroundColor.b
@@ -18328,7 +18350,7 @@ PrefabInstance:
       objectReference: {fileID: 1948493817}
     - target: {fileID: 4458219291978334757, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: 28.7
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 4668986654378255266, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Layer
@@ -18376,7 +18398,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 27647eca92e23274e92fb1a0ff87fef1, type: 2}
     - target: {fileID: 5960295943275004652, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: orthographic size
-      value: 28.7
+      value: -30.8
       objectReference: {fileID: 0}
     - target: {fileID: 5968246061782436622, guid: ecb14ddc0d9a464479176ef94983f8bf, type: 3}
       propertyPath: m_Layer
