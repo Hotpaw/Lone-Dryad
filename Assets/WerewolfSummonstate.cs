@@ -46,7 +46,7 @@ public class WerewolfSummonstate : State
 
         yield return new WaitForSeconds(WereWolf.INSTANCE.GetAnimationClipDuration("Werewolf_Howl")+ 1);
         EnemySpawner.INSTANCE.SpawnStage2();
-        PopUpText.INSTANCE.PopUpMessage("The winged beasts return",Color.black);
+        PopUpText.INSTANCE.PopUpMessage("The winged beasts return",Color.white);
 
         yield return new WaitForSeconds(1);
        

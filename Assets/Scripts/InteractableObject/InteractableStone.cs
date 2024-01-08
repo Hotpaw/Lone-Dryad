@@ -18,6 +18,6 @@ public class InteractableStone : InteractableObject
             Destroy(stone);
         }
         else
-            PopUpText.INSTANCE.PopUpMessage("I can't carry anymore stones", Color.black, 2);
+            PopUpText.INSTANCE.PopUpMessage("I can't carry anymore stones", Color.white, 2);
     }
 }

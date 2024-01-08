@@ -15,7 +15,7 @@ public class WerewolfDieState : State
         {
             used = false;
             GameValueManager.INSTANCE.nextLevelAvailable = true;
-            PopUpText.INSTANCE.PopUpMessage("Finally, i am safe. Now i can rest...",Color.black);
+            PopUpText.INSTANCE.PopUpMessage("Finally, i am safe. Now i can rest...",Color.white);
             stopGrowling.SetActive(false);
             StartCoroutine(endScene());
             return this;

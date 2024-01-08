@@ -37,7 +37,7 @@ public class GuideTimer : MonoBehaviour
         if(guideTimer > 120) 
         {
             canStartGuide = true;
-            PopUpText.INSTANCE.PopUpMessage("I can go to my tree and ask the spirits for help", Color.green, 3);
+            PopUpText.INSTANCE.PopUpMessage("I can go to my tree and ask the spirits for help", Color.white, 3);
             spriteRenderer.enabled = true;
             transform.position = Vector3.MoveTowards(transform.position, activeGuidePoint.position, 2 * Time.deltaTime);
             particleSystem.Play();

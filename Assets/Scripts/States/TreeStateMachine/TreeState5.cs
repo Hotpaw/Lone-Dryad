@@ -12,7 +12,7 @@ public class TreeState5 : State
     public GameObject background;
     public void Start()
     {
-        PopUpText.INSTANCE.PopUpMessage("The water is Gone, i should climb the branches to find out what happened", Color.black, 5f);
+        PopUpText.INSTANCE.PopUpMessage("The water is Gone, i should climb the branches to find out what happened", Color.white, 5f);
         INSTANCE = this;
 
     }
