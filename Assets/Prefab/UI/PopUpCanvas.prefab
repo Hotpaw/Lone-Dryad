@@ -502,10 +502,10 @@ PrefabInstance:
     - target: {fileID: 7058984792733100229, guid: 2fac419a58bc08849a7ebd6e9b3eb6c2, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2100000, guid: 754c6f84f35cd3942a74670055376751, type: 2}
+      objectReference: {fileID: 3654073164518192102, guid: 2dac0dd376667954380e5171391d3ac3, type: 2}
     - target: {fileID: 7058984792733100229, guid: 2fac419a58bc08849a7ebd6e9b3eb6c2, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

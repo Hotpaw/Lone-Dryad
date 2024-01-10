@@ -276,6 +276,7 @@ MonoBehaviour:
   - {fileID: 6177039995354922173}
   - {fileID: 7969622953194176525}
   steps: {fileID: 6177039995354922173}
+  jump: {fileID: 0}
 --- !u!114 &7538903822014611799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +536,7 @@ MonoBehaviour:
   attackSpeed: 1
   lineMaterial: {fileID: 2100000, guid: e290e4ae60f49d94e9b8c04f36b964fc, type: 2}
   textureScrollSpeed: 1
+  throwingSound: {fileID: 0}
 --- !u!1 &2658867501446756505
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,7 +2097,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1500
+      scalar: 0
       minScalar: 10
       maxCurve:
         serializedVersion: 2
