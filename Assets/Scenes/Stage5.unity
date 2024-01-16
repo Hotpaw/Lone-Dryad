@@ -5517,6 +5517,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8410927938367760931, guid: dffc8a89dc94725499c9a1327a47c829, type: 3}
   m_PrefabInstance: {fileID: 1443155093}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1281912365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9083854785461551285, guid: 7c37935317a468c4999003e83aa1a458, type: 3}
+  m_PrefabInstance: {fileID: 205145340}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1296107896
 GameObject:
   m_ObjectHideFlags: 0
@@ -6990,6 +6995,9 @@ MonoBehaviour:
   mode: 3
   once: 0
   once2: 0
+  needToTurnOffOtherCave: 1
+  otherCave: {fileID: 1281912365}
+  otherCaveIsActive: 0
 --- !u!4 &1862482128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4136526811372781742, guid: 186522c6015a56f4f83cbef1859125cc, type: 3}

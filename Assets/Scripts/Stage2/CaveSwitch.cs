@@ -9,6 +9,11 @@ public class CaveSwitch : InteractableObject
     public int mode;
     public bool once;
     public bool once2;
+
+    public bool needToTurnOffOtherCave;
+    public GameObject otherCave;
+    public bool otherCaveIsActive;
+
     List<GameObject> enemyList = new List<GameObject>();
     public static bool areSwitchesDeactivated = false;
     private static List<CaveSwitch> allCaveSwitches = new List<CaveSwitch>();
@@ -27,6 +32,11 @@ public class CaveSwitch : InteractableObject
     {
         if (!once)
         {
+            if (needToTurnOffOtherCave)
+            {
+                otherCave.SetActive(otherCaveIsActive);
+                otherCaveIsActive = !otherCaveIsActive;
+            }
             ChangePlayerLayer();
             once = true;
             ToggleOtherSwitches();
